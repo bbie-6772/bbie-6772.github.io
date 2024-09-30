@@ -4,6 +4,7 @@ description: 2024/09/30부터 작성되는 일기장
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
+locale: "ko-KR"
 cover_image: /bg.jpeg
 
 # Gems
