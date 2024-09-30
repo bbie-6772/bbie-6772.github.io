@@ -1,9 +1,9 @@
 - type: dates
-  title: Dates
+  title: 날짜
   url: /dates/
 #- type: categories
 #  title: Categories
 #  url: /categories/
 - type: tags
-  title: Tags
+  title: 태그
   url: /tags/
