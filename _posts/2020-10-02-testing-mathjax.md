@@ -1,17 +1,9 @@
 ---
 layout: post
-title: Testing MathJax
-tags: mathjax
-math: true
-date: 2020-10-02 15:32 +0800
+title: 테스트?
+tags: 진짜모름
+math: false
+date: 2023-09-30 16:53
 ---
-Not Pure Poole supports [MathJax](https://www.mathjax.org/). You can enable it on a page by setting `math: true` in the front matter.
+그래서 이거 어떻게 하는건데요...
 
-An inline math: \\\(E=mc^2\\\).
-
-A display math:
-
-$$
-i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
-\frac{\partial^2 \Psi}{\partial x^2} + V \Psi
-$$
