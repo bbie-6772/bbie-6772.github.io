@@ -8,31 +8,31 @@ layout: default
     {%- assign date_format = site.date_format | default: "%-d %b %Y" -%}
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%F" }}</time>
     {%- if page.last_modified_at -%}
-      <span> ~ </span>
-      {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
-      <time datetime="{{ mdate }}" itemprop="dateModified">
-        {{ mdate | date: date_format }}
-      </time>
+    <span> ~ </span>
+    {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
+    <time datetime="{{ mdate }}" itemprop="dateModified">
+      {{ mdate | date: date_format }}
+    </time>
     {%- endif -%}
     {%- if page.author -%}
-      <span> • </span>
-      {% for author in page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          {{ author }}
-        </span>
-        {%- if forloop.last == false %}, {% endif -%}
-      {% endfor %}
+    <span> • </span>
+    {% for author in page.author %}
+    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+      {{ author }}
+    </span>
+    {%- if forloop.last == false %}, {% endif -%}
+    {% endfor %}
     {%- endif -%}
   </div>
 
   {{ content }}
 
   {% if page.tags %}
-    {% include post-tags.html %}
+  {% include post-tags.html %}
   {% endif %}
 
   {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
-    {% include disqus.html %}
+  {% include disqus.html %}
   {% endif %}
 </article>
 
@@ -41,21 +41,19 @@ layout: default
   <h2>이전 포스트</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:"%F" }}</time></small>
-        </a>
-      </li>
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        {{ post.title }}
+        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:"%F" }}</time></small>
+      </a>
+    </li>
     {% endfor %}
   </ul>
 </aside>
 {% endif %}
 
-<script src="https://utteranc.es/client.js"
-        repo="bbie-6772/blog-comments"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+<div>
+  <script src="https://utteranc.es/client.js" repo="bbie-6772/blog-comments" issue-term="pathname" theme="github-light"
+    crossorigin="anonymous" async>
+    </script>
+</div>
