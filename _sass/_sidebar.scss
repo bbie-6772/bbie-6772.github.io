@@ -6,7 +6,8 @@
   text-align: center;
   margin: auto;
   width: 100%;
-  top : 10%;
+  display: flex;
+  align-items: flex-start;
 
   a {
     color: inherit;
