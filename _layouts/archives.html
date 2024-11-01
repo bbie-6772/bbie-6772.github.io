@@ -11,8 +11,8 @@ sidebar: archive-list
   {% include functions.html func='get_datetimes' %}
   {% assign datetimes = return %}
 
-  {% assign keys = datetimes | reverse %}
-  {% assign field = 'date' %}
+  {% assign keys = datetimes %}
+  {% assign field = 'date' | date: "%Y-%m" %}
   {% include views/segments.html %}
 
 {%- endif -%}
