@@ -9,11 +9,9 @@ tags: [sql]
 
 SQL 관련 과제 제출 및 기록하기!
 
-# 과제 제출
-
 ## SQL 문법을 연습해요
 
-## 7. 랭크게임 하다가 싸워서 피드백 남겼어요…
+### 7. 랭크게임 하다가 싸워서 피드백 남겼어요…
 
 아래와 같은 lol_feedbacks (LOL 피드백 테이블)이 있습니다.
 
@@ -67,7 +65,7 @@ GROUP BY feedback_date
 ORDER BY AVG(satisfaction_score) DESC;
 ```
   
-## 8. LOL을 하다가 홧병이 나서 병원을 찾아왔습니다.
+### 8. LOL을 하다가 홧병이 나서 병원을 찾아왔습니다.
 
 이제, 아래와 같은 doctors(의사) 테이블이 있습니다.
 
@@ -225,7 +223,7 @@ JOIN departments ON employees.department_id = departments.id
 WHERE departments.name = '마케팅팀';
 ```
 
-## 마지막  연습 문제 !
+### 마지막  연습 문제 !
 
 다음과 같은 상품(products) 테이블과 주문(orders) 테이블이 있습니다.
 
