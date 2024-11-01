@@ -12,7 +12,7 @@ sidebar: archive-list
   {% assign datetimes = return %}
 
   {% assign keys = datetimes %}
-  {% assign field = 'date' | date: "%Y-%m" %}
+  {% assign field = 'date' | reverse %}
   {% include views/segments.html %}
 
 {%- endif -%}
