@@ -12,7 +12,6 @@
     <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
       {% assign items = site.posts | where: field, key %}
       {% for item in items %}
-        <span>{{ item.date }}</span>
         {% if item != nil %}
           {%- assign post_item_class = "" -%}
           {%- if item.top -%}
