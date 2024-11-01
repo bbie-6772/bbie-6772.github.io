@@ -1,24 +1,25 @@
 ---
 layout: post
-title: Table example
-subtitle:
+title: Table 예제
+subtitle: 참고하세염
 categories: example
 tags: [table]
 ---
 
-## Table example as below
+## Table 예제
 
-**For now, these extended features are provided:**
+**다음과 같은 확장 기능이 제공됩니다:**
 
-* Cells spanning multiple columns
-* Cells spanning multiple rows
-* Cells text align separately
-* Table header not required
-* Grouped table header rows or data rows
+* 여러 열에 걸친 셀
+* 여러 행에 걸친 셀
+* 셀 텍스트 별도로 정렬
+* 테이블 헤더가 별도로 필요하지 않음
+* 그룹화된 테이블 행 또는 데이터 행
 
-### Rowspan and Colspan
-^^ in a cell indicates it should be merged with the cell above.  
-This feature is contributed by [pmccloghrylaing](https://github.com/pmccloghrylaing).  
+### 행 간격과 열 간격
+
+셀 내부에 있는 ^^ 표시는 위의 셀과 병합되어야 함을 나타냅니다.  
+이 기능은 [pmccloghrylaing](https://github.com/pmccloghrylaing)님에 의해 개발됐습니다.
 
 | Stage | Direct Products | ATP Yields |
 | ----: | --------------: | ---------: |
@@ -32,9 +33,10 @@ This feature is contributed by [pmccloghrylaing](https://github.com/pmccloghryla
 
 [ Net ATP yields per hexose]
 
-### Multiline
-A backslash at end to join cell contents with the following lines.  
-This feature is contributed by [Lucas-C](https://github.com/Lucas-C).
+### 멀티 라인
+
+셀 내용을 다음 줄과 연결하기 위해 끝에 `\`를 붙입니다.  
+이 기능은 [Lucas-C](https://github.com/Lucas-C)님에 의해 개발됐습니다.
 
 |:     Easy Multiline     :|||
 |:------ |:------ |:-------- |
@@ -46,8 +48,9 @@ This feature is contributed by [Lucas-C](https://github.com/Lucas-C).
 | Apple  | Banana |  Orange  |
 
 
-### Headerless
-Table header can be eliminated.
+### 헤더가 없는 테이블
+
+테이블 헤더를 없앨 수 있습니다.
 
 |--|--|--|--|--|--|--|--|
 |♜ |  |♝ |♛ |♚ |♝ |♞ |♜ |
@@ -72,8 +75,9 @@ Table header can be eliminated.
 |^^   C. Banana      ||   It's OK! ![example image][my-image]  |
 ```
 
-### Text Alignment
-Table cell can be set alignment separately.
+### 텍스트 정렬
+
+테이블 셀의 정렬을 별도로 설정할 수 있습니다.
 
 | \:Fruits         ||  Food   :|
 |:-------- |:------ |:-------- |

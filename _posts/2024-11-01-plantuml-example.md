@@ -1,34 +1,34 @@
 ---
 layout: post
-title: Plantuml example
+title: Plantuml 예제
 categories: example
 tags: [plantuml]
 ---
 
-## My First PlantUML
+## 첫 PlantUML!
 
 ### PlantUML Block-1
 @startuml
-Bob -> Alice : hello
+나 -> 누구 : 안뇽
 @enduml
 
 
 ### PlantUML Block-2
 ``` plantuml!
-Bob -> Alice : hello world
+나 -> 누구 : 안뇽 세상
 ```
 
 
 ### PlantUML Block-3
 @startuml
-(*) --> "Initialization"
+(*) --> "초기화"
 
-if "Some Test" then
-  -->[true] "Some Activity"
-  --> "Another activity"
+if "약간의 테스트" then
+  -->[true] "몬가 움직여"
+  --> "또 다르게 움직여"
   -right-> (*)
 else
-  ->[false] "Something else"
+  ->[false] "몬가"
   -->[Ending process] (*)
 endif
 @enduml

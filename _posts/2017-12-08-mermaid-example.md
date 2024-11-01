@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Mermaid example
+title: Mermaid 예제
 categories: example
 tags: [mermaid]
 ---
 
-### 1. Pie chart
+### 1. 둥근 차트
 
 ```mermaid!
 pie title Pets adopted by volunteers
@@ -14,7 +14,7 @@ pie title Pets adopted by volunteers
   "Rats" : 35
 ```
 
-### 2. sequence diagram
+### 2. 시퀀스 다이어그램
 
 @startmermaid
 sequenceDiagram
@@ -37,7 +37,8 @@ A[Christmas] -->|Get money| B(Go shopping)
   C -->|Three| F[fa:fa-car Car]
 ```
 
-### 3. Class diagram
+### 3. Class 다이어그램
+
 ```mermaid!
 classDiagram
 Animal <|-- Duck
@@ -62,7 +63,8 @@ class Zebra{
 }
 ```
 
-### 4. State diagram
+### 4. Status 다이어그램
+
 ```mermaid!
 stateDiagram
 [*] --> Still
