@@ -1,59 +1,81 @@
 ---
-layout: default
+layout: framework
+banner:
+banner_html: post-header.html
+hidden: []
+sidebar:
+  - article-menu
 ---
 
-<article class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">
-    {%- assign date_format = site.date_format | default: "%-d %b %Y" -%}
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%F" }}</time>
-    {%- if page.last_modified_at -%}
-    <span> ~ </span>
-    {%- assign mdate = page.last_modified_at | date_to_xmlschema -%}
-    <time datetime="{{ mdate }}" itemprop="dateModified">
-      {{ mdate | date: date_format }}
-    </time>
+<div class="post">
+  <section>
+
+    {%- assign name = 'banner' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign banner = return -%}
+
+    {%- assign name = 'hidden' -%}
+    {%- include functions.html func='get_value' -%}
+    {%- assign hidden = return -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'header'" -%}
+    {%- if banner == nil and result.size == 0 -%}
+    {%- include views/post-header.html -%}
     {%- endif -%}
-    {%- if page.author -%}
-    <span> • </span>
-    {% for author in page.author %}
-    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-      {{ author }}
-    </span>
-    {%- if forloop.last == false %}, {% endif -%}
-    {% endfor %}
+
+    {%- include views/article.html -%}
+
+    {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-nav">
+      {%- if page.previous -%}
+        <a class="previous" href="{{ page.previous.url | relative_url }}" title="{{
+          page.previous.title | escape }}">{{ page.previous.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
+
+      {%- if page.next -%}
+        <a class="next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | escape }}">{{ page.next.title | escape | truncatewords: 6 }}</a>
+      {%- else -%}
+      <span></span>
+      {%- endif -%}
+    </div>
     {%- endif -%}
-  </div>
 
-  {{ content }}
+    {%- assign result = hidden | where_exp: "item", "item == 'related_posts'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        {% assign posts = site[page.collection] | sample:4 %}
+        {%- for post in posts -%}
+        <li><a class="post-link" href="{{post.url | relative_url}}" title="{{ page.next.title | escape }}">{{ post.title | escape | truncatewords: 12 }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
 
-  {% if page.tags %}
-  {% include post-tags.html %}
-  {% endif %}
+    {%- assign result = hidden | where_exp: "item", "item == 'comments'" -%}
+    {%- if result.size == 0 -%}
+    <div class="post-comments">
+      {%- if page.comments != false -%}
 
-  {% if jekyll.environment == "production" and site.disqus and page.comments != false %}
-  {% include disqus.html %}
-  {% endif %}
-</article>
+      {%- if site.disqus.shortname -%}
+      {%- include extensions/comments/disqus.html -%}
+      {%- endif -%}
 
-{% if site.related_posts != empty %}
-<aside class="related">
-  <h2>관련 포스트</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-    <li>
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date:"%F" }}</time></small>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</aside>
-{% endif %}
+      {%- if site.gitment.username -%}
+      {%- include extensions/comments/gitment.html -%}
+      {%- endif -%}
 
-<div class="Community">
-  <script src="https://utteranc.es/client.js" repo="bbie-6772/blog-comments" issue-term="pathname" theme="github-light"
-    crossorigin="anonymous" async>
-    </script>
+      {%- if site.utterances.repo -%}
+      {%- include extensions/comments/utterances.html -%}
+      {%- endif -%}
+
+      {%- endif -%}
+    </div>
+    {%- endif -%}
+
+  </section>
 </div>
