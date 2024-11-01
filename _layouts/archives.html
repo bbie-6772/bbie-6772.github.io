@@ -7,7 +7,7 @@ sidebar: archive-list
 
   {% include functions.html func='log' level='debug' msg='Get datetimes value' %}
 
-  {% assign filter = '%Y-m' %}
+  {% assign filter = '%Y-%m' %}
   {% include functions.html func='get_datetimes' %}
   {% assign datetimes = return %}
 
