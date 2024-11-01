@@ -24,8 +24,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@domain.com
+title: 새로워진 개발 일지!
+email: qldpdml12@gmail.com
 author: GitHub User
 
 # Copyright setting
@@ -43,10 +43,9 @@ author: GitHub User
 copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
+  2024.09.30 부터 시작되는 프로그래밍 학습 기록장입니다!
+  ( 삽질을 좋아하는 사람의 삽질 여행 기록입니다. )
+ 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
@@ -54,7 +53,7 @@ favicon: "" # the favicon for your site
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 yat:
-  date_format: "%b %d, %Y"
+  date_format: "%Y-%m-%d, %a"
 
 # If you want more debug log, you can set true
 # debug: false

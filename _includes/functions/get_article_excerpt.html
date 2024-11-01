@@ -5,7 +5,7 @@
 {% if include.params.lang %}
   {% assign lang = include.params.lang %}
 {% else %}
-  {% assign lang = lang | default: site.lang | default: "en" %}
+  {% assign lang = lang | default: site.lang | default: "ko" %}
 {% endif %}
 
 {% if include.params.excerpt_size %}
