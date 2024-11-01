@@ -12,7 +12,7 @@
     <h2 id="{{ key }}" class="segment-name">{{ key }}</h2>
       {% assign items = site.posts | where: field, key %}
       {% for item in items %}
-        {{ item | debug }}
+        {{ item.top | debug }}
         {% if item != nil %}
           {%- assign post_item_class = "" -%}
           {%- if item.top -%}
