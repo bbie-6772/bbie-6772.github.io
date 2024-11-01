@@ -124,9 +124,9 @@ $$ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )
 |--------------------|---------------|------------------------------------|
 | 열 1              | 사과[^1]     | [Youtube (Home)]                   |
 | 열 2              | 바나나        | [Github][1]                        |
-| 열 3 (merged)     | 블루베리     | [Google] *****  [Github]           |
+| Row 3 (merged)     | 블루베리     | [Google] *****  [Github]           |
 | ^^         | [자두](https://example.com) | 라즈베리 ![example][cell image]   |
-| 열 4      | <https://www.google.com>    |  [테스트](https://www.google.com){:target="_blank"}                            |
+| Row 4      | <https://www.google.com>    |  [테스트](https://www.google.com){:target="_blank"}                            |
 |^^          |^^ <https://www.youtube.com> |                              |
 | 열 5      | <https://www.google.com>                                  ||
 
@@ -154,22 +154,22 @@ $$ \rho {\rm{FOD}} = \sum\limits{\sigma ,i} {(\delta _1 - \delta _2 n_i^\sigma )
 ## PlantUML(다이어그램 언어)
 
 @startuml
-나 -> 누군가 : 안뇽
+Bob -> Alice : hello
 @enduml
 
 ## Mermaid(다이어그램 언어)
 
 ```mermaid!
 graph LR
-  Concurrent.futures --->| 위에 | 스레딩
-  Concurrent.futures --->| 위에 | 멀티프로세싱
-  스레딩 --->| 위에 | \_thread
+  concurrent.futures --->| on top of | threading
+  concurrent.futures --->| on top of | multiprocessing
+  threading --->| on top of | \_thread
   click concurrent.futures "https://docs.python.org/3.9/library/concurrent.futures.html" _blank
 ```
 
 ## 동영상
 
-![꽃](https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm)
+![Flower](https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm)
 
 ![](//www.youtube.com/watch?v=Ptk_1Dc2iPY)
 

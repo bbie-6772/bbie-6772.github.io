@@ -8,31 +8,31 @@ tags: [plantuml]
 ## 첫 PlantUML!
 
 ### PlantUML Block-1
+
 @startuml
-나 -> 누구 : 안뇽
+Bob -> Alice : hello
 @enduml
 
-
 ### PlantUML Block-2
+
 ``` plantuml!
-나 -> 누구 : 안뇽 세상
+Bob -> Alice : hello world
 ```
 
-
 ### PlantUML Block-3
-@startuml
-(*) --> "초기화"
 
-if "약간의 테스트" then
-  -->[true] "몬가 움직여"
-  --> "또 다르게 움직여"
+@startuml
+(*) --> "Initialization"
+
+if "Some Test" then
+  -->[true] "Some Activity"
+  --> "Another activity"
   -right-> (*)
 else
-  ->[false] "몬가"
+  ->[false] "Something else"
   -->[Ending process] (*)
 endif
 @enduml
-
 
 ### PlantUML Block-4
 
