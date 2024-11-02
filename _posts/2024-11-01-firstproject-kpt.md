@@ -6,8 +6,10 @@ author: bbie
 categories: bootcamp
 banner:
   image: https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99
-  height: "60vh"
-  min_height: "38vh"
+  opacity: 0.618
+  background: "#000"
+  height: "100vh"
+  min_height: "30vh"
 tags: [firstproject]
 ---
 

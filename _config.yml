@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 코딩 서커스
+title: Circus Code
 email: qldpdml12@gmail.com
 author: bbie
 
