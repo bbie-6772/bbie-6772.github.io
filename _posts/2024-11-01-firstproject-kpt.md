@@ -8,8 +8,8 @@ banner:
   image: https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99
   opacity: 0.618
   background: "#000"
-  height: "100vh"
-  min_height: "30vh"
+  height: "50vh"
+  min_height: "20vh"
 tags: [firstproject]
 ---
 
@@ -64,7 +64,7 @@ tags: [firstproject]
 
 ## 약속
 
-> 언젠가 프로젝트 도중 같은 팀으로 만나게 될 수도 있으니 그때까지 캠프에 "끝"까지 남아 있어보자고 서로 약속했다.
+> 언젠가 프로젝트 도중 같은 팀으로 만나게 될 수도 있으니 그때까지 캠프에 끝까지 완주하자고 약속했다.
 
 ---
 
