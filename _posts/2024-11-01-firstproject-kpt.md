@@ -16,7 +16,7 @@ tags: [firstproject]
 > 기간 : 2024.10.28 ~ 2024.11.1 (1주일)  
 참여인원 : 5인
 
-![placeholder](https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99 "Medium example image")
+![결과물](https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99 "Medium example image")
 
 ---
 
