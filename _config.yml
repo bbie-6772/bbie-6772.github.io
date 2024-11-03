@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 삐에로의 일상 아카이브
+title: 삐에로의 지식창고
 email: qldpdml12@gmail.com
 author: bbie
 
