@@ -65,7 +65,7 @@ GROUP BY feedback_date
 ORDER BY AVG(satisfaction_score) DESC;
 ```
   
-### 8. LOL을 하다가 홧병이 나서 병원을 찾아왔습니다.
+### 8. LOL을 하다가 홧병이 나서 병원을 찾아왔습니다
 
 이제, 아래와 같은 doctors(의사) 테이블이 있습니다.
 
@@ -107,7 +107,7 @@ SELECT *, DATEDIFF(CURRENT_DATE(), hire_date) AS workday
 FROM doctors;
 ```
 
-## 9. 아프면 안됩니다! 항상 건강 챙기세요!
+### 9. 아프면 안됩니다! 항상 건강 챙기세요
 
 의사가 있으면 당연히 의사에게 진료받는 환자가 있겠죠? 아래와 같은 patients(환자) 테이블이 있습니다.
 
@@ -223,7 +223,7 @@ JOIN departments ON employees.department_id = departments.id
 WHERE departments.name = '마케팅팀';
 ```
 
-### 마지막  연습 문제 !
+### 마지막  연습 문제
 
 다음과 같은 상품(products) 테이블과 주문(orders) 테이블이 있습니다.
 
@@ -234,6 +234,7 @@ WHERE departments.name = '마케팅팀';
 | 1 | 랩톱 | 1200 |
 | 2 | 핸드폰 | 800 |
 | 3 | 타블렛 | 400 |
+
 - orders 테이블
 
 | id | product_id | quantity | order_date |
