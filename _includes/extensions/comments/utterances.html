@@ -31,9 +31,9 @@
   utterancesScript.async = true;
   utterancesScript.src = 'https://utteranc.es/client.js';
   utterancesScript.crossOrigin = 'anonymous';
-  utterancesScript.setAttribute('pathname', '{{ site.utterances.issue_term }}');
+  utterancesScript.setAttribute('issue-term', '{{ site.utterances.issue_term }}');
   utterancesScript.setAttribute('label', '{{ site.utterances.label }}');
-  utterancesScript.setAttribute('bbie-6772/blog-comments', '{{ site.utterances.repo }}');
+  utterancesScript.setAttribute('repo', '{{ site.utterances.repo }}');
   utterancesScript.setAttribute('theme', utterancesThemeFromDataTheme());
 
   const placeholder = document.getElementById('utterances-placeholder');
