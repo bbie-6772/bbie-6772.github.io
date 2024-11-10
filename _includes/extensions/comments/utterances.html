@@ -31,21 +31,16 @@
   utterancesScript.async = true;
   utterancesScript.src = 'https://utteranc.es/client.js';
   utterancesScript.crossOrigin = 'anonymous';
-  utterancesScript.setAttribute('issue-term', '{{ site.utterances.issue_term }}');
+  utterancesScript.setAttribute('pathname', '{{ site.utterances.issue_term }}');
   utterancesScript.setAttribute('label', '{{ site.utterances.label }}');
-  utterancesScript.setAttribute('repo', '{{ site.utterances.repo }}');
+  utterancesScript.setAttribute('bbie-6772/blog-comments', '{{ site.utterances.repo }}');
   utterancesScript.setAttribute('theme', utterancesThemeFromDataTheme());
 
   const placeholder = document.getElementById('utterances-placeholder');
   placeholder.parentNode.replaceChild(utterancesScript, placeholder);
 </script>
 {%- else -%}
-<script async
-        crossorigin="anonymous"
-        issue-term="{{ site.utterances.issue_term }}"
-        label="{{ site.utterances.label }}"
-        repo="{{ site.utterances.repo }}"
-        src="https://utteranc.es/client.js"
-        theme="{{ site.utterances.theme }}">
- </script>
+<script async crossorigin="anonymous" issue-term="{{ site.utterances.issue_term }}" label="{{ site.utterances.label }}"
+  repo="{{ site.utterances.repo }}" src="https://utteranc.es/client.js" theme="{{ site.utterances.theme }}">
+  </script>
 {%- endif -%}
