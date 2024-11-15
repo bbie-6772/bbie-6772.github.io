@@ -48,11 +48,11 @@ $click-to-top-dark-color: {{site.click_to_top.dark.color | default: "#bbb"}};
 $selection-color: unquote("{{ site.selection.color }}");
 $selection-background-color: unquote("{{ site.selection.background_color }}");
 
-@if $selection-color =="" {
+@if $selection-color == "" {
 $selection-color: inherit;
 }
 
-@if $selection-background-color =="" {
+@if $selection-background-color == "" {
   $selection-background-color: rgba(invert($brand-color), 0.3);
 }
 
