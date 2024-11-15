@@ -22,17 +22,13 @@ $brand-color: map-get($brand-colors, "orangered");
 
 @if map-has-key($theme-colors, $theme-name) {
   $theme-color: map-get($theme-colors, $theme-name);
-}
-
-@else if str-index($theme-name, "#")==1 {
+} @else if str-index($theme-name, "#")==1 {
   $theme-color: {{site.theme_color | default: '#ffffff'}};
 }
 
 @if map-has-key($brand-colors, $brand-name) {
   $brand-color: map-get($brand-colors, $brand-name);
-}
-
-@else if str-index($brand-name, "#")==1 {
+} @else if str-index($brand-name, "#")==1 {
   $brand-color: {{site.brand_color | default: '#ff5100'}};
 }
 
