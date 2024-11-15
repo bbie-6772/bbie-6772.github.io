@@ -47,7 +47,7 @@ $brand-color: map-get($brand-colors, "orangered");
 
 $content-width: {
     {
-    default: '1300px'
+    site.content_width | default: '1300px'
   }
 }
 
