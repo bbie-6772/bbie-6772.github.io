@@ -1,6 +1,7 @@
 --- 
 # Only the main Sass file needs front matter (the dashes are enough) 
 --- // Default theme colors
+
 $theme-colors: (
   "coolblack": #090a0b,
   "spacegrey": #353535,
@@ -24,13 +25,7 @@ $brand-color: map-get($brand-colors, "orangered");
 }
 
 @else if str-index($theme-name, "#")==1 {
-  $theme-color: {
-      {
-      site.theme_color | default: '#ffffff'
-    }
-  }
-
-  ;
+  $theme-color: {{site.theme_color | default: '#ffffff'}};
 }
 
 @if map-has-key($brand-colors, $brand-name) {
@@ -38,62 +33,26 @@ $brand-color: map-get($brand-colors, "orangered");
 }
 
 @else if str-index($brand-name, "#")==1 {
-  $brand-color: {
-      {
-      site.brand_color | default: '#ff5100'
-    }
-  }
-
-  ;
+  $brand-color: {{site.brand_color | default: '#ff5100'}};
 }
 
-$content-width: {
-    {
-    site.content_width | default: '1000px'
-  }
-}
-
-;
+$content-width: {{site.content_width | default: '1000px'}};
 
 // Click to top theme
-$click-to-top-light-background-color: {
-    {
-    site.click_to_top.light.background_color | default: "white"
-  }
-}
+$click-to-top-light-background-color: {{site.click_to_top.light.background_color | default: "white"}};
 
-;
+$click-to-top-light-color: {{site.click_to_top.light.color | default: "#454545"}};
 
-$click-to-top-light-color: {
-    {
-    site.click_to_top.light.color | default: "#454545"
-  }
-}
+$click-to-top-dark-background-color: {{site.click_to_top.dark.background_color | default: "#34323d"}};
 
-;
-
-$click-to-top-dark-background-color: {
-    {
-    site.click_to_top.dark.background_color | default: "#34323d"
-  }
-}
-
-;
-
-$click-to-top-dark-color: {
-    {
-    site.click_to_top.dark.color | default: "#bbb"
-  }
-}
-
-;
+$click-to-top-dark-color: {{site.click_to_top.dark.color | default: "#bbb"}};
 
 // Selection styles
 $selection-color: unquote("{{ site.selection.color }}");
 $selection-background-color: unquote("{{ site.selection.background_color }}");
 
 @if $selection-color =="" {
-  $selection-color: inherit;
+$selection-color: inherit;
 }
 
 @if $selection-background-color =="" {
