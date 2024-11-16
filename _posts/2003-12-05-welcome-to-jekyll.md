@@ -34,7 +34,7 @@ puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+```
 
 ## 섹션 2
 
