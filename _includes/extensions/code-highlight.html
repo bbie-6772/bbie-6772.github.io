@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
 <!-- and it's easy to individually load additional languages -->
 <script charset="UTF-8"
         src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     addLangData(block);
     addBadge(block);
     hljs.highlightBlock(block);
-    hljs.initLineNumbersOnLoad();
+    hljs.lineNumbersBlock(block);
   }
 
   for (var i = 0; i < els.length; i++) {
@@ -89,6 +89,14 @@ pre.badge::before {
 /* fix wrong badge display for firefox browser */
 code > table pre::before {
   display: none;
+}
+
+table.hljs-ln {
+  width: auto;
+  border-width: 0px;
+}
+table.hljs-ln td {
+  border-width: 0px;
 }
 
 .hljs-ln-numbers {
