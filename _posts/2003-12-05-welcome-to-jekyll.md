@@ -28,13 +28,13 @@ sidebar: []
 
 Jekyll 은 코드 스니펫에 대한 강료크한 지원을 합니다!
 
-{% highlight ruby %}
+```ruby
 def print_hi(name)
 puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-```
+
 
 ## 섹션 2
 
