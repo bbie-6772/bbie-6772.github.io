@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     addLangData(block);
     addBadge(block);
     hljs.highlightBlock(block);
-    hljs.lineNumbersBlock(block);
+    hljs.initLineNumbersOnLoad();
   }
 
   for (var i = 0; i < els.length; i++) {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   code > table pre::before {
     display: none;
   }
-  
+
   .hljs-ln-numbers {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
