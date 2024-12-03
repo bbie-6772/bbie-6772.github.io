@@ -48,84 +48,72 @@ tags: [codetest, petit-tft-project ]
   남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
 
 ```jsx
-function solution(babbling) {
+function solution(n, lost, reserve) {
     let answer = 0;
-    //옹알이 저장
-    const word = ["aya","ye","woo","ma"]
     
-    answer = babbling.reduce((acc,cur) => {
-        // 값이 옹알이에 있는 것과 같으면 바로 +1 
-        if (cur === word.find((val) => val === cur)) return acc + 1
-        let double = cur
-        for (let i = 0;i < word.length;i++) {
-            // replace에서 전역으로 검사하기위해 RegExp 사용
-            const w = new RegExp(word[i], "g");
-            double = double.replace(w,i)
-            // 만약 같은 숫자가 이어질경우 옹알이가 불가능하기에 for을 빠져나옴
-            if (double.includes(`${i}${i}`)) break
-            // double이 모두 숫자로 채워지면 가능하다는 말이기에 +1 
-            if (/^[0-9]*$/.test(double)) return acc + 1
+    answer += n - lost.length
+    
+    // 중복값 확인 및 삭제 + 정렬
+    lost = lost.filter((e) => {
+        if(reserve.includes(e)) {
+            reserve.splice(reserve.indexOf(e),1)
+            
+            answer++
+            return false
         }
-        return acc
-    },0)
+        return true
+    }).sort()
+    // 정렬
+    reserve.sort()
     
+    for (let i = 0;i < reserve.length;i++) {
+        const low = lost.indexOf(reserve[i]-1) 
+        const high = lost.indexOf(reserve[i]+1)
+        let recive = 0;
+        if (low >= 0) recive = lost.splice(low,1)
+        else if(!recive && high >= 0) recive = lost.splice(high,1)
+        
+        if (recive) answer++
+        if (lost.length <= 0) break
+    } 
     return answer;
 }
-// 근데 나중에 보니까 replaceAll 이라는 좋은 구문이 있더라
 ```
 
-#### 숫자 짝꿍
-
-- 문제  
-
-두 정수 X, Y의 임의의 자리에서 공통으로 나타나는 정수 k(0 ≤ k ≤ 9)들을 이용하여 만들 수 있는 가장 큰 정수를 두 수의 짝꿍이라 합니다(단, 공통으로 나타나는 정수 중 서로 짝지을 수 있는 숫자만 사용합니다). X, Y의 짝꿍이 존재하지 않으면, 짝꿍은 -1입니다. X, Y의 짝꿍이 0으로만 구성되어 있다면, 짝꿍은 0입니다.
-
-- 조건
-
-  - 3 ≤ X, Y의 길이(자릿수) ≤ 3,000,000입니다.
-
-  - X, Y는 0으로 시작하지 않습니다.
-
-  - X, Y의 짝꿍은 상당히 큰 정수일 수 있으므로, 문자열로 반환합니다.
+- 다른 코드 분석
 
 ```jsx
-function solution(X, Y) {
-    let answer = [];
-    
-    for(let i = 0;i < 10;i++) {
-        let xcount = 0;
-        let ycount = 0;
-        X.replaceAll(i,() => {xcount++})    
-        Y.replaceAll(i,() => {ycount++})
-        for (let y = 0;y < Math.min(xcount,ycount);y++) {
-            answer.push(i)
+function solution(n, lost, reserve) {
+    const students = {};
+    let answer = 0;
+    // 학생 배열 생성(+ 정렬효과)
+    for(let i = 1; i <= n; i++){
+        students[i] = 1;
+    }
+    // 도난 / 여벌 학생 일괄 할당
+    lost.forEach(number => students[number] -= 1);
+    reserve.forEach(number => students[number] += 1);
+
+    // 학생 마다 판정
+    for(let i = 1; i <= n; i++){
+        // 여벌 학생과 도난 학생이 -1 관계일 때
+        if(students[i] === 2 && students[i-1] === 0){
+                students[i-1]++;
+                students[i]--;
+        // 여벌 학생과 도난 학생이 +1 관계일 때
+        } else if(students[i] === 2 && students[i+1] === 0){
+                students[i+1]++;
+                students[i]--;
+        }
+        // 분배 완료
+    }
+    // 체육복이 1개 이상인 학생들만 확인
+    for(let key in students){
+        if(students[key] >= 1){
+            answer++;
         }
     }
-    if (answer.length === 0) answer = -1
-    else answer = answer.sort((a,b) => +b - +a).join("")
-    if (+answer === 0) answer = 0
-    
-    return ""+answer
-}
-```
-
-- 최적화 실패 버전..
-
-```jsx
-function solution(babbling) {
-    let answer = '';
-    
-    answer = X.split("").filter((e) => {
-        if (Y.includes(e)) {
-            Y = Y.replace(e,"")
-            return true
-        } else return false
-    }).sort((a,b) => +b - +a).join("")
-    
-    if (answer.length <= 0) answer = -1
-    if (+answer === 0) answer = 0
-    
-    return ""+answer;
+    return answer;
 }
 ```
 
