@@ -1,16 +1,16 @@
 ---
 layout: post
-title: 회고록 - [멤퍼 소개 페이지 프로젝트]
+title: 멤퍼 소개 페이지 프로젝트 - <KPT>
 subtitle: 게임서버 개발 부트캠프
 author: bbie
-categories: bootcamp
+categories: Member-Introduce-Page
 banner:
   image: https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [firstproject]
+tags: [KPT]
 ---
 
 # 멤버 소개 페이지 프로젝트
@@ -23,7 +23,6 @@ tags: [firstproject]
 ![결과물](https://github.com/user-attachments/assets/2fbe48fa-0708-4c89-b5e7-053b1ec29d99 "Medium example image")
 
 ---
-
 
 ## KPT 팀 회고록
 
