@@ -10,10 +10,8 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [KPT]
+tags: [KPT,Feedback]
 ---
-
-# 멤버 소개 페이지 프로젝트
 
 ## 결과물
 
