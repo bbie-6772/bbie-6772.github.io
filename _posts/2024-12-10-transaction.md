@@ -3,7 +3,7 @@ layout: post
 title: Transaction
 subtitle: 게임Server 개발 부트캠프
 author: bbie
-categories: study
+categories: SQL
 banner:
   image: https://github.com/user-attachments/assets/4a04ae53-da2a-4d83-96a0-384edca38bfa
   opacity: 0.618
