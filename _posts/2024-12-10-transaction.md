@@ -5,7 +5,7 @@ subtitle: 게임Server 개발 부트캠프
 author: bbie
 categories: Data-base
 banner:
-  image: https://github.com/user-attachments/assets/4a04ae53-da2a-4d83-96a0-384edca38bfa
+  image: https://github.com/user-attachments/assets/82629dbe-cbb1-4bce-8aa1-ca30eeb76d66
   opacity: 0.618
   background: "#000"
   height: "50vh"
