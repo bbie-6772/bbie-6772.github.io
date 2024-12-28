@@ -143,7 +143,7 @@ socket.on("response", (data) => {
     });
 ```
 
-#### sendEvent 동기화
+#### sendEvent 동기화 작업
 
 - sendEvent 를 쓰는 경우 서버에 요청을 하고, 받은 답을 통해 클라이언트에게 표시한다
 
