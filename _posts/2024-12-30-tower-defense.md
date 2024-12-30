@@ -166,6 +166,32 @@ socket.on('leaveRoom',(data) => {
 socket.on('leaveRoom', (data) => socket.leave(data.roomId))
 ```
 
+### 강퇴 기능
+
+- 기존에 만든 나가기 기능을 응용하여 간단하게 구현하였다
+
+```jsx
+// 서버에서 요청을 받을 시 일어나는 상황
+export const kickUser = (userId, payload, socket) => {
+    const room = kick(payload.roomId)
+    // 참가자에게 방을 나가도록 요구
+    socket.to(payload.roomId).emit('leaveRoom', { roomId: payload.roomId })
+    // 업데이트된 값 적용
+    socket.emit('room', { room })
+
+    return { status: "success" }
+}
+export const kick = (gameId) => {
+    const roomIdx = gameRooms.findIndex((e) => e.gameId === gameId)
+    // 방이 서버에 있는 확인
+    if (roomIdx === -1) return false
+    // 서버에서 유저(참가자) 삭제
+    gameRooms[roomIdx].userId2 = null
+    
+    return gameRooms[roomIdx]
+}
+```
+
 ## 한줄 평 + 개선점
 
 - 오늘 주로 진행된 과정은 개인적 부분보다 팀 프로젝트적 부분이 많았다.
