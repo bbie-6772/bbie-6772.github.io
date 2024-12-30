@@ -184,6 +184,29 @@ export const sendEvent = async (handlerId, payload) => {
 };
 ```
 
+#### 방 동기화
+
+- 방에 입장하면 입장한 사람들끼리만 이용할 수 있는 웹소켓의 "방" 개념을 이용해야겠다
+
+```jsx
+// 방 입장 핸들러(서버)
+export const enterRoom = (userId, payload, socket) => {
+    /* 방 참여 성공 여부 검증(생략) */
+    
+    // 필요없는 값 삭제
+    let room = getRoom(userId)
+    delete room.score
+    delete room.startTime
+    delete room.monsterCount
+    delete room.gameOverTimer
+
+    // 성공 시 유저를 roomId(UUIDv4)에 연결시킴 
+    socket.join(payload.roomId)
+
+    return { status: "success", room: room }
+};
+```
+
 ## 한줄 평 + 개선점
 
 - 오늘도 끝까지 알차게 작업을 마치고 머지까지 성공했다!
