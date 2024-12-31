@@ -255,10 +255,6 @@ socket.emit('connection', [loginUser.id, loginUser.nickname, loginUser.highScore
 
 - 원래 랭킹 기능을 더 구현할 예정이었으나 트러블 슈팅으로 인해 보류되었다
 
-## 트러블 슈팅
-
-- pingPong
-
 ## 한줄 평 + 개선점
 
 - 하루마다 병합을 하면서 나온 오류들을 해결하는 과정을 너무 담지 못해서 아쉬웠다
