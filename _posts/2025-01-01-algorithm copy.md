@@ -119,6 +119,7 @@ function binary_search_leftmost(A, n, T):
         // 중앙 값이 타겟 값보다 작지 않을 때 범위를 중앙 값보다 왼쪽으로 설정
         else:
             R := m
+    // 범위를 최대한 줄였을 때 범위의 가장 왼쪽을 기준으로 인덱스를 반환
     return L
 ```
 
@@ -137,7 +138,7 @@ function binary_search_rightmost(A, n, T):
         // 중앙 값이 타겟 값보다 크지 않을 때 범위를 중앙 값보다 오른쪽으로 설정
         else:
             L := m + 1
-    // 범위를 최대한 줄였을 때 범위의 가장 오른쪽을 기준으로 마지막 값을 반환
+    // 범위를 최대한 줄였을 때 범위의 가장 오른쪽을 기준으로 마지막 인덱스를 반환
     return R - 1
 ```
 
@@ -155,6 +156,12 @@ function binary_search_rightmost(A, n, T):
 
 - 경우의 수를 구하는 방식으로 사용됨
 
+- 여러 갈래 중 무한한 길이를 가지는 경로가 존재하고 탐색 목표가 다른 경로에 존재하는 경우  
+
+  - DFS로 탐색할 시에는 무한한 길이의 경로에서 영원히 종료하지 못함
+
+  - BFS의 경우는 모든 경로를 동시에 진행하기 때문에 탐색이 가능함
+
 #### BFS(Breadth First Search)
 
 ![image](https://github.com/user-attachments/assets/4fe570a6-00b3-450d-8e20-ff42d6f15820)
@@ -163,7 +170,11 @@ function binary_search_rightmost(A, n, T):
 
 - 스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 ) 대신 큐 ( 선입선출 방식)를 사용
 
-- 정점이 대기열에서 제거될 때까지 확인을 미루는 대신, 정점을 대기열(Queue)에 넣기 전에 해당 정점이 탐색되었는지 확인
+- 최단 경로를 찾으려 할 때 사용 가능  
+( 대신 경로에 추가적인 가중치가 없어야 함 )
+
+- 정점이 대기열에서 제거될 때까지 원하는 값인지 확인을 미루는 대신,  
+정점을 대기열(Queue)에 넣기 전에 해당 정점이 탐색되었는지 확인함
 
 ```jsx
 // 의사코드(Pseudocode)
@@ -214,7 +225,46 @@ function bfs(graph, start) {
 
 ![image](https://github.com/user-attachments/assets/72b1206e-91bc-4fd6-aad8-1e933e1e96f5)
 
-- 
+- 시작 노드 에서 시작하여 백트래킹하기 전에 각 브랜치를 따라 가능한 한 멀리 탐색하는 방식
+
+```jsx
+// 의사코드(Pseudocode)
+// G = 트리 구조, root = 시작 지점
+// 재귀적 구현
+procedure DFS(G, v) is
+    label v as discovered
+    for all directed edges from v to w that are in G.adjacentEdges(v) do
+        if vertex w is not labeled as discovered then
+            recursively call DFS(G, w)
+
+// 비재귀적 구현
+procedure DFS_iterative(G, v) is
+    let S be a stack
+    S.push(v)
+    while S is not empty do
+        v = S.pop()
+        if v is not labeled as discovered then
+            label v as discovered
+            for all edges from v to w in G.adjacentEdges(v) do 
+                S.push(w)
+
+// 스택 대신 반복자 사용
+procedure DFS_iterative(G, v) is
+    let S be a stack
+    label v as discovered
+    S.push(iterator of G.adjacentEdges(v))
+    while S is not empty do
+        if S.peek().hasNext() then
+            w = S.peek().next()
+            if w is not labeled as discovered then
+                label w as discovered
+                S.push(iterator of G.adjacentEdges(w))
+        else
+            S.pop()
+```
+
+```jsx
+```
 
 ## Reference
 
