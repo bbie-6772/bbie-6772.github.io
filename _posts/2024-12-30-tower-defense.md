@@ -5,7 +5,7 @@ subtitle: TowerDefense
 author: bbie
 categories: WebSocket2
 banner:
-  image: https://github.com/user-attachments/assets/736f3407-7144-4b11-9ae4-bddd1ec9b745
+  image: https://github.com/user-attachments/assets/305f33cb-2c72-4636-ab9b-b001a718e0ff
   opacity: 0.618
   background: "#000"
   height: "50vh"
