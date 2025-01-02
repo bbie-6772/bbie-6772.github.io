@@ -173,12 +173,12 @@ function binary_search_rightmost(A, n, T):
 - 최단 경로를 찾으려 할 때 사용 가능  
 ( 대신 경로에 추가적인 가중치가 없어야 함 )
 
-- 정점이 대기열에서 제거될 때까지 원하는 값인지 확인을 미루는 대신,  
+- 정점이 대기열에서 제거될 때까지 탐색되었는지 확인을 미루는 대신,  
 정점을 대기열(Queue)에 넣기 전에 해당 정점이 탐색되었는지 확인함
 
 ```jsx
 // 의사코드(Pseudocode)
-// G = 트리 구조, root = 시작 지점
+// G = 트리/그래프 구조 데이터, root = 시작 지점(노드)
 procedure BFS(G, root) is
     // Queue 구조 데이터 생성
     let Q be a queue
@@ -186,7 +186,7 @@ procedure BFS(G, root) is
     label root as explored
     // Q에 찾는 지점을 삽입
     Q.enqueue(root)
-    // Q가 비어있지 않은 동안 실행
+    // Q가 비어있지 않은 동안 실행 ( do 를 이용해 처음한번은 무조건 되도록 )
     while Q is not empty do
         // Q에서 처음 들어간 값을 빼며 v에 저장
         v := Q.dequeue()
@@ -198,13 +198,14 @@ procedure BFS(G, root) is
             // 인접 노드가 확인되어 있지 않으면 확인 표시
             if w is not labeled as explored then
                 label w as explored
-                // 처음 넣은 값을 부모로 지정
+                // 현재 노드 v를 인접 노드 w의 부모로 지정
                 w.parent := v
                 // 노드를 Q에 마지막으로 저장
                 Q.enqueue(w)
 ```
 
 ```jsx
+// graph = 트리/그래프 구조 데이터, start = 시작 지점(노드)
 function bfs(graph, start) {  
       const visited = new Set();  
       const queue = [start];  
@@ -227,43 +228,76 @@ function bfs(graph, start) {
 
 - 시작 노드 에서 시작하여 백트래킹하기 전에 각 브랜치를 따라 가능한 한 멀리 탐색하는 방식
 
+- 큐 ( 선입선출 방식) 대신 스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 ) 을 사용
+
+- 정점을 추가하기 전에 탐색되었는지 검사를 수행하는 대신,  
+스택에서 정점이 삭제될 때 정점이 발견되었는지 확인하지 않음
+
 ```jsx
 // 의사코드(Pseudocode)
-// G = 트리 구조, root = 시작 지점
+// G = 트리/그래프 구조 데이터, v = 시작 지점(노드)
 // 재귀적 구현
 procedure DFS(G, v) is
     label v as discovered
+    // 시작 노드 v 에서 출발하는 모든 노드 w를 확인 (directed는 방향성을 나타냄)
     for all directed edges from v to w that are in G.adjacentEdges(v) do
+        // w 가 탐색되지 않았다면 재귀 호출
         if vertex w is not labeled as discovered then
             recursively call DFS(G, w)
 
-// 비재귀적 구현
+// 비재귀적 구현 ( 대신 마지막 줄부터 확인함 )
 procedure DFS_iterative(G, v) is
+    // Stack 구조 데이터 생성
     let S be a stack
+    // 시작 노드를 삽입
     S.push(v)
+    // S가 빌때까지 반복 ( do 를 이용해 처음한번은 무조건 되도록 )
     while S is not empty do
+        // 마지막에 넣은 값을 빼면서 삽입
         v = S.pop()
+        // 탐색되지 않았다면
         if v is not labeled as discovered then
+            // 탐색으로 지정 후
             label v as discovered
+            // 모든 자식 노드 w 를 넣음
             for all edges from v to w in G.adjacentEdges(v) do 
                 S.push(w)
 
-// 스택 대신 반복자 사용
+//  반복자(Iterator) Stack 사용
 procedure DFS_iterative(G, v) is
     let S be a stack
     label v as discovered
+    // 시작 노드에 연결된 노드들을 순서대로 넣음
     S.push(iterator of G.adjacentEdges(v))
     while S is not empty do
+        // 스택의 최상단 요소(마지막에 추가한 노드)를 확인하고 다음 인접 노드(자식)가 있다면
         if S.peek().hasNext() then
+            // 다음 인접 노드를 가져옴
             w = S.peek().next()
+            // 인접 노드가 탐색되지 않았으면
             if w is not labeled as discovered then
+                // 탐색으로 지정하고
                 label w as discovered
+                // 노드의 자식 노드를 넣음
                 S.push(iterator of G.adjacentEdges(w))
         else
+            // 최상단 요소의 인접 노드가 없으면 마지막 요소를 지움
             S.pop()
 ```
 
 ```jsx
+// graph = 트리/그래프 구조 데이터, start = 시작 지점(노드)
+function dfs(graph, start, visited = new Set()) {  
+    // 시작 지점을 방문함에 저장
+    visited.add(start);  
+
+    // 노드들을 돌며 재귀 호출을 통해 탐색을 함
+    for (const neighbor of graph[start]) {  
+        if (!visited.has(neighbor)) {  
+            dfs(graph, neighbor, visited);  
+        }  
+    }  
+}  
 ```
 
 ## Reference
