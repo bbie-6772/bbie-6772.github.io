@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Sort]
+tags: [NET, Buffer]
 ---
 
 ## NET을 이용한 서버
