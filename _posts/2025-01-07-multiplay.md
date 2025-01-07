@@ -133,7 +133,20 @@ tags: [Protobuf, Constants]
 - constants 에서 지정된 값들을 외부 파일에서 용도에 맞게 사용하기 쉽도록 묶어주는 역할이다!
 
 ```jsx
-import { CLIENT_VERSION, DB1_HOST, DB1_NAME, DB1_PASSWORD, DB1_PORT, DB1_USER, DB2_HOST, DB2_NAME, DB2_PASSWORD, DB2_PORT, DB2_USER, HOST, PORT } from "../constants/env.js";
+import { CLIENT_VERSION, 
+    DB1_HOST, 
+    DB1_NAME, 
+    DB1_PASSWORD, 
+    DB1_PORT, 
+    DB1_USER, 
+    DB2_HOST, 
+    DB2_NAME, 
+    DB2_PASSWORD, 
+    DB2_PORT, 
+    DB2_USER, 
+    HOST, 
+    PORT 
+} from "../constants/env.js";
 import { PACKET_TYPE_LENGTH, TOTAL_LENGTH } from "../constants/header.js";
 
 export const config = {
