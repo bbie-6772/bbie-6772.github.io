@@ -162,73 +162,13 @@ function binary_search_rightmost(A, n, T):
 
   - BFS의 경우는 모든 경로를 동시에 진행하기 때문에 탐색이 가능함
 
-#### BFS(Breadth First Search)
-
-![image](https://github.com/user-attachments/assets/4fe570a6-00b3-450d-8e20-ff42d6f15820)
-
-- 갈림길에 연결되어 있는 모든 길을 한번씩 탐색한 뒤 다시 연결되어 있는 모든 길을 넓게 탐색하는 방식
-
-- 스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 ) 대신 큐 ( 선입선출 방식)를 사용
-
-- 최단 경로를 찾으려 할 때 사용 가능  
-( 대신 경로에 추가적인 가중치가 없어야 함 )
-
-- 정점이 대기열에서 제거될 때까지 탐색되었는지 확인을 미루는 대신,  
-정점을 대기열(Queue)에 넣기 전에 해당 정점이 탐색되었는지 확인함
-
-```jsx
-// 의사코드(Pseudocode)
-// G = 트리/그래프 구조 데이터, root = 시작 지점(노드)
-procedure BFS(G, root) is
-    // Queue 구조 데이터 생성
-    let Q be a queue
-    // root 를 탐색됨 상태로 지정
-    label root as explored
-    // Q에 찾는 지점을 삽입
-    Q.enqueue(root)
-    // Q가 비어있지 않은 동안 실행 ( do 를 이용해 처음한번은 무조건 되도록 )
-    while Q is not empty do
-        // Q에서 처음 들어간 값을 빼며 v에 저장
-        v := Q.dequeue()
-        // v가 찾는 값이면 반환하며 끝
-        if v is the goal then
-            return v
-        // 현재 노드 v의 모든 인접 노드 w를 확인
-        for all edges from v to w in G.adjacentEdges(v) do
-            // 인접 노드가 확인되어 있지 않으면 확인 표시
-            if w is not labeled as explored then
-                label w as explored
-                // 현재 노드 v를 인접 노드 w의 부모로 지정
-                w.parent := v
-                // 노드를 Q에 마지막으로 저장
-                Q.enqueue(w)
-```
-
-```jsx
-// graph = 트리/그래프 구조 데이터, start = 시작 지점(노드)
-function bfs(graph, start) {  
-      const visited = new Set();  
-      const queue = [start];  
-
-      while (queue.length > 0) {  
-          // 맨 앞의 노드를 삭제하며 읽음
-          const node = queue.shift();  
-          if (!visited.has(node)) {  
-              visited.add(node);  
-              // 내부 노드들 중 방문하지 않은 객체만 넣음
-              queue.push(...graph[node].filter(neighbor => !visited.has(neighbor)));  
-          }  
-      }  
-  }  
-```
-
 #### DFS(Depth First Search)
 
 ![image](https://github.com/user-attachments/assets/72b1206e-91bc-4fd6-aad8-1e933e1e96f5)
 
 - 시작 노드 에서 시작하여 백트래킹하기 전에 각 브랜치를 따라 가능한 한 멀리 탐색하는 방식
 
-- 큐 ( 선입선출 방식) 대신 스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 ) 을 사용
+- 큐 ( 선입선출 방식) 대신 **스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 )** 을 사용
 
 - 정점을 추가하기 전에 탐색되었는지 검사를 수행하는 대신,  
 스택에서 정점이 삭제될 때 정점이 발견되었는지 확인하지 않음
@@ -239,13 +179,13 @@ function bfs(graph, start) {
 // 재귀적 구현
 procedure DFS(G, v) is
     label v as discovered
-    // 시작 노드 v 에서 출발하는 모든 노드 w를 확인 (directed는 방향성을 나타냄)
+    // 시작 노드 v 에서 출발하는 모든 노드 w(자식)를 확인 (directed는 방향성을 나타냄)
     for all directed edges from v to w that are in G.adjacentEdges(v) do
         // w 가 탐색되지 않았다면 재귀 호출
         if vertex w is not labeled as discovered then
             recursively call DFS(G, w)
 
-// 비재귀적 구현 ( 대신 마지막 줄부터 확인함 )
+// 비재귀적 구현
 procedure DFS_iterative(G, v) is
     // Stack 구조 데이터 생성
     let S be a stack
@@ -298,6 +238,66 @@ function dfs(graph, start, visited = new Set()) {
         }  
     }  
 }  
+```
+
+#### BFS(Breadth First Search)
+
+![image](https://github.com/user-attachments/assets/4fe570a6-00b3-450d-8e20-ff42d6f15820)
+
+- 갈림길에 연결되어 있는 모든 길을 한번씩 탐색한 뒤 다시 연결되어 있는 모든 길을 넓게 탐색하는 방식
+
+- 스택 ( 마지막에 들어온 사람이 먼저 나가는 방식 ) 대신 **큐 ( 선입선출 방식)**를 사용
+
+- 최단 경로를 찾으려 할 때 사용 가능  
+( 대신 경로에 추가적인 가중치가 없어야 함 )
+
+- 정점이 대기열에서 제거될 때까지 탐색되었는지 확인을 미루는 대신,  
+정점을 대기열(Queue)에 넣기 전에 해당 정점이 탐색되었는지 확인함
+
+```jsx
+// 의사코드(Pseudocode)
+// G = 트리/그래프 구조 데이터, root = 시작 지점(노드)
+procedure BFS(G, root) is
+    // Queue 구조 데이터 생성
+    let Q be a queue
+    // root 를 탐색됨 상태로 지정
+    label root as explored
+    // Q에 시작 노드 삽입
+    Q.enqueue(root)
+    // Q가 비어있지 않은 동안 실행 ( do 를 이용해 처음한번은 무조건 되도록 )
+    while Q is not empty do
+        // Q에서 처음 들어간 값을 빼며 v에 저장
+        v := Q.dequeue()
+        // v가 찾는 값이면 반환하며 끝
+        if v is the goal then
+            return v
+        // 현재 노드 v의 모든 인접 노드 w를 확인
+        for all edges from v to w in G.adjacentEdges(v) do
+            // 인접 노드가 확인되어 있지 않으면 확인 표시
+            if w is not labeled as explored then
+                label w as explored
+                // 현재 노드 v를 인접 노드 w의 부모로 지정
+                w.parent := v
+                // 노드를 Q에 마지막으로 저장
+                Q.enqueue(w)
+```
+
+```jsx
+// graph = 트리/그래프 구조 데이터, start = 시작 지점(노드)
+function bfs(graph, start) {  
+      const visited = new Set();  
+      const queue = [start];  
+
+      while (queue.length > 0) {  
+          // 맨 앞의 노드를 삭제하며 읽음
+          const node = queue.shift();  
+          if (!visited.has(node)) {  
+              visited.add(node);  
+              // 내부 노드들 중 방문하지 않은 객체만 넣음
+              queue.push(...graph[node].filter(neighbor => !visited.has(neighbor)));  
+          }  
+      }  
+  }  
 ```
 
 ## 소수(Prime Number) 구하기
