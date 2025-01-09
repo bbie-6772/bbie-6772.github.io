@@ -104,16 +104,16 @@ tags: [NET, Protobuf, Constants]
     - Packet의 종류도 구분해주는 역할!
 
     ```jsx
-    // 헤더의 총 길이 (Bytes)
+    // 총 길이(정보)를 담을 크기 (Bytes)
     export const TOTAL_LENGTH = 4;
-    // 패킷 종류를 담을 길이 (Bytes)
+    // 패킷 종류(정보)를 담을 크기 (Bytes)
     export const PACKET_TYPE_LENGTH = 1;
-    // 패킷의 종류와 매칭되는 ID
+    // 패킷의 종류와 매칭되는 ID 정보( 0 ~ 255 범위 이내)
     export const PACKET_TYPE = {
-        PING: 203,
-        NORMAL: 5437,
-        GAME_START: 2124,
-        LOCATION: 3344
+        PING: 23,
+        NORMAL: 13,
+        GAME_START: 52,
+        LOCATION: 152
     }
     ```
 
