@@ -31,23 +31,19 @@ tags: [Database, Error, Migration]
 ├── clients                 
 ├── README.md               
 ├── .env                    
-└── src                         // 서버 폴더
-    ├── server.js               // 서버 실행 파일
-    ├── classes             
+└── src                         
+    ├── server.js                    
     ├── config              
     ├── constants           
-    ├── db                  
-    ├── events                  // socket 이벤트 분리
-    │   └── onError.js            // 소켓 통신 중 에러 발생
-    ├── handlers           
     ├── init                
-    ├── protobuf            
-    ├── session             
-    └── utils                   // 기타 유용한 함수들 모음
-        └── error                 // 클라이언트 요청 패킷 구조
-            ├── customError.js      // CustomError 클래스
-            ├── errorCodes.js       // 에러코드(분류) 상수 값
-            └── errorHandler.js     // 에러들을 일괄적으로 처리해주는 핸들러 
+    ├── protobuf           
+    ├── utils                   // 기타 유용한 함수들 모음(공용)
+    │   └── error                 // 클라이언트 요청 패킷 구조
+    │       ├── customError.js      // CustomError 클래스
+    │       ├── errorCodes.js       // 에러코드(분류) 상수 값
+    │       └── errorHandler.js     // 에러들을 일괄적으로 처리해주는 핸들러  
+    └── events                  // socket 이벤트 분리
+        └── onError.js            // 소켓 통신 중 에러 발생    
 ```
 
 ### CustomError 클래스
@@ -170,36 +166,32 @@ try {
 
 ```folder
 .
-├── assets                  
-├── clients                 
-├── README.md               
 ├── .env                    
-└── src                       // 서버 폴더
-    ├── server.js               // 서버 실행 파일
-    ├── classes             
-    ├── config                // 환경변수, DB 설정등을 관리
+├── assets                   
+├── README.md               
+├── client.js                
+└── src                      
+    ├── server.js               
+    ├── config                  // 환경변수, DB 설정등을 관리
     ├── constants               
-    ├── db                      // db 관련 폴더
-    │   ├── migration             // db 기초설정(Migration)용 폴더
-    │   │   └── createSchemas.js    // DB의 Schema(형식) 지정
-    │   ├── sql                   // SQL Migration 용 쿼리문
-    │   │   └── user_db.sql         // user_db의 table 생성/변경 쿼리
-    │   ├── user                  // user_db 관련 폴더 
-    │   │   ├── user.db.js          // user_db에 사용할 함수 모음
-    │   │   └── user.queries.js     // 함수에 사용될 쿼리들 저장
-    │   └── database.js           // Connection Pool 관리
     ├── events              
-    ├── handlers           
+    ├── protobuf         
+    ├── utils                   // 기타 유용한 함수들 모음(공용)
+    │   └── db                    // db 관련 함수
+    │       └── testConnection.js   // 연결상태 확인
     ├── init                    // 초기 설정 관련 폴더
     │   ├── assets.js               // assets 불러오기
     │   ├── loadProtos.js           // proto 불러오기
-    │   └── index.js                // 초기 설정을 총괄
-    ├── protobuf            
-    ├── session             
-    ├── utils                   // 기타 유용한 함수들 모음
-    │   └── db                    // db 관련 함수
-    │       └── testConnection.js   // 연결상태 확인
-    └── dateFormatter.js        // 날짜 변환기
+    │   └── index.js                // 초기 설정을 총괄   
+    └── db                      // db 관련 폴더
+        ├── migration             // db 기초설정(Migration)용 폴더
+        │   └── createSchemas.js    // DB의 Schema(형식) 지정
+        ├── sql                   // SQL Migration 용 쿼리문
+        │   └── user_db.sql         // user_db의 table 생성/변경 쿼리
+        ├── user                  // user_db 관련 폴더 
+        │   ├── user.db.js          // user_db에 사용할 함수 모음
+        │   └── user.queries.js     // 함수에 사용될 쿼리들 저장
+        └── database.js           // Connection Pool 관리
 ```
 
 ### DB Connection Pool 구현

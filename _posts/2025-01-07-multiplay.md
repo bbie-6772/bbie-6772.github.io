@@ -29,20 +29,13 @@ tags: [NET, Protobuf, Constants]
 ├── .env                    // 중요한 환경변수(보안!)
 └── src                     // 서버 폴더
     ├── server.js           // 서버 실행 파일
-    ├── classes             
     ├── config              // 환경변수, DB 설정등을 관리
     │   └── config.js      
     ├── constants           // 상수 관리
     │   ├── env.js          // env 상수
     │   ├── handler.js      // handler 관련 상수
-    │   └── header.js       // header 관련 상수
-    ├── db                  
-    ├── events              
-    ├── handlers            
-    ├── init                
-    ├── protobuf            
-    ├── session             
-    └── utils               
+    │   └── header.js       // header 관련 상수              
+    └── events              
 ```
 
 - 일단 복잡한건 제쳐두고 환경변수 관리에 필요한 config 와 constants들을 확인해보겠다!
@@ -234,22 +227,19 @@ yarn add protobufjs
 
 ```folder
 .
-├── assets                  
-├── clients                 
-├── README.md               
 ├── .env                    
+├── assets                   
+├── README.md               
+├── client.js               // 임시 클라이언트     
 └── src                     // 서버 폴더
     ├── server.js               // 서버 실행 파일
-    ├── classes             
     ├── config              
     ├── constants           
-    ├── db                  
     ├── events              
-    ├── handlers            
     ├── init                    // 서버 초기화
     │   └── loadProtos              // Proto 파일들을 읽어와 저장 및 관리하는 곳
     ├── protobuf                // 패킷 구조
-    │   ├── notification            // 서버의 일방적 전달의 패킷 구조
+    │   ├── notification            // 서버의 전달 패킷 구조
     │   │   └── game.notification.proto // game 관련 전달
     │   ├── request                 // 클라이언트 요청 패킷 구조
     │   │   ├── common.proto            // 기본적인 요청 
@@ -257,9 +247,10 @@ yarn add protobufjs
     │   │   └── initial.proto           // 첫 서버 연결 관련 요청
     │   ├── response                // 서버 응답의 패킷 구조
     │   │   └── response.proto          // 기본적인 응답
-    │   └── packetNames.js          // Proto의 Message들을 구별하기 위해 사용
-    ├── session             
-    └── utils               
+    │   └── packetNames.js          // Proto의 Message들을 구별하기 위해 사용    
+    └── utils                   // 기타 유용한 함수들 모음(공용)
+        └── parser                  // 분석에 이용되는 함수모음
+            └── packetParser.js         // packet 분석용 함수         
 ```
 
 #### Proto 작성
@@ -436,7 +427,7 @@ export const getProtoMessages = () => {
 }
 ```
 
-### Packet Parse
+### Parser
 
 - 네트워크에서 전송된 패킷의 데이터를 분석하고 필요한 정보를 추출하는 과정!
 
@@ -456,6 +447,7 @@ await loadProtos();
 - 클라이언트를 기준으로 Packet 을 보낼 때 일어나는 과정을 자세히 설명하였다!
 
 ```jsx
+/* client.js */
 import { getProtoMessages } from '../../init/loadProtos.js';
 
 // 보낼 패킷 생성
@@ -496,7 +488,7 @@ const sendPacket = (socket, packet) => {
     }
 
     // 여기서 create()를 안써도 되는 이유는 
-    // createPacket에서 반환되는 값이 이미 protoMessages.common.Packet 형식에 맞춰져 있어서임
+    // createPacket()에서 반환되는 값이 이미 protoMessages.common.Packet 형식에 맞춰져 있어서임
     // Messages.encode() 를 통해 직렬화(=Byte Stream 변환) 진행
     const buffer = Packet.encode(packet).finish();
 
@@ -521,6 +513,7 @@ const sendPacket = (socket, packet) => {
 - 받아온 값을 역직렬화 해주는 서버의 함수를 이용해 설명하겠다!
 
 ```jsx
+/* utils/packetParser.js */
 import { getProtoMessages } from '../../init/loadProtos.js';
 
 export const packetParser = (data) => {
