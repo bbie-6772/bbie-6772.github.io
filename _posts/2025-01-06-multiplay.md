@@ -312,7 +312,7 @@ export const onData = (socket) => async (data) => {
       socket.buffer = socket.buffer.slice(length);
 
       console.log(`length: ${length}`);
-      console.log(`packetType: ${packetType}`);
+      console.log(`handlerType: ${handlerType}`);
       console.log(packet);
     } else {
       // 아직 전체 패킷이 도착하지 않음
