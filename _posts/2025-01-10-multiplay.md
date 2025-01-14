@@ -5,7 +5,7 @@ subtitle: 기록
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
-  image: https://github.com/user-attachments/assets/2138a507-e57d-4b62-8001-2f2fcfcccbfa
+  image:https://github.com/user-attachments/assets/ee4fe93f-6293-4366-bc92-b8ca8622d397
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -14,6 +14,8 @@ tags: [Unity]
 ---
 
 ## 유니티 클라이언트 연동
+
+- [클라이언트 ProtoType](https://github.com/Ho-yeong/node5_unity_sample)
 
 - 서버측 코드를 구성하며 클라이언트와 통일된 HANDLER_ID 및 PACKET_TYPE 을 맞춰 주었다!
 

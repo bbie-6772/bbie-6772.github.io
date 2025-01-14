@@ -5,7 +5,7 @@ subtitle: 기록
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
-  image: https://github.com/user-attachments/assets/2138a507-e57d-4b62-8001-2f2fcfcccbfa
+  image: https://github.com/user-attachments/assets/ee4fe93f-6293-4366-bc92-b8ca8622d397
   opacity: 0.618
   background: "#000"
   height: "50vh"
