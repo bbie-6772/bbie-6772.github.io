@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 6 >
-subtitle: 기록
+subtitle: 프로젝트 진행
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:

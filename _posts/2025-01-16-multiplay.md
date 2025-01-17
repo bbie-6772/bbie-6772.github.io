@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 9 >
-subtitle: 기록
+subtitle: 마무리 하루 전
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
