@@ -13,7 +13,9 @@ banner:
 tags: [Server-Architecture]
 ---
 
-## Zenless Zone Zero
+## 서버 구조 분석
+
+### Zenless Zone Zero
 
 현재까지 공식적으로 공개된 “젠레스 존 제로(Zenless Zone Zero)”의 내부 서버 아키텍처 정보는 없으나,  
 일반적으로 호요버스(miHoYo) 계열의 온라인 액션 게임(예: 원신, 붕괴 시리즈 등)은 다음과 같은 아키텍처 특징을 가짐
@@ -47,5 +49,7 @@ tags: [Server-Architecture]
     - 핵/치트 방지, 데이터 변조 방지 및 안전한 결제 처리를 위해 내부적으로 보안 모듈(안티 치트 시스템)과 암호화 통신 채널을 사용
 
 ## 서버 구조 설계
+
+
 
 ---
