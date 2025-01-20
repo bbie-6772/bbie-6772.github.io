@@ -33,7 +33,7 @@ tags: []
 
 ### 와이어 프레임
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/83c75a39-3aba-4ba4-a792-7aefe4b07895/c4f4160b-8956-425d-b793-b1c21b58df95/image.png)
+![Image](https://github.com/user-attachments/assets/43d6ee89-8bf1-49b1-9af6-427fddafbbb7)
 
 - 게임 화면에서 오른쪽이 무조건 각 플레이어가 되도록 설계
 
