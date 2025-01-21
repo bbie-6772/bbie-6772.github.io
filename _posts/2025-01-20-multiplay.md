@@ -5,7 +5,7 @@ subtitle: 프로젝트 계획
 author: bbie
 categories: Multi-TowerDefense-Project
 banner:
-  image: https://github.com/user-attachments/assets/ee4fe93f-6293-4366-bc92-b8ca8622d397
+  image: https://github.com/user-attachments/assets/2403c1b6-7704-4ded-9562-204c27aa6ed2
   opacity: 0.618
   background: "#000"
   height: "50vh"
