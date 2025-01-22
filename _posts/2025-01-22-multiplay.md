@@ -80,7 +80,8 @@ IEnumerator OnReceiveQueue()
         var packet = receiveQueue.Dequeue();
         Debug.Log("Receive Packet : " + packet.type.ToString());
         // 메서드를 매핑한 후 실행(Invoke)해 주는 작업
-        // _onRecv는 class가 선언될 때 내부 메서드를 읽어 이름이 packetType와 같으면 매칭하여 저장해둠 
+        // _onRecv는 class가 선언될 때 
+        // class 내부 메서드를 읽어 이름이 packetType과 같으면 매칭하여 저장한 정보
         _onRecv[packet.type].Invoke(packet.gamePacket);
     }
 }
