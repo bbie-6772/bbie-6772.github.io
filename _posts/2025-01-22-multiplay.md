@@ -288,8 +288,47 @@ export default makePath;
 
 #### Base 피격 핸들러
 
-- 클라이언트가 주는
+- 클라이언트가 Base 피격 패킷을 보내면 이를 찾아 처리해주는 핸들러를 생성해준다
 
-#### 게임오버 알림 
+```jsx
+import { roomSession, userSession } from '../../session/session.js';
+
+const attackBaseHandler = (socket, payload) => {
+  // 세션<>입력 검증 과정
+  const user = userSession.getUser(socket);
+  if (!user) return;
+  const room = roomSession.getRoom(user.roomId);
+  if (!room) return;
+  const player = room.getPlayer(user.id);
+  if (!player) return;
+  // base 피격 적용
+  player.base.damaged(room, user.id, payload.damage);
+};
+
+export default attackBaseHandler;
+```
+
+#### 게임오버 알림
+
+- base 클래스에서 damage를 받는 메서드 damaged()에 관련 로직을 구현해준다
+
+```jsx
+damaged(room, userId, damage) {
+  if (this.hp - damage > 0) this.hp -= monster.atk;
+  else {
+    // 게임종료 알림 패킷 생성
+    // room 내의 플레이어들에게 전달
+    room.players.forEach((player) => {
+      let packet
+      // player가 자신일 경우 패배, 다를 경우 승리 정보를 반환
+      if(player.playerId === userId)
+        packet = makePacketBuffer(config.packetType.gameOverNotification, { isWin: false })
+      else
+        packet = makePacketBuffer(config.packetType.gameOverNotification, { isWin: true })
+      player.socket.write(packet)
+    });
+  }
+}
+```
 
 ---
