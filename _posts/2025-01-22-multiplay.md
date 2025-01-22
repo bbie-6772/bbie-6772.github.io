@@ -35,7 +35,6 @@ tags: []
 ```c#
 public void OnClickSetting()
 {
-    // 입력값을 읽어옴
     NetworkManager.instance.Init(inputIp.text, inputPort.text);
     // 연결을 시작해주는 곳
     SocketManager.instance.Init(inputIp.text, int.Parse(inputPort.text)).Connect();
