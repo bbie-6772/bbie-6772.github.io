@@ -24,7 +24,7 @@ tags: []
 - 그렇다면 경로를 만들어 클라이언트에게 전달해주어야 하는데,  
 클라이언트가 어떤방식으로 이를 사용하는지 분석해 봐야 제대로된 값을 보내줄 수 있을 것 같다!
 
-#### 게임 시작 및 통신 분석
+#### 통신구조 분석
 
 - 일단 게임 처음 진입 시, 연결할 서버의 주소와 port를 입력해달라는 창이 뜨는데, 이를 이용해서 연결을 시작하는 것 같다.
 
@@ -32,14 +32,14 @@ tags: []
 public void OnClickSetting()
 {
     NetworkManager.instance.Init(inputIp.text, inputPort.text);
-    // 이 부분!
+    // 이 부분!이 연결을 시작해줌
     SocketManager.instance.Init(inputIp.text, int.Parse(inputPort.text)).Connect();
-    // 
     PlayerPrefs.SetString("ip", inputIp.text);
     PlayerPrefs.SetString("port", inputPort.text);
     HideDirect();
 }
 
+// Connect() 메서드 내부를 뜯어보았습니다.
 public async void Connect(UnityAction callback = null)
 {
     IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
@@ -67,6 +67,7 @@ public async void Connect(UnityAction callback = null)
     }
 }
 
+// 위의 StartCoroutine(OnReceiveQueue())에 사용되는 메서드
 IEnumerator OnReceiveQueue()
 {
     while (true)
@@ -75,35 +76,36 @@ IEnumerator OnReceiveQueue()
         var packet = receiveQueue.Dequeue();
         Debug.Log("Receive Packet : " + packet.type.ToString());
         // 메서드를 매핑한 후 실행(Invoke)해 주는 작업
-        // _onRecv는 class가 선언될 때 내부 메서드를 읽어 packet.type에 맞게 저장해둔 정보임
+        // _onRecv는 class가 선언될 때 내부 메서드를 읽어 packet.type에 맞게 매칭해둔 정보! 
         _onRecv[packet.type].Invoke(packet.gamePacket);
     }
 }
 ```
 
-#### 
+#### 게임시작 분석
 
 - 이제 게임이 시작될 때 실행되는 메서드를 확인해보겠다!
 
 ```c#
-// 1차로 실행되는 메서드
+// 서버에서 받은 통신에 의해 1차로 실행되는 메서드
 public void MatchStartNotification(GamePacket gamePacket)
 {
     var response = gamePacket.MatchStartNotification;
     UIManager.Get<UIMain>().OnMatchResult(response);
 }
 
-// 호출된 2차 메서드
+// 호출된 OnMatchResult() 메서드(2차)
 public void OnMatchResult(S2CMatchStartNotification response)
 {
     // GameManger에 받아온 정보 저장 후
     GameManager.instance.playerData = response.PlayerData;
     GameManager.instance.opponentData = response.OpponentData;
     GameManager.instance.initialGameState = response.InitialGameState;
-    // Game 씬 실행(Awake) -> GameManger 메서드의 OnGameStart() 실행 
+    // Game 씬이 로드되면(Awake) -> GameManger 메서드의 OnGameStart() 실행
     SceneManager.LoadSceneAsync("Game");
 }
-// GameManger의 게임 시작 메서드(3차)
+
+// GameManger의 OnGameStart() 메서드(3차)
 public void OnGameStart()
 {
     // 게임 정보 초기화
@@ -126,50 +128,104 @@ public void OnGameStart()
 }
 ```
 
+#### AddRoad 분석
+
 - 위는 게임 시작과 실행에 관련되어있는 정보고 아래부터는 Road(=MonsterPath)를 어떻게 사용하는지에 대한 코드다
 
 ```c#
-// 이후 MultiGameLoop 에서 AddRoad 메서드를 호출
-// gameState 는 상대방과 나를 구별해서 사용하는 용도
-var gameState = i == 0 ? playerData : opponentData;
-for (int j = 0; j < gameState.MonsterPath.Count; j++)
+// MultiGameLoop 에서 AddRoad 메서드를 호출함
+IEnumerator MultiGameLoop()
 {
-AddRoad(gameState.MonsterPath[j], count > 0 ? gameState.MonsterPath[j+1] : null, gameObjects.roadParent, (ePlayer)i, count);
+    // gameState 는 상대방과 나를 구별해서 사용하는 용도
+    var gameState = i == 0 ? playerData : opponentData;
+    /* 중간 로직 생략 */
+    for (int j = 0; j < gameState.MonsterPath.Count; j++)
+    {
+        var count = 0;
+        // 다음 도로가 마지막이 아닐 때
+        if (gameState.MonsterPath.Count > j + 1)
+        {   
+            // 다음 도로와 현재 도로 간 거리를 확인
+            var dist = Vector3.Distance(gameState.MonsterPath[j].ToVector3(), gameState.MonsterPath[j + 1].ToVector3());
+            // 이를 30f(아마 도로 이미지 크기?) 으로 나눠 count에 저장
+            count = (int)(dist / 30f);
+        }
+
+        AddRoad(        
+                // 현재 위치 
+                gameState.MonsterPath[j],            
+                // 다음 위치  
+                count > 0 ? gameState.MonsterPath[j+1] : null,  
+                // 부모 Transform  
+                gameObjects.roadParent,              
+                // 플레이어 구분 
+                (ePlayer)i,                           
+                // 추가 도로 갯수 
+                count                                 
+        );
+    }
 }
 
-// MonsterPath의 구성정보를 확인하기 위해 가져온 값으로 MonsterPath는 Position(x,y) 값을 배열로 갖는다는걸 알 수 있다
+// MonsterPath의 구성정보를 확인하기 위해 가져온 값으로 MonsterPath는 Position(x,y) 값을 배열로 갖는다는걸 알 수 있음 
 private readonly pbc::RepeatedField<global::Position> monsterPath_ = new pbc::RepeatedField<global::Position>();
 
 // 호출된 AddRoad
 public void AddRoad(Position position, Position nextPos, Transform parent, ePlayer player, int count = 0)
 {
+    // 도로 리스트 선택
     var roads = player == ePlayer.me ? roads1 : roads2;
-    // Road 에셋 가져오기
+    // 도로 프리팹 로드
     var roadPrefab = ResourceManager.instance.LoadAsset<SpriteRenderer>("Road");
 
-    // 다음 경로를 부모로 지정하여 roadPrefab 복사
+    // 다음 경로를 부모로 지정하며 roadPrefab 복제 
     var newRoad = Instantiate(roadPrefab, parent);
+    // 도로 리스트에 추가
     roads.Add(newRoad.transform);
+    // 지정된 위치에 배치
     newRoad.transform.localPosition = new Vector3(position.X, position.Y);
 
+    // 다음 도로까지 이어질 수 있도록 받은 count가 있을 경우 진행
     if (count > 0)
     {
+        // 다음 도로까지의 방향(좌표) 벡터 계산
         var normal = (nextPos.ToVector3() - position.ToVector3()).normalized;
+        // 각도 계산
         var isUp = nextPos.Y > position.Y;
+        // 각도의 절댓값 * 라디안을 도로 변환 * 위/아래 방향으로 각도 부호 설정
         var angle = Mathf.Abs(Mathf.Atan2(normal.y, normal.x) * 180 / Mathf.PI) * (isUp ? 1 : -1);
+        // x , y , z 에서 z 축을 기준으로 방향(각도) 벡터 저장
         var eulerAngle = new Vector3(0, 0, angle);
+        // 첫 도로 회전설정
         newRoad.transform.localEulerAngles = eulerAngle;
         for (int i = 0; i < count; i++)
-        {
+        {   
+            //count 수 만큼 위의 과정을 반복
+            // 복제 -> 위치 추가 -> 방향 계산 -> 배치
             var newRoad2 = Instantiate(roadPrefab, parent);
             roads.Add(newRoad2.transform);
+            // 뒤에 [30 * (i+1)] 은 count 계산시 사용한 30f를 이용해 위치(간격)를 정해주는 방법
             newRoad2.transform.localPosition = position.ToVector3() + normal * 30 * (i + 1);
             newRoad2.transform.localEulerAngles = eulerAngle;
+             // 콜라이더 비활성화 = 불필요한 콜라이더 충돌 검사 제거
+             /* 몬스터 이동에서 도로의 콜라이더를 만나면(충돌) 각도를 바꾸는 로직인데,
+             추가로 생성된 도로들은 다음 도로까지 방향이 같으므로 충돌 검사가 필요 없음 */
             newRoad2.GetComponent<CircleCollider2D>().enabled = false;
         }
     }
 }
 ```
+
+### Road 값 생성
+
+- 위의 분석정보들을 토대로 **우리가 줘야하는 정보**는 **시작지점에서부터 베이스지점까지의 좌푯값들** 이다!
+
+- 가장 쉬운 방법으로는 시작지점과 베이스지점까지만 주는 방법이 있다만..
+
+- 그래도 어느 정도의 랜덤성(제한된 환경 속 랜덤값)이 있으면 좋을 것 같다!
+
+
+
+
 
 ### 메인 작업
 
