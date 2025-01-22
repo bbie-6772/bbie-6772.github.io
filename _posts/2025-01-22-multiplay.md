@@ -13,7 +13,7 @@ banner:
 tags: []
 ---
 
-## 프로젝트 시작
+## 프로젝트 기초 작업
 
 ### 클라이언트 분석
 
@@ -24,15 +24,20 @@ tags: []
 - 그렇다면 경로를 만들어 클라이언트에게 전달해주어야 하는데,  
 클라이언트가 어떤방식으로 이를 사용하는지 분석해 봐야 제대로된 값을 보내줄 수 있을 것 같다!
 
-#### 통신구조 분석
+#### 통신 구조 분석
 
-- 일단 게임 처음 진입 시, 연결할 서버의 주소와 port를 입력해달라는 창이 뜨는데, 이를 이용해서 연결을 시작하는 것 같다.
+![Image](https://github.com/user-attachments/assets/b0056f86-914f-445c-a46a-bedf2a1fd921)
+
+- 일단 게임 처음 진입 시, 연결할 서버의 주소와 port를 입력해달라는 창이 뜬다!
+
+- 우선 이러한 창의 설정 버튼에 OnClickSetting()을 매핑해 연결을 시작하는 것 같다.
 
 ```c#
 public void OnClickSetting()
 {
+    // 입력값을 읽어옴
     NetworkManager.instance.Init(inputIp.text, inputPort.text);
-    // 이 부분!이 연결을 시작해줌
+    // 연결을 시작해주는 곳
     SocketManager.instance.Init(inputIp.text, int.Parse(inputPort.text)).Connect();
     PlayerPrefs.SetString("ip", inputIp.text);
     PlayerPrefs.SetString("port", inputPort.text);
@@ -229,13 +234,41 @@ public void AddRoad(Position position, Position nextPos, Transform parent, ePlay
 - 일단 클라이언트의 Game Scene에 있는 Object를 확인해본 결과 FieldParent 내부 로컬좌표를 주면될 것 같다!  
 (FieldParent -> RoadParent -> Road LocalPosition )
 
-- 여기서 카메라의 크기에 맞출 수 있도록 좌표를 제한하면 (0, 200) ~ (1500, 400) 인거 같다.
+- 여기서 카메라의 크기에 맞출 수 있도록 좌표를 제한하면 나올 수 있는 좌표범위는 (0, 200) ~ (1500, 400) 인거 같다.
 
-- 일단 Road의 갯수는 6 개 (시작(1) / 중간지점(4)/ 끝(1)) 정도로 x 값은 고정해둔 채로 y값에 랜덤값을 주도록 해줘야 겠다
+- 일단 Road의 갯수는 (시작(1) / 중간지점(n)/ 끝(1)) 정도로 x 값은 고정해둔 채로 y값에 랜덤값을 주도록 해줘야 겠다
+
+```jsx
+const makePath = (count) => {
+  const paths = [];
+  // 만약 count가 2개 이하이면 기본값 직선으로 반환
+  if (count <= 2)
+    return [
+      [0, 350],
+      [1500, 350],
+    ];
+  const weightX = Math.trunc(1500 / (count-1));
+
+  for (let i = 0; i < count; i++) {
+    let x = weightX * i;
+    if (i === count - 1) x = 1500;
+    const y = Math.trunc(Math.random() * 200) + 200;
+    paths.push([x, y]);
+  }
+
+  return paths;
+};
+
+export default makePath;
+```
+
+## 메인 작업
+
+### 게임오버 핸들링
+
+- 게임을 끝내는 조건과 이를 이용해 클라이언트에게 전달해주는 로직을 구현해볼 예정이다.
 
 
-
-### 메인 작업
 
 
 ---
