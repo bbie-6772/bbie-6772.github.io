@@ -136,8 +136,9 @@ public void OnGameStart()
 // MultiGameLoop 에서 AddRoad 메서드를 호출함
 IEnumerator MultiGameLoop()
 {
-    // gameState 는 상대방과 나를 구별해서 사용하는 용도
+    // gameState / gameObjects 는 상대방과 나를 구별해서 사용하는 용도
     var gameState = i == 0 ? playerData : opponentData;
+    var gameObjects = i == 0 ? playerObjects : opponentObjects;
     /* 중간 로직 생략 */
     for (int j = 0; j < gameState.MonsterPath.Count; j++)
     {
@@ -156,7 +157,7 @@ IEnumerator MultiGameLoop()
                 gameState.MonsterPath[j],            
                 // 다음 위치  
                 count > 0 ? gameState.MonsterPath[j+1] : null,  
-                // 부모 Transform  
+                // 부모 Transform (LocalPosition 의 기준이 됨)
                 gameObjects.roadParent,              
                 // 플레이어 구분 
                 (ePlayer)i,                           
@@ -223,7 +224,14 @@ public void AddRoad(Position position, Position nextPos, Transform parent, ePlay
 
 - 그래도 어느 정도의 랜덤성(제한된 환경 속 랜덤값)이 있으면 좋을 것 같다!
 
+![Image](https://github.com/user-attachments/assets/1a921516-4e8e-4fc2-bf22-ea677e9aff3b)
 
+- 일단 클라이언트의 Game Scene에 있는 Object를 확인해본 결과 FieldParent 내부 로컬좌표를 주면될 것 같다!  
+(FieldParent -> RoadParent -> Road LocalPosition )
+
+- 여기서 카메라의 크기에 맞출 수 있도록 좌표를 제한하면 (0, 200) ~ (1500, 400) 인거 같다.
+
+- 일단 Road의 갯수는 6 개 (시작(1) / 중간지점(4)/ 끝(1)) 정도로 x 값은 고정해둔 채로 y값에 랜덤값을 주도록 해줘야 겠다
 
 
 
