@@ -149,13 +149,15 @@ getSequence() {
 
 4. 각 클라이언트는 받은 정보를 통해 Tower를 렌더링한다.
 
-#### 검증 목표
+#### 구입 검증 목표
 
 - 위의 프로세스를 통해 검증할 수 있는 것들을 생각해보았다!
 
-1. 요청한 플레이어의 돈이 충분한지 확인 및 감소
+1. 요청한 정보가 세션에 존재하는지 확인
 
-2. 타워의 위치는 MonsterPath 내부에 위치하고 있는가  
+2. 플레이어의 돈이 충분한지 확인 및 감소
+
+3. 타워의 위치는 MonsterPath 내부에 위치하고 있는가  
 ( 이 검증 사항은 나중에 서버에서 시뮬레이션 기능을 추가하였을 때 구현해보기로 했다! )
 
 #### 타워 구입 핸들러 구현
@@ -186,7 +188,7 @@ const purchaseTowerHandler = (socket, payload) => {
     room.players.forEach((player) => {
         let packet
         // player가 자신일 경우 response, 상대방일 경우 notification 반환
-        if (player.playerId === user.id)
+        if (player.id === user.id)
             packet = makePacketBuffer(config.packetType.towerPurchaseResponse, { towerId })
         else
             packet = makePacketBuffer(config.packetType.addEnemyTowerNotification, { towerId, x, y })
@@ -199,8 +201,74 @@ const purchaseTowerHandler = (socket, payload) => {
 
 #### 공격 프로세스 확인
 
+1. 클라이언트에서 타워의 공격범위(반지름이 200px인 Collider)내 에 몬스터가 들어오면 공격 요청을 보낸다.  
+( 데이터는 대상들의 monsterId 와 towerId )
+
+2. 서버는 받은 정보로 검증 후 데이터를 서버에 적용시킨다.
+
+3. 서버는 상대방 Player 에게 타워 공격 정보를 보내준다.  
+( 데이터는 대상들의 monsterId 와 towerId )
+
+#### 공격 검증 목표
+
+1. 요청한 정보가 세션에 존재하는지 확인
+
+2. 타워의 공격 쿨타임 확인
+
+3. 둘의 위치정보로 거리가 올바른지 확인
+
+#### 타워 공격 핸들러 구현
+
+- 일단 세션정보 검증 후 공격을 실행하여 성공 시, 상대에게 보내주는 핸들러를 생성한다.
+
+```jsx
+const attackMonsterHandler = (socket, payload) => {
+    const { towerId, monsterId } = payload
+    // 세션<>입력 검증 과정
+    const user = userSession.getUser(socket);
+    if (!user) return;
+    const room = roomSession.getRoom(user.roomId);
+    if (!room) return;
+    const player = room.getPlayer(user.id);
+    if (!player) return;
+    const monster = player.getMonster(monsterId);
+    if (!monster) return;
+    const tower = player.getTower(towerId);
+    if (!tower) return;
+
+    // 공격 판정 성공 시
+    if (tower.attackMonster(monster))
+        room.players.forEach((player) => {
+            // 자신을 제외한 상대에게 티워 공격 정보 반환
+            if (player.id === user.id) return
+            const packet = makePacketBuffer(config.packetType.enemyTowerAttackNotification, { towerId, monsterId });
+            player.socket.write(packet);
+        });
+};
+```
+
+- 이제 tower의 메서드에서 공격 쿨타임과 위치정보를 계산 후 성공여부를 알려주도록 만든다
+
+```jsx
+attackMonster(monster) {
+  const timeDiff = Date.now() - this.lastUpdate;
+  // 공격 쿨타임 확인
+  if (timeDiff < this.stat.coolDown) return false
+  // 위치 정보 확인
+  const distance = Math.floor(Math.sqrt((this.x - targetX)** 2 + (this.y - targetY)** 2))
+  if (distance > this.stat.range) return false
+
+  // 몬스터 공격 적용
+  monster.damaged(this.getDamage())
+  this.lastUpdate = Date.now();
+  return true
+}
+```
+
 ## 한줄 평 + 개선점
 
--
+- 현재는 이론상으로만 코드를 구현하였기에, 유니티 클라이언트에 연결해보고 디버깅하는 작업이 필요하다!
+
+- 내일 프로토타입으로 실행을 해보는 날이기에 기대가 되면서 조금 무섭다..
 
 ---
