@@ -132,7 +132,7 @@ getSequence() {
 
 ![Image](https://github.com/user-attachments/assets/216be053-59e9-4941-8c45-ee87ac856958)
 
-### 타워 구입(생성)
+### 타워 구입(생성) 핸들러
 
 #### 구입 프로세스 확인
 
@@ -155,11 +155,49 @@ getSequence() {
 
 1. 요청한 플레이어의 돈이 충분한지 확인 및 감소
 
-2. 타워의 위치는 MonsterPath 내부에 위치하고 있는가
+2. 타워의 위치는 MonsterPath 내부에 위치하고 있는가  
+( 이 검증 사항은 나중에 서버에서 시뮬레이션 기능을 추가하였을 때 구현해보기로 했다! )
 
 #### 타워 구입 핸들러 구현
 
-### 타워 판매
+1. 요청을 받으면 관련 핸들러인 purchaseTowerHandler가 실행된다
+
+2. 핸들러를 통해 player를 불러오고, player의 메서드를 통해 타워설치를 진행한다
+
+3. 이후 성공적으로 마쳤다면 Player에 따라(자신, 상대방) 다른 패킷을 보내준다.
+
+```jsx
+const purchaseTowerHandler = (socket, payload) => {
+    const { x, y } = payload
+
+    // 서버 세션 내 정보 검증
+    const user = userSession.getUser(socket)
+    if(!user) return
+    const room = roomSession.getRoom(user.roomId)
+    if(!room) return
+    const player = room.getPlayer(socket)
+    if(!player) return 
+
+    // 골드 확인 후 towerId 반환
+    const towerId = player.placeTower(room,x,y);
+    // 타워 설치 실패 시 끝
+    if(towerId === -1) return 
+
+    room.players.forEach((player) => {
+        let packet
+        // player가 자신일 경우 response, 상대방일 경우 notification 반환
+        if (player.playerId === user.id)
+            packet = makePacketBuffer(config.packetType.towerPurchaseResponse, { towerId })
+        else
+            packet = makePacketBuffer(config.packetType.addEnemyTowerNotification, { towerId, x, y })
+        player.socket.write(packet)
+    })
+}
+```
+
+### 타워 공격 핸들러
+
+#### 공격 프로세스 확인
 
 ## 한줄 평 + 개선점
 
