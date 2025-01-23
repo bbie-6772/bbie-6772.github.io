@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티타워디펜스 - < 2 >
-subtitle: 프로젝트 계획
+subtitle: 프로젝트 설계
 author: bbie
 categories: Multi-TowerDefense-Project
 banner:

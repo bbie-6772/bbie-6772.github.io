@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티타워디펜스 - < 3 >
-subtitle: 프로젝트 계획
+subtitle: 프로젝트 진행
 author: bbie
 categories: Multi-TowerDefense-Project
 banner:
@@ -330,5 +330,11 @@ damaged(room, userId, damage) {
   }
 }
 ```
+
+## 한줄 평 + 개선점
+
+- 이번 프로젝트는 클라이언트 분석량이 최종 작업량보다 많을 것 같다!
+
+- 서버 구조도 어느정도 안정되어 기능 구현과 병합에만 신경쓰면 금방 마칠 것 같다
 
 ---
