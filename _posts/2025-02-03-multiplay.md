@@ -31,8 +31,6 @@ tags: []
 
 ![Image](https://github.com/user-attachments/assets/4292dc0f-b68c-4b8e-b317-370773f91c41)
 
-![Image](https://github.com/user-attachments/assets/9381b6a1-007c-49da-8138-138d5b93a5ea)
-
 ![Image](https://github.com/user-attachments/assets/7dfcbeb0-ef3e-497b-8f4a-6554823ffb0c)
 
 ![Image](https://github.com/user-attachments/assets/e0dabbcf-5d90-4a55-9f64-79d284b149a1)
