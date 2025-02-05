@@ -114,17 +114,11 @@ tags: []
         }
 
         // [2] 타겟과 자신의 위치로 방향 확인
-        const x = this.x === target.x ? 0 : this.x > target.x ? -1 : 1
-        const y = this.y === target.y ? 0 : this.y > target.y ? -1 : 1
+        const axisX = target.x - this.x
+        const axisY = target.y - this.y
 
-        // [3] 벡터사이즈 정하기
-        let vectorSize = 0;
-        // [3-1] 대각선 방향의경우 벡터 사이즈는 root2
-        if (x * y !== 0) vectorSize = Math.sqrt(2);
-        // [3-2] 단일 방향의 경우 벡터 사이즈는 1 
-        else if (x + y > 0) vectorSize = 1;
-        // [3-3] 벡터 사이즈가 0 일 경우 === 정지상태(및 도착상태)
-        if (vectorSize === 0) return 1
+        // [3] 벡터 사이즈(거리) 계산
+        const vectorSize = Math.sqrt((axisX) ** 2 + (axisY) ** 2);
 
         // [4] 방향(벡터 좌표) 저장
         const directX = x / vectorSize;
@@ -141,7 +135,7 @@ tags: []
         const position = { x: this.x, y: this.y }
 
         // [7] 현재 좌표에서 대상과 인식 범위가 닿지 않으면 잠들기
-        if (Math.sqrt((this.x - target.x) ** 2 + (this.y - target.y) ** 2) > this.awakeRange) {
+        if (vectorSize > this.awakeRange) {
             this.awake = false
             this.targetId = null;
         }
