@@ -63,6 +63,93 @@ tags: []
 
 ## 회고록
 
+### Node.js의 싱글스레드
+
+위의 자료에서 로그인 대기열 관련 질문으로 Node.js는 싱글 스레드이므로 하나씩 처리가 되는데,  
+과연 로그인 대기열이 필요한가에 대해 받았었다.
+
+이에 대해 로그인 대기열을 만들기 전 코드로 테스트를 해보며 가설을 다시 세워보게되었다.
+
+- 기존 코드 + 디버깅용 콘솔로그 추가
+
+    ```jsx
+    /* 요청받은 정보 검증 후 처리하고 적절한 페이로드 준비하는 함수 */
+    const verifyLoginInfo = async (user, id, password) => {
+      // [1] 요청된 유저와 일치하는 정보가 없는 경우
+      if (!user) return makeFailPayload('user');
+      // [2] DB에서 유저 정보 가져오기 (쿼리 실행)
+      let userData = null;
+      try {
+        userData = await selectUserData(id);
+      } catch (err) {
+        // [실패] 예외적인 오류 발생 시
+        console.error('로그인 처리 중 문제 발생!!', err);
+        return {
+          success: false,
+          message: `DB 문제 발생 : ${err.code}`,
+          failCode: GlobalFailCode.UNKNOWN_ERROR,
+        };
+      }
+
+      // [3] 이미 로그인된 계정인지 검증
+      console.log("아이디 확인 시작 전")
+      for await (const account of userSession.users.values()) {
+        console.log("아이디 확인",account.id, account.socket.remotePort)
+        if (account.id === id) {
+          return makeFailPayload('duplicate');
+        }
+      }
+
+      // [4] 비밀번호 일치 여부 검증
+      const isRightPassword = await bcrypt.compare(password, userData.password);
+      if (!isRightPassword) return makeFailPayload('password');
+      
+      // [5] 모든 검증 통과 시 jwt 생성
+      const token = jwt.sign({ userId: userData.id }, config.env.secretKey);
+      // [6] 깡통 유저에 계정 정보 연동하기
+      console.log("로그인 직전",user.id, user.socket.remotePort)
+      user.login(
+        userData.user_key,
+        userData.id,
+        userData.win_count,
+        userData.lose_count,
+        userData.mmr,
+        userData.high_score,
+      );
+      console.log("로그인 적용 성공",user.id, user.socket.remotePort)
+      // [7] 성공 응답 페이로드 반환
+      return { success: true, message: messageType.success, token, failCode: GlobalFailCode.NONE };
+    };
+    ```
+
+- 이 코드의 문제점을 찾아보았다.
+
+  1. 비동기 작업으로 인한 실행 순서 문제
+
+  verifyLoginInfo 함수 내에서 await를 사용한 비동기 작업(예: selectUserData, bcrypt.compare)이 있습니다.
+  이 작업들은 이벤트 루프에 의해 처리되며, 다른 작업과 동시에 실행될 수 있습니다.
+  만약 loginHandler가 동시에 여러 번 호출되면, 비동기 작업이 겹쳐 실행될 수 있음
+
+- 문제점에 의하면 Node.js는 비동기 작업을 만나면 싱글 스레드가 아닌, 이벤트 루프의 스레드 풀로 멀티스레드 처리 작업이 진행된다.
+
+- 그렇게 스레드 풀에서 진행된 작업이 끝났을 경우에 스레드가 작업을 재개하기에 순서를 대략적으로 표현하자면...
+
+![Image](https://github.com/user-attachments/assets/c594b262-e4d7-4541-8e9a-39d50b66f43b)
+
+- 위 사진처럼 작업의 원자성이 분리되어 비동기인 비밀번호 검증에 의해 "유저 등록"이 밀리고,  
+그 동안 다른 유저의 로그인 요청이 "유저 중복 검사"를 통과해버린 것이다!
+
+- 이를 방지하기 위해 "유저 중복 검사"와 "유저 등록"을 같은 작업에서 처리하도록 순서를 변경해주었다!
+
+![Image](https://github.com/user-attachments/assets/df580810-6e13-405d-8bac-758cbdbb8c1d)
+
+- 이러면 비동기 처리 순서와 관계없이 유저가 중복되지 않았을 경우에만 유저 등록이 되게 된다!
+
+![Image](https://github.com/user-attachments/assets/70d37b84-cd3d-426b-9965-3263045af1ea)
+
+- 더미 클라이언트의 응답으로 로직변경 후 중복로그인 로직이 제대로 작동하는 걸 알 수 있다!  
+( 이제 와서 보면 for 문보다 map 형태로 get(user.id)로 중복확인을 최적화 할 수 있었던 것 같다.. )
+
 ### 피드백
 
 - 회의를 마쳐서 정리된 부분을 튜터님에게 여러 검토를 받았으면 좀 더 좋은 결과물이 나오지 않았을까..? 싶었다.
