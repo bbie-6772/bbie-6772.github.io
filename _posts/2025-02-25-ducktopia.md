@@ -233,6 +233,6 @@ subscriber.subscribe('UserGameEnd', updateInGameHandler);
 
 ## 한줄 평 + 개선점
 
-- 
+- Health Check/Load balance를 개념상 알고있었지만, 이를 직접 구현해보는 것은 아주 새롭고 재밌는 경험이였다!
 
 ---
