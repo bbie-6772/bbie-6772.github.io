@@ -36,11 +36,6 @@ const initOnRedis = async () => {
     status: 1,
   };
 
-  // 1. list에서 서버 조회
-  // 2. hashKey 생성 lobby2 lobby3 ...
-  // 3. 값 저장
-  // 4. Pub/Sub을 이용해서 서버오픈 알림
-
   // 서버 상태 on
   // watch를 통해 Server:Gateway(List)가 업데이트 되지 않을때에만 성공하도록 설계
   await redisClient.watch('Server:Gateway');
@@ -72,32 +67,45 @@ const initOnRedis = async () => {
 게이트 서버가 올라갈 때, Redis에 있는 서버들에 연결하는 로직도 구현해준다!
 
 ```jsx
-  const LobbyServers = await redisClient.lRange('Server:Lobby', 0, -1);
-  for (let i = 0; i < LobbyServers.length; i++) {
-    const [address, status] = await redisClient.hVals('Server:Lobby:' + i);
-    if (+status !== 1) continue;
-    connectToLobbyServer(address, 'Server:Lobby:' + i); //로비서버 TCP연결
-  }
+import { initOnRedis, redisClient, connectServer } from '../db/redis/redis.js';
+import { loadProtos } from './loadProtos.js';
 
-  const GameServers = await redisClient.lRange('Server:Game', 0, -1);
-  for (let i = 0; i < LobbyServers.length; i++) {
-    const [address, status] = await redisClient.hVals('Server:Game:' + i);
-    if (+status !== 1) continue;
-    connectToGameServer(address, 'Server:Game:' + i); //게임서버 TCP연결
+const InitServer = async () => {
+  try {
+    await loadProtos();
+    await initOnRedis();
+    // Redis에 저장된 서버에 연결
+
+    const LobbyServers = await redisClient.lRange('Server:Lobby', 0, -1);
+    for (let i = 0; i < LobbyServers.length; i++) {
+      await connectServer('Server:Lobby:' + i); //로비서버 TCP연결
+    }
+
+    const GameServers = await redisClient.lRange('Server:Game', 0, -1);
+    for (let i = 0; i < GameServers.length; i++) {
+      await connectServer('Server:Game:' + i); //게임서버 TCP연결
+    }
+  } catch (err) {
+    console.error(err);
   }
+};
 ```
 
 또한 Pub/Sub을 이용하여 서버가 새로 올라올 때도 연결되도록 설정해준다!
 
 ```jsx
-
 const connectServer = async (name) => {
-  const host = await redisClient.hGet(name, 'address');
+  const [host, status] = await redisClient.hmGet(name, 'address', 'status');
+  if (status !== '1') return;
   const type = name.split(':')[1];
   const portType = {
     Game: [5557, onGameConnection],
     Lobby: [5556, onLobbyConnection],
   };
+
+  // 서버세션 내 중복 서버 여부확인
+  const server = serverSession.getServerById(name);
+  if (server) return;
 
   const port = portType[type][0];
   if (!port) {
@@ -107,13 +115,14 @@ const connectServer = async (name) => {
 
   const newServer = net.createConnection({ host: host, port: port }, () => {
     console.log(`${name}와 연결되었습니다.`);
+    newServer.name = name;
     portType[type][1](newServer);
   });
 
   serverSession.addServer(name, newServer);
 };
 
-// 새로운 서버 알림 시, 연결
+// redis.js 새로운 서버 알림 시, 연결
 await subscriber.subscribe('ServerOn', connectServer);
 ```
 
