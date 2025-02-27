@@ -91,6 +91,25 @@ const InitServer = async () => {
 };
 ```
 
+-> 이 부분은 이후 비동기적으로 서버 연결을 하도록 구조를 변경했다!
+
+```jsx
+  // Gateway 서버의 연결 부
+  const LobbyServers = await redisClient.lRange(lobby, 0, -1);
+  const GameServers = await redisClient.lRange(game, 0, -1);
+
+  // 비동기 서버 연결
+  await Promise.all([
+    ...Array.from({ length: LobbyServers.length }, async (__, idx) => {
+      await connectServer(lobby + ':' + +idx);
+    }),
+    ...Array.from({ length: GameServers.length }, async (__, idx) => {
+      await connectServer(game + ':' + +idx);
+    }),
+  ]);
+```
+
+
 또한 Pub/Sub을 이용하여 서버가 새로 올라올 때도 연결되도록 설정해준다!
 
 ```jsx
