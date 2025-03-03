@@ -5,7 +5,7 @@ subtitle: 2차 구현
 author: bbie
 categories: Ducktopia-Project
 banner:
-  image: 
+  image: https://github.com/user-attachments/assets/e2201ed3-6804-4534-ac37-e2c9a678cddb
   opacity: 0.618
   background: "#000"
   height: "50vh"
