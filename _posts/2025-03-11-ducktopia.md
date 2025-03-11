@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ducktopia - <23>
-subtitle: 로드밸런싱
+title: Ducktopia - <24>
+subtitle: 로드밸런싱 정리
 author: bbie
 categories: Ducktopia-Project
 banner:
