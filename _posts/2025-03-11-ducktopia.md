@@ -13,147 +13,196 @@ banner:
 tags: []
 ---
 
-## AWS ECS
+## 게임 플레이 테스트
 
-- 어제 제대로 정리하지 못한 정보들을 정리해두려 한다
+### Health Check 오류
 
-### ECR
+기존 Gateway가 1개의 서버로 돌아갔을땐 문제가 없었으나, 이제 Gateway가 다중화 되면서 문제가 생기기 시작했다!
 
-일단 ECS에서 실행될 "서비스"를 가동하기 위해선 Task라는 컨테이너 실행 단위를 정의 해주어야 한다!  
-그럼 컨테이너 실행 단위를 정의하기 위해 컨테이너를 만들 Image를 불러와야 하는데..
+바로 특정 Gateway의 HealthCheck에 오류가 생겨 Lobby 나 Game 서버와의 접속을 끊어버린 다는 것이다!
 
--> 이 때 사용되는 것이 ECR(Elastic Container Registry) 이다!
+![헬스체크로그](https://github.com/user-attachments/assets/daa6c4c0-97dd-410e-be9f-ca6bd4e147e9)
 
-1. ECR에 리포지토리를 생성해준다
+오류가 난 상황과 이유를 대략적인 가설로 설명을 해보자면 (위는 중간 확인을 위한 console.log 이다)
 
-    ![ECR생성](https://github.com/user-attachments/assets/1e009edf-0ee1-4050-82cd-40b3eca64b05)
-
-2. ECR에 Docker Image 파일을 빌드해주려면 AWS CLI 를 설치해야한다!
-
-    ![ECR푸시](https://github.com/user-attachments/assets/2c6d06d8-b51c-473c-87ab-469d86b3f422)
-
-3. AWS CLI 를 설치 후, PowerShell에서 aws 로그인 인증을 하기 위해선 IAM 에 사용자 세팅을 해주어야 한다!
-
-    - 로그인에 이용할 사용자를 생성
-
-    ![사용자생성1](https://github.com/user-attachments/assets/88db68f3-6788-49c9-a897-9fce48f69caa)
-
-    ![사용자생성2](https://github.com/user-attachments/assets/7d55b78b-bc5f-4e42-911b-abbcb8993e73)
-
-    - 현재는 이 사용자를 이용해 대부분의 작업을 진행할 예정이기 때문에 AdminAccess 권한을 부여해준다!
-
-    ![사용자생성3](https://github.com/user-attachments/assets/79480eff-e982-43cd-87aa-03591e251d0c)
-
-    - 이제 이 사용자를 이용해 PowerShell의 AWS CLI 로 접속하기 위한 키를 생성해준다!
-
-    ![액세스키생성](https://github.com/user-attachments/assets/9f208e9a-c8c2-42b5-9686-d23a182d80f8)
-
-    ![액세스키생성2](https://github.com/user-attachments/assets/42f85af0-71f1-48ee-9750-4e1593bbb5aa)
-
-    - 이제 생성된 액세스 키와 보안 키를 이용해 PowerShell의 AWS CLI에서 접속할 수 있게 되었다!  
-    ( 아래와 같은 키 정보는 잘 간직하시길.. )
-
-    ![액세스키확인](https://github.com/user-attachments/assets/7d09e456-80e6-46be-bd3f-a4bada8dc80a)
-
-4. PowerShell 에서 사용자로 로그인을 진행해준다!
-
-    ![로그인](https://github.com/user-attachments/assets/1b9fdba6-d641-4531-9234-658eac203457)
-
-    ```powershell
-    # aws 로그인 명령어
-    aws configure
-    # 이후 Access key / Secret Access Key / 지역(서울) / 출력 포맷 json 으로 설정
-    ```
-
-5. 이제 위에서 봤던(2번)의 첫 번째 명령어를 실행해 권한을 확인한다!
-
-    ![로그인2](https://github.com/user-attachments/assets/1aed17a3-d55c-4791-866a-1c5d4a93f202)
-
-6. 확인이 되었다면 프로젝트 파일로 이동해 Dockerfile/.dockerignore 를 세팅해주고 명령어를 실행해준다!
-
-    ![docker 푸시](https://github.com/user-attachments/assets/3ba3c833-0500-4139-a18e-18f45d5b331f)
-
-![확인창](https://github.com/user-attachments/assets/043f8485-f21f-4d84-b5e8-54d1f9f2fa34)
-
-- 위와 같이 ECR에 3가지의 이미지가 업데이트 되는데 latest 태그가 붙어있는 게 진짜 이미지이다!  
-( 나머지는 latest 종속된 이미지 )
-
-### Task 정의
-
-ECS 에서 태스크 정의 에서 새 정의를 만들어준다!
-
-- 아래부터는 세팅에 주의해줄 것들이다!
-
-![테스크정의1](https://github.com/user-attachments/assets/67f6f65c-4ed8-46d0-9a6d-5ce726f20628)
-
-- 이름 정하기
-
-![테스크정의2](https://github.com/user-attachments/assets/8d486953-0b78-4929-badb-dfeb74da6806)
-
-1. 이미지 URI -> 전에 latest 태그의 이미지 에 URI 복사가 있다
-
-2. 컨테이너 포트 -> Docker 내부 컨테이너의 애플리케이션과 연결될 포트를 설정해준다
-
-### ELB(로드 밸런서) 정의
-
-TCP 연결을 이용해 서버를 구현중이기에 NLB를 선택하여 세팅해준다!
-
-![로드밸런서1](https://github.com/user-attachments/assets/13f6f6cc-a5e3-40fc-a5f8-2f950a63d02d)
-
-- 현재 로드밸런서가 서버간 로드밸런싱이 아닌 클라이언트 <-> 로드밸런서 이기 때문에 외부망 연결을 설정해준다
-
-![로드밸런서2](https://github.com/user-attachments/assets/0abddff6-0bf1-462c-a3ec-21b8d41367ad)
-
-- VPC는 로드밸런싱할 대상과 같은 곳을 사용해준다(서브넷도 라이팅 테이블 잘 확인하기!)
-
-- 보안그룹도 기존 Gateway서버와 같이 클라이언트의 입력을 받을 포트를 열어둔다!
-
-![로드밸런서3](https://github.com/user-attachments/assets/042970e1-be6d-49a3-ba53-0e71b388a306)
-
-- 로드밸런서에서 클라이언트에게서 받은 입력을 대상 그룹에게 전달해주는걸 설정해준다  
-( 필요 시 대상 그룹은 임시로 만들어준다 )
-
-### ECS Cluster 정의 + 세팅
-
-이제 사전준비가 마쳐졌다! 본격적으로 ECS 세팅을 해준다!
-
-#### Cluster 생성
-
-- 기본적으로 Task 때 사용한 인프라 설정(서버 종류)을 따라해야한다!
-
-![클러스터](https://github.com/user-attachments/assets/52211ee0-100c-4ed4-b37b-33a38a9336a4)
-
-#### Service 설정
-
-- 클러스터에서 서비스 생성을 누른 뒤 Task에 만들어두었던 family를 사용해 세팅해준다!
-
-![서비스생성](https://github.com/user-attachments/assets/bfa67f9b-3e82-4e5c-a05b-b443731c9a90)
-
-![서비스생성2](https://github.com/user-attachments/assets/4ca667ab-432e-486e-bf6a-02943425510f)
-
-- 로드밸런서 설정과 같이 설정해둔 Gateway 보안 그룹을 적용 시켜준다
-
-- 퍼블릭 IP 설정을 켜두어야 설정한 이미지들을 불러올 수 있다!  
-( 이 부분을 퍼블릭 IP를 꺼두려면 여러 추가 설정이 필요하다 )
-
-![서비스생성3](https://github.com/user-attachments/assets/f692b618-4e6b-49d8-a6d7-9776064add6a)
-
-- 이제 추가로 만들어둔 로드밸런서를 연결해준다
-
-- 리스너는 이제 전달 포트를 설정해주는 것인데 전에 만들어둔 리스너를 적용시켜준다!
-
-- 이제 서버에 ECS 로 올린 서버에 접속하기 위해 로드밸런서의 DNS를 이용하면 된다!
-
-#### AutoScaling
-
-![오토스케일링](https://github.com/user-attachments/assets/a0b4fd3c-794a-4f5b-9308-c1fdaea71a8f)
-
-- 최소 / 최대 테스크 수를 정해주고, 조정 정책을 이용해 오토스케일링이 되는 규칙을 설정해준다!
-
-- 조정 정책에는 평균 CPU 부하나 현재 CPU 부하를 트랙킹하여 ??% 를 넘어가면 새로 테스크를 생성해주도록 설정할 수 있다!
+```jsx
+this.intervals.push(setInterval(this.healthCheck, 5000));
+
+healthCheck = async () => {
+    // stack 증감
+    const test = await redisClient.hGet(this.socket.id, 'check');
+    if (test === 'testing') this.stack++;
+    else this.stack = 0;
+
+    // stack 검증
+    if (this.stack >= 3) {
+      switch (this.type) {
+        case 'Game':
+          onGameEnd(this.socket)();
+          break;
+        case 'Lobby':
+          onLobbyEnd(this.socket)();
+          break;
+      }
+      await redisClient.hSet(this.socket.id, 'status', 0);
+    }
+
+    // 테스팅 시작
+    await redisClient.hSet(this.socket.id, 'check', 'testing');
+    await redisClient.publish(this.socket.id, 'testing');
+    console.log(`//HealthCheck// [Server] ${this.socket.id} / [Stack] : ${this.stack} `);
+  };
+```
+
+1. 5초마다 Redis에 저장된 서버의 check 라는 필드를 읽는다  
+( this.socket.id 는 Redis에 Key값으로 사용하는 서버의 Id를 의미한다. )
+
+2. 만약 서버의 check 값이 'testing' 일 경우 stack을 쌓는다(아니면 stack 초기화)
+
+3. 만약 stack이 3 이상이 되면 서버와의 연결을 끊는다.
+
+4. Health Check을 하기위해 Redis에 있는 서버의 check 필드를 testing으로 바꾸고 Pub/Sub으로 알림을 보낸다.
+
+5. 이때 알림을 받은 서버는 자신의 check 필드를 update로 다시 올린다
+
+위와 같은 로직이였는데.. 만약 Gateway 서버가 HealthChecking 할 서버에 거의 동시에 로직이 작동되면,  
+Gateway 1 번이 서버의 'check' 필드를 'testing'으로 만들고 Pub/Sub을 받는 서버가 'update'로 바꾸기 전에  
+Gateway 2 번이 검증을 시작하면서 스택이 계속해서 쌓이는 것이다!
+
+이를 위한 해결방법으로 **HealthCheck를 받는 대상**에 상태를 저장하는 것이 아닌,  
+**HealthCheck를 하는 대상**에게 상태를 저장하는 방식으로 수정하였다!
+
+```jsx
+healthCheck = async () => {
+    // userSession.name 은 Gateway 서버의 구분자로 Redis Hash Table key로 사용된다
+    const test = await redisClient.hGet(userSession.name, this.socket.id);
+    if (test === 'testing') this.stack++
+    else this.stack = 0;
+
+    // stack 검증
+    if (this.stack >= 5) {
+      switch (this.type) {
+        case 'Game':
+          onGameEnd(this.socket)();
+          break;
+        case 'Lobby':
+          onLobbyEnd(this.socket)();
+          break;
+      }
+      await redisClient.hSet(this.socket.id, 'status', 0);
+    }
+
+    // 테스팅 시작
+    await redisClient.hSet(userSession.name, this.socket.id, 'testing');
+    await redisClient.publish(this.socket.id, userSession.name);
+
+    //console.log(`//HealthCheck// [Server] ${this.socket.id} / [Stack] : ${this.stack} `);
+};
+```
+
+- 기존 Redis 저장방식과 이를 통한 이후 저장방식을 비교해보겠다!  
+
+1. 기존 -> HealthCheck 대상 Hash Table에 'check' 필드 사용
+    ![기존서버Redis](https://github.com/user-attachments/assets/0f0f90cf-f383-45fc-9959-970c3f2dd7a2)
+
+2. 변경 이후 -> HealthCheck 주체 Gateway의 Hash Table에 서버 아이디를 필드명으로 사용
+    ![이후서버Redis](https://github.com/user-attachments/assets/7ff3d1cf-fc2c-4d6a-b285-07a80bec4354)
+
+### 알림창 설정
+
+전에 서버에서 오류가 난 부분을 클라이언트에게 전달해주기 위해 errorHandler에 패킷을 보내주는 로직을 추가했엇다
+
+```jsx
+export const errorHandler = (socket, error) => {
+  let message;
+  // client에게 보여줄 에러인지 확인하는 변수
+  let clienterr = false;
+
+  // 에러 정보 로깅
+  console.error(error);
+
+  // 에러 타입별 분류 및 처리
+  switch (true) {
+    // CustomError 처리
+    case error instanceof CustomError:
+      message = error.message;
+      break;
+
+    // MySQL 에러
+    case error.code === 'ER_DUP_ENTRY':
+      if (error.sqlMessage.includes('users.name')) {
+        message = '이미 존재하는 닉네임입니다';
+        clienterr = true;
+      } else if (error.sqlMessage.includes('users.email')) {
+        message = '이미 존재하는 이메일입니다';
+        clienterr = true;
+      }
+      break;
+
+    // 유효성 검사 에러
+    case error.name === 'ValidationError':
+      message = error.message;
+      clienterr = true;
+      break;
+
+    // 기타 일반 에러
+    default:
+      message = error.message || '알 수 없는 오류가 발생했습니다';
+  }
+
+  console.log(`에러 메시지: ${message}`);
+
+  // 에러 응답 패킷 생성 및 전송
+  const errorResponse = makePacket(config.packetType.S_ERROR_NOTIFICATION, {
+    errorMessage: message,
+    timestamp: Date.now(),
+    clienterr: clienterr,
+  });
+
+  socket.write(errorResponse);
+};
+```
+
+- 그러나 Gateway의 경우는 클라이언트와 직접적으로 연결되어있어 socket.write를 사용해도 되었는데,  
+다른 서버는 Gateway로 보내기 때문에 어느 유저인지 구분해줄 userId도 같이 보내주어야 했다!
+
+```jsx
+export const errorHandler = (socket, error, userId) => {
+  let message;
+
+  // 에러 정보 로깅
+  console.error(error);
+
+  // 에러 타입별 분류 및 처리
+  switch (true) {
+    // CustomError 처리
+    case error instanceof CustomError:
+      message = error.message;
+      break;
+    // 기타 일반 에러
+    default:
+      message = error.message || '알 수 없는 오류가 발생했습니다';
+  }
+
+  console.log(`에러 메시지: ${message}`);
+
+  const user = userSession.getUserByID(userId);
+  if (!user) return
+
+  user.sendPacket([config.packetType.S_ERROR_NOTIFICATION, {
+      errorMessage: message,
+      timestamp: Date.now(),
+      clienterr: true,
+    }])
+};
+```
+
+- 그래서 errorHandler에 userId를 넣어주기 위해 try catch 외부에 userId를 미리 선언하고,  
+이에 대입하여 보내주는 것으로 onData들을 수정해두었다!
 
 ## 한줄 평 + 개선점
 
-- 정보를 다 담아서 너무 뿌듯하다
+- 게임 테스터분들을 모집해서 서버를 운영하는데 여러 버그들을 빠르게 수정해서 서버를 다시 올리는게...  
+정신적 압박감이 좀 있다는걸 느꼇고, 좀더 효율좋은 CD 방법을 배웠다면 좋았을 것 같다
 
 ---
