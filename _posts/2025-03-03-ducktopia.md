@@ -118,7 +118,8 @@ user.socket.write(resPacket);
 
     ![실행시간변경후](https://github.com/user-attachments/assets/f76ac1e1-cd24-40e6-a06b-a180a9d4840c)
 
-    -> 전체적으로 실행시간이 줄어들긴했다!
+    -> 전체적으로 실행시간이 줄어들긴했다!  
+    ( 평균 0.165ms -> 0.134ms (약 19% 정도 개선))
 
 ## 한줄 평 + 개선점
 
