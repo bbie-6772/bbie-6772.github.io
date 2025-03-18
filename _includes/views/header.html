@@ -51,6 +51,10 @@
                   {%- include extensions/google-translate.html -%}
               </div>
             {%- endif -%}
+            <div id="search-bar">
+              <input id="search-input" type="text" placeholder="검색어를 입력하세요." />
+            </div>
+            <ul id="results-container"></ul>
           </div>
         </nav>
       {%- endif -%}
@@ -58,7 +62,30 @@
   </div>
 </header>
 
+<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+
 <script>
+  SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/search.json',
+      searchResultTemplate: `
+        <li class="search-result-item">
+        <a href="{url}" class="search-result-link">
+          <div class="search-result-title">{title}</div>
+          <div class="search-result-meta">
+            <span class="search-result-date">{date}</span>
+            <span class="search-result-category">{category}</span>
+          </div>
+        </a>
+      </li>
+      `,
+      noResultsText: '검색결과가 존재하지 않습니다.',
+      limit: 3,
+      fuzzy: false,
+      exclude: ['Welcome']
+    });
+
   function initHeader() {
     var lastScrollY = getScrollPos().y;
     var documentElement = document.documentElement;
