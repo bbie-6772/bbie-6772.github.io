@@ -827,16 +827,6 @@ a:visited .post-badges .post-badge.badge-new {
   background-color: $background-color;
 }
 
-// 검색 바 컨테이너 스타일  
-.search-bar-container {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 // 검색 입력창 스타일  
 #search-input {
   width: 100%;
@@ -891,7 +881,9 @@ $transition-speed: 0.3s;
 // 검색 결과 컨테이너 스타일  
 #results-container {
   list-style: none;
+  height: 300px;
   padding: 0;
+  overflow: auto;
   margin-top: 20px;
 
   // 검색 결과 항목 스타일  
