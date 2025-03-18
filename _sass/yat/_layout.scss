@@ -826,3 +826,153 @@ a:visited .post-badges .post-badge.badge-new {
   color: $background-color;
   background-color: $background-color;
 }
+
+// 검색 바 컨테이너 스타일  
+.search-bar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// 검색 입력창 스타일  
+#search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+$primary-color: #007bff;
+$secondary-color: #f9f9f9;
+$border-color: #ddd;
+$text-color: #333;
+$text-color-light: #666;
+$font-size-base: 14px;
+$font-size-large: 16px;
+$transition-speed: 0.3s;
+
+// 검색 바 컨테이너 스타일  
+.search-bar-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// 검색 입력창 스타일  
+.search-input {
+  width: 100%;
+  padding: 12px;
+  font-size: $font-size-large;
+  border: 2px solid $border-color;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color $transition-speed ease;
+
+  // 포커스 효과  
+  &:focus {
+    border-color: $primary-color;
+  }
+
+  // 플레이스홀더 스타일  
+  &::placeholder {
+    color: $text-color-light;
+    opacity: 1;
+  }
+}
+
+// 검색 결과 컨테이너 스타일  
+#results-container {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+
+  // 검색 결과 항목 스타일  
+  .search-result-item {
+    padding: 15px;
+    border-bottom: 1px solid $border-color;
+    transition: background-color $transition-speed ease;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    // 호버 효과  
+    &:hover {
+      background-color: $secondary-color;
+    }
+
+    // 링크 스타일  
+    .search-result-link {
+      text-decoration: none;
+      height: 100px;
+      color: $text-color;
+      display: block;
+
+      // 링크 호버 효과  
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    // 제목 스타일  
+    .search-result-title {
+      font-size: $font-size-large;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    // 메타 정보 스타일 (날짜, 카테고리)  
+    .search-result-meta {
+      font-size: $font-size-base;
+      color: $text-color-light;
+      margin-bottom: 5px;
+
+      .search-result-date {
+        margin-right: 10px;
+      }
+
+      .search-result-category {
+        font-style: italic;
+      }
+    }
+
+    // 요약 스타일  
+    .search-result-summary {
+      font-size: $font-size-base;
+      color: $text-color;
+    }
+  }
+}
+
+// 검색 결과 없을 때 스타일  
+.no-results {
+  color: $text-color-light;
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+}
+
+// 더보기 버튼 스타일  
+.load-more-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: $font-size-large;
+  cursor: pointer;
+  transition: background-color $transition-speed ease;
+
+  // 버튼 호버 효과  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
