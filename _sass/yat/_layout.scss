@@ -888,10 +888,10 @@ $transition-speed: 0.3s;
 
   // 검색 결과 항목 스타일  
   .search-result-item {
-    padding: 15px;
+    padding: 10px;
     border-bottom: 1px solid $border-color;
     transition: background-color $transition-speed ease;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
 
     // 호버 효과  
     &:hover {
@@ -903,7 +903,9 @@ $transition-speed: 0.3s;
       text-decoration: none;
       height: 100px;
       color: $text-color;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       // 링크 호버 효과  
       &:hover {
@@ -913,16 +915,22 @@ $transition-speed: 0.3s;
 
     // 제목 스타일  
     .search-result-title {
-      font-size: $font-size-large;
-      font-weight: bold;
-      margin-bottom: 5px;
+    font-size: $font-size-large;  
+    font-weight: bold;  
+    margin-bottom: 5px;  
+    max-height: 30px; // 제목 높이 제한  
+    text-overflow: ellipsis;  
+    white-space: nowrap;  
     }
 
     // 메타 정보 스타일 (날짜, 카테고리)  
     .search-result-meta {
-      font-size: $font-size-base;
+    font-size: $font-size-base;
       color: $text-color-light;
       margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      max-height: 20px; // 메타 정보 높이 제한  
 
       .search-result-date {
         margin-right: 10px;
@@ -935,8 +943,14 @@ $transition-speed: 0.3s;
 
     // 요약 스타일  
     .search-result-summary {
-      font-size: $font-size-base;
-      color: $text-color;
+    font-size: $font-size-base;
+    color: $text-color;
+    max-height: 40px; // 원하는 높이로 조정  
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // 요약 줄 수 제한  
+    -webkit-box-orient: vertical;
     }
   }
 }
