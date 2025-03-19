@@ -143,12 +143,12 @@ foreach(LocationUpdate.UserLocation user in data.users) {
 
 ```jsx
 import { config } from "../config/config.js";
-import mysql from 'mysql2/promise'
+import mySQL from 'mySQL2/promise'
 
 const { database } = config;
 
 const createPool = (dbConfig) => {
-    const pool = mysql.createPool({
+    const pool = mySQL.createPool({
         host: dbConfig.host,
         port: dbConfig.port,
         user: dbConfig.user,

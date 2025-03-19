@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Transaction
-subtitle: 게임Server 개발 부트캠프
+subtitle: Transaction의 개념과 특징
 author: bbie
-categories: Data-base
+categories: Study
 banner:
   image: https://github.com/user-attachments/assets/82629dbe-cbb1-4bce-8aa1-ca30eeb76d66
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [transaction]
+tags: [Database]
 ---
 
 ## Transaction

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 
-subtitle: Ducktopia - < Project interview >
+title: Ducktopia - < Project interview >
+subtitle: 모의 면접
 author: bbie
 categories: Ducktopia-Project
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [interview]
+tags: []
 ---
 
 ## 모의 면접

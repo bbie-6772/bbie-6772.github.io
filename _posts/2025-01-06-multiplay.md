@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 1 >
-subtitle: 이론 공부
+subtitle: 이론 공부(NET, Buffer)
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
@@ -10,14 +10,14 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [NET, Buffer]
+tags: []
 ---
 
 ## NET을 이용한 서버
 
-- 기존에 웹 서버를 구성하려면 node.js 위에 express 와 socket.io 등 여러 라이브러리를 사용하여야 했다!
+- 기존에 웹 서버를 구성하려면 Node.js 위에 express 와 socket.io 등 여러 라이브러리를 사용하여야 했다!
 
-- 이번엔 node.js에 기본 포함된 net 을 이용해 서버 통신을 직접 구현하는 프로젝트이다!
+- 이번엔 Node.js에 기본 포함된 net 을 이용해 서버 통신을 직접 구현하는 프로젝트이다!
 
 ### 서버<>클라이언트
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 4 >
-subtitle: 기록
+subtitle: Latency, Ping 구현!
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Latency, Ping]
+tags: []
 ---
 
 ## 클라이언트 연동

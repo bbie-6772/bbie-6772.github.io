@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Feedback]
 ---
 
 ## 프로젝트 끝

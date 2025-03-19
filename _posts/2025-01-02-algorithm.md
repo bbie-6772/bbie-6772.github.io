@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 알고리즘 - < 탐색/검색 >
-subtitle: 탐색과 경우의 수
+subtitle: 탐색과 경우의 수(Searching, DFS, BFS, Prime-Number)
 author: bbie
 categories: Algorithm
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Searching, DFS, BFS, Prime-Number]
+tags: []
 ---
 
 ## 탐색/검색 알고리즘(Search algorithm)

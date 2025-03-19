@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 2 >
-subtitle: 기록
+subtitle: NET, Protobuf, Constants 관리
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [NET, Protobuf, Constants]
+tags: []
 ---
 
 ## 환경변수 관리

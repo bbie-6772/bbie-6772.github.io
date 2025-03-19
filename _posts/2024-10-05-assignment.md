@@ -3,8 +3,8 @@ layout: post
 title: SQL 과제 제출
 subtitle: 게임서버 개발 부트캠프
 author: bbie
-categories: pre-camp
-tags: [sql]
+categories: Pre-camp
+tags: [SQL]
 ---
 
 SQL 관련 과제 제출 및 기록하기!
@@ -25,7 +25,7 @@ SQL 관련 과제 제출 및 기록하기!
 
 25.**`lol_feedbacks`** 테이블에서 만족도 점수(satisfaction_score)에 따라 피드백을 내림차순으로 정렬하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT * 
 FROM lol_feedbacks 
 ORDER BY 3 DESC;
@@ -33,7 +33,7 @@ ORDER BY 3 DESC;
 
 26.**`lol_feedbacks`** 테이블에서 각 유저별로 최신 피드백을 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT * 
 FROM lol_feedbacks 
 ORDER BY 2,4 DESC;
@@ -41,7 +41,7 @@ ORDER BY 2,4 DESC;
 
 27.**`lol_feedbacks`** 테이블에서 만족도 점수가 5점인 피드백의 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT COUNT(*) 
 FROM lol_feedbacks 
 WHERE satisfaction_score = 5;
@@ -49,7 +49,7 @@ WHERE satisfaction_score = 5;
 
 28.**`lol_feedbacks`** 테이블에서 가장 많은 피드백을 남긴 상위 3명의 고객을 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT user_name, COUNT(*) 
 FROM lol_feedbacks 
 GROUP BY user_name 
@@ -58,7 +58,7 @@ ORDER BY COUNT(*) DESC LIMIT 3;
 
 29.**`lol_feedbacks`** 테이블에서 평균 만족도 점수가 가장 높은 날짜를 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT feedback_date, AVG(satisfaction_score) 
 FROM lol_feedbacks 
 GROUP BY feedback_date 
@@ -77,7 +77,7 @@ ORDER BY AVG(satisfaction_score) DESC;
 
 30.**`doctors`** 테이블에서 전공(major)가 성형외과인 의사의 이름을 알아내는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT name 
 FROM doctors
 WHERE major = '성형외과';
@@ -85,7 +85,7 @@ WHERE major = '성형외과';
 
 31.**`doctors`** 테이블에서 각 전공 별 의사 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT major, COUNT(*) 
 FROM doctors
 GROUP BY major
@@ -94,7 +94,7 @@ ORDER BY COUNT(*);
 
 32.**`doctors`** 테이블에서 현재 날짜 기준으로 5년 이상 근무(hire_date)한 의사 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT *
 FROM doctors
 WHERE DATEDIFF(CURRENT_DATE(), hire_date) > 365*5;
@@ -102,7 +102,7 @@ WHERE DATEDIFF(CURRENT_DATE(), hire_date) > 365*5;
 
 33.**`doctors`** 테이블에서 각 의사의 근무 기간을 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT *, DATEDIFF(CURRENT_DATE(), hire_date) AS workday
 FROM doctors;
 ```
@@ -120,7 +120,7 @@ FROM doctors;
 
 34.**`patients`** 테이블에서 각 성별(gender)에 따른 환자 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT gender, COUNT(*)
 FROM patients
 GROUP BY gender
@@ -129,7 +129,7 @@ ORDER BY COUNT(*);
 
 35.**`patients`** 테이블에서 현재 나이가 40세 이상인 환자들의 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT COUNT(*)
 FROM patients
 WHERE DATEDIFF(CURRENT_DATE(), birth_date) > 365*40;
@@ -137,7 +137,7 @@ WHERE DATEDIFF(CURRENT_DATE(), birth_date) > 365*40;
 
 36.**`patients`** 테이블에서 마지막 방문 날짜(last_visit_date)가 1년 이상 된 환자들을 선택하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT *
 FROM patients
 WHERE DATEDIFF(CURRENT_DATE(), last_visit_date) >= 365;
@@ -145,7 +145,7 @@ WHERE DATEDIFF(CURRENT_DATE(), last_visit_date) >= 365;
 
 37.**`patients`** 테이블에서 생년월일이 1980년대인 환자들의 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT *
 FROM patients
 WHERE YEAR(birth_date) BETWEEN  1980 and 1989;
@@ -174,14 +174,14 @@ WHERE YEAR(birth_date) BETWEEN  1980 and 1989;
 
 38.현재 존재하고 있는 총 부서의 수를 구하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT COUNT(name)
 FROM departments;
 ```
 
 39.모든 직원과 그들이 속한 부서의 이름을 나열하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT employees.name, departments.name
 FROM employees, departments
 WHERE employees.department_id = departments.id
@@ -190,7 +190,7 @@ ORDER BY departments.id;
 
 40.'기술팀' 부서에 속한 직원들의 이름을 나열하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT employees.name, departments.name
 FROM employees, departments
 WHERE employees.department_id = departments.id and departments.name = '기술팀';
@@ -198,7 +198,7 @@ WHERE employees.department_id = departments.id and departments.name = '기술팀
 
 41.부서별로 직원 수를 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT departments.name, count(employees.name)
 FROM employees, departments
 WHERE employees.department_id = departments.id
@@ -207,7 +207,7 @@ GROUP BY departments.name;
 
 42.직원이 없는 부서의 이름을 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT departments.name
 FROM departments
 LEFT JOIN employees ON departments.id = employees.department_id
@@ -216,7 +216,7 @@ WHERE employees.department_id is null;
 
 43.'마케팅팀' 부서에만 속한 직원들의 이름을 나열하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT employees.name
 FROM employees
 JOIN departments ON employees.department_id = departments.id 
@@ -245,7 +245,7 @@ WHERE departments.name = '마케팅팀';
 
 44.모든 주문의 주문 ID와 주문된 상품의 이름을 나열하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT orders.id, products.name
 FROM orders, products
 WHERE orders.product_id = products.id
@@ -254,7 +254,7 @@ ORDER BY orders.id;
 
 45.총 매출(price * quantity의 합)이 가장 높은 상품의 ID와 해당 상품의 총 매출을 가져오는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.name, SUM(products.price * orders.quantity) AS total_sales
 FROM orders, products
 WHERE orders.product_id = products.id
@@ -265,7 +265,7 @@ LIMIT 1;
 
 46.각 상품 ID별로 판매된 총 수량(quantity)을 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.id, SUM(orders.quantity) AS total_quantity
 FROM orders, products
 WHERE orders.product_id = products.id
@@ -275,7 +275,7 @@ ORDER BY products.id;
 
 47.2023년 3월 3일 이후에 주문된 모든 상품의 이름을 나열하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.name
 FROM orders, products
 WHERE orders.product_id = products.id AND orders.order_date >= '2023-03-03'
@@ -284,7 +284,7 @@ GROUP BY products.name;
 
 48.가장 많이 판매된 상품의 이름을 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.name
 FROM orders, products
 WHERE orders.product_id = products.id
@@ -295,7 +295,7 @@ LIMIT 1;
 
 49.각 상품 ID별로 평균 주문 수량을 계산하는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.id, AVG(orders.quantity) AS total_quantity
 FROM orders, products
 WHERE orders.product_id = products.id
@@ -305,7 +305,7 @@ ORDER BY products.id;
 
 50.판매되지 않은 상품의 ID와 이름을 찾는 쿼리를 작성해주세요!
 
-```sql
+```SQL
 SELECT products.id, products.name
 FROM products
 LEFT JOIN orders ON orders.product_id = products.id

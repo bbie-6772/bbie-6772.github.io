@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 멀티플레이 게임 - < 3 >
-subtitle: 기록
+subtitle: Error 핸들러, DB Pool / Migration 
 author: bbie
 categories: TCP-Multi-PlayGame
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Database, Error, Migration]
+tags: [Database]
 ---
 
 ## CustomError
@@ -186,8 +186,8 @@ try {
     └── db                      // db 관련 폴더
         ├── migration             // db 기초설정(Migration)용 폴더
         │   └── createSchemas.js    // DB의 Schema(형식) 지정
-        ├── sql                   // SQL Migration 용 쿼리문
-        │   └── user_db.sql         // user_db의 table 생성/변경 쿼리
+        ├── SQL                   // SQL Migration 용 쿼리문
+        │   └── user_db.SQL         // user_db의 table 생성/변경 쿼리
         ├── user                  // user_db 관련 폴더 
         │   ├── user.db.js          // user_db에 사용할 함수 모음
         │   └── user.queries.js     // 함수에 사용될 쿼리들 저장
@@ -196,21 +196,21 @@ try {
 
 ### DB Connection Pool 구현
 
-- mysql2 라이브러리를 이용하여 Connection Pool 을 만들어 DB관련 I/O를 관리해준다!
+- mySQL2 라이브러리를 이용하여 Connection Pool 을 만들어 DB관련 I/O를 관리해준다!
 
 ```jsx
 /* database.js */
 import { config } from "../config/config.js";
 import { formatDate } from "../utils/dateFormatter.js";
-import mysql from 'mysql2/promise'
+import mySQL from 'mySQL2/promise'
 
 // 환경변수 모음집 config 에서 db 관련 값 가져오기
 const { databases } = config;
 
 // Connection Pool 생성 함수
 const createPool = (dbConfig) => {
-    // mysql2 라이브러리의 createPool() 메서드 사용
-    const pool = mysql.createPool({
+    // mySQL2 라이브러리의 createPool() 메서드 사용
+    const pool = mySQL.createPool({
         // 호스트 주소 
         host: dbConfig.host,
         // 포트 번호 
@@ -233,15 +233,15 @@ const createPool = (dbConfig) => {
     const originQuery = pool.query;
 
     // poo.query 오버라이드
-    pool.query = (sql, params) => {
+    pool.query = (SQL, params) => {
         // 실행된 날짜 확인
         const date = new Date();
 
         // 확인용 로그 띄우기
-        console.log(`${formatDate(date)} / ${sql} / ${params && JSON.stringify(params)}`)
+        console.log(`${formatDate(date)} / ${SQL} / ${params && JSON.stringify(params)}`)
 
         // 백업된 기존의 query 메서드를 사용하여 query 진행 
-        return originQuery.call(pool, sql, params);
+        return originQuery.call(pool, SQL, params);
     }
 
     //생성한 Connection Pool 반환
@@ -348,7 +348,7 @@ initServer().then(() => {
 
 ```jsx
 export const SQL_QUERIES = {
-    // connection.query(sql, [params]) 형식으로 사용할 때 ? 부분이 params가 들어감
+    // connection.query(SQL, [params]) 형식으로 사용할 때 ? 부분이 params가 들어감
     // 유저 찾기 쿼리
     FIND_USER_BY_ID: 'SELECT * FROM users WHERE device_id = ?',
     // 유저 추가 쿼리
@@ -407,8 +407,8 @@ export const updateUserLogin = async (id) => {
 
 - 위에서 사용한 방법처럼 쿼리문을 미리 만들어 두고 이를 사용하는 방식으로 진행한다!
 
-```sql
--- user_db.sql
+```SQL
+-- user_db.SQL
 
 -- users 테이블이 없을 경우 초기화 설정 
 CREATE TABLE IF NOT EXISTS users 
@@ -449,12 +449,12 @@ const __filename = fileURLToPath(import.meta.url);
 //디렉토리 경로(현재 파일위치) 추출
 const __dirname = path.dirname(__filename);
 
-// sql file 을 읽어 변환 해주는 함수
+// SQL file 을 읽어 변환 해주는 함수
 const executeSqlFile = async (pools, filePath) => {
     // 받아온 인자 filePath 에 있는 파일 읽기
-    const sql = fs.readFileSync(filePath, 'utf8');
+    const SQL = fs.readFileSync(filePath, 'utf8');
     // 파일에서 split(';')을 통해 쿼리문을 분리
-    const queries = sql.split(';')
+    const queries = SQL.split(';')
     // 분리된 쿼리문에서 양끝의 공백을 제거
     .map((query) => query.trim())
     // 유효한 쿼리문만 사용하도록 길이 확인
@@ -468,11 +468,11 @@ const executeSqlFile = async (pools, filePath) => {
 
 // 테이블 형식 생성 
 const createSchemas = async () => {
-    // sql 폴더 주소 추출 
-    const sqlDir = path.join(__dirname, '../sql');
+    // SQL 폴더 주소 추출 
+    const SQLDir = path.join(__dirname, '../SQL');
     try {
         // 위의 함수를 통해 테이블 생성 쿼리문 적용
-        await executeSqlFile(pools.USER_DB, path.join(sqlDir, 'user_db.sql'))
+        await executeSqlFile(pools.USER_DB, path.join(SQLDir, 'user_db.SQL'))
     } catch(e) {
         console.error("데이터 베이스 생성 오류",e)
     }

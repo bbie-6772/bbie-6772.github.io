@@ -39,7 +39,7 @@ tags: []
 
 #### 서버 NavMesh
 
-node.js의 recast-navigation 패키지가 있어 이를 응용하는 법을 배우고 사용해볼 예정이다!  
+Node.js의 recast-navigation 패키지가 있어 이를 응용하는 법을 배우고 사용해볼 예정이다!  
 [recast-navigation_Git-Hub](https://github.com/isaac-mason/recast-navigation-js#temporary-obstacles)
 
 - 일단 기본적인 맵 데이터를 어떤 형식으로 저장해서 서버에서 어떻게 읽을 지 생각을 해봐야한다..  

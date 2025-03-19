@@ -16,11 +16,11 @@ banner:
   min_height: "38vh"
   heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
   subheading_style: "color: gold"
-tags: jekyll theme yat
+tags: [Jekyll]
 sidebar: []
 ---
 
-이 게시물은 `_posts.` 디렉토리에서 찾을 수 있습니다  계속해서 편집하고 사이트를 다시 빌드하여 변경 사항을 확인해보세요! 여러 가지 방법으로 사이트를 다시 빌드할 수 있지만 가장 일반적인 방법은 `jekyll serve.`를 실행하는 것입니다! 이렇게 하면 웹 서버가 시작되고 파일이 업데이트되면 사이트가 자동으로 다시 생성됩니다.
+이 게시물은 `_posts.` 디렉토리에서 찾을 수 있습니다  계속해서 편집하고 사이트를 다시 빌드하여 변경 사항을 확인해보세요! 여러 가지 방법으로 사이트를 다시 빌드할 수 있지만 가장 일반적인 방법은 `Jekyll serve.`를 실행하는 것입니다! 이렇게 하면 웹 서버가 시작되고 파일이 업데이트되면 사이트가 자동으로 다시 생성됩니다.
 
 새로운 게시물을 추가하려면, `YYYY-MM-DD-name-of-post.ext` 규칙을 따르고 `_posts` 디렉토리 에 파일을 추가하기만 하기만 하면 됩니다. 이 게시물의 소스를 살펴보면 어떻게 작동하는지 알 수 있습니다.
 
@@ -38,11 +38,11 @@ print_hi('Tom')
 
 ## 섹션 2
 
-Jekyll을 최대한 활용하는 방법에 대한 자세한 내용은 [Jekyll docs][jekyll-docs]를 확인하세요. 모든 버그/기능 요청은[Jekyll’s GitHub repository][jekyll-gh] 에 제출하세요. 질문이 있으면 [Jekyll Talk][jekyll-talk] 에서 질문할 수 있습니다.
+Jekyll을 최대한 활용하는 방법에 대한 자세한 내용은 [Jekyll docs][Jekyll-docs]를 확인하세요. 모든 버그/기능 요청은[Jekyll’s GitHub repository][Jekyll-gh] 에 제출하세요. 질문이 있으면 [Jekyll Talk][Jekyll-talk] 에서 질문할 수 있습니다.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]: https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+[Jekyll-docs]: https://Jekyllrb.com/docs/home
+[Jekyll-gh]: https://github.com/Jekyll/Jekyll
+[Jekyll-talk]: https://talk.Jekyllrb.com/
 
 $ a \* b = c ^ b $
 

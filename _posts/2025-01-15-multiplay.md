@@ -19,9 +19,9 @@ tags: [Unity]
 
 - DB에 저장할 정보들을 지정해두어 DB가 바뀌어도 테이블의 기본 형식을 설정해주어 사용가능하도록 해준다!
 
-- DB 마이그레이션에 사용할 sql 문법
+- DB 마이그레이션에 사용할 SQL 문법
 
-```sql
+```SQL
 CREATE TABLE IF NOT EXISTS users 
 (
     device_id VARCHAR(255) PRIMARY KEY, 
@@ -44,8 +44,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 
 const executeFile = async (pool, filePath) => {
-    const sql = fs.readFileSync(filePath, 'utf-8');
-    const queries = sql.split(";")
+    const SQL = fs.readFileSync(filePath, 'utf-8');
+    const queries = SQL.split(";")
     .map((query) => query.trim())
     .filter((q) => q.length > 0);
 
@@ -53,7 +53,7 @@ const executeFile = async (pool, filePath) => {
 }
 
 const createSchemas = async () => {
-    const filePath = path.join(__dirname, 'database.sql')
+    const filePath = path.join(__dirname, 'database.SQL')
     try {
         await executeFile(pools.USER_DB, filePath);
     } catch(e) {
