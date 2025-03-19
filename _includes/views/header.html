@@ -70,7 +70,9 @@
       resultsContainer: document.getElementById('results-container'),
       json: '/search.json',
       searchResultTemplate: `
+        
         <li class="search-result-item">
+        <div class="banner" style="background-image: url('{image}');"></div>
         <a href="{url}" class="search-result-link">
           <div class="search-result-title">{title}</div>
           <div class="search-result-summary">{desc}</div>

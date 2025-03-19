@@ -881,7 +881,7 @@ $transition-speed: 0.3s;
 // 검색 결과 컨테이너 스타일  
 #results-container {
   list-style: none;
-  height: 360px;
+  height: 440px;
   padding: 0;
   overflow: auto;
   margin-top: 20px;
@@ -912,7 +912,18 @@ $transition-speed: 0.3s;
         color: $primary-color;
       }
     }
-
+    
+    .banner {
+      width: 100%;
+      height: 100px;
+      /* 배너 높이 설정 */
+      background-image: url('/assets/images/banners/home.jpeg');
+      background-size: cover;
+      /* 배경 이미지가 요소를 꽉 채우도록 설정 */
+      background-position: center;
+      /* 배경 이미지가 중앙에 위치하도록 설정 */
+    }
+  
     // 제목 스타일  
     .search-result-title {
     font-size: $font-size-large;  

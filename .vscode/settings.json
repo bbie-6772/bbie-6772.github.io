@@ -10,5 +10,9 @@
         ".vscode": true,
         ".github": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "cSpell.ignoreWords": [
+        "endfor",
+        "forloop"
+    ]
 }
