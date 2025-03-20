@@ -71,7 +71,7 @@ yat:
   sitemap: true
 
   # If you want to change site language, you can set lang option
-  # lang: "en"  # default lang is en
+  lang: "kr"  # default lang is en
 
   # Translate languges
   # langs refer to https://cloud.google.com/translate/docs/languages
@@ -106,8 +106,8 @@ yat:
   # spacegrey: #353535
   # snowwhite: #ffffff
   #
-  # theme_color: snowwhite
-  #
+  theme_color: "#e1e8e6"
+  
   # Custom color as below:
   # theme_color: "#882250"
 
@@ -116,16 +116,16 @@ yat:
   # orangered: #ff5100
   # greatgold: #f2cb05
   # greenblue: #389092
-  #
-  # brand_color: orangered
+  
+  brand_color: "#76a0e8"
   #
   # Custom color as below:
   # brand_color: "#1a8e42"
 
   # You can custom selection style
-  # selection:
-  #   color: "#ff00ff"
-  #   background_color: "yellow"
+  selection:
+    color: "#ff00ff"
+    background_color: "yellow"
 
   # Night/Dark mode
   # Default mode is "auto", "auto" is for auto nightshift
