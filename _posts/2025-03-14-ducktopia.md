@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ducktopia - <24>
+title: Ducktopia - <26>
 subtitle: 마무리
 author: bbie
 categories: Ducktopia-Project
