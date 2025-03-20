@@ -46,7 +46,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   코드를 이용하여 서커스를 열 수 있는 그날까지 삽질을 하고 있습니다.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://bbie-6772.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
