@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ducktopia_C# - <2>
-subtitle: 새로운 시작
+subtitle: 경로 수정
 author: bbie
 categories: Ducktopia-Project-C#
 banner:
@@ -32,6 +32,6 @@ tags: [C#]
 
 ## 한줄 평 + 개선점
 
-- 구조가 많이 복잡하다..
+- 앞으로 배워야할 것들을 미리 정리해두신 최흥배님 감사합니다.. ㅠㅠ
 
 ---
