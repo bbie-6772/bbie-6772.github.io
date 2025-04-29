@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TypeScript - < 문법 >
-subtitle: Other
+subtitle: 문법
 author: bbie
 categories: Study
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [TypeScript]
 ---
 
 ## 문법

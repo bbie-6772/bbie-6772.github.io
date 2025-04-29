@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TypeScript - < 정적 언어 >
-subtitle: Other
+subtitle: 개요
 author: bbie
 categories: Study
 banner:
@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [TypeScript]
 ---
 
 ## 개요
