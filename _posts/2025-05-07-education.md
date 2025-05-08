@@ -1,11 +1,11 @@
 ---
 layout: post
 title: 교육 운영 매니저 - < 1 >
-subtitle: 새로운 시작
+subtitle: 새로운 시작(EduTech 산업)
 author: bbie
 categories: Education Product Manager
 banner:
-  image: 
+  image: https://github.com/user-attachments/assets/4c50bf14-ceba-4c29-b13e-d6a228bae1f4
   opacity: 0.618
   background: "#000"
   height: "50vh"
