@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 교육 운영 매니저 - < 8 >
+title: 교육 운영 매니저 - < 7 >
 subtitle: 진로 고민과 마무리
 author: bbie
 categories: 
