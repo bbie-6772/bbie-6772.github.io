@@ -190,6 +190,7 @@ yat:
 
   # Pagination setting
   paginate: 8
+  paginate_path: "/page:num/"
 
   # Photo previewer settings (PhotoSwipe 5)
   # the options please refer to: https://photoswipe.com/options/
