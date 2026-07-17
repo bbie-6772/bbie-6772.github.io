@@ -51,6 +51,11 @@ favicon: "" # the favicon for your site
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+
+  # Pagination setting
+paginate: 8
+paginate_path: "/page:num/"
+
 yat:
   date_format: "%Y-%m-%d, %a"
 
@@ -187,10 +192,6 @@ yat:
   #   image_width: 38.2%      # Image default width
   #   image_height: 160px     # Image default height
   #   text_size: 350          # Words default size
-
-  # Pagination setting
-  paginate: 8
-  paginate_path: "/page:num/"
 
   # Photo previewer settings (PhotoSwipe 5)
   # the options please refer to: https://photoswipe.com/options/
