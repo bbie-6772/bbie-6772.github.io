@@ -3,22 +3,72 @@
 {% endif %}
 
 {% if paginator.posts.size > 0 %}
+  {%- assign group_size = 5 -%}
+  {%- assign current_page = paginator.page -%}
+  {%- assign total_pages = paginator.total_pages -%}
+  {%- assign current_group = current_page | minus: 1 | divided_by: group_size -%}
+  {%- assign group_start = current_group | times: group_size | plus: 1 -%}
+  {%- assign group_end = group_start | plus: group_size | minus: 1 -%}
+  {%- if group_end > total_pages -%}
+    {%- assign group_end = total_pages -%}
+  {%- endif -%}
+  {%- assign paginate_path = site.paginate_path | default: '/page:num/' -%}
+
   <div class="paginator">
-    <span class="previous">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">Prev</a>
+    <!-- First page -->
+    <span class="first">
+    {% if current_page > 1 %}
+      <a href="{{ '/' | relative_url }}" aria-label="First page">&laquo;</a>
     {% else %}
-      <span>Prev</span>
+      <span aria-hidden="true">&laquo;</span>
     {% endif %}
     </span>
 
-    <span class="indicator"> {{ paginator.page }}/{{ paginator.total_pages }}</span>
+    <!-- Previous page -->
+    <span class="previous">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" aria-label="Previous page">&lsaquo;</a>
+    {% else %}
+      <span aria-hidden="true">&lsaquo;</span>
+    {% endif %}
+    </span>
 
+    <!-- Page numbers -->
+    <span class="pages">
+    {% for num in (group_start..group_end) %}
+      {% if num == current_page %}
+        <span class="page-num current">{{ num }}</span>
+      {% else %}
+        {% if num == 1 %}
+          {% assign page_url = '/' | relative_url %}
+        {% else %}
+          {% assign page_url = paginate_path | replace: ':num', num | relative_url %}
+        {% endif %}
+        <a class="page-num" href="{{ page_url }}">{{ num }}</a>
+      {% endif %}
+    {% endfor %}
+    </span>
+
+    <!-- Next page -->
     <span class="next">
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+      <a href="{{ paginator.next_page_path | relative_url }}" aria-label="Next page">&rsaquo;</a>
     {% else %}
-      <span>Next</span>
+      <span aria-hidden="true">&rsaquo;</span>
+    {% endif %}
+    </span>
+
+    <!-- Last page -->
+    <span class="last">
+    {% if current_page < total_pages %}
+      {% if total_pages == 1 %}
+        {% assign last_url = '/' | relative_url %}
+      {% else %}
+        {% assign last_url = paginate_path | replace: ':num', total_pages | relative_url %}
+      {% endif %}
+      <a href="{{ last_url }}" aria-label="Last page">&raquo;</a>
+    {% else %}
+      <span aria-hidden="true">&raquo;</span>
     {% endif %}
     </span>
   </div>
