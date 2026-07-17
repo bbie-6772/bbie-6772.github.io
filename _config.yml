@@ -241,6 +241,12 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+# polyfill.io 악성코드 주입 방지
+jekyll-spaceship:
+  mathjax-processor:
+    src:
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
