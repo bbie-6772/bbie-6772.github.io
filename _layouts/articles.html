@@ -8,6 +8,8 @@ sidebar: category-list
     {% assign banner = page.title %}
   {% endif %}
 
+  {% assign paginator_source = paginator | default: site.posts %}
+
   {{ content }}
 
   {% include views/pagination.html %}
