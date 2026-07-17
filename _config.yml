@@ -190,7 +190,6 @@ yat:
 
   # Pagination setting
   paginate: 8
-  paginate_path: "/page:num/"  # 페이지 번호 경로 (예: /page2/)
 
   # Photo previewer settings (PhotoSwipe 5)
   # the options please refer to: https://photoswipe.com/options/
