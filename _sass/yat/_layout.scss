@@ -514,6 +514,28 @@ html {
       background-color: #ebebeb;
       border: none;
     }
+
+      // 리스트 자체의 위아래 여백 (문단과의 구분감은 살리기)
+    ul, ol {
+      margin-bottom: 24px;
+    }
+
+    // 리스트 항목 사이 간격은 여기서 직접 관리
+    li {
+      margin-bottom: 6px; // 원하는 만큼 조절 (예: 4px~10px)
+    }
+
+    // kramdown이 리스트 안에 <p>를 만들어도 24px 안 붙게 막기
+    li > p {
+      margin-bottom: 0;
+    }
+
+    // 리스트 안에 또 리스트(하위 목록)가 있을 때 위쪽 여백 정리
+    li > ul,
+    li > ol {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
   }
 
   .post-related {
