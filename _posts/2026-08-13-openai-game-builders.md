@@ -5,7 +5,7 @@ subtitle: 하나의 이야기를 2D와 3D로 동시에 만들어보는 이유
 author: bbie
 categories: openai_game_builders
 banner:
-  image: /assets/images/openai-game-builders/02-two-track-pipeline.svg
+  image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#111827"
   height: "50vh"
