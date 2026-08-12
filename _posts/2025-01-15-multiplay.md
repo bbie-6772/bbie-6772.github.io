@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Unity]
+tags: [Unity, Game-Server, Multiplayer, Database, TCP]
 ---
 
 ## DB 연동

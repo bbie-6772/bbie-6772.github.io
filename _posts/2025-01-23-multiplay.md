@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Game-Server, Tower-Defense, Database, Multiplayer]
 ---
 
 ## 메인 작업

@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Feedback]
+tags: [Feedback, Git, Node.js, Game-Server, Tower-Defense, Multiplayer]
 ---
 
 ## 프로젝트 끝

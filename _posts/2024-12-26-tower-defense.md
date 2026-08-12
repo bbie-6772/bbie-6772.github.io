@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Node.js]
+tags: [Node.js, WebSocket, Authentication, Game-Server]
 ---
 
 ## 회원가입 기능 + 클라이언트

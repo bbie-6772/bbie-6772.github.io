@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [AWS-ECS, Docker, Load-Balancing, Game-Server]
 ---
 
 ## AWS ECS

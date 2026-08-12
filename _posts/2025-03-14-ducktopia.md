@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Feedback]
+tags: [Feedback, CI-CD, Movement-Synchronization, Game-Server]
 ---
 
 ## 피드백

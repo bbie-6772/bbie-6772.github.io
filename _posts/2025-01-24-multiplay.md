@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Packet-Protocol, Matchmaking, Game-Server, Tower-Defense, Multiplayer]
 ---
 
 ## 메인 작업

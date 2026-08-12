@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [C#]
+tags: [C#, Game-Server]
 ---
 
 ## C#으로 서버 열기

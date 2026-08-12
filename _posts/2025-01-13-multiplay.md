@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Unity]
+tags: [Unity, Game-Server, Multiplayer, TCP]
 ---
 
 ## 지연 시간과 핑 구현

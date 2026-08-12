@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Node.js]
+tags: [Node.js, WebSocket, Game-Server]
 ---
 
 ## 대기 방 구현

@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Refactoring, Game-Server, Tower-Defense, Multiplayer]
 ---
 
 ## 리팩토링 작업

@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Feedback]
+tags: [Feedback, Game-Server, Multiplayer, TCP]
 ---
 
 ## 추가 변경사항

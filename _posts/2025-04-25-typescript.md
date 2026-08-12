@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [TypeScript]
+tags: [TypeScript, OOP]
 ---
 
 ## 문법

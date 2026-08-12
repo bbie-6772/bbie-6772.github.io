@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Unity]
+tags: [Unity, Movement-Synchronization, Game-Server, Multiplayer, Database, TCP]
 ---
 
 ## 위치 동기화

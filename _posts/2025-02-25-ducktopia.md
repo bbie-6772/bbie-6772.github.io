@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Health-Check, Load-Balancing, Game-Server]
 ---
 
 ## 분산 서버

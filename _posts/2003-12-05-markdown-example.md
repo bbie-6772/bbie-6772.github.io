@@ -3,7 +3,7 @@ layout: post
 title: Markdown 예제1
 subtitle: 각 게시물에 부제목도 있어요!
 categories: example
-tags: []
+tags: [Markdown]
 ---
 
 일반적으로 markdown 언어를 여기에 작성하면 Jekyll이 자동으로 멋진 웹페이지로 변환시켜줘요!  

@@ -4,7 +4,7 @@ title: SQL 과제 제출
 subtitle: 게임서버 개발 부트캠프
 author: bbie
 categories: Pre-camp
-tags: [SQL]
+tags: [SQL, TIL]
 ---
 
 SQL 관련 과제 제출 및 기록하기!

@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Algorithm]
+tags: [Algorithm, Graph-Traversal]
 ---
 
 ## 탐색/검색 알고리즘(Search algorithm)

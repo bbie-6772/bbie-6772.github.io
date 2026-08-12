@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [AWS-EC2, Game-Server]
 ---
 
 ## 분산 서버

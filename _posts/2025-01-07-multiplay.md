@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Protobuf, Game-Server, Multiplayer, TCP]
 ---
 
 ## 환경변수 관리

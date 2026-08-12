@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [C++]
+tags: [C++, Chat-System, Game-Server]
 ---
 
 ## 채팅 서버 만들기(동기 I/O)

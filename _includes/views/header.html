@@ -65,6 +65,9 @@
 <script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
 
 <script>
+  var searchScoreCache = new WeakMap();
+  var cachedSearchQuery = '';
+
   SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
@@ -84,10 +87,51 @@
       </li>
       `,
       noResultsText: '검색결과가 존재하지 않습니다.',
-      limit: 10000,
+      limit: 50,
       debounceTime: 500,
       fuzzy: false,
-      exclude: ['Welcome']
+      exclude: ['Welcome'],
+      sortMiddleware: function(a, b, query) {
+        function relevance(item) {
+          var keyword = query.trim().toLowerCase();
+          if (cachedSearchQuery !== keyword) {
+            cachedSearchQuery = keyword;
+            searchScoreCache = new WeakMap();
+          }
+          if (searchScoreCache.has(item)) return searchScoreCache.get(item);
+
+          var title = (item.title || '').toLowerCase();
+          var tags = (item.tags || '').toLowerCase();
+          var tagList = tags.split(',').map(function(tag) { return tag.trim(); });
+          var category = (item.category || '').toLowerCase();
+          var desc = (item.desc || '').toLowerCase();
+          var content = (item.content || '').toLowerCase();
+          var score = 0;
+
+          if (title === keyword) score += 120;
+          else if (title.startsWith(keyword)) score += 100;
+          else if (title.includes(keyword)) score += 90;
+
+          if (tagList.includes(keyword)) score += 80;
+          else if (tags.includes(keyword)) score += 60;
+          if (desc.includes(keyword)) score += 50;
+          if (category.includes(keyword)) score += 20;
+
+          var count = 0;
+          var position = content.indexOf(keyword);
+          for (var index = position; index >= 0 && count < 5; index = content.indexOf(keyword, index + keyword.length)) {
+            count++;
+          }
+          score += count * 6;
+          if (position >= 0 && position < 300) score += 10;
+          else if (position >= 0 && position < 1000) score += 5;
+
+          searchScoreCache.set(item, score);
+          return score;
+        }
+
+        return relevance(b) - relevance(a) || b.date.localeCompare(a.date);
+      }
     });
 
   function initHeader() {

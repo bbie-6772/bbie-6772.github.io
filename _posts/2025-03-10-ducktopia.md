@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [AWS-ECS, Load-Balancing, Game-Server]
 ---
 
 ## Gateway 로드밸런싱

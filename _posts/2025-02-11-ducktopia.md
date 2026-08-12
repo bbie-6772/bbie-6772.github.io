@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [Refactoring, Game-Server]
 ---
 
 ## 2차 구현

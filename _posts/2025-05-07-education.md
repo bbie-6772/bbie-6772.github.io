@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: []
+tags: [EdTech, Product-Management]
 ---
 
 ## 교육 운영 매니저(Education Product Manager)

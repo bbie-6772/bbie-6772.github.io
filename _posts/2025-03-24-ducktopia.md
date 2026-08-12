@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Feedback]
+tags: [Feedback, Load-Balancing, PM2, Testing, Game-Server]
 ---
 
 ## 개요

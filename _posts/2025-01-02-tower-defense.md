@@ -10,7 +10,7 @@ banner:
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [Node.js, Feedback]
+tags: [Node.js, Feedback, WebSocket, Game-Server]
 ---
 
 ## 프로젝트 마무리
