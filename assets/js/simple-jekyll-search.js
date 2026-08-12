@@ -317,6 +317,7 @@
         }
 
         let debounceTimerHandle
+        let isSearchReady = false
         const debounce = function (func, delayMillis) {
             if (delayMillis) {
                 clearTimeout(debounceTimerHandle)
@@ -356,6 +357,8 @@
                 exclude: options.exclude
             })
 
+            registerInput()
+
             if (_$utils_9.isJSON(options.json)) {
                 initWithJSON(options.json)
             } else {
@@ -372,7 +375,8 @@
 
         function initWithJSON(json) {
             _$Repository_4.put(json)
-            registerInput()
+            isSearchReady = true
+            search(options.searchInput.value)
         }
 
         function initWithURL(url) {
@@ -396,7 +400,9 @@
             options.searchInput.addEventListener('input', function (e) {
                 if (isWhitelistedKey(e.which)) {
                     emptyResultsContainer()
-                    debounce(function () { search(e.target.value) }, options.debounceTime)
+                    if (isSearchReady) {
+                        debounce(function () { search(e.target.value) }, options.debounceTime)
+                    }
                 }
             })
         }
