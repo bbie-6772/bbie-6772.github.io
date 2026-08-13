@@ -1,20 +1,21 @@
 # frozen_string_literal: true
 
+require "cgi"
+
 module Jekyll
   module SearchFilters
     def search_headings(content)
-      content.to_s.each_line.filter_map do |line|
-        match = line.match(/^\s{0,3}\#{1,6}\s+(.+?)\s*\#*\s*$/)
-        next unless match
-
-        match[1]
-          .gsub(/!\[[^\]]*\]\([^)]*\)/, " ")
-          .gsub(/\[([^\]]+)\]\([^)]*\)/, '\\1')
+      content.to_s
+        .scan(/<h[1-6]\b[^>]*>(.*?)<\/h[1-6]>/im)
+        .flatten
+        .map do |heading|
+          CGI.unescapeHTML(heading)
           .gsub(/<[^>]+>/, " ")
-          .gsub(/[`*_~]/, "")
           .gsub(/\s+/, " ")
           .strip
-      end.reject(&:empty?).join(" ")
+        end
+        .reject(&:empty?)
+        .join(" ")
     end
   end
 end
