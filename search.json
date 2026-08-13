@@ -2,31 +2,32 @@
 layout: none
 ---
 [
+  {% assign first_search_item = true %}
   {% for post in site.posts %}
+    {% unless first_search_item %},{% endunless %}
     {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.categories }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: '%Y-%m-%d'}}",
-      "desc"     : "{{ post.subtitle }}",
-      "image"    : "{% if post.banner.image %}{{ post.banner.image }}{% else %}/assets/images/banners/home.jpeg{% endif %}",
-      "content"  : {{ post.content | strip_html | strip_newlines | truncate: 3000 | replace: '\"', '\\\"' | jsonify }}
-    } {% unless forloop.last %},{% endunless %}
+      "title"    : {{ post.title | escape | jsonify }},
+      "category" : {{ post.categories | join: ', ' | jsonify }},
+      "tags"     : {{ post.tags | join: ', ' | jsonify }},
+      "url"      : {{ site.baseurl | append: post.url | jsonify }},
+      "date"     : {{ post.date | date: '%Y-%m-%d' | jsonify }},
+      "desc"     : {{ post.subtitle | default: '' | strip_html | jsonify }},
+      "headings" : {{ post.content | search_headings | jsonify }}
+    }
+    {% assign first_search_item = false %}
   {% endfor %}
-  ,
-  {% for page in site.pages %}
-   {
-     {% if page.title != nil %}
-        "title"    : "{{ page.title | escape }}",
-        "category" : "{{ page.categories }}",
-        "tags"     : "{{ page.tags | join: ', ' }}",
-        "url"      : "{{ site.baseurl }}{{ page.url }}",
-        "date"     : "{{ page.date | date: '%Y-%m-%d'}}",
-        "desc"     : "{{ page.subtitle }}",
-        "image"    : "{% if page.banner.image %}{{ page.banner.image }}{% else %}/assets/images/banners/home.jpeg{% endif %}",
-        "content"  : {{ page.content | strip_html | strip_newlines | truncate: 3000 | replace: '\"', '\\\"' | jsonify }}
-     {% endif %}
-   } {% unless forloop.last %},{% endunless %}
+  {% assign searchable_pages = site.pages | where_exp: 'page', 'page.title != nil' %}
+  {% for page in searchable_pages %}
+    {% unless first_search_item %},{% endunless %}
+    {
+      "title"    : {{ page.title | escape | jsonify }},
+      "category" : {{ page.categories | join: ', ' | jsonify }},
+      "tags"     : {{ page.tags | join: ', ' | jsonify }},
+      "url"      : {{ site.baseurl | append: page.url | jsonify }},
+      "date"     : {{ page.date | date: '%Y-%m-%d' | jsonify }},
+      "desc"     : {{ page.subtitle | default: '' | strip_html | jsonify }},
+      "headings" : {{ page.content | search_headings | jsonify }}
+    }
+    {% assign first_search_item = false %}
   {% endfor %}
 ]

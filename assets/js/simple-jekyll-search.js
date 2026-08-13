@@ -37,28 +37,87 @@
 
     'use strict';
 
-    function fuzzysearch(needle, haystack) {
-        var tlen = haystack.length;
-        var qlen = needle.length;
-        if (qlen > tlen) {
-            return false;
+    function normalizeSearchText(value) {
+        var text = String(value || '').toLowerCase()
+        if (typeof text.normalize === 'function') {
+            text = text.normalize('NFKC')
         }
-        if (qlen === tlen) {
-            return needle === haystack;
-        }
-        outer: for (var i = 0, j = 0; i < qlen; i++) {
-            var nch = needle.charCodeAt(i);
-            while (j < tlen) {
-                if (haystack.charCodeAt(j++) === nch) {
-                    continue outer;
-                }
-            }
-            return false;
-        }
-        return true;
+        return text.replace(/[\s_-]+/g, ' ').trim()
     }
 
-    var _$fuzzysearch_1 = fuzzysearch;
+    function compactSearchText(value) {
+        return normalizeSearchText(value).replace(/\s+/g, '')
+    }
+
+    function tokenizeSearchText(value) {
+        return normalizeSearchText(value).match(/[\p{L}\p{N}+#.]+/gu) || []
+    }
+
+    function allowedEditDistance(term) {
+        var length = compactSearchText(term).length
+        if (length <= 3) return 0
+        if (length <= 7) return 1
+        return 2
+    }
+
+    function isWithinEditDistance(left, right, maximum) {
+        if (Math.abs(left.length - right.length) > maximum) return false
+
+        var previous = []
+        for (var column = 0; column <= right.length; column++) previous[column] = column
+
+        for (var row = 1; row <= left.length; row++) {
+            var current = [row]
+            var smallest = current[0]
+            for (var index = 1; index <= right.length; index++) {
+                var cost = left[row - 1] === right[index - 1] ? 0 : 1
+                current[index] = Math.min(
+                    current[index - 1] + 1,
+                    previous[index] + 1,
+                    previous[index - 1] + cost
+                )
+                smallest = Math.min(smallest, current[index])
+            }
+            if (smallest > maximum) return false
+            previous = current
+        }
+        return previous[right.length] <= maximum
+    }
+
+    function isFuzzyTermMatch(text, term) {
+        var compactTerm = compactSearchText(term)
+        var maximum = allowedEditDistance(compactTerm)
+        if (!compactTerm || maximum === 0) return false
+
+        var candidates = tokenizeSearchText(text).map(compactSearchText)
+        for (var start = 0; start < candidates.length; start++) {
+            var combined = ''
+            for (var end = start; end < candidates.length && end < start + 3; end++) {
+                combined += candidates[end]
+                if (combined.length > compactTerm.length + maximum) break
+                if (isWithinEditDistance(combined, compactTerm, maximum)) return true
+            }
+        }
+        return false
+    }
+
+    function matchesSearchText(text, query, allowFuzzy) {
+        var compactText = compactSearchText(text)
+        var compactQuery = compactSearchText(query)
+        var textTerms = tokenizeSearchText(text)
+        var queryTerms = tokenizeSearchText(query)
+
+        if (!compactQuery || queryTerms.length === 0) return false
+        if (compactText.indexOf(compactQuery) >= 0) return true
+
+        return queryTerms.every(function (queryTerm) {
+            var compactTerm = compactSearchText(queryTerm)
+            var exact = textTerms.some(function (textTerm) {
+                return compactSearchText(textTerm).indexOf(compactTerm) >= 0
+            })
+            return exact || (allowFuzzy && isFuzzyTermMatch(text, queryTerm))
+        })
+    }
 
     'use strict'
 
@@ -68,7 +127,7 @@
 
     function FuzzySearchStrategy() {
         this.matches = function (string, crit) {
-            return _$fuzzysearch_1(crit.toLowerCase(), string.toLowerCase())
+            return matchesSearchText(string, crit, true)
         }
     }
 
@@ -78,14 +137,7 @@
 
     function LiteralSearchStrategy() {
         this.matches = function (str, crit) {
-            if (!str) return false
-
-            str = str.trim().toLowerCase()
-            crit = crit.trim().toLowerCase()
-
-            return crit.split(' ').filter(function (word) {
-                return str.indexOf(word) >= 0
-            }).length === crit.split(' ').length
+            return matchesSearchText(str, crit, false)
         }
     }
 
@@ -113,6 +165,7 @@
     opt.searchStrategy = opt.fuzzy ? _$FuzzySearchStrategy_5 : _$LiteralSearchStrategy_6
     opt.sort = NoSort
     opt.exclude = []
+    opt.searchableFields = ['title', 'tags', 'category', 'desc', 'headings']
 
     function put(data) {
         if (isObject(data)) {
@@ -169,6 +222,7 @@
         opt.searchStrategy = _opt.fuzzy ? _$FuzzySearchStrategy_5 : _$LiteralSearchStrategy_6
         opt.sort = _opt.sort || NoSort
         opt.exclude = _opt.exclude || []
+        opt.searchableFields = _opt.searchableFields || ['title', 'tags', 'category', 'desc', 'headings']
     }
 
     function findMatches(data, crit, strategy, opt) {
@@ -183,11 +237,11 @@
     }
 
     function findMatchesInObject(obj, crit, strategy, opt) {
-        for (const key in obj) {
-            if (!isExcluded(obj[key], opt.exclude) && strategy.matches(obj[key], crit)) {
-                return obj
-            }
-        }
+        const searchableText = opt.searchableFields
+            .map(function (field) { return obj[field] || '' })
+            .filter(function (value) { return !isExcluded(value, opt.exclude) })
+            .join(' ')
+        if (strategy.matches(searchableText, crit)) return obj
     }
 
     function isExcluded(term, excludedTerms) {
@@ -217,12 +271,14 @@
 
     function createStateChangeListener(xhr, callback) {
         return function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                try {
-                    callback(null, JSON.parse(xhr.responseText))
-                } catch (err) {
-                    callback(err, null)
-                }
+            if (xhr.readyState !== 4) return
+            if (xhr.status !== 200) {
+                return callback(new Error('HTTP ' + xhr.status), null)
+            }
+            try {
+                callback(null, JSON.parse(xhr.responseText))
+            } catch (err) {
+                callback(err, null)
             }
         }
     }
@@ -310,6 +366,8 @@
                 return 0
             },
             noResultsText: 'No results found',
+            loadingText: 'Loading search index...',
+            errorText: 'Search index could not be loaded.',
             limit: 10,
             fuzzy: false,
             debounceTime: null,
@@ -358,6 +416,8 @@
             })
 
             registerInput()
+            setResultsBusy(true)
+            appendToResultsContainer(options.loadingText)
 
             if (_$utils_9.isJSON(options.json)) {
                 initWithJSON(options.json)
@@ -376,13 +436,18 @@
         function initWithJSON(json) {
             _$Repository_4.put(json)
             isSearchReady = true
+            setResultsBusy(false)
+            emptyResultsContainer()
             search(options.searchInput.value)
         }
 
         function initWithURL(url) {
             _$JSONLoader_2.load(url, function (err, json) {
                 if (err) {
-                    throwError('failed to get JSON (' + url + ')')
+                    setResultsBusy(false)
+                    emptyResultsContainer()
+                    appendToResultsContainer(options.errorText)
+                    return
                 }
                 initWithJSON(json)
             })
@@ -396,12 +461,20 @@
             options.resultsContainer.innerHTML += text
         }
 
+        function setResultsBusy(isBusy) {
+            if (typeof options.resultsContainer.setAttribute === 'function') {
+                options.resultsContainer.setAttribute('aria-busy', String(isBusy))
+            }
+        }
+
         function registerInput() {
             options.searchInput.addEventListener('input', function (e) {
                 if (isWhitelistedKey(e.which)) {
                     emptyResultsContainer()
                     if (isSearchReady) {
                         debounce(function () { search(e.target.value) }, options.debounceTime)
+                    } else {
+                        appendToResultsContainer(options.loadingText)
                     }
                 }
             })
@@ -432,6 +505,11 @@
         function isWhitelistedKey(key) {
             return [13, 16, 20, 37, 38, 39, 40, 91].indexOf(key) === -1
         }
+
+        window.SimpleJekyllSearch.normalize = normalizeSearchText
+        window.SimpleJekyllSearch.compact = compactSearchText
+        window.SimpleJekyllSearch.tokenize = tokenizeSearchText
+        window.SimpleJekyllSearch.isFuzzyMatch = isFuzzyTermMatch
 
         function throwError(message) {
             throw new Error('SimpleJekyllSearch --- ' + message)

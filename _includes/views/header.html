@@ -52,9 +52,9 @@
               </div>
             {%- endif -%}
             <div id="search-bar">
-              <input id="search-input" type="text" placeholder="검색어를 입력하세요." />
+              <input id="search-input" type="search" placeholder="검색어를 입력하세요." aria-label="블로그 글 검색" />
             </div>
-            <ul id="results-container"></ul>
+            <ul id="results-container" aria-live="polite" aria-busy="true"></ul>
           </div>
         </nav>
       {%- endif -%}
@@ -75,7 +75,6 @@
       searchResultTemplate: `
         
         <li class="search-result-item">
-        <div class="banner" style="background-image: url('{image}');"></div>
         <a href="{url}" class="search-result-link">
           <div class="search-result-title">{title}</div>
           <div class="search-result-summary">{desc}</div>
@@ -87,50 +86,80 @@
       </li>
       `,
       noResultsText: '검색결과가 존재하지 않습니다.',
-      limit: 50,
+      loadingText: '검색 자료를 불러오는 중입니다.',
+      errorText: '검색 자료를 불러오지 못했습니다. 새로고침해 주세요.',
+      limit: 10,
       debounceTime: 250,
-      fuzzy: false,
+      fuzzy: true,
       exclude: ['Welcome'],
       sortMiddleware: function(a, b, query) {
         function relevance(item) {
-          var keyword = query.trim().toLowerCase();
+          var keyword = SimpleJekyllSearch.normalize(query);
           if (cachedSearchQuery !== keyword) {
             cachedSearchQuery = keyword;
             searchScoreCache = new WeakMap();
           }
           if (searchScoreCache.has(item)) return searchScoreCache.get(item);
 
-          var title = (item.title || '').toLowerCase();
-          var tags = (item.tags || '').toLowerCase();
-          var tagList = tags.split(',').map(function(tag) { return tag.trim(); });
-          var category = (item.category || '').toLowerCase();
-          var desc = (item.desc || '').toLowerCase();
-          var content = (item.content || '').toLowerCase();
+          var title = SimpleJekyllSearch.normalize(item.title);
+          var tags = SimpleJekyllSearch.normalize(item.tags);
+          var tagList = (item.tags || '').split(',').map(SimpleJekyllSearch.normalize);
+          var category = SimpleJekyllSearch.normalize(item.category);
+          var desc = SimpleJekyllSearch.normalize(item.desc);
+          var headings = SimpleJekyllSearch.normalize(item.headings);
+          var terms = SimpleJekyllSearch.tokenize(query);
           var score = 0;
 
-          if (title === keyword) score += 120;
-          else if (title.startsWith(keyword)) score += 100;
-          else if (title.includes(keyword)) score += 90;
+          terms.forEach(function(term) {
+            var compactTerm = SimpleJekyllSearch.compact(term);
+            var compactTitle = SimpleJekyllSearch.compact(title);
+            var compactTags = SimpleJekyllSearch.compact(tags);
+            var compactDesc = SimpleJekyllSearch.compact(desc);
+            var compactCategory = SimpleJekyllSearch.compact(category);
+            var compactHeadings = SimpleJekyllSearch.compact(headings);
+            var hasExactMatch = false;
 
-          if (tagList.includes(keyword)) score += 80;
-          else if (tags.includes(keyword)) score += 60;
-          if (desc.includes(keyword)) score += 50;
-          if (category.includes(keyword)) score += 20;
+            if (compactTitle === compactTerm) score += 120;
+            else if (compactTitle.startsWith(compactTerm)) score += 100;
+            else if (compactTitle.includes(compactTerm)) score += 90;
 
-          var count = 0;
-          var position = content.indexOf(keyword);
-          for (var index = position; index >= 0 && count < 5; index = content.indexOf(keyword, index + keyword.length)) {
-            count++;
+            if (tagList.some(function(tag) { return SimpleJekyllSearch.compact(tag) === compactTerm; })) score += 80;
+            else if (compactTags.includes(compactTerm)) score += 60;
+            if (compactDesc.includes(compactTerm)) score += 50;
+            if (compactCategory.includes(compactTerm)) score += 20;
+
+            var headingCount = 0;
+            for (var index = compactHeadings.indexOf(compactTerm); index >= 0 && headingCount < 5; index = compactHeadings.indexOf(compactTerm, index + compactTerm.length)) {
+              headingCount++;
+            }
+            score += headingCount * 8;
+
+            hasExactMatch = compactTitle.includes(compactTerm) || compactTags.includes(compactTerm) ||
+              compactDesc.includes(compactTerm) || compactCategory.includes(compactTerm) ||
+              compactHeadings.includes(compactTerm);
+
+            if (!hasExactMatch) {
+              if (SimpleJekyllSearch.isFuzzyMatch(title, term)) score += 35;
+              if (SimpleJekyllSearch.isFuzzyMatch(tags, term)) score += 30;
+              if (SimpleJekyllSearch.isFuzzyMatch(desc, term)) score += 20;
+              if (SimpleJekyllSearch.isFuzzyMatch(category, term)) score += 10;
+              if (SimpleJekyllSearch.isFuzzyMatch(headings, term)) score += 8;
+            }
+          });
+
+          if (terms.length > 1) {
+            var compactKeyword = SimpleJekyllSearch.compact(keyword);
+            if (SimpleJekyllSearch.compact(title).includes(compactKeyword)) score += 40;
+            if (SimpleJekyllSearch.compact(tags).includes(compactKeyword)) score += 30;
+            if (SimpleJekyllSearch.compact(desc).includes(compactKeyword)) score += 20;
+            if (SimpleJekyllSearch.compact(headings).includes(compactKeyword)) score += 10;
           }
-          score += count * 6;
-          if (position >= 0 && position < 300) score += 10;
-          else if (position >= 0 && position < 1000) score += 5;
 
           searchScoreCache.set(item, score);
           return score;
         }
 
-        return relevance(b) - relevance(a) || b.date.localeCompare(a.date);
+        return relevance(b) - relevance(a) || (b.date || '').localeCompare(a.date || '');
       }
     });
 
