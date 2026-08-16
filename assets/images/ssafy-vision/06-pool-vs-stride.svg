@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="400" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">해상도를 줄이는 두 가지 방법</text>
+
+<text x="180" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">맥스 풀링 — 배울 게 없는 요약</text>
+<g font-size="13" fill="#1d3a5c" text-anchor="middle">
+<rect x="90" y="92" width="40" height="40" fill="#f6d9d9" stroke="#a04040" stroke-width="1.6"/><text x="110" y="118">1</text>
+<rect x="130" y="92" width="40" height="40" fill="#f6d9d9" stroke="#a04040" stroke-width="1.6"/><text x="150" y="118">6</text>
+<rect x="170" y="92" width="40" height="40" fill="#dce9dc" stroke="#4f8f68" stroke-width="1.6"/><text x="190" y="118">2</text>
+<rect x="210" y="92" width="40" height="40" fill="#dce9dc" stroke="#4f8f68" stroke-width="1.6"/><text x="230" y="118">8</text>
+<rect x="90" y="132" width="40" height="40" fill="#f6d9d9" stroke="#a04040" stroke-width="1.6"/><text x="110" y="158">5</text>
+<rect x="130" y="132" width="40" height="40" fill="#f6d9d9" stroke="#a04040" stroke-width="1.6"/><text x="150" y="158">3</text>
+<rect x="170" y="132" width="40" height="40" fill="#dce9dc" stroke="#4f8f68" stroke-width="1.6"/><text x="190" y="158">7</text>
+<rect x="210" y="132" width="40" height="40" fill="#dce9dc" stroke="#4f8f68" stroke-width="1.6"/><text x="230" y="158">4</text>
+</g>
+<path d="M262 152 L300 152" stroke="#40556b" stroke-width="1.6" marker-end="url(#e)"/>
+<g font-size="14" font-weight="700" fill="#1d3a5c" text-anchor="middle">
+<rect x="306" y="112" width="40" height="40" fill="#f6d9d9" stroke="#a04040" stroke-width="1.8"/><text x="326" y="139">6</text>
+<rect x="346" y="112" width="40" height="40" fill="#dce9dc" stroke="#4f8f68" stroke-width="1.8"/><text x="366" y="139">8</text>
+</g>
+<text x="180" y="196" text-anchor="middle" font-size="12" fill="#40556b">2×2 조각에서 가장 큰 값만 남긴다</text>
+<text x="420" y="120" font-size="12" fill="#40556b">학습할 값이 없음</text>
+<text x="420" y="142" font-size="12" fill="#40556b">가장 센 신호만 통과</text>
+<text x="420" y="164" font-size="12" fill="#4f8f68">위치가 살짝 흔들려도 결과 동일</text>
+
+<line x1="40" y1="222" x2="680" y2="222" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="180" y="256" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">스트라이드 합성곱 — 배우면서 건너뛰기</text>
+<rect x="90" y="272" width="160" height="80" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<g stroke="#3d6fa8" stroke-width="0.6" opacity="0.5"><path d="M110 272 V352 M130 272 V352 M150 272 V352 M170 272 V352 M190 272 V352 M210 272 V352 M230 272 V352 M90 292 H250 M90 312 H250 M90 332 H250"/></g>
+<rect x="90" y="272" width="60" height="60" fill="none" stroke="#a04040" stroke-width="2.2"/>
+<rect x="130" y="272" width="60" height="60" fill="none" stroke="#c2703c" stroke-width="2.2" stroke-dasharray="4 3"/>
+<text x="180" y="376" text-anchor="middle" font-size="12" fill="#40556b">필터를 2칸씩 건너뛰며 찍는다</text>
+
+<path d="M262 312 L300 312" stroke="#40556b" stroke-width="1.6" marker-end="url(#e)"/>
+<rect x="306" y="286" width="52" height="52" rx="4" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="420" y="290" font-size="12" fill="#40556b">필터 값을 학습함</text>
+<text x="420" y="312" font-size="12" fill="#40556b">줄이는 방식까지 데이터에서 배움</text>
+<text x="420" y="334" font-size="12" fill="#c2703c">요즘 모델은 풀링 대신 이쪽을 자주 쓴다</text>
+<defs><marker id="e" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

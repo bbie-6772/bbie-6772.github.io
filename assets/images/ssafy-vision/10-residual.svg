@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="400" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">깊게 쌓았더니 오히려 나빠졌다 — 그래서 지름길을 냈다</text>
+
+<text x="180" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#a04040">퇴화(Degradation) 문제</text>
+<line x1="80" y1="240" x2="300" y2="240" stroke="#40556b" stroke-width="1.2"/>
+<line x1="80" y1="96" x2="80" y2="240" stroke="#40556b" stroke-width="1.2"/>
+<text x="60" y="102" font-size="10.5" fill="#40556b">오차</text>
+<text x="290" y="258" font-size="10.5" fill="#40556b">학습</text>
+<path d="M84 110 C120 160 160 196 296 214" fill="none" stroke="#4f8f68" stroke-width="2.4"/>
+<path d="M84 118 C130 150 170 172 296 178" fill="none" stroke="#a04040" stroke-width="2.4"/>
+<text x="230" y="204" font-size="11.5" fill="#4f8f68">20층</text>
+<text x="230" y="168" font-size="11.5" fill="#a04040">56층</text>
+<text x="180" y="284" text-anchor="middle" font-size="12" fill="#1d3a5c">더 깊은 모델이 <tspan font-weight="700" fill="#a04040">훈련 오차조차</tspan> 더 높다</text>
+<text x="180" y="306" text-anchor="middle" font-size="11.5" fill="#40556b">과적합이 아니다 — 학습 자체가 안 되는 것</text>
+
+<line x1="340" y1="70" x2="340" y2="330" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="530" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#4f8f68">잔차 블록(Residual Block)</text>
+<rect x="470" y="200" width="120" height="36" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="530" y="224" text-anchor="middle" font-size="12.5" fill="#1d3a5c">Conv 3×3</text>
+<rect x="470" y="146" width="120" height="36" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="530" y="170" text-anchor="middle" font-size="12.5" fill="#1d3a5c">Conv 3×3</text>
+<circle cx="530" cy="116" r="14" fill="#fff" stroke="#4f8f68" stroke-width="2.4"/>
+<text x="530" y="121" text-anchor="middle" font-size="14" font-weight="700" fill="#4f8f68">+</text>
+<path d="M530 260 V236 M530 200 V182 M530 146 V130" stroke="#40556b" stroke-width="1.8" marker-end="url(#f)"/>
+<path d="M530 102 V80" stroke="#40556b" stroke-width="1.8" marker-end="url(#f)"/>
+<path d="M530 260 C450 260 440 130 512 118" fill="none" stroke="#4f8f68" stroke-width="2.4" marker-end="url(#g)"/>
+<text x="416" y="192" font-size="11.5" font-weight="700" fill="#4f8f68">지름길</text>
+<text x="416" y="212" font-size="11.5" fill="#4f8f68">(입력 그대로)</text>
+<circle cx="530" cy="262" r="4" fill="#40556b"/>
+<text x="546" y="268" font-size="12" fill="#1d3a5c">입력 x</text>
+<text x="546" y="86" font-size="12" fill="#1d3a5c">출력 F(x) + x</text>
+
+<rect x="60" y="330" width="600" height="52" rx="10" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.3"/>
+<text x="80" y="352" font-size="12.5" fill="#40556b">학습이 잘 안 되면 F(x) ≈ 0이 되어 출력이 x 그대로 나온다 — <tspan font-weight="700" fill="#1d3a5c">최소한 얕은 모델만큼은 보장</tspan></text>
+<text x="80" y="374" font-size="12.5" fill="#4f8f68">덕분에 100층 넘게 쌓아도 학습이 된다. ResNet-50은 지금도 현역 기준 모델이다.</text>
+<defs>
+<marker id="f" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker>
+<marker id="g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#4f8f68"/></marker>
+</defs>
+</svg>

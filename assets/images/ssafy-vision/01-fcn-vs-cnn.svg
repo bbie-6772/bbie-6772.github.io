@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="400" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">FCN은 사진을 한 줄로 편다, CNN은 사진 모양 그대로 본다</text>
+
+<text x="60" y="76" font-size="13" font-weight="700" fill="#a04040">FCN — 3×32×32 이미지를 3072칸 한 줄로 펴서 입력</text>
+<g>
+<rect x="60" y="92" width="86" height="86" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="2"/>
+<path d="M60 121 H146 M60 150 H146 M89 92 V178 M118 92 V178" stroke="#3d6fa8" stroke-width="0.8" opacity="0.5"/>
+<text x="103" y="196" text-anchor="middle" font-size="12" fill="#40556b">3×32×32</text>
+<path d="M156 135 L186 135" stroke="#40556b" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="196" y="124" width="400" height="22" rx="4" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="396" y="139" text-anchor="middle" font-size="12" fill="#a04040">3072칸 한 줄 (Flatten)</text>
+<text x="396" y="168" text-anchor="middle" font-size="12.5" fill="#a04040">옆 화소와 붙어 있었다는 사실이 여기서 사라진다</text>
+</g>
+
+<line x1="40" y1="212" x2="680" y2="212" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="60" y="244" font-size="13" font-weight="700" fill="#4f8f68">CNN — 가로·세로·채널(3차원)을 그대로 두고 필터를 굴린다</text>
+<rect x="60" y="260" width="86" height="86" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="2"/>
+<path d="M60 289 H146 M60 318 H146 M89 260 V346 M118 260 V346" stroke="#3d6fa8" stroke-width="0.8" opacity="0.5"/>
+<rect x="72" y="272" width="28" height="28" rx="3" fill="none" stroke="#a04040" stroke-width="2.4"/>
+<text x="103" y="364" text-anchor="middle" font-size="12" fill="#40556b">3×32×32</text>
+
+<path d="M156 303 L196 303" stroke="#40556b" stroke-width="1.6"/>
+<rect x="200" y="284" width="96" height="38" rx="8" fill="#4f8f68" opacity="0.85"/>
+<text x="248" y="308" text-anchor="middle" font-size="12.5" fill="#fff">필터 3×5×5</text>
+<path d="M300 303 L340 303" stroke="#40556b" stroke-width="1.6"/>
+<rect x="344" y="266" width="76" height="76" rx="6" fill="#eef4ee" stroke="#4f8f68" stroke-width="2"/>
+<text x="382" y="360" text-anchor="middle" font-size="12" fill="#40556b">특징 맵 28×28</text>
+<text x="446" y="296" font-size="12.5" fill="#1d3a5c">화소들의 이웃 관계가 살아 있다</text>
+<text x="446" y="318" font-size="12.5" fill="#4f8f68">→ 같은 필터를 이미지 전체에 재사용 (가중치 공유)</text>
+<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

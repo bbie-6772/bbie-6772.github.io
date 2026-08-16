@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="380" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">CNN이 못 하는 세 가지</text>
+
+<rect x="40" y="64" width="200" height="280" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="140" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">① 순서를 못 본다</text>
+<rect x="60" y="110" width="160" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="140" y="132" text-anchor="middle" font-size="12" fill="#1d3a5c">약을 먹고 잠을 자고</text>
+<path d="M100 152 L180 182 M180 152 L100 182" stroke="#c2703c" stroke-width="1.6"/>
+<rect x="60" y="188" width="160" height="34" rx="6" fill="#f6ece5" stroke="#c2703c" stroke-width="1.4"/>
+<text x="140" y="210" text-anchor="middle" font-size="12" fill="#1d3a5c">잠을 자고 약을 먹고</text>
+<text x="140" y="248" text-anchor="middle" font-size="11.5" fill="#40556b">단어는 똑같은데</text>
+<text x="140" y="268" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a04040">뜻이 완전히 다르다</text>
+<text x="140" y="300" text-anchor="middle" font-size="11.5" fill="#40556b">CNN에는 "먼저·나중"을</text>
+<text x="140" y="318" text-anchor="middle" font-size="11.5" fill="#40556b">담는 자리가 없다</text>
+
+<rect x="260" y="64" width="200" height="280" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="360" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">② 멀리 못 본다</text>
+<rect x="280" y="110" width="160" height="130" rx="6" fill="#eceff2" stroke="#8a97a5" stroke-width="1.2"/>
+<rect x="296" y="126" width="26" height="26" fill="none" stroke="#4f8f68" stroke-width="2"/>
+<rect x="398" y="126" width="26" height="26" fill="none" stroke="#4f8f68" stroke-width="2"/>
+<rect x="296" y="198" width="26" height="26" fill="none" stroke="#4f8f68" stroke-width="2"/>
+<rect x="398" y="198" width="26" height="26" fill="none" stroke="#4f8f68" stroke-width="2"/>
+<path d="M322 139 H398 M322 211 H398" stroke="#4f8f68" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="360" y="180" text-anchor="middle" font-size="11.5" fill="#4f8f68">같은 무늬, 먼 거리</text>
+<text x="360" y="268" text-anchor="middle" font-size="11.5" fill="#40556b">필터는 작은 이웃만 본다</text>
+<text x="360" y="288" text-anchor="middle" font-size="11.5" fill="#40556b">멀리 떨어진 두 곳의 관계는</text>
+<text x="360" y="308" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a04040">층을 아주 많이 쌓아야 겨우</text>
+
+<rect x="480" y="64" width="200" height="280" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="580" y="92" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">③ 위치를 버린다</text>
+<rect x="500" y="112" width="70" height="56" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="535" y="145" text-anchor="middle" font-size="11" fill="#1d3a5c">왼쪽 고양이</text>
+<rect x="500" y="180" width="70" height="56" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="535" y="213" text-anchor="middle" font-size="11" fill="#1d3a5c">오른쪽 고양이</text>
+<path d="M578 140 L616 164 M578 208 L616 184" stroke="#40556b" stroke-width="1.5" marker-end="url(#i)"/>
+<rect x="620" y="152" width="44" height="44" rx="6" fill="#f6ece5" stroke="#c2703c" stroke-width="1.6"/>
+<text x="642" y="179" text-anchor="middle" font-size="11" fill="#a04040">"고양이"</text>
+<text x="580" y="268" text-anchor="middle" font-size="11.5" fill="#40556b">풀링·스트라이드로 줄이면서</text>
+<text x="580" y="288" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a04040">어디에 있었는지가 사라진다</text>
+<text x="580" y="312" text-anchor="middle" font-size="11.5" fill="#40556b">분류엔 좋지만 분할·생성엔 곤란</text>
+
+<text x="360" y="368" text-anchor="middle" font-size="12.5" fill="#1d3a5c">①은 RNN이, ②는 Attention이, ③은 또 다른 구조가 답을 낸다</text>
+<defs><marker id="i" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

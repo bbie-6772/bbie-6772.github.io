@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="400" rx="12" fill="#f7f9fb"/><text x="360" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">AlexNet — 비용은 층마다 다른 곳에서 터진다</text>
+
+<text x="120" y="72" font-size="12.5" font-weight="700" fill="#3d6fa8">메모리 (KB)</text>
+<text x="120" y="90" font-size="11" fill="#40556b">앞쪽 합성곱층에 몰림</text>
+<g>
+<rect x="60" y="104" width="20" height="96" fill="#3d6fa8"/><text x="70" y="98" text-anchor="middle" font-size="9.5" fill="#40556b">1134</text>
+<rect x="84" y="138" width="20" height="62" fill="#3d6fa8"/><text x="94" y="132" text-anchor="middle" font-size="9.5" fill="#40556b">729</text>
+<rect x="108" y="178" width="20" height="22" fill="#7fa2c9"/>
+<rect x="132" y="178" width="20" height="22" fill="#7fa2c9"/>
+<rect x="156" y="186" width="20" height="14" fill="#7fa2c9"/>
+<rect x="180" y="198" width="20" height="2" fill="#c9d4e0"/>
+<rect x="204" y="198" width="20" height="2" fill="#c9d4e0"/>
+</g>
+<line x1="56" y1="200" x2="228" y2="200" stroke="#40556b" stroke-width="1"/>
+<g font-size="9" fill="#8a97a5" text-anchor="middle"><text x="70" y="214">C1</text><text x="94" y="214">C2</text><text x="118" y="214">C3</text><text x="142" y="214">C4</text><text x="166" y="214">C5</text><text x="190" y="214">FC1</text><text x="214" y="214">FC2</text></g>
+
+<text x="360" y="72" font-size="12.5" font-weight="700" fill="#c2703c">파라미터 (K)</text>
+<text x="360" y="90" font-size="11" fill="#40556b">완전연결층에 몰림</text>
+<g>
+<rect x="300" y="198" width="20" height="2" fill="#eec9a8"/>
+<rect x="324" y="197" width="20" height="3" fill="#eec9a8"/>
+<rect x="348" y="196" width="20" height="4" fill="#eec9a8"/>
+<rect x="372" y="194" width="20" height="6" fill="#eec9a8"/>
+<rect x="396" y="196" width="20" height="4" fill="#eec9a8"/>
+<rect x="420" y="104" width="20" height="96" fill="#c2703c"/><text x="430" y="98" text-anchor="middle" font-size="9.5" fill="#a04040">37,753</text>
+<rect x="444" y="157" width="20" height="43" fill="#c2703c"/><text x="454" y="151" text-anchor="middle" font-size="9.5" fill="#a04040">16,781</text>
+</g>
+<line x1="296" y1="200" x2="468" y2="200" stroke="#40556b" stroke-width="1"/>
+<g font-size="9" fill="#8a97a5" text-anchor="middle"><text x="310" y="214">C1</text><text x="334" y="214">C2</text><text x="358" y="214">C3</text><text x="382" y="214">C4</text><text x="406" y="214">C5</text><text x="430" y="214">FC1</text><text x="454" y="214">FC2</text></g>
+
+<text x="600" y="72" font-size="12.5" font-weight="700" fill="#4f8f68">연산량 (M FLOPs)</text>
+<text x="600" y="90" font-size="11" fill="#40556b">합성곱층에 몰림</text>
+<g>
+<rect x="540" y="177" width="20" height="23" fill="#4f8f68"/><text x="550" y="171" text-anchor="middle" font-size="9.5" fill="#40556b">105</text>
+<rect x="564" y="104" width="20" height="96" fill="#4f8f68"/><text x="574" y="98" text-anchor="middle" font-size="9.5" fill="#40556b">448</text>
+<rect x="588" y="168" width="20" height="32" fill="#4f8f68"/>
+<rect x="612" y="152" width="20" height="48" fill="#4f8f68"/>
+<rect x="636" y="168" width="20" height="32" fill="#4f8f68"/>
+<rect x="660" y="192" width="20" height="8" fill="#a8cbb4"/>
+</g>
+<line x1="536" y1="200" x2="684" y2="200" stroke="#40556b" stroke-width="1"/>
+<g font-size="9" fill="#8a97a5" text-anchor="middle"><text x="550" y="214">C1</text><text x="574" y="214">C2</text><text x="598" y="214">C3</text><text x="622" y="214">C4</text><text x="646" y="214">C5</text><text x="670" y="214">FC1</text></g>
+
+<rect x="60" y="244" width="600" height="130" rx="10" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.3"/>
+<text x="80" y="272" font-size="13" font-weight="700" fill="#1d3a5c">읽는 법 — 어디를 깎아야 하는지가 여기서 갈린다</text>
+<text x="80" y="300" font-size="12.5" fill="#40556b">· 메모리가 부족하다 → <tspan font-weight="700" fill="#3d6fa8">앞쪽 합성곱층</tspan>의 해상도를 줄여라 (특징 맵이 크다)</text>
+<text x="80" y="324" font-size="12.5" fill="#40556b">· 모델 파일이 너무 크다 → <tspan font-weight="700" fill="#c2703c">완전연결층</tspan>을 줄여라 (파라미터가 여기 다 있다)</text>
+<text x="80" y="348" font-size="12.5" fill="#40556b">· 추론이 느리다 → <tspan font-weight="700" fill="#4f8f68">합성곱층</tspan>을 줄여라 (곱셈이 여기서 일어난다)</text>
+<text x="80" y="368" font-size="11.5" fill="#a04040">셋은 서로 다른 문제다. "모델을 줄인다"는 말은 그래서 항상 되물어야 한다</text>
+</svg>

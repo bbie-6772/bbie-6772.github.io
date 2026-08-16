@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="340" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">Swin — 창문 안에서만 보되, 다음 층에서 창문을 어긋나게 옮긴다</text>
+
+<text x="180" y="76" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">L층 — 창문 안에서만 어텐션</text>
+<g>
+<rect x="100" y="92" width="160" height="160" rx="4" fill="#eceff2" stroke="#8a97a5" stroke-width="1"/>
+<g stroke="#c9d4e0" stroke-width="0.8"><path d="M140 92 V252 M180 92 V252 M220 92 V252 M100 132 H260 M100 172 H260 M100 212 H260"/></g>
+<rect x="100" y="92" width="80" height="80" fill="none" stroke="#3d6fa8" stroke-width="2.6"/>
+<rect x="180" y="92" width="80" height="80" fill="none" stroke="#3d6fa8" stroke-width="2.6"/>
+<rect x="100" y="172" width="80" height="80" fill="none" stroke="#3d6fa8" stroke-width="2.6"/>
+<rect x="180" y="172" width="80" height="80" fill="none" stroke="#3d6fa8" stroke-width="2.6"/>
+</g>
+<text x="180" y="274" text-anchor="middle" font-size="11.5" fill="#40556b">창문끼리는 서로 못 본다</text>
+
+<path d="M290 172 L340 172" stroke="#40556b" stroke-width="1.8" marker-end="url(#k)"/>
+<text x="315" y="162" text-anchor="middle" font-size="11" fill="#40556b">이동</text>
+
+<text x="470" y="76" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c2703c">L+1층 — 창문을 반 칸 어긋나게</text>
+<g>
+<rect x="390" y="92" width="160" height="160" rx="4" fill="#eceff2" stroke="#8a97a5" stroke-width="1"/>
+<g stroke="#c9d4e0" stroke-width="0.8"><path d="M430 92 V252 M470 92 V252 M510 92 V252 M390 132 H550 M390 172 H550 M390 212 H550"/></g>
+<rect x="430" y="132" width="80" height="80" fill="none" stroke="#c2703c" stroke-width="2.6"/>
+<rect x="390" y="132" width="40" height="80" fill="none" stroke="#c2703c" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="510" y="132" width="40" height="80" fill="none" stroke="#c2703c" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="430" y="92" width="80" height="40" fill="none" stroke="#c2703c" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="430" y="212" width="80" height="40" fill="none" stroke="#c2703c" stroke-width="2" stroke-dasharray="4 3"/>
+</g>
+<text x="470" y="274" text-anchor="middle" font-size="11.5" fill="#c2703c">이전 층의 창문 경계를 가로지른다</text>
+
+<rect x="60" y="290" width="600" height="34" rx="8" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.3"/>
+<text x="360" y="312" text-anchor="middle" font-size="12.5" fill="#1d3a5c">두 층이 겹치면서 <tspan font-weight="700">결국 이미지 전역이 연결</tspan>된다 — 전역 어텐션 값을 안 치르고 전역 효과를 얻는 방법</text>
+<defs><marker id="k" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

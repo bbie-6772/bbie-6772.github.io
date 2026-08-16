@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="400" rx="12" fill="#f7f9fb"/><text x="360" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">활성화 함수 — 문제를 하나씩 지우며 진화했다</text>
+
+<g>
+<rect x="40" y="60" width="150" height="130" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.3"/>
+<text x="115" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d3a5c">Sigmoid</text>
+<path d="M60 152 C90 152 100 108 115 108 C130 108 140 100 170 100" fill="none" stroke="#3d6fa8" stroke-width="2.2"/>
+<line x1="60" y1="130" x2="170" y2="130" stroke="#c9d4e0" stroke-width="1"/>
+<ellipse cx="68" cy="152" rx="12" ry="7" fill="none" stroke="#a04040" stroke-width="1.6"/>
+<ellipse cx="163" cy="100" rx="12" ry="7" fill="none" stroke="#a04040" stroke-width="1.6"/>
+<text x="115" y="174" text-anchor="middle" font-size="10.5" fill="#a04040">양 끝에서 기울기 0 · 출력이 양수만</text>
+</g>
+
+<g>
+<rect x="206" y="60" width="150" height="130" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.3"/>
+<text x="281" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d3a5c">tanh</text>
+<path d="M226 156 C256 156 266 104 281 104 C296 104 306 100 336 100" fill="none" stroke="#3d6fa8" stroke-width="2.2"/>
+<line x1="226" y1="130" x2="336" y2="130" stroke="#c9d4e0" stroke-width="1"/>
+<text x="281" y="174" text-anchor="middle" font-size="10.5" fill="#a04040">0 중심은 해결 · 기울기 소실은 여전</text>
+</g>
+
+<g>
+<rect x="372" y="60" width="150" height="130" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.3"/>
+<text x="447" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">ReLU</text>
+<path d="M392 140 L447 140 L502 98" fill="none" stroke="#4f8f68" stroke-width="2.4"/>
+<line x1="392" y1="140" x2="502" y2="140" stroke="#c9d4e0" stroke-width="1"/>
+<text x="447" y="174" text-anchor="middle" font-size="10.5" fill="#40556b">빠르고 안 죽음 · 단 음수 입력은 완전히 0</text>
+</g>
+
+<g>
+<rect x="538" y="60" width="142" height="130" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.3"/>
+<text x="609" y="84" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c2703c">Leaky ReLU / ELU</text>
+<path d="M556 146 L609 138 L662 98" fill="none" stroke="#c2703c" stroke-width="2.4"/>
+<line x1="556" y1="138" x2="662" y2="138" stroke="#c9d4e0" stroke-width="1"/>
+<text x="609" y="174" text-anchor="middle" font-size="10.5" fill="#40556b">음수에도 작은 기울기 → 죽은 뉴런 방지</text>
+</g>
+
+<rect x="40" y="208" width="640" height="172" rx="10" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.3"/>
+<text x="60" y="234" font-size="13" font-weight="700" fill="#1d3a5c">각 단계가 지운 문제</text>
+<text x="60" y="262" font-size="12.5" fill="#40556b">Sigmoid → 출력이 0~1이라 확률로 읽기 좋음. <tspan fill="#a04040">그러나 양 끝에서 역전파가 끊기고, exp 계산이 비쌈</tspan></text>
+<text x="60" y="286" font-size="12.5" fill="#40556b">tanh → 0을 중심으로 대칭이라 학습이 안정. <tspan fill="#a04040">기울기 소실과 exp 비용은 그대로</tspan></text>
+<text x="60" y="310" font-size="12.5" fill="#40556b">ReLU → max(0, x) 하나로 끝. <tspan font-weight="700" fill="#4f8f68">양수 영역에서 포화 없음, 수렴 6배 이상 빠름</tspan></text>
+<text x="60" y="334" font-size="12.5" fill="#40556b">Leaky ReLU / ELU → <tspan fill="#a04040">죽은 뉴런</tspan> 문제를 음수 기울기로 보완</text>
+<text x="60" y="364" font-size="13" font-weight="700" fill="#1d3a5c">결론 — 고민 말고 <tspan fill="#4f8f68">일단 ReLU</tspan>. 성능 경쟁 중이면 개선판을. Sigmoid·tanh는 전문가 영역.</text>
+</svg>

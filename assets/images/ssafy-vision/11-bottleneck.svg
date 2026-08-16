@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="380" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">보틀넥 — 비싼 3×3은 좁은 통로 안에서만 시킨다</text>
+
+<text x="170" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#a04040">일반 잔차 블록</text>
+<rect x="90" y="188" width="160" height="40" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="170" y="213" text-anchor="middle" font-size="12.5" fill="#1d3a5c">Conv 3×3 (C→C)</text>
+<rect x="90" y="132" width="160" height="40" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="2"/>
+<text x="170" y="157" text-anchor="middle" font-size="12.5" fill="#1d3a5c">Conv 3×3 (C→C)</text>
+<path d="M170 250 V228 M170 188 V172" stroke="#40556b" stroke-width="1.6" marker-end="url(#h)"/>
+<text x="170" y="268" text-anchor="middle" font-size="12" fill="#40556b">채널 256 그대로</text>
+<text x="170" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#a04040">FLOPs 18HWC²</text>
+
+<text x="360" y="190" text-anchor="middle" font-size="18" fill="#40556b">vs</text>
+
+<text x="530" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#4f8f68">보틀넥 잔차 블록</text>
+<rect x="440" y="216" width="180" height="34" rx="8" fill="#eef4ee" stroke="#4f8f68" stroke-width="2"/>
+<text x="530" y="238" text-anchor="middle" font-size="12" fill="#1d3a5c">Conv 1×1 (256→64)</text>
+<rect x="440" y="166" width="180" height="34" rx="8" fill="#dce9dc" stroke="#4f8f68" stroke-width="2.4"/>
+<text x="530" y="188" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Conv 3×3 (64→64)</text>
+<rect x="440" y="116" width="180" height="34" rx="8" fill="#eef4ee" stroke="#4f8f68" stroke-width="2"/>
+<text x="530" y="138" text-anchor="middle" font-size="12" fill="#1d3a5c">Conv 1×1 (64→256)</text>
+<path d="M530 270 V250 M530 216 V200 M530 166 V150" stroke="#40556b" stroke-width="1.6" marker-end="url(#h)"/>
+<text x="646" y="238" font-size="11" fill="#40556b">줄이고</text>
+<text x="646" y="188" font-size="11" font-weight="700" fill="#4f8f68">여기서만</text>
+<text x="646" y="138" font-size="11" fill="#40556b">되돌리고</text>
+<text x="530" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#4f8f68">FLOPs 17HWC²</text>
+
+<rect x="60" y="318" width="600" height="48" rx="10" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.3"/>
+<text x="80" y="338" font-size="12.5" fill="#40556b">1×1 합성곱은 <tspan font-weight="700" fill="#1d3a5c">공간은 안 건드리고 채널만 섞는</tspan> 연산 — 채널 수를 조절하는 밸브다.</text>
+<text x="80" y="358" font-size="12.5" fill="#4f8f68">같은 비용으로 층은 더 깊게. ResNet-50 이상이 전부 이 블록을 쓴다.</text>
+<defs><marker id="h" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="420" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">합성곱 = 도장을 한 칸씩 옮겨 찍으며 점수를 적는 일</text>
+
+<text x="70" y="74" font-size="12.5" font-weight="700" fill="#40556b">입력 (해상도 10)</text>
+<g stroke="#3d6fa8" stroke-width="1" fill="#e8eef6">
+<rect x="70" y="86" width="200" height="200" rx="4"/>
+</g>
+<g stroke="#3d6fa8" stroke-width="0.7" opacity="0.55">
+<path d="M90 86 V286 M110 86 V286 M130 86 V286 M150 86 V286 M170 86 V286 M190 86 V286 M210 86 V286 M230 86 V286 M250 86 V286"/>
+<path d="M70 106 H270 M70 126 H270 M70 146 H270 M70 166 H270 M70 186 H270 M70 206 H270 M70 226 H270 M70 246 H270 M70 266 H270"/>
+</g>
+<rect x="130" y="126" width="60" height="60" rx="3" fill="#c2703c" opacity="0.18"/>
+<rect x="130" y="126" width="60" height="60" rx="3" fill="none" stroke="#a04040" stroke-width="2.6"/>
+<text x="160" y="163" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">3×3</text>
+<path d="M190 156 L250 156" stroke="#a04040" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="196" y="150" font-size="11.5" fill="#a04040">한 칸씩 이동</text>
+
+<path d="M286 186 L336 186" stroke="#40556b" stroke-width="1.8" marker-end="url(#b)"/>
+<text x="311" y="176" text-anchor="middle" font-size="11.5" fill="#40556b">내적</text>
+
+<text x="352" y="74" font-size="12.5" font-weight="700" fill="#4f8f68">출력 특징 맵 (해상도 8)</text>
+<rect x="352" y="86" width="160" height="160" rx="4" fill="#eef4ee" stroke="#4f8f68" stroke-width="1"/>
+<g stroke="#4f8f68" stroke-width="0.7" opacity="0.55">
+<path d="M372 86 V246 M392 86 V246 M412 86 V246 M432 86 V246 M452 86 V246 M472 86 V246 M492 86 V246"/>
+<path d="M352 106 H512 M352 126 H512 M352 146 H512 M352 166 H512 M352 186 H512 M352 206 H512 M352 226 H512"/>
+</g>
+<rect x="372" y="106" width="20" height="20" fill="#4f8f68" opacity="0.5"/>
+
+<rect x="352" y="272" width="316" height="112" rx="10" fill="#eaf0f7" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="372" y="300" font-size="13" font-weight="700" fill="#1d3a5c">출력 해상도 = (입력 − 필터) / 스트라이드 + 1</text>
+<text x="372" y="326" font-size="12.5" fill="#40556b">예) (10 − 3) / 1 + 1 = 8</text>
+<text x="372" y="350" font-size="12.5" fill="#40556b">예) (32 − 5) / 1 + 1 = 28</text>
+<text x="372" y="372" font-size="12.5" fill="#a04040">도장이 안쪽에서만 찍히니 그림이 조금씩 줄어든다</text>
+
+<text x="70" y="316" font-size="12.5" fill="#1d3a5c">필터가 덮은 자리의 숫자들과</text>
+<text x="70" y="338" font-size="12.5" fill="#1d3a5c">필터 값을 곱해서 전부 더한다</text>
+<text x="70" y="366" font-size="12.5" font-weight="700" fill="#4f8f68">= 출력 한 칸의 값</text>
+<defs><marker id="b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 z" fill="#40556b"/></marker></defs>
+</svg>

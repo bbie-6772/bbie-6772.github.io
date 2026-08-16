@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="360" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">ViT가 항상 이기는 게 아니다 — 데이터가 갈랐다</text>
+
+<line x1="110" y1="266" x2="620" y2="266" stroke="#40556b" stroke-width="1.2"/>
+<line x1="110" y1="76" x2="110" y2="266" stroke="#40556b" stroke-width="1.2"/>
+<text x="70" y="96" font-size="11" fill="#40556b">높음</text>
+<text x="70" y="262" font-size="11" fill="#40556b">낮음</text>
+<text x="52" y="180" font-size="11.5" fill="#40556b" transform="rotate(-90 52 180)">정확도</text>
+
+<g font-size="11.5" fill="#40556b" text-anchor="middle">
+<text x="180" y="290">ImageNet</text>
+<text x="360" y="290">ImageNet-21k</text>
+<text x="560" y="290">JFT-300M</text>
+<text x="180" y="308" font-size="10.5" fill="#8a97a5">보통</text>
+<text x="360" y="308" font-size="10.5" fill="#8a97a5">큼</text>
+<text x="560" y="308" font-size="10.5" fill="#8a97a5">아주 큼</text>
+</g>
+<text x="365" y="332" text-anchor="middle" font-size="12" fill="#1d3a5c">사전학습에 쓴 데이터 규모</text>
+
+<path d="M180 176 L360 148 L560 132" fill="none" stroke="#3d6fa8" stroke-width="2.6"/>
+<circle cx="180" cy="176" r="6" fill="#3d6fa8"/><circle cx="360" cy="148" r="6" fill="#3d6fa8"/><circle cx="560" cy="132" r="6" fill="#3d6fa8"/>
+<text x="596" y="136" font-size="12" font-weight="700" fill="#3d6fa8">ResNet</text>
+
+<path d="M180 238 L360 140 L560 96" fill="none" stroke="#c2703c" stroke-width="2.6"/>
+<circle cx="180" cy="238" r="6" fill="#c2703c"/><circle cx="360" cy="140" r="6" fill="#c2703c"/><circle cx="560" cy="96" r="6" fill="#c2703c"/>
+<text x="596" y="100" font-size="12" font-weight="700" fill="#c2703c">ViT</text>
+
+<line x1="378" y1="86" x2="378" y2="266" stroke="#a04040" stroke-width="1.4" stroke-dasharray="5 4"/>
+<text x="388" y="96" font-size="11.5" font-weight="700" fill="#a04040">여기서 뒤집힌다</text>
+
+<text x="150" y="212" font-size="11.5" fill="#a04040">데이터가 적으면</text>
+<text x="150" y="230" font-size="11.5" font-weight="700" fill="#a04040">ViT가 진다</text>
+
+<text x="120" y="120" font-size="12" fill="#40556b">CNN에는 "이웃 화소끼리 관련 있다"는 <tspan font-weight="700" fill="#1d3a5c">사전 지식</tspan>이 구조에 박혀 있다</text>
+<text x="120" y="140" font-size="12" fill="#40556b">ViT에는 그게 없다 — <tspan font-weight="700" fill="#c2703c">데이터로 직접 배워야 한다</tspan></text>
+</svg>

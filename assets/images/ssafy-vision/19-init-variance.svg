@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="380" rx="12" fill="#f7f9fb"/><text x="360" y="36" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">초기화 — 첫 단추가 층을 지날수록 벌어진다</text>
+
+<text x="60" y="72" font-size="12.5" font-weight="700" fill="#a04040">① 전부 0으로</text>
+<rect x="60" y="82" width="600" height="34" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="1.3"/>
+<text x="80" y="104" font-size="12" fill="#40556b">모든 뉴런의 출력이 같고 기울기도 같다 → 뉴런이 서로 달라질 수 없다 → <tspan font-weight="700" fill="#a04040">학습이 아예 안 됨</tspan></text>
+
+<text x="60" y="150" font-size="12.5" font-weight="700" fill="#a04040">② 작은 랜덤 (0.01 × 표준정규)</text>
+<g>
+<rect x="60" y="160" width="70" height="52" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.2"/>
+<path d="M66 208 L66 174 L124 174 L124 208 Z" fill="#3d6fa8" opacity="0.55"/>
+<text x="95" y="226" text-anchor="middle" font-size="9.5" fill="#40556b">1층 σ=0.49</text>
+<rect x="140" y="160" width="70" height="52" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.2"/>
+<path d="M160 208 C168 176 182 176 190 208 Z" fill="#3d6fa8" opacity="0.55"/>
+<text x="175" y="226" text-anchor="middle" font-size="9.5" fill="#40556b">2층 σ=0.29</text>
+<rect x="220" y="160" width="70" height="52" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.2"/>
+<path d="M248 208 C252 184 258 184 262 208 Z" fill="#3d6fa8" opacity="0.55"/>
+<text x="255" y="226" text-anchor="middle" font-size="9.5" fill="#40556b">4층 σ=0.11</text>
+<rect x="300" y="160" width="70" height="52" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.2"/>
+<path d="M332 208 L332 190 L338 190 L338 208 Z" fill="#a04040" opacity="0.7"/>
+<text x="335" y="226" text-anchor="middle" font-size="9.5" fill="#a04040">6층 σ=0.05</text>
+</g>
+<text x="392" y="182" font-size="12" fill="#40556b">층을 지날수록 값이 0으로 쪼그라든다</text>
+<text x="392" y="204" font-size="12" font-weight="700" fill="#a04040">→ 역전파 기울기도 함께 0으로 수렴</text>
+<text x="392" y="224" font-size="11.5" fill="#40556b">얕은 모델에서만 통하는 전략</text>
+
+<text x="60" y="266" font-size="12.5" font-weight="700" fill="#4f8f68">③ Xavier(자비에) — 표준편차를 1/√(입력 차원)로</text>
+<text x="80" y="288" font-size="12" fill="#40556b">입출력의 분산을 맞춰 층이 깊어져도 분포가 유지된다. <tspan fill="#a04040">단 "출력이 대칭"이라는 가정 위에 서 있다</tspan></text>
+
+<text x="60" y="320" font-size="12.5" font-weight="700" fill="#4f8f68">④ He(허) — 표준편차를 √(2/입력 차원)로</text>
+<text x="80" y="342" font-size="12" fill="#40556b">ReLU는 <tspan font-weight="700">음수를 잘라버려 대칭이 깨진다.</tspan> 잘려나간 절반만큼 2를 곱해 보정한 것</text>
+<text x="80" y="364" font-size="12" font-weight="700" fill="#4f8f68">→ ReLU 쓰는 모델(=대부분)의 사실상 기본값</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="380" rx="12" fill="#f7f9fb"/><text x="360" y="38" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">네 구조의 장부 — 무엇을 얻고 무엇을 못 얻었나</text>
+
+<line x1="360" y1="64" x2="360" y2="340" stroke="#d5dde6" stroke-width="1.4"/>
+<line x1="50" y1="202" x2="670" y2="202" stroke="#d5dde6" stroke-width="1.4"/>
+
+<text x="205" y="98" text-anchor="middle" font-size="16" font-weight="700" fill="#3d6fa8">CNN</text>
+<text x="205" y="126" text-anchor="middle" font-size="12" fill="#4f8f68">+ 지역 특징에 강함</text>
+<text x="205" y="148" text-anchor="middle" font-size="12" fill="#4f8f68">+ 파라미터 효율 좋음</text>
+<text x="205" y="170" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">− 순서 반영 불가</text>
+
+<text x="515" y="98" text-anchor="middle" font-size="16" font-weight="700" fill="#3d6fa8">RNN</text>
+<text x="515" y="126" text-anchor="middle" font-size="12" fill="#4f8f68">+ 순서를 반영</text>
+<text x="515" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">− 기울기 소실·폭발</text>
+<text x="515" y="170" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">− 병렬 처리 어려움</text>
+
+<text x="205" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#3d6fa8">LSTM</text>
+<text x="205" y="268" text-anchor="middle" font-size="12" fill="#4f8f68">+ 덧셈 경로로 기울기 보존</text>
+<text x="205" y="290" text-anchor="middle" font-size="12" fill="#4f8f68">+ 장거리 맥락 어느 정도</text>
+<text x="205" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">− 정보 희석 (조금씩 옅어짐)</text>
+
+<text x="515" y="240" text-anchor="middle" font-size="16" font-weight="700" fill="#c2703c">Attention</text>
+<text x="515" y="268" text-anchor="middle" font-size="12" fill="#4f8f68">+ 먼 곳을 한 번에 직접 봄</text>
+<text x="515" y="290" text-anchor="middle" font-size="12" fill="#4f8f68">+ 정보 희석 없음</text>
+<text x="515" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">− 순서 정보가 원래 없음</text>
+
+<rect x="440" y="326" width="230" height="32" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="1.4"/>
+<text x="555" y="347" text-anchor="middle" font-size="12" fill="#a04040">→ 그래서 위치 인코딩을 더한다</text>
+</svg>
