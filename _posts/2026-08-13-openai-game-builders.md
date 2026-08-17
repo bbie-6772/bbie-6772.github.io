@@ -98,12 +98,12 @@ tags: [game, ai, Codex, Unity, PixelLab, MVP, AI-Agent, Architecture]
         ↓
 하이라이트 장면과 검증 질문 정의
         ↓
-   ┌────┴────┐
+   (여기서 두 갈래로 갈라짐)
    ↓         ↓
 2D MVP     3D MVP
    ↓         ↓
 브라우저에서 직접 플레이
-   └────┬────┘
+   (여기서 다시 합류)
         ↓
 분위기·재미·몰입감 비교
         ↓
