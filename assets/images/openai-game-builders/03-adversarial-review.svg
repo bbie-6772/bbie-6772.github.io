@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">기획 패키지를 적대적으로 검토하고 RAG 근거로 판정하는 흐름</title>
+  <desc id="desc">완성된 기획 패키지를 적대적 검토에 넣어 계약 결함, 명세 공백, 페이싱 리스크를 찾고, 리서치 카드에서 근거를 회수한 뒤 정말 없는 지식만 새 카드로 보충하는 과정</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#3b1f2b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="66" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="34" font-weight="700" fill="#f8fafc">완성된 기획서를 믿지 않는 절차</text>
+  <text x="600" y="102" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="18" fill="#cbd5e1">칭찬이 아니라 공격으로 시작해, 감이 아니라 근거로 판정한다</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="150" width="240" height="96" rx="14" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  </g>
+  <text x="200" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#f1f5f9">기획 패키지</text>
+  <text x="200" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#94a3b8">blueprint + 명세 15개</text>
+
+  <line x1="320" y1="198" x2="392" y2="198" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="400" y="150" width="230" height="96" rx="14" fill="#7f1d1d" stroke="#f87171" stroke-width="2"/>
+  </g>
+  <text x="515" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#fef2f2">적대적 검토</text>
+  <text x="515" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#fecaca">"어디서 깨지는가"</text>
+
+  <line x1="515" y1="246" x2="515" y2="292" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="300" width="250" height="86" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+    <rect x="400" y="300" width="230" height="86" rx="12" fill="#1e293b" stroke="#fb923c" stroke-width="2"/>
+    <rect x="660" y="300" width="230" height="86" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+  </g>
+  <text x="245" y="332" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#fca5a5">계약 결함</text>
+  <text x="245" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">잡히면 어떻게 되는가</text>
+  <text x="515" y="332" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#fdba74">명세 공백</text>
+  <text x="515" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">아무도 소유 안 함</text>
+  <text x="775" y="332" text-anchor="middle" font-family="system-ui,sans-serif" font-size="17" font-weight="600" fill="#fcd34d">페이싱 리스크</text>
+  <text x="775" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">중반이 지루해진다</text>
+
+  <line x1="905" y1="343" x2="965" y2="343" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="850" y="150" width="270" height="96" rx="14" fill="#134e4a" stroke="#2dd4bf" stroke-width="2"/>
+  </g>
+  <text x="985" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#ccfbf1">리서치 카드 DB</text>
+  <text x="985" y="216" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#5eead4">실패 사례부터 찾는다</text>
+
+  <line x1="985" y1="246" x2="985" y2="330" stroke="#2dd4bf" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="930" y="335" width="190" height="72" rx="12" fill="#1e293b" stroke="#2dd4bf" stroke-width="2"/>
+  </g>
+  <text x="1025" y="366" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#ccfbf1">근거 회수</text>
+  <text x="1025" y="390" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">기존 카드 인용</text>
+
+  <line x1="600" y1="400" x2="600" y2="452" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="460" width="600" height="100" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+  <text x="600" y="497" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#e0f2fe">DB에도 없는 지식만 새 카드로</text>
+  <text x="600" y="526" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#94a3b8">추격 설계 · 접근성 옵션 · 레벨 상태 오버레이 — 3장</text>
+  <text x="600" y="549" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#64748b">형식 검사 · 링크 감사 · 임베딩 · 미해결 참조 0</text>
+
+  <text x="600" y="600" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#94a3b8">있는 것을 먼저 쓰고, 정말 없을 때만 만든다</text>
+</svg>

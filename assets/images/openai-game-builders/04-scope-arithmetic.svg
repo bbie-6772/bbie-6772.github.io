@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">가용 공수 계산으로 13스테이지 계획을 1스테이지 세로 조각으로 줄인 과정</title>
+  <desc id="desc">3인이 8일간 쓸 수 있는 96 person-hour를 계산해 13스테이지 목표가 불가능함을 확인하고, 설계 계약은 유지한 채 구현 범위만 Stage 1 세로 조각으로 줄인 결정</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#1e3a5f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity=".28"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="64" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="34" font-weight="700" fill="#f8fafc">계획을 죽인 것은 산수였다</text>
+  <text x="600" y="100" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="18" fill="#cbd5e1">설계는 줄이지 않는다. 줄이는 것은 이번에 구현할 범위뿐이다</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="150" width="470" height="200" rx="16" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  </g>
+  <text x="305" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#f1f5f9">가용 공수</text>
+  <text x="110" y="228" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#cbd5e1">평일 6일 × 2시간 = 12시간</text>
+  <text x="110" y="258" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#cbd5e1">주말 2일 × 10시간 = 20시간</text>
+  <line x1="110" y1="274" x2="500" y2="274" stroke="#475569" stroke-width="1.5"/>
+  <text x="110" y="302" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#e2e8f0">1인 32시간 × 3인</text>
+  <text x="110" y="332" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="22" font-weight="700" fill="#7dd3fc">= 96 person-hour</text>
+
+  <g filter="url(#shadow)">
+    <rect x="660" y="150" width="470" height="200" rx="16" fill="#1e293b" stroke="#f87171" stroke-width="2"/>
+  </g>
+  <text x="895" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="19" font-weight="600" fill="#fecaca">원래 목표</text>
+  <text x="700" y="228" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#cbd5e1">13 스테이지 · 4~5시간 플레이</text>
+  <text x="700" y="258" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#cbd5e1">공간 상태 26개 · 고유 기믹 12개</text>
+  <line x1="700" y1="274" x2="1090" y2="274" stroke="#475569" stroke-width="1.5"/>
+  <text x="700" y="302" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#e2e8f0">96 ÷ 13 스테이지</text>
+  <text x="700" y="332" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="22" font-weight="700" fill="#fca5a5">= 스테이지당 7.4시간</text>
+
+  <text x="600" y="392" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" fill="#94a3b8">시스템 작업을 빼기 전 숫자다</text>
+
+  <line x1="600" y1="408" x2="600" y2="452" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="120" y="460" width="440" height="110" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="2" stroke-dasharray="7 5"/>
+  </g>
+  <text x="340" y="497" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#cbd5e1">설계 계약 13 스테이지</text>
+  <text x="340" y="526" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#94a3b8">그대로 보존 — 축소하지 않는다</text>
+  <text x="340" y="550" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#64748b">구현만 미룬다</text>
+
+  <g filter="url(#shadow)">
+    <rect x="640" y="460" width="440" height="110" rx="14" fill="#0c4a6e" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+  <text x="860" y="497" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="600" fill="#e0f2fe">8일 빌드 = Stage 1 세로 조각</text>
+  <text x="860" y="526" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" fill="#7dd3fc">전진 · 전투 · 회상 · 추격 · 탈출 한 바퀴</text>
+  <text x="860" y="550" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#94a3b8">명세마다 포함 여부를 직접 적는다</text>
+</svg>
