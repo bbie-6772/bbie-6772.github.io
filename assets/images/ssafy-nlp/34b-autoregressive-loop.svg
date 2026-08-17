@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="arLoop" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b7a99"/></marker></defs>
+<rect width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#1d3a5c">자동회귀 생성 — 한 토큰 만들고 다시 입력에 붙인다</text>
+
+<rect x="36" y="72" width="132" height="80" rx="10" fill="#fff" stroke="#3f6ea5" stroke-width="2"/>
+<text x="102" y="104" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3f6ea5">입력 토큰</text>
+<text x="102" y="127" text-anchor="middle" font-size="10.5" font-weight="400" fill="#1d3a5c">[아까, 밥, 먹고]</text>
+
+<rect x="208" y="72" width="132" height="80" rx="10" fill="#fff" stroke="#3f6ea5" stroke-width="2"/>
+<text x="274" y="104" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3f6ea5">모델</text>
+<text x="274" y="127" text-anchor="middle" font-size="10.5" font-weight="400" fill="#1d3a5c">Transformer</text>
+
+<rect x="380" y="72" width="132" height="80" rx="10" fill="#fff" stroke="#4f8f68" stroke-width="2"/>
+<text x="446" y="97" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">확률 분포</text>
+<text x="446" y="118" text-anchor="middle" font-size="10.5" font-weight="400" fill="#1d3a5c">왔어 0.5 · 왔는데 0.2</text>
+<text x="446" y="136" text-anchor="middle" font-size="10.5" font-weight="400" fill="#1d3a5c">왔거든 0.1 · …</text>
+
+<rect x="552" y="72" width="132" height="80" rx="10" fill="#fff" stroke="#c2703c" stroke-width="2"/>
+<text x="618" y="104" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c2703c">디코딩 알고리즘</text>
+<text x="618" y="127" text-anchor="middle" font-size="10.5" font-weight="400" fill="#1d3a5c">하나를 고른다</text>
+
+<line x1="170" y1="112" x2="202" y2="112" stroke="#5b7a99" stroke-width="1.8" marker-end="url(#arLoop)"/>
+<line x1="342" y1="112" x2="374" y2="112" stroke="#5b7a99" stroke-width="1.8" marker-end="url(#arLoop)"/>
+<line x1="514" y1="112" x2="546" y2="112" stroke="#5b7a99" stroke-width="1.8" marker-end="url(#arLoop)"/>
+
+<rect x="290" y="198" width="140" height="46" rx="10" fill="#eef4fa" stroke="#4f8f68" stroke-width="1.5"/>
+<text x="360" y="227" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">선택된 토큰: 왔어</text>
+
+<path d="M 618 152 V 221 H 436" fill="none" stroke="#5b7a99" stroke-width="1.8" marker-end="url(#arLoop)"/>
+<path d="M 284 221 H 102 V 158" fill="none" stroke="#4f8f68" stroke-width="1.8" marker-end="url(#arLoop)"/>
+<text x="186" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">다시 입력에 붙인다</text>
+
+<text x="360" y="286" text-anchor="middle" font-size="11.5" font-weight="400" fill="#5b7a99">EOS 토큰이 나오거나 최대 토큰 수에 도달할 때까지 이 고리를 반복한다</text>
+</svg>

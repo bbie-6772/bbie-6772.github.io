@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#1d3a5c">Sampling의 약점 — 꼬리는 작지만 0이 아니다</text>
+
+<rect x="206" y="96" width="372" height="144" rx="8" fill="#c0504d" opacity="0.07"/>
+<line x1="56" y1="240" x2="600" y2="240" stroke="#d8e2ec" stroke-width="2"/>
+
+<rect x="70" y="118" width="26" height="122" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="106" y="167" width="26" height="73" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="142" y="215" width="26" height="25" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="178" y="227" width="26" height="13" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="214" y="234" width="26" height="6" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="250" y="235" width="26" height="5" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="286" y="235" width="26" height="5" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="322" y="236" width="26" height="4" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="358" y="236" width="26" height="4" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="394" y="237" width="26" height="3" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="430" y="237" width="26" height="3" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="466" y="237" width="26" height="3" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="502" y="237" width="26" height="3" rx="2" fill="#c0504d" opacity="0.8"/>
+<rect x="538" y="237" width="26" height="3" rx="2" fill="#c0504d" opacity="0.8"/>
+
+<text x="83" y="110" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">0.50</text>
+<text x="119" y="159" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">0.30</text>
+<text x="155" y="207" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">0.10</text>
+<text x="191" y="219" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">0.05</text>
+
+<text x="83" y="256" text-anchor="middle" font-size="10" font-weight="400" fill="#5b7a99">green</text>
+<text x="119" y="256" text-anchor="middle" font-size="10" font-weight="400" fill="#5b7a99">red</text>
+<text x="155" y="256" text-anchor="middle" font-size="10" font-weight="400" fill="#5b7a99">blue</text>
+<text x="191" y="256" text-anchor="middle" font-size="10" font-weight="400" fill="#5b7a99">gray</text>
+<text x="392" y="256" text-anchor="middle" font-size="10" font-weight="400" fill="#c0504d">the · a · 그리고 사전에 있는 나머지 수만 개 전부</text>
+
+<text x="392" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#c0504d">꼬리 — 합쳐도 5% 남짓, 그러나 확률은 0이 아니다</text>
+
+<text x="360" y="288" text-anchor="middle" font-size="11.5" font-weight="400" fill="#5b7a99">한 토큰당 꼬리에 걸릴 확률이 1%라면, 200토큰 문장에서 한 번이라도 걸릴 확률은</text>
+<text x="360" y="308" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c0504d">1 − 0.99²⁰⁰ ≈ 87%</text>
+</svg>

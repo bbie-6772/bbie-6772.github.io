@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 344" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="344" rx="12" fill="#f7f9fb"/>
+<text x="360" y="32" text-anchor="middle" font-size="15" font-weight="700" fill="#1d3a5c">Temperature는 로짓을 T로 나눈 뒤 softmax를 다시 태우는 것</text>
+<text x="360" y="62" text-anchor="middle" font-size="14" font-weight="700" fill="#3f6ea5">p(i) = exp(z(i) / T) ÷ Σ exp(z(j) / T)</text>
+<text x="360" y="86" text-anchor="middle" font-size="11.5" font-weight="400" fill="#5b7a99">같은 로짓 z = [3, 2, 1, 0] 을 놓고 T만 바꾼 결과</text>
+
+<rect x="66" y="102" width="176" height="196" rx="10" fill="#fff" stroke="#c2703c" stroke-width="2"/>
+<text x="154" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">T = 0.5 (뾰족)</text>
+<rect x="85" y="160" width="24" height="112" rx="3" fill="#c2703c" opacity="0.85"/>
+<rect x="123" y="257" width="24" height="15" rx="3" fill="#c2703c" opacity="0.85"/>
+<rect x="161" y="269" width="24" height="3" rx="2" fill="#c2703c" opacity="0.85"/>
+<rect x="199" y="269" width="24" height="3" rx="2" fill="#c2703c" opacity="0.85"/>
+<text x="97" y="153" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c2703c">.865</text>
+<text x="135" y="250" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c2703c">.117</text>
+<text x="173" y="262" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c2703c">.016</text>
+<text x="211" y="262" text-anchor="middle" font-size="9.5" font-weight="700" fill="#c2703c">.002</text>
+
+<rect x="272" y="102" width="176" height="196" rx="10" fill="#fff" stroke="#3f6ea5" stroke-width="2"/>
+<text x="360" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#3f6ea5">T = 1.0 (원본)</text>
+<rect x="291" y="188" width="24" height="84" rx="3" fill="#3f6ea5" opacity="0.85"/>
+<rect x="329" y="241" width="24" height="31" rx="3" fill="#3f6ea5" opacity="0.85"/>
+<rect x="367" y="261" width="24" height="11" rx="3" fill="#3f6ea5" opacity="0.85"/>
+<rect x="405" y="268" width="24" height="4" rx="2" fill="#3f6ea5" opacity="0.85"/>
+<text x="303" y="181" text-anchor="middle" font-size="9.5" font-weight="700" fill="#3f6ea5">.644</text>
+<text x="341" y="234" text-anchor="middle" font-size="9.5" font-weight="700" fill="#3f6ea5">.237</text>
+<text x="379" y="254" text-anchor="middle" font-size="9.5" font-weight="700" fill="#3f6ea5">.087</text>
+<text x="417" y="261" text-anchor="middle" font-size="9.5" font-weight="700" fill="#3f6ea5">.032</text>
+
+<rect x="478" y="102" width="176" height="196" rx="10" fill="#fff" stroke="#4f8f68" stroke-width="2"/>
+<text x="566" y="126" text-anchor="middle" font-size="13" font-weight="700" fill="#4f8f68">T = 2.0 (평평)</text>
+<rect x="497" y="213" width="24" height="59" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="535" y="236" width="24" height="36" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="573" y="250" width="24" height="22" rx="3" fill="#4f8f68" opacity="0.85"/>
+<rect x="611" y="259" width="24" height="13" rx="3" fill="#4f8f68" opacity="0.85"/>
+<text x="509" y="206" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f8f68">.455</text>
+<text x="547" y="229" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f8f68">.276</text>
+<text x="585" y="243" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f8f68">.167</text>
+<text x="623" y="252" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4f8f68">.102</text>
+
+<line x1="76" y1="274" x2="232" y2="274" stroke="#d8e2ec" stroke-width="1.5"/>
+<line x1="282" y1="274" x2="438" y2="274" stroke="#d8e2ec" stroke-width="1.5"/>
+<line x1="488" y1="274" x2="644" y2="274" stroke="#d8e2ec" stroke-width="1.5"/>
+<text x="154" y="290" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5b7a99">z=3   z=2   z=1   z=0</text>
+<text x="360" y="290" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5b7a99">z=3   z=2   z=1   z=0</text>
+<text x="566" y="290" text-anchor="middle" font-size="9.5" font-weight="400" fill="#5b7a99">z=3   z=2   z=1   z=0</text>
+
+<text x="360" y="322" text-anchor="middle" font-size="11.5" font-weight="400" fill="#5b7a99">T → 0 이면 1등 확률이 1로 수렴해 <tspan font-weight="700" fill="#1d3a5c">Greedy와 같아지고</tspan>, T가 커질수록 <tspan font-weight="700" fill="#1d3a5c">균등분포</tspan>에 가까워진다</text>
+</svg>
