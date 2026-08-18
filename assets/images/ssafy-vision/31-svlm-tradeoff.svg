@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">리더보드 1등은 내 기기에서 안 돌아간다</text>
+
+  <rect x="24" y="54" width="410" height="262" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="78" font-size="12" font-weight="700" fill="#1d3a5c">추론에 필요한 GPU 메모리 (이미지 1장 기준, 대략)</text>
+
+  <g font-size="11" fill="#1d3a5c">
+    <text x="40" y="116">SmolVLM</text>
+    <rect x="150" y="104" width="40" height="16" rx="3" fill="#3d6fa8"/>
+    <text x="200" y="116" fill="#6b7f95">약 5GB</text>
+
+    <text x="40" y="150">PaliGemma 3B</text>
+    <rect x="150" y="138" width="54" height="16" rx="3" fill="#3d6fa8"/>
+    <text x="214" y="150" fill="#6b7f95">약 6.7GB</text>
+
+    <text x="40" y="184">InternVL2 2B</text>
+    <rect x="150" y="172" width="84" height="16" rx="3" fill="#8fb0d4"/>
+    <text x="244" y="184" fill="#6b7f95">약 10.5GB</text>
+
+    <text x="40" y="218">Qwen2-VL 2B</text>
+    <rect x="150" y="206" width="110" height="16" rx="3" fill="#8fb0d4"/>
+    <text x="270" y="218" fill="#6b7f95">약 13.7GB</text>
+
+    <text x="40" y="252">리더보드 상위권</text>
+    <rect x="150" y="240" width="250" height="16" rx="3" fill="#a04040"/>
+    <text x="150" y="276" fill="#a04040" font-weight="700">파라미터 78B — 서버 GPU 여러 장이 필요하다</text>
+  </g>
+  <text x="40" y="300" font-size="11" fill="#6b7f95">성능 순위와 쓸 수 있느냐는 다른 문제다</text>
+
+  <rect x="446" y="54" width="250" height="262" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="462" y="78" font-size="13" font-weight="700" fill="#3d6fa8">작게 만드는 두 축</text>
+  <text x="462" y="106" font-size="12" font-weight="700" fill="#1d3a5c">1. 파라미터 수 줄이기</text>
+  <text x="462" y="128" font-size="11" fill="#6b7f95">작은 이미지 인코더 + 작은 LLM</text>
+  <text x="462" y="146" font-size="11" fill="#6b7f95">이미지 토큰 수도 압축한다</text>
+
+  <text x="462" y="180" font-size="12" font-weight="700" fill="#1d3a5c">2. 양자화 (Quantization)</text>
+  <text x="462" y="202" font-size="11" fill="#6b7f95">가중치를 낮은 비트로 표현</text>
+  <text x="462" y="224" font-size="11" fill="#1d3a5c">8비트 : 다운로드 479MB / 메모리 996MB</text>
+  <text x="462" y="244" font-size="11" fill="#1d3a5c">4비트 : 다운로드 375MB / 메모리 816MB</text>
+  <text x="462" y="272" font-size="11" fill="#a04040" font-weight="700">대가 : 정확도가 조금 깎인다</text>
+  <text x="462" y="294" font-size="11" fill="#6b7f95">2억 파라미터 모델이 휴대폰에 들어간다</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="350" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">태스크마다 새로 학습 vs 하나를 사전학습하고 적응</text>
+
+  <rect x="24" y="54" width="316" height="272" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="80" font-size="14" font-weight="700" fill="#a04040">예전 방식 — 태스크당 모델 하나</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="40" y="96" width="84" height="30" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="52" y="115">분류 데이터</text>
+    <rect x="40" y="150" width="84" height="30" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="52" y="169">검출 데이터</text>
+    <rect x="40" y="204" width="84" height="30" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="52" y="223">캡션 데이터</text>
+    <rect x="196" y="96" width="120" height="30" rx="6" fill="#dfe9f4" stroke="#8fb0d4"/><text x="212" y="115">분류 전용 모델</text>
+    <rect x="196" y="150" width="120" height="30" rx="6" fill="#dfe9f4" stroke="#8fb0d4"/><text x="212" y="169">검출 전용 모델</text>
+    <rect x="196" y="204" width="120" height="30" rx="6" fill="#dfe9f4" stroke="#8fb0d4"/><text x="212" y="223">캡션 전용 모델</text>
+  </g>
+  <g stroke="#a04040" stroke-width="1.6" fill="none" marker-end="url(#ar)">
+    <path d="M126 111 H192"/><path d="M126 165 H192"/><path d="M126 219 H192"/>
+  </g>
+  <text x="40" y="264" font-size="11" fill="#6b7f95">태스크가 늘 때마다 데이터 수집과 학습을 처음부터 반복</text>
+  <text x="40" y="284" font-size="11" fill="#6b7f95">학습 안 한 상황이 들어오면 그냥 틀린다</text>
+  <text x="40" y="308" font-size="12" font-weight="700" fill="#a04040">비용 = 태스크 수 × 학습 한 번</text>
+
+  <rect x="380" y="54" width="316" height="272" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="396" y="80" font-size="14" font-weight="700" fill="#3d6fa8">파운데이션 모델 — 한 번 크게, 여러 번 얕게</text>
+  <rect x="396" y="96" width="132" height="52" rx="8" fill="#dfe9f4" stroke="#3d6fa8" stroke-width="1.6"/>
+  <text x="412" y="118" font-size="12" font-weight="700" fill="#1d3a5c">대규모 사전학습</text>
+  <text x="412" y="136" font-size="11" fill="#6b7f95">웹 규모 데이터 1회</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="576" y="90" width="104" height="26" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="588" y="107">Zero-shot</text>
+    <rect x="576" y="126" width="104" height="26" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="588" y="143">Few-shot</text>
+    <rect x="576" y="162" width="104" height="26" rx="6" fill="#eef3f8" stroke="#d5dde6"/><text x="588" y="179">Fine-tuning</text>
+  </g>
+  <g stroke="#3d6fa8" stroke-width="1.6" fill="none" marker-end="url(#ar2)">
+    <path d="M528 122 C552 122 552 103 572 103"/>
+    <path d="M528 124 H572"/>
+    <path d="M528 126 C552 126 552 175 572 175"/>
+  </g>
+  <text x="396" y="216" font-size="11" fill="#6b7f95">사전학습 비용은 크지만 한 번만 낸다</text>
+  <text x="396" y="236" font-size="11" fill="#6b7f95">응용 쪽은 추가 학습이 거의 없거나 아주 가볍다</text>
+  <text x="396" y="256" font-size="11" fill="#6b7f95">배운 적 없는 대상도 자연어로 지시하면 처리된다</text>
+  <text x="396" y="284" font-size="12" font-weight="700" fill="#3d6fa8">비용 = 사전학습 1회 + 적응 여러 번(가벼움)</text>
+  <text x="396" y="308" font-size="11" fill="#6b7f95">가난한 개발자가 고를 수 있는 쪽은 오른쪽뿐이다</text>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#a04040"/></marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3d6fa8"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="300" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">개인화 — 내 강아지에게 이름표를 하나 만들어 붙인다</text>
+
+  <rect x="24" y="56" width="200" height="120" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="80" font-size="12" font-weight="700" fill="#1d3a5c">입력</text>
+  <text x="40" y="104" font-size="11" fill="#6b7f95">내 강아지 사진 3~5장</text>
+  <text x="40" y="126" font-size="11" fill="#6b7f95">일반 명칭 하나 : dog</text>
+  <text x="40" y="152" font-size="11" fill="#1d3a5c">사진 몇 장이면 된다</text>
+
+  <rect x="264" y="56" width="192" height="120" rx="10" fill="#ffffff" stroke="#a04040" stroke-width="1.6"/>
+  <text x="280" y="80" font-size="12" font-weight="700" fill="#a04040">파인튜닝</text>
+  <text x="280" y="104" font-size="11" fill="#1d3a5c">고유 식별자 토큰 [V]와</text>
+  <text x="280" y="124" font-size="11" fill="#1d3a5c">생성 모델을 함께 학습</text>
+  <text x="280" y="152" font-size="11" fill="#6b7f95">[V] = 이 강아지를 가리키는 새 단어</text>
+
+  <rect x="496" y="56" width="200" height="120" rx="10" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="512" y="80" font-size="12" font-weight="700" fill="#3d6fa8">개인화된 생성 모델</text>
+  <text x="512" y="104" font-size="11" fill="#6b7f95">원래의 생성 능력은 유지</text>
+  <text x="512" y="126" font-size="11" fill="#6b7f95">거기에 [V]만 얹혔다</text>
+  <text x="512" y="152" font-size="11" fill="#1d3a5c">모델 하나가 새 단어를 배운 셈</text>
+
+  <g stroke="#3d6fa8" stroke-width="1.6" fill="none" marker-end="url(#arD)">
+    <path d="M224 116 H260"/><path d="M456 116 H492"/>
+  </g>
+
+  <rect x="24" y="198" width="672" height="80" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="222" font-size="12" font-weight="700" fill="#1d3a5c">쓸 때는 그냥 문장에 [V]를 섞는다</text>
+  <text x="40" y="248" font-size="11" fill="#6b7f95">"[V] 강아지가 해변에 있는 사진"  ·  "[V] 강아지가 알록달록한 카펫 위를 걷는 사진"</text>
+  <text x="40" y="270" font-size="11" fill="#3d6fa8">배경도 자세도 새로 만들어지는데, 강아지의 생김새는 내 강아지 그대로다</text>
+
+  <defs>
+    <marker id="arD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3d6fa8"/></marker>
+  </defs>
+</svg>

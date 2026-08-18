@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">CLIP을 모델이 아니라 자로 쓰기 — 바뀌는 건 입력 쪽이다</text>
+
+  <rect x="24" y="56" width="150" height="96" rx="10" fill="#ffffff" stroke="#a04040" stroke-width="1.6"/>
+  <text x="40" y="80" font-size="12" font-weight="700" fill="#a04040">학습 대상</text>
+  <text x="40" y="102" font-size="11" fill="#1d3a5c">문장 / 3D 물체 /</text>
+  <text x="40" y="120" font-size="11" fill="#1d3a5c">동작 / 스타일 값</text>
+  <text x="40" y="140" font-size="11" fill="#6b7f95">여기만 업데이트</text>
+
+  <rect x="212" y="56" width="150" height="96" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="228" y="80" font-size="12" font-weight="700" fill="#1d3a5c">CLIP 인코더 두 개</text>
+  <text x="228" y="102" font-size="11" fill="#6b7f95">가중치 고정 (동결)</text>
+  <text x="228" y="122" font-size="11" fill="#6b7f95">사전학습본 그대로</text>
+  <text x="228" y="142" font-size="11" fill="#6b7f95">학습하지 않는다</text>
+
+  <rect x="400" y="56" width="150" height="96" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="416" y="80" font-size="12" font-weight="700" fill="#1d3a5c">유사도 점수</text>
+  <text x="416" y="102" font-size="11" fill="#6b7f95">이미지 벡터와</text>
+  <text x="416" y="120" font-size="11" fill="#6b7f95">문장 벡터의 정합도</text>
+  <text x="416" y="140" font-size="11" fill="#3d6fa8">이 값이 곧 손실</text>
+
+  <rect x="588" y="56" width="108" height="96" rx="10" fill="#dfe9f4" stroke="#3d6fa8" stroke-width="1.6"/>
+  <text x="604" y="86" font-size="12" font-weight="700" fill="#1d3a5c">목표</text>
+  <text x="604" y="110" font-size="11" fill="#1d3a5c">유사도 최대화</text>
+  <text x="604" y="132" font-size="11" fill="#6b7f95">= 설명대로 만들기</text>
+
+  <g stroke="#3d6fa8" stroke-width="1.6" fill="none" marker-end="url(#ar5)">
+    <path d="M174 104 H208"/>
+    <path d="M362 104 H396"/>
+    <path d="M550 104 H584"/>
+  </g>
+  <path d="M640 152 V196 H100 V156" stroke="#a04040" stroke-width="1.8" stroke-dasharray="6 4" fill="none" marker-end="url(#ar6)"/>
+  <text x="300" y="188" font-size="12" font-weight="700" fill="#a04040">backpropagation — 기울기가 입력까지 되돌아간다</text>
+
+  <rect x="24" y="212" width="672" height="88" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="236" font-size="12" font-weight="700" fill="#1d3a5c">같은 틀로 만들어지는 것들</text>
+  <g font-size="11" fill="#6b7f95">
+    <text x="40" y="260">이미지 캡셔닝 · 텍스트로 이미지 스타일 바꾸기 · Text-to-image · Text-to-motion · Text-to-3D · 텍스트로 영상 검색</text>
+    <text x="40" y="284">모델을 새로 학습하는 게 아니라 결과물 하나를 최적화하는 것이라, 데이터셋 없이도 돌아간다</text>
+  </g>
+
+  <defs>
+    <marker id="ar5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3d6fa8"/></marker>
+    <marker id="ar6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#a04040"/></marker>
+  </defs>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">확산 모델 — 노이즈를 씌우며 배우고, 걷어내며 만든다</text>
+
+  <rect x="24" y="54" width="672" height="128" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <g>
+    <rect x="48" y="86" width="96" height="64" rx="6" fill="#dfe9f4" stroke="#8fb0d4"/>
+    <text x="66" y="122" font-size="11" fill="#1d3a5c">원본 사진</text>
+    <rect x="200" y="86" width="96" height="64" rx="6" fill="#e4e9ee" stroke="#8fb0d4"/>
+    <text x="220" y="122" font-size="11" fill="#1d3a5c">노이즈 조금</text>
+    <rect x="352" y="86" width="96" height="64" rx="6" fill="#e9e9e9" stroke="#8fb0d4"/>
+    <text x="372" y="122" font-size="11" fill="#1d3a5c">노이즈 많이</text>
+    <rect x="504" y="86" width="96" height="64" rx="6" fill="#efefef" stroke="#8fb0d4"/>
+    <text x="514" y="116" font-size="11" fill="#1d3a5c">완전한 잡음</text>
+    <text x="514" y="134" font-size="10" fill="#6b7f95">정규분포</text>
+  </g>
+  <g stroke="#a04040" stroke-width="1.6" fill="none" marker-end="url(#ar8)">
+    <path d="M144 104 H196"/><path d="M296 104 H348"/><path d="M448 104 H500"/>
+  </g>
+  <g stroke="#3d6fa8" stroke-width="1.6" fill="none" marker-end="url(#ar9)">
+    <path d="M500 140 H452"/><path d="M348 140 H300"/><path d="M196 140 H148"/>
+  </g>
+  <text x="616" y="94" font-size="11" font-weight="700" fill="#a04040">forward</text>
+  <text x="616" y="112" font-size="10" fill="#6b7f95">노이즈 추가</text>
+  <text x="616" y="140" font-size="11" font-weight="700" fill="#3d6fa8">backward</text>
+  <text x="616" y="158" font-size="10" fill="#6b7f95">노이즈 제거</text>
+
+  <rect x="24" y="198" width="330" height="118" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="222" font-size="13" font-weight="700" fill="#1d3a5c">학습이 푸는 문제</text>
+  <text x="40" y="246" font-size="11" fill="#6b7f95">직접 만든 노이즈를 씌워놓고</text>
+  <text x="40" y="266" font-size="11" fill="#6b7f95">"방금 씌운 노이즈가 뭐였게" 를 맞히게 한다</text>
+  <text x="40" y="292" font-size="11" font-weight="700" fill="#1d3a5c">정답을 내가 만들었으니 라벨이 공짜다</text>
+
+  <rect x="366" y="198" width="330" height="118" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="382" y="222" font-size="13" font-weight="700" fill="#3d6fa8">잠재 확산 (LDM)</text>
+  <text x="382" y="246" font-size="11" fill="#6b7f95">픽셀 그대로가 아니라 인코더로 압축한</text>
+  <text x="382" y="266" font-size="11" fill="#6b7f95">저차원 잠재 공간에서 노이즈를 걷어낸다</text>
+  <text x="382" y="292" font-size="11" font-weight="700" fill="#1d3a5c">계산량이 줄고 품질도 좋아졌다</text>
+
+  <defs>
+    <marker id="ar8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#a04040"/></marker>
+    <marker id="ar9" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3d6fa8"/></marker>
+  </defs>
+</svg>

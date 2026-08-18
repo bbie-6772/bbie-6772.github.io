@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="300" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">Set of Mark — 사진에 번호를 붙여주고 물어본다</text>
+
+  <rect x="24" y="54" width="330" height="222" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="78" font-size="13" font-weight="700" fill="#a04040">그냥 물어보면</text>
+  <rect x="40" y="92" width="298" height="86" rx="8" fill="#eef3f8" stroke="#d5dde6"/>
+  <rect x="60" y="110" width="70" height="50" rx="4" fill="#ffffff" stroke="#8fb0d4"/>
+  <rect x="150" y="118" width="60" height="42" rx="4" fill="#ffffff" stroke="#8fb0d4"/>
+  <rect x="232" y="106" width="86" height="54" rx="4" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="40" y="202" font-size="11" fill="#1d3a5c">질문 : 오른쪽 노트북 왼편에 있는 게 뭔가</text>
+  <text x="40" y="224" font-size="11" fill="#a04040">답변 : 컵 같은 것이 있다 (틀림)</text>
+  <text x="40" y="252" font-size="11" fill="#6b7f95">어느 물체를 가리키는지부터 어긋난다</text>
+
+  <rect x="366" y="54" width="330" height="222" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="382" y="78" font-size="13" font-weight="700" fill="#3d6fa8">번호를 붙여서 물어보면</text>
+  <rect x="382" y="92" width="298" height="86" rx="8" fill="#eef3f8" stroke="#d5dde6"/>
+  <rect x="402" y="110" width="70" height="50" rx="4" fill="#ffffff" stroke="#3d6fa8"/>
+  <circle cx="402" cy="110" r="10" fill="#3d6fa8"/><text x="398" y="114" font-size="10" fill="#ffffff">7</text>
+  <rect x="492" y="118" width="60" height="42" rx="4" fill="#ffffff" stroke="#3d6fa8"/>
+  <circle cx="492" cy="118" r="10" fill="#3d6fa8"/><text x="486" y="122" font-size="10" fill="#ffffff">12</text>
+  <rect x="574" y="106" width="86" height="54" rx="4" fill="#ffffff" stroke="#3d6fa8"/>
+  <circle cx="574" cy="106" r="10" fill="#3d6fa8"/><text x="570" y="110" font-size="10" fill="#ffffff">9</text>
+  <text x="382" y="202" font-size="11" fill="#1d3a5c">앞단 : 세그멘테이션 모델이 물체를 잘라 번호를 찍는다</text>
+  <text x="382" y="224" font-size="11" fill="#3d6fa8">답변 : 12번 스탠드다 (맞음)</text>
+  <text x="382" y="252" font-size="11" fill="#6b7f95">모델을 재학습하지 않고 입력만 바꿔 성능을 올린다</text>
+</svg>

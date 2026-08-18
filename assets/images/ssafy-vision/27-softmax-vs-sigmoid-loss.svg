@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">CLIP의 softmax와 SigLIP의 sigmoid — 채점 방식이 다르다</text>
+
+  <rect x="24" y="54" width="330" height="262" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="80" font-size="13" font-weight="700" fill="#3d6fa8">CLIP — 한 줄에서 1등 뽑기 (softmax)</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="40" y="96" width="60" height="28" rx="5" fill="#3d6fa8"/><text x="56" y="115" fill="#ffffff">정답</text>
+    <rect x="106" y="96" width="60" height="28" rx="5" fill="#eef3f8" stroke="#d5dde6"/><text x="122" y="115">오답</text>
+    <rect x="172" y="96" width="60" height="28" rx="5" fill="#eef3f8" stroke="#d5dde6"/><text x="188" y="115">오답</text>
+    <rect x="238" y="96" width="60" height="28" rx="5" fill="#eef3f8" stroke="#d5dde6"/><text x="254" y="115">오답</text>
+  </g>
+  <text x="40" y="150" font-size="11" fill="#6b7f95">한 행의 점수를 전부 모아 확률로 나눈다.</text>
+  <text x="40" y="170" font-size="11" fill="#6b7f95">합이 1이라 서로 자리를 뺏는 구조다.</text>
+  <text x="40" y="200" font-size="12" font-weight="700" fill="#a04040">한계</text>
+  <text x="40" y="222" font-size="11" fill="#6b7f95">이미 충분히 멀어진 오답까지</text>
+  <text x="40" y="240" font-size="11" fill="#6b7f95">계속 더 밀어내며 학습이 낭비된다.</text>
+  <text x="40" y="268" font-size="11" fill="#6b7f95">배치 전체를 한 번에 봐야 계산이 된다.</text>
+  <text x="40" y="296" font-size="11" fill="#1d3a5c">채점 질문 : "이 넷 중 어느 게 정답인가"</text>
+
+  <rect x="366" y="54" width="330" height="262" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="382" y="80" font-size="13" font-weight="700" fill="#3d6fa8">SigLIP — 칸마다 O/X 찍기 (sigmoid)</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="382" y="96" width="60" height="28" rx="5" fill="#3d6fa8"/><text x="404" y="115" fill="#ffffff">O</text>
+    <rect x="448" y="96" width="60" height="28" rx="5" fill="#ffffff" stroke="#8fb0d4"/><text x="470" y="115">X</text>
+    <rect x="514" y="96" width="60" height="28" rx="5" fill="#ffffff" stroke="#8fb0d4"/><text x="536" y="115">X</text>
+    <rect x="580" y="96" width="60" height="28" rx="5" fill="#ffffff" stroke="#8fb0d4"/><text x="602" y="115">X</text>
+  </g>
+  <text x="382" y="150" font-size="11" fill="#6b7f95">각 쌍을 독립적으로 맞다/아니다로 채점한다.</text>
+  <text x="382" y="170" font-size="11" fill="#6b7f95">서로 확률을 나눠 갖지 않는다.</text>
+  <text x="382" y="200" font-size="12" font-weight="700" fill="#3d6fa8">효과</text>
+  <text x="382" y="222" font-size="11" fill="#6b7f95">이미 잘 맞힌 쌍은 손실이 거의 0이라</text>
+  <text x="382" y="240" font-size="11" fill="#6b7f95">틀리는 쌍에 학습이 집중된다.</text>
+  <text x="382" y="268" font-size="11" fill="#6b7f95">라벨 노이즈가 섞여도 성능이 덜 무너진다.</text>
+  <text x="382" y="296" font-size="11" fill="#1d3a5c">채점 질문 : "이 쌍은 맞나, 아닌가"</text>
+</svg>

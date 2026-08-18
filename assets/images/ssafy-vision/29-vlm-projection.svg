@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="16" font-weight="700" fill="#1d3a5c">VLM의 뼈대 — 이미지를 언어모델이 읽을 토큰으로 번역한다</text>
+
+  <rect x="24" y="56" width="672" height="126" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <rect x="44" y="86" width="118" height="66" rx="8" fill="#eef3f8" stroke="#d5dde6"/>
+  <text x="60" y="112" font-size="12" font-weight="700" fill="#1d3a5c">이미지 인코더</text>
+  <text x="60" y="132" font-size="11" fill="#6b7f95">CLIP / SigLIP ViT</text>
+
+  <rect x="212" y="86" width="118" height="66" rx="8" fill="#f6e6e6" stroke="#a04040"/>
+  <text x="228" y="112" font-size="12" font-weight="700" fill="#a04040">투영 레이어</text>
+  <text x="228" y="132" font-size="11" fill="#6b7f95">선형 변환 또는 MLP</text>
+
+  <rect x="380" y="86" width="140" height="66" rx="8" fill="#e6f0e8" stroke="#8fb0d4"/>
+  <text x="396" y="112" font-size="12" font-weight="700" fill="#1d3a5c">언어모델 (LLM)</text>
+  <text x="396" y="132" font-size="11" fill="#6b7f95">텍스트 토큰과 함께 처리</text>
+
+  <rect x="566" y="86" width="112" height="66" rx="8" fill="#eef3f8" stroke="#d5dde6"/>
+  <text x="582" y="112" font-size="12" font-weight="700" fill="#1d3a5c">답변 문장</text>
+  <text x="582" y="132" font-size="11" fill="#6b7f95">설명 · 질의응답</text>
+
+  <g stroke="#3d6fa8" stroke-width="1.6" fill="none" marker-end="url(#ar7)">
+    <path d="M162 119 H208"/><path d="M330 119 H376"/><path d="M520 119 H562"/>
+  </g>
+  <text x="212" y="76" font-size="10" fill="#6b7f95">이미지 특징</text>
+  <text x="380" y="76" font-size="10" fill="#6b7f95">이미지 토큰 (soft prompt)</text>
+
+  <rect x="24" y="198" width="330" height="118" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="40" y="222" font-size="13" font-weight="700" fill="#3d6fa8">1단계 — 사전학습</text>
+  <text x="40" y="246" font-size="11" fill="#1d3a5c">투영 레이어만 학습 (나머지 전부 동결)</text>
+  <text x="40" y="268" font-size="11" fill="#6b7f95">이미지 특징을 언어 공간의 좌표로 옮기는</text>
+  <text x="40" y="286" font-size="11" fill="#6b7f95">번역기만 만든다. 학습 파라미터가 아주 적다.</text>
+  <text x="40" y="308" font-size="11" font-weight="700" fill="#1d3a5c">비유 : 통역사만 새로 뽑는다</text>
+
+  <rect x="366" y="198" width="330" height="118" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="382" y="222" font-size="13" font-weight="700" fill="#3d6fa8">2단계 — 미세조정</text>
+  <text x="382" y="246" font-size="11" fill="#1d3a5c">투영 레이어 + 언어모델을 함께 조정</text>
+  <text x="382" y="268" font-size="11" fill="#6b7f95">이미지·지시문·답변으로 짜인 지시 데이터로</text>
+  <text x="382" y="286" font-size="11" fill="#6b7f95">대화 능력을 붙인다. 이미지 인코더는 보통 동결.</text>
+  <text x="382" y="308" font-size="11" font-weight="700" fill="#1d3a5c">비유 : 통역 붙인 채로 응대 연습</text>
+
+  <defs>
+    <marker id="ar7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#3d6fa8"/></marker>
+  </defs>
+</svg>
