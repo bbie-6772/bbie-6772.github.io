@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="360" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">내 글버릇 — 161편 29,004줄을 센 결과 (편당 줄 수)</text>
+
+<g font-size="11.5" fill="#1d3a5c">
+<text x="172" y="80" text-anchor="end" font-weight="700">문장 끝 느낌표</text>
+<rect x="185" y="68" width="420" height="17" rx="4" fill="#3d6fa8"/>
+<text x="615" y="81" font-size="11" font-weight="700" fill="#3d6fa8">11.6</text>
+
+<text x="172" y="118" text-anchor="end">줄 끝 공백 줄바꿈</text>
+<rect x="185" y="106" width="398" height="17" rx="4" fill="#5b8ec4"/>
+<text x="593" y="119" font-size="11" fill="#3d6fa8">11.0</text>
+
+<text x="172" y="156" text-anchor="end">볼드 강조</text>
+<rect x="185" y="144" width="235" height="17" rx="4" fill="#5b8ec4"/>
+<text x="430" y="157" font-size="11" fill="#3d6fa8">6.5</text>
+
+<text x="172" y="194" text-anchor="end">말줄임</text>
+<rect x="185" y="182" width="101" height="17" rx="4" fill="#8fb0d4"/>
+<text x="296" y="195" font-size="11" fill="#3d6fa8">2.8</text>
+
+<text x="172" y="232" text-anchor="end">표</text>
+<rect x="185" y="220" width="94" height="17" rx="4" fill="#8fb0d4"/>
+<text x="289" y="233" font-size="11" fill="#3d6fa8">2.6</text>
+
+<text x="172" y="270" text-anchor="end">괄호 보충</text>
+<rect x="185" y="258" width="40" height="17" rx="4" fill="#8fb0d4"/>
+<text x="235" y="271" font-size="11" fill="#3d6fa8">1.1</text>
+
+<text x="172" y="308" text-anchor="end" fill="#a04040">이모지 · ㅋㅋ · ㅎㅎ</text>
+<line x1="185" y1="302" x2="205" y2="302" stroke="#a04040" stroke-width="2"/>
+<text x="215" y="308" font-size="11" font-weight="700" fill="#a04040">0 — 161편 통틀어 한 번도 없었다</text>
+</g>
+
+<line x1="185" y1="326" x2="605" y2="326" stroke="#d5dde6" stroke-width="1"/>
+<text x="360" y="346" text-anchor="middle" font-size="10.5" fill="#6b7f95">"느낌표를 좀 쓴다"고 생각했지만, 실제로는 두 줄에 한 번꼴이었다</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="360" rx="12" fill="#f7f9fb"/>
+<text x="360" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">가독성의 정체 — 7월 전후 편당 구조 요소</text>
+
+<rect x="392" y="46" width="12" height="10" rx="2" fill="#b9c6d4"/>
+<text x="410" y="55" font-size="10.5" fill="#6b7f95">7월 이전 161편</text>
+<rect x="512" y="46" width="12" height="10" rx="2" fill="#3d6fa8"/>
+<text x="530" y="55" font-size="10.5" fill="#3d6fa8">7월 이후 55편</text>
+
+<g font-size="11.5" fill="#1d3a5c">
+<text x="150" y="86" text-anchor="end" font-weight="700">인용 강조</text>
+<rect x="165" y="76" width="14" height="13" rx="3" fill="#b9c6d4"/>
+<text x="186" y="87" font-size="10" fill="#8a9aab">0.4</text>
+<rect x="165" y="94" width="360" height="13" rx="3" fill="#3d6fa8"/>
+<text x="533" y="105" font-size="10" font-weight="700" fill="#3d6fa8">9.8</text>
+<text x="640" y="97" font-size="13" font-weight="700" fill="#a04040">24배</text>
+
+<text x="150" y="150" text-anchor="end" font-weight="700">번호 붙은 섹션</text>
+<rect x="165" y="140" width="4" height="13" rx="2" fill="#b9c6d4"/>
+<text x="176" y="151" font-size="10" fill="#8a9aab">0.04</text>
+<rect x="165" y="158" width="360" height="13" rx="3" fill="#3d6fa8"/>
+<text x="533" y="169" font-size="10" font-weight="700" fill="#3d6fa8">4.5</text>
+<text x="640" y="161" font-size="13" font-weight="700" fill="#a04040">112배</text>
+
+<text x="150" y="214" text-anchor="end">표 (줄)</text>
+<rect x="165" y="204" width="38" height="13" rx="3" fill="#b9c6d4"/>
+<text x="211" y="215" font-size="10" fill="#8a9aab">2.6</text>
+<rect x="165" y="222" width="360" height="13" rx="3" fill="#3d6fa8"/>
+<text x="533" y="233" font-size="10" fill="#3d6fa8">24.4</text>
+<text x="644" y="225" font-size="12" fill="#a04040">9배</text>
+
+<text x="150" y="278" text-anchor="end">구분선</text>
+<rect x="165" y="268" width="64" height="13" rx="3" fill="#b9c6d4"/>
+<text x="237" y="279" font-size="10" fill="#8a9aab">1.1</text>
+<rect x="165" y="286" width="360" height="13" rx="3" fill="#3d6fa8"/>
+<text x="533" y="297" font-size="10" fill="#3d6fa8">6.2</text>
+<text x="644" y="289" font-size="12" fill="#a04040">6배</text>
+</g>
+
+<line x1="40" y1="318" x2="680" y2="318" stroke="#d5dde6" stroke-width="1"/>
+<text x="360" y="340" text-anchor="middle" font-size="11.5" fill="#1d3a5c">문체는 7월 이전이 내 것, 구조는 7월 이후가 읽힌다 — 둘은 다른 문제였다</text>
+</svg>

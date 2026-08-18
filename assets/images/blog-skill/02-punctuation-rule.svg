@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif"><rect width="720" height="300" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">세고 나서야 발견한 규칙 — 문장을 무엇으로 맺는가</text>
+
+<rect x="285" y="56" width="150" height="34" rx="8" fill="#1d3a5c"/>
+<text x="360" y="78" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">문장을 맺을 때</text>
+
+<path d="M360 90 L360 106 M130 106 L590 106 M130 106 L130 124 M360 106 L360 124 M590 106 L590 124" fill="none" stroke="#c9d4e0" stroke-width="1.6"/>
+
+<g>
+<rect x="40" y="124" width="180" height="112" rx="10" fill="#fff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="130" y="158" text-anchor="middle" font-size="26" font-weight="700" fill="#3d6fa8">!</text>
+<text x="130" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">새로 알게 된 사실</text>
+<text x="130" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">해결된 순간</text>
+<text x="130" y="226" text-anchor="middle" font-size="10.5" fill="#6b7f95">편당 11.6줄</text>
+</g>
+
+<g>
+<rect x="270" y="124" width="180" height="112" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="1.6"/>
+<text x="360" y="158" text-anchor="middle" font-size="26" font-weight="700" fill="#6b7f95">.</text>
+<text x="360" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">배경 설명</text>
+<text x="360" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">개념 정의</text>
+<text x="360" y="226" text-anchor="middle" font-size="10.5" fill="#6b7f95">느낌표와 거의 반반</text>
+</g>
+
+<g>
+<rect x="500" y="124" width="180" height="112" rx="10" fill="#fff" stroke="#a04040" stroke-width="1.6"/>
+<text x="590" y="158" text-anchor="middle" font-size="26" font-weight="700" fill="#a04040">..</text>
+<text x="590" y="186" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">아쉬움 · 피로</text>
+<text x="590" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">확신 없음</text>
+<text x="590" y="226" text-anchor="middle" font-size="10.5" fill="#6b7f95">편당 2.8줄</text>
+</g>
+
+<text x="360" y="270" text-anchor="middle" font-size="11.5" fill="#1d3a5c">의식하고 쓴 적이 없는데, 161편 내내 이 셋은 거의 섞이지 않았다</text>
+<text x="360" y="288" text-anchor="middle" font-size="10.5" fill="#6b7f95">감으로는 설명 못 하던 것이 세어보니 규칙으로 나왔다</text>
+</svg>
