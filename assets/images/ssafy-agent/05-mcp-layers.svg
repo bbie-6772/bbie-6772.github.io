@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">편지의 내용과 봉투를 나눈 것</text>
+
+<rect x="40" y="58" width="640" height="204" rx="12" fill="#fdf6f1" stroke="#c2703c" stroke-width="2.2"/>
+<text x="64" y="86" font-size="13" font-weight="700" fill="#a04040">전송 계층 (Transport Layer) — 바깥쪽, 봉투</text>
+<text x="64" y="108" font-size="11.5" fill="#40556b">어떻게 실어 나를지를 정한다 &#183; stdio, HTTP 같은 실제 통신 채널</text>
+<text x="64" y="127" font-size="11.5" fill="#40556b">연결 수립, 메시지 프레이밍, 인증을 담당한다</text>
+
+<rect x="72" y="144" width="576" height="98" rx="10" fill="#e8eef6" stroke="#3d6fa8" stroke-width="2"/>
+<text x="96" y="172" font-size="13" font-weight="700" fill="#3d6fa8">데이터 계층 (Data Layer) — 안쪽, 내용</text>
+<text x="96" y="196" font-size="11.5" fill="#40556b">무엇을 주고받을지를 정한다 &#183; JSON-RPC 기반 메시지 형식</text>
+<text x="96" y="216" font-size="11.5" fill="#40556b">도구, 리소스, 프롬프트의 정의와 연결 수명주기가 여기 들어간다</text>
+<text x="96" y="234" font-size="11" fill="#6b7f95">봉투를 뜯어야 나오는 부분이다</text>
+
+<text x="360" y="290" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">내용 형식이 같으니, 봉투가 로컬이든 원격이든 같은 도구가 그대로 돈다</text>
+<text x="360" y="310" text-anchor="middle" font-size="11.5" fill="#6b7f95">stdio로 띄우던 서버를 HTTP로 옮겨도 도구 정의는 손대지 않는다</text>
+</svg>

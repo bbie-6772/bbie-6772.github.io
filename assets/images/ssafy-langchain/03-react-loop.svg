@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="lg3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">ReAct — 생각하고, 하고, 보고, 다시 생각한다</text>
+
+<rect x="40" y="70" width="176" height="66" rx="8" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="128" y="96" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">Thought · 생각</text>
+<text x="128" y="118" text-anchor="middle" font-size="11" fill="#40556b">지금 뭘 해야 하는지 적는다</text>
+
+<path d="M222 103 H262" stroke="#40556b" stroke-width="1.8" marker-end="url(#lg3)"/>
+
+<rect x="268" y="70" width="176" height="66" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="1.8"/>
+<text x="356" y="96" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">Action · 행동</text>
+<text x="356" y="118" text-anchor="middle" font-size="11" fill="#40556b">도구를 하나 골라 호출한다</text>
+
+<path d="M450 103 H490" stroke="#40556b" stroke-width="1.8" marker-end="url(#lg3)"/>
+
+<rect x="496" y="70" width="176" height="66" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="584" y="96" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">Observation · 관찰</text>
+<text x="584" y="118" text-anchor="middle" font-size="11" fill="#40556b">결과를 받아 읽는다</text>
+
+<path d="M584 142 C584 180 500 190 360 190 C220 190 136 180 136 146" stroke="#3d6fa8" stroke-width="1.8" fill="none" marker-end="url(#lg3)"/>
+<text x="360" y="182" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3d6fa8">답이 나올 때까지 반복</text>
+
+<line x1="40" y1="216" x2="680" y2="216" stroke="#d5dde6" stroke-width="1"/>
+
+<rect x="40" y="234" width="310" height="72" rx="8" fill="#ffffff" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="60" y="260" font-size="11.5" font-weight="700" fill="#4f8f68">생각을 글로 남기면 성능이 오른다</text>
+<text x="60" y="284" font-size="11.5" fill="#40556b">왜 이 도구를 부르는지 먼저 쓰게 하는 것만으로</text>
+
+<rect x="370" y="234" width="310" height="72" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="390" y="260" font-size="11.5" font-weight="700" fill="#3d6fa8">그리고 디버깅이 된다</text>
+<text x="390" y="284" font-size="11.5" fill="#40556b">사람이 어디서 헛다리를 짚었는지 읽을 수 있다</text>
+
+<text x="360" y="330" text-anchor="middle" font-size="11.5" fill="#6b7f95">되먹임이 있다 — RAG가 에이전트가 아닌 이유가 이 그림에서 보인다</text>
+</svg>

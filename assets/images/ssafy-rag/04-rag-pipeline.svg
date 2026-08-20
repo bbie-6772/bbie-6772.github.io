@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="300" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">RAG 파이프라인 — 질문이 답이 되기까지 세 걸음</text>
+
+<rect x="40" y="62" width="180" height="86" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="130" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">1. 질의 추출</text>
+<text x="130" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">언어모델이 질문을 해석해</text>
+<text x="130" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">검색에 쓸 문장을 만든다</text>
+
+<path d="M226 105 H262" stroke="#40556b" stroke-width="1.8" marker-end="url(#ar4)"/>
+
+<rect x="270" y="62" width="180" height="86" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="360" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#4f8f68">2. 문서 검색</text>
+<text x="360" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">검색기가 저장소에서</text>
+<text x="360" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">관련 문서를 찾아온다</text>
+
+<path d="M456 105 H492" stroke="#40556b" stroke-width="1.8" marker-end="url(#ar4)"/>
+
+<rect x="500" y="62" width="180" height="86" rx="8" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="590" y="94" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">3. 답변 생성</text>
+<text x="590" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">찾은 문서를 질문과 함께</text>
+<text x="590" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">넣어 최종 답을 쓴다</text>
+
+<line x1="40" y1="180" x2="680" y2="180" stroke="#d5dde6" stroke-width="1"/>
+<rect x="40" y="200" width="640" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.6"/>
+<text x="360" y="222" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">모델을 다시 학습시키는 게 아니라, 읽을거리를 같이 건네주는 것</text>
+<text x="360" y="262" text-anchor="middle" font-size="12" fill="#40556b">그래서 저장소만 갱신하면 최신 정보가 반영되고, 어떤 문서를 봤는지 근거가 남는다</text>
+<text x="360" y="284" text-anchor="middle" font-size="12" fill="#a04040">대신 검색이 못 찾아오면 답도 못 한다 — 성능이 검색 품질에 종속된다</text>
+</svg>

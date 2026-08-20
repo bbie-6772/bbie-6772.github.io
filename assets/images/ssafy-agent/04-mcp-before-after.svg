@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">도구가 준 게 아니라, 규격이 하나로 모인 것</text>
+<line x1="360" y1="56" x2="360" y2="300" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="40" y="78" font-size="13" font-weight="700" fill="#a04040">MCP 이전 — 모델 수 x 도구 수만큼의 연결</text>
+<rect x="46" y="96" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="86" y="116" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 A</text>
+<rect x="46" y="146" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="86" y="166" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 B</text>
+<rect x="46" y="196" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="86" y="216" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 C</text>
+<rect x="244" y="96" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="284" y="116" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 1</text>
+<rect x="244" y="146" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="284" y="166" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 2</text>
+<rect x="244" y="196" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="284" y="216" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 3</text>
+<path d="M130 111 L240 111 M130 111 L240 161 M130 111 L240 211 M130 161 L240 111 M130 161 L240 161 M130 161 L240 211 M130 211 L240 111 M130 211 L240 161 M130 211 L240 211" stroke="#a04040" stroke-width="1" opacity="0.6"/>
+<text x="186" y="258" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a04040">연결마다 규격이 다르다</text>
+<text x="186" y="278" text-anchor="middle" font-size="11.5" fill="#6b7f95">모델을 바꾸면 전부 다시 짠다</text>
+
+<text x="392" y="78" font-size="13" font-weight="700" fill="#4f8f68">MCP 이후 — 가운데에 공통 규격</text>
+<rect x="398" y="96" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="438" y="116" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 A</text>
+<rect x="398" y="146" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="438" y="166" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 B</text>
+<rect x="398" y="196" width="80" height="30" rx="5" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.5"/>
+<text x="438" y="216" text-anchor="middle" font-size="11" fill="#1d3a5c">모델 C</text>
+<rect x="510" y="126" width="52" height="74" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="2"/>
+<text x="536" y="158" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4f8f68">MCP</text>
+<text x="536" y="176" text-anchor="middle" font-size="10" fill="#4f8f68">규격</text>
+<rect x="596" y="96" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="636" y="116" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 1</text>
+<rect x="596" y="146" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="636" y="166" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 2</text>
+<rect x="596" y="196" width="80" height="30" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.5"/>
+<text x="636" y="216" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 3</text>
+<path d="M482 111 L506 155 M482 161 L506 161 M482 211 L506 171 M566 161 L592 111 M566 161 L592 161 M566 171 L592 211" stroke="#4f8f68" stroke-width="1.3"/>
+<text x="536" y="258" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4f8f68">한 번 정의한 도구를 어디서나</text>
+<text x="536" y="278" text-anchor="middle" font-size="11.5" fill="#6b7f95">모델을 갈아끼워도 그대로 돈다</text>
+
+<text x="360" y="326" text-anchor="middle" font-size="12" fill="#6b7f95">패킷 구조를 proto 파일에 못 박아두는 것과 같은 이야기다</text>
+</svg>

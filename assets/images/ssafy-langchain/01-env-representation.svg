@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="350" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">환경은 글자가 아닌데, 모델은 글자만 읽는다</text>
+
+<rect x="36" y="60" width="204" height="212" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.6"/>
+<text x="138" y="88" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">1. 텍스트</text>
+<rect x="56" y="102" width="164" height="72" rx="6" fill="#f7f9fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="68" y="122" font-size="10.5" fill="#40556b">당신은 방 한가운데 있다.</text>
+<text x="68" y="140" font-size="10.5" fill="#40556b">캐비닛과 싱크대가 보인다.</text>
+<text x="68" y="158" font-size="10.5" fill="#40556b">캐비닛은 비어 있다.</text>
+<text x="138" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">모델이 읽기 제일 편하다</text>
+<text x="138" y="228" text-anchor="middle" font-size="11" fill="#a04040">누군가 미리 글로</text>
+<text x="138" y="246" text-anchor="middle" font-size="11" fill="#a04040">적어두어야 한다</text>
+
+<rect x="258" y="60" width="204" height="212" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.6"/>
+<text x="360" y="88" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">2. 이미지</text>
+<rect x="278" y="102" width="164" height="72" rx="6" fill="#eef1f4" stroke="#d5dde6" stroke-width="1"/>
+<rect x="290" y="114" width="52" height="20" rx="3" fill="#c9d4e0"/>
+<rect x="290" y="142" width="90" height="10" rx="2" fill="#dbe3ea"/>
+<rect x="290" y="156" width="70" height="10" rx="2" fill="#dbe3ea"/>
+<rect x="392" y="114" width="38" height="38" rx="3" fill="#c9d4e0"/>
+<text x="360" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">가장 자연스러운 입력</text>
+<text x="360" y="228" text-anchor="middle" font-size="11" fill="#a04040">글자 읽기, 겹친 레이아웃,</text>
+<text x="360" y="246" text-anchor="middle" font-size="11" fill="#a04040">말과 위치 연결에서 깨진다</text>
+
+<rect x="480" y="60" width="204" height="212" rx="10" fill="#ffffff" stroke="#4f8f68" stroke-width="2"/>
+<text x="582" y="88" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">3. 구조화된 표현</text>
+<rect x="500" y="102" width="164" height="72" rx="6" fill="#f7f9fb" stroke="#d5dde6" stroke-width="1"/>
+<text x="512" y="120" font-size="10" fill="#40556b">button</text>
+<text x="524" y="136" font-size="10" fill="#6b7f95">name: 장바구니에 담기</text>
+<text x="524" y="152" font-size="10" fill="#6b7f95">focusable: true</text>
+<text x="512" y="168" font-size="10" fill="#40556b">heading: 상품 상세</text>
+<text x="582" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">이미 해석되어 있다</text>
+<text x="582" y="228" text-anchor="middle" font-size="11" fill="#40556b">접근성 트리는 원래 화면을</text>
+<text x="582" y="246" text-anchor="middle" font-size="11" fill="#40556b">못 보는 사람을 위한 구조다</text>
+
+<text x="360" y="308" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">픽셀로 주면 모델이 해석해야 하고, 트리로 주면 이미 해석돼 있다</text>
+<text x="360" y="332" text-anchor="middle" font-size="11.5" fill="#6b7f95">시각 정보를 글로 옮기는 일을 웹 표준이 먼저 해둔 셈이다</text>
+</svg>

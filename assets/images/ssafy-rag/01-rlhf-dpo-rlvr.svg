@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 386" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="386" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">사람의 선호를 무엇으로 대신할 것인가</text>
+
+<text x="44" y="90" font-size="13" font-weight="700" fill="#3d6fa8">RLHF</text>
+<rect x="104" y="66" width="104" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="156" y="90" text-anchor="middle" font-size="12" fill="#1d3a5c">선호 데이터</text>
+<path d="M210 85 H226" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="230" y="66" width="104" height="38" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="282" y="90" text-anchor="middle" font-size="12" fill="#1d3a5c">보상 모델</text>
+<path d="M336 85 H352" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="356" y="66" width="118" height="38" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="415" y="90" text-anchor="middle" font-size="12" fill="#1d3a5c">강화학습 (PPO)</text>
+<path d="M476 85 H492" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="496" y="66" width="104" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="548" y="90" text-anchor="middle" font-size="12" fill="#1d3a5c">언어모델</text>
+<text x="104" y="126" font-size="11.5" fill="#a04040">보상이 사람의 근사치 &#8594; 리워드 해킹, 과최적화</text>
+
+<line x1="40" y1="144" x2="680" y2="144" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="44" y="194" font-size="13" font-weight="700" fill="#3d6fa8">DPO</text>
+<rect x="104" y="170" width="104" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="156" y="194" text-anchor="middle" font-size="12" fill="#1d3a5c">선호 데이터</text>
+<path d="M210 189 H492" stroke="#4f8f68" stroke-width="1.8" marker-end="url(#ar)"/>
+<text x="350" y="182" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4f8f68">확률을 직접 조정</text>
+<text x="350" y="205" text-anchor="middle" font-size="11.5" fill="#6b7f95">보상 모델도 강화학습도 없음</text>
+<rect x="496" y="170" width="104" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="548" y="194" text-anchor="middle" font-size="12" fill="#1d3a5c">언어모델</text>
+<text x="104" y="230" font-size="11.5" fill="#6b7f95">부품이 줄어 가볍고 안정적 &#183; 선호 데이터 품질에 그대로 종속</text>
+
+<line x1="40" y1="248" x2="680" y2="248" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="44" y="298" font-size="13" font-weight="700" fill="#3d6fa8">RLVR</text>
+<rect x="104" y="274" width="96" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="152" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">수학 문제</text>
+<path d="M202 293 H218" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="222" y="274" width="104" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="274" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">언어모델</text>
+<path d="M328 293 H344" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="348" y="274" width="96" height="38" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="396" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">모델의 답</text>
+<path d="M446 293 H462" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="466" y="274" width="104" height="38" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="518" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">자동 채점기</text>
+<path d="M572 293 H588" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar)"/>
+<rect x="592" y="274" width="80" height="38" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="632" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">1 또는 0</text>
+<path d="M632 316 C632 348 320 350 274 322" stroke="#4f8f68" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+<text x="452" y="372" text-anchor="middle" font-size="11.5" font-weight="700" fill="#4f8f68">이 보상으로 모델을 업데이트한다</text>
+<text x="104" y="372" font-size="11.5" fill="#6b7f95">보상이 근사치가 아닌 사실</text>
+</svg>

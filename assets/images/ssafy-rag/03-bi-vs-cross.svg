@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="370" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">따로 인코딩할 것인가, 붙여서 인코딩할 것인가</text>
+<line x1="360" y1="56" x2="360" y2="330" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="40" y="76" font-size="13" font-weight="700" fill="#3d6fa8">바이인코더 — 따로</text>
+<rect x="46" y="92" width="110" height="32" rx="6" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="101" y="113" text-anchor="middle" font-size="12" fill="#1d3a5c">질의</text>
+<rect x="200" y="92" width="110" height="32" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.6"/>
+<text x="255" y="113" text-anchor="middle" font-size="12" fill="#1d3a5c">문서</text>
+<path d="M101 126 V144" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<path d="M255 126 V144" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<rect x="46" y="150" width="110" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="101" y="172" text-anchor="middle" font-size="12" fill="#1d3a5c">인코더</text>
+<rect x="200" y="150" width="110" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="255" y="172" text-anchor="middle" font-size="12" fill="#1d3a5c">인코더</text>
+<path d="M101 186 V204" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<path d="M255 186 V204" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<rect x="56" y="210" width="90" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="101" y="227" text-anchor="middle" font-size="11" fill="#40556b">벡터 q</text>
+<rect x="210" y="210" width="90" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="255" y="227" text-anchor="middle" font-size="11" fill="#40556b">벡터 d</text>
+<path d="M101 236 L166 262" stroke="#40556b" stroke-width="1.3"/>
+<path d="M255 236 L190 262" stroke="#40556b" stroke-width="1.3"/>
+<rect x="108" y="264" width="140" height="30" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="178" y="284" text-anchor="middle" font-size="11.5" fill="#1d3a5c">유사도 계산 단 한 번</text>
+<text x="40" y="318" font-size="11.5" font-weight="700" fill="#4f8f68">문서 벡터를 미리 계산해 저장할 수 있다 — 빠름</text>
+<text x="40" y="338" font-size="11.5" fill="#a04040">마지막에 한 번만 만나므로 정확도는 낮다</text>
+
+<text x="392" y="76" font-size="13" font-weight="700" fill="#3d6fa8">크로스인코더 — 붙여서</text>
+<rect x="398" y="92" width="264" height="32" rx="6" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="470" y="113" text-anchor="middle" font-size="12" fill="#1d3a5c">질의</text>
+<text x="530" y="113" text-anchor="middle" font-size="11" fill="#6b7f95">[SEP]</text>
+<text x="596" y="113" text-anchor="middle" font-size="12" fill="#1d3a5c">문서</text>
+<path d="M530 126 V144" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<rect x="398" y="150" width="264" height="60" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="530" y="173" text-anchor="middle" font-size="12" fill="#1d3a5c">인코더 (트랜스포머)</text>
+<path d="M430 196 L630 196 M430 196 L530 184 M630 196 L530 184 M480 196 L580 184 M580 196 L480 184" stroke="#3d6fa8" stroke-width="0.9" opacity="0.55"/>
+<text x="530" y="230" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3d6fa8">모든 토큰이 서로를 본다</text>
+<path d="M530 238 V258" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar3)"/>
+<rect x="470" y="264" width="120" height="30" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="530" y="284" text-anchor="middle" font-size="11.5" fill="#1d3a5c">관련도 점수</text>
+<text x="392" y="318" font-size="11.5" font-weight="700" fill="#4f8f68">토큰 단위로 맞물리므로 정확하다</text>
+<text x="392" y="338" font-size="11.5" fill="#a04040">질의가 와야 계산 시작 — 미리 만들어 둘 수 없다</text>
+</svg>

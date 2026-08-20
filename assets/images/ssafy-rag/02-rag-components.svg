@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">검색증강 언어모델의 네 부품</text>
+
+<rect x="40" y="76" width="150" height="110" rx="8" fill="#ffffff" stroke="#c2703c" stroke-width="2"/>
+<path d="M56 100 H174 M56 122 H160 M56 144 H174 M56 166 H148" stroke="#c2703c" stroke-width="1" opacity="0.45"/>
+<text x="115" y="206" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">Datastore</text>
+
+<path d="M194 131 H222" stroke="#40556b" stroke-width="1.6" marker-end="url(#ar2)"/>
+
+<rect x="230" y="111" width="110" height="40" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="285" y="136" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d3a5c">Index</text>
+<rect x="238" y="52" width="94" height="34" rx="6" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="285" y="74" text-anchor="middle" font-size="12" fill="#1d3a5c">Query</text>
+<path d="M285 88 V105" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar2)"/>
+
+<path d="M344 131 H372" stroke="#40556b" stroke-width="1.6" marker-end="url(#ar2)"/>
+
+<rect x="380" y="111" width="110" height="40" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="435" y="136" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1d3a5c">LM</text>
+<rect x="388" y="52" width="94" height="34" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="435" y="74" text-anchor="middle" font-size="12" fill="#40556b">사용자 질문</text>
+<path d="M435 88 V105" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar2)"/>
+
+<path d="M494 131 H522" stroke="#40556b" stroke-width="1.6" marker-end="url(#ar2)"/>
+<rect x="530" y="111" width="110" height="40" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="585" y="136" text-anchor="middle" font-size="12.5" fill="#1d3a5c">답변</text>
+
+<line x1="40" y1="226" x2="680" y2="226" stroke="#d5dde6" stroke-width="1"/>
+<text x="40" y="256" font-size="12" fill="#40556b"><tspan font-weight="700" fill="#a04040">Datastore</tspan>  가공되지 않은 원문 뭉치. 라벨링된 데이터셋도, 지식 그래프도 아니다</text>
+<text x="40" y="280" font-size="12" fill="#40556b"><tspan font-weight="700" fill="#3d6fa8">Query</tspan>  검색에 쓸 질의. 사용자가 던진 질문과 같을 필요가 없다</text>
+<text x="40" y="304" font-size="12" fill="#40556b"><tspan font-weight="700" fill="#4f8f68">Index</tspan>  빨리 찾으려고 미리 만들어 둔 색인. 검색 방식마다 만드는 법이 다르다</text>
+<text x="40" y="328" font-size="12" fill="#40556b"><tspan font-weight="700" fill="#3d6fa8">LM</tspan>  찾아온 문서를 읽고 답을 다시 쓴다. 검색 결과를 그대로 뱉지 않는다</text>
+</svg>

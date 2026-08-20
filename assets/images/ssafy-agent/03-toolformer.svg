@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ag3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">사람이 채점하지 않는다 — 손실이 줄었는지가 채점 기준</text>
+
+<rect x="36" y="66" width="190" height="96" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="131" y="94" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">1. 샘플링</text>
+<text x="131" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">평범한 텍스트를 놓고</text>
+<text x="131" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">넣을 만한 API 호출을</text>
+<text x="131" y="154" text-anchor="middle" font-size="11.5" fill="#40556b">후보로 잔뜩 만든다</text>
+
+<path d="M232 114 H258" stroke="#40556b" stroke-width="1.6" marker-end="url(#ag3)"/>
+
+<rect x="266" y="66" width="190" height="96" rx="8" fill="#f6ece5" stroke="#c2703c" stroke-width="1.8"/>
+<text x="361" y="94" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">2. 실행</text>
+<text x="361" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">만든 호출을 진짜로</text>
+<text x="361" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">실행해서 응답을</text>
+<text x="361" y="154" text-anchor="middle" font-size="11.5" fill="#40556b">받아 온다</text>
+
+<path d="M462 114 H488" stroke="#40556b" stroke-width="1.6" marker-end="url(#ag3)"/>
+
+<rect x="496" y="66" width="190" height="96" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="591" y="94" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">3. 필터링</text>
+<text x="591" y="118" text-anchor="middle" font-size="11.5" fill="#40556b">그 응답을 끼워 넣으니</text>
+<text x="591" y="136" text-anchor="middle" font-size="11.5" fill="#40556b">뒷부분 예측이 쉬워졌나</text>
+<text x="591" y="154" text-anchor="middle" font-size="11.5" fill="#40556b">쉬워진 것만 남긴다</text>
+
+<line x1="36" y1="192" x2="686" y2="192" stroke="#d5dde6" stroke-width="1"/>
+
+<rect x="36" y="212" width="316" height="66" rx="8" fill="#ffffff" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="56" y="238" font-size="11.5" font-weight="700" fill="#4f8f68">남긴다</text>
+<text x="56" y="262" font-size="11.5" fill="#40556b">호출 결과를 알고 나니 다음 문장이 잘 이어진다</text>
+
+<rect x="370" y="212" width="316" height="66" rx="8" fill="#ffffff" stroke="#a04040" stroke-width="1.6"/>
+<text x="390" y="238" font-size="11.5" font-weight="700" fill="#a04040">버린다</text>
+<text x="390" y="262" font-size="11.5" fill="#40556b">알아도 달라지는 게 없다 — 쓸모없는 호출이었다</text>
+
+<text x="360" y="304" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">사람 손이 들어가는 자리가 한 군데도 없다</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="lg2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="330" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">한 걸음씩 갈 것인가, 전체를 먼저 짤 것인가</text>
+
+<text x="40" y="76" font-size="13" font-weight="700" fill="#3d6fa8">국소적 계획 — 매 스텝마다 도구 하나</text>
+<rect x="46" y="92" width="86" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="89" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">컨트롤러</text>
+<path d="M136 109 H160" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="166" y="92" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="201" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 A</text>
+<path d="M201 130 V148" stroke="#40556b" stroke-width="1.2" stroke-dasharray="3 3" marker-end="url(#lg2)"/>
+<rect x="46" y="152" width="86" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="89" y="174" text-anchor="middle" font-size="11" fill="#1d3a5c">컨트롤러</text>
+<path d="M136 169 H160" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="166" y="152" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="201" y="174" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 B</text>
+<path d="M201 190 V208" stroke="#40556b" stroke-width="1.2" stroke-dasharray="3 3" marker-end="url(#lg2)"/>
+<rect x="46" y="212" width="86" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="89" y="234" text-anchor="middle" font-size="11" fill="#1d3a5c">컨트롤러</text>
+<path d="M136 229 H160" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="166" y="212" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="201" y="234" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 C</text>
+<text x="46" y="278" font-size="11.5" font-weight="700" fill="#4f8f68">상황을 보고 매번 다시 정한다 — 유연하다</text>
+<text x="46" y="298" font-size="11.5" fill="#a04040">열 걸음 뒤를 못 본다 — 장기 의존성에 약하다</text>
+
+<line x1="360" y1="56" x2="360" y2="306" stroke="#d5dde6" stroke-width="1"/>
+
+<text x="392" y="76" font-size="13" font-weight="700" fill="#3d6fa8">전역적 계획 — 경로를 한 번에</text>
+<rect x="398" y="92" width="100" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="448" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">컨트롤러</text>
+<path d="M502 109 H526" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="532" y="86" width="148" height="46" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="606" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">전체 계획</text>
+<text x="606" y="123" text-anchor="middle" font-size="10.5" fill="#40556b">A 다음 B 다음 C</text>
+<path d="M606 136 C606 150 606 150 560 150 C470 150 433 150 433 158" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#lg2)"/>
+<text x="506" y="145" text-anchor="middle" font-size="10" fill="#6b7f95">계획대로 순서대로</text>
+<rect x="398" y="164" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="433" y="186" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 A</text>
+<path d="M472 181 H492" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="498" y="164" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="533" y="186" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 B</text>
+<path d="M572 181 H592" stroke="#40556b" stroke-width="1.4" marker-end="url(#lg2)"/>
+<rect x="598" y="164" width="70" height="34" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="633" y="186" text-anchor="middle" font-size="11" fill="#1d3a5c">도구 C</text>
+<text x="392" y="234" font-size="11.5" font-weight="700" fill="#4f8f68">중간에 흔들리지 않는다 — 오류가 덜 쌓인다</text>
+<text x="392" y="254" font-size="11.5" fill="#a04040">초기 계획이 현실과 어긋나면 통째로 실패한다</text>
+<text x="392" y="290" font-size="11.5" fill="#6b7f95">단계가 짧고 상황이 바뀌면 국소적으로,</text>
+<text x="392" y="308" font-size="11.5" fill="#6b7f95">절차가 정해져 있고 길면 전역적으로</text>
+</svg>

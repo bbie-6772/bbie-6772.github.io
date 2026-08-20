@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ag1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="400" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">에이전트는 부품 네 개와 사람 하나로 돈다</text>
+
+<rect x="278" y="62" width="164" height="46" rx="8" fill="#e8eef6" stroke="#3d6fa8" stroke-width="2"/>
+<text x="360" y="83" text-anchor="middle" font-size="13" font-weight="700" fill="#1d3a5c">Controller</text>
+<text x="360" y="100" text-anchor="middle" font-size="11" fill="#40556b">언어모델 — 계획을 세운다</text>
+
+<rect x="500" y="176" width="164" height="46" rx="8" fill="#ffffff" stroke="#c2703c" stroke-width="2"/>
+<text x="582" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#1d3a5c">Tool Set</text>
+<text x="582" y="214" text-anchor="middle" font-size="11" fill="#40556b">기능이 다른 도구들</text>
+
+<rect x="278" y="286" width="164" height="46" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.8"/>
+<text x="360" y="307" text-anchor="middle" font-size="13" font-weight="700" fill="#1d3a5c">Environment</text>
+<text x="360" y="324" text-anchor="middle" font-size="11" fill="#40556b">도구가 실제로 도는 무대</text>
+
+<rect x="56" y="176" width="164" height="46" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="2"/>
+<text x="138" y="197" text-anchor="middle" font-size="13" font-weight="700" fill="#1d3a5c">Perceiver</text>
+<text x="138" y="214" text-anchor="middle" font-size="11" fill="#40556b">결과를 요약해 돌려준다</text>
+
+<circle cx="360" cy="199" r="30" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="360" y="199" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">사람</text>
+
+
+<path d="M446 92 C520 100 566 132 578 170" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#ag1)"/>
+<text x="556" y="122" text-anchor="middle" font-size="11" fill="#6b7f95">계획</text>
+
+<path d="M578 228 C566 268 516 296 448 306" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#ag1)"/>
+<text x="566" y="290" text-anchor="middle" font-size="11" fill="#6b7f95">도구 실행</text>
+
+<path d="M272 306 C204 296 154 268 142 228" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#ag1)"/>
+<text x="152" y="290" text-anchor="middle" font-size="11" fill="#6b7f95">환경 피드백</text>
+
+<path d="M142 170 C154 132 200 100 274 92" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#ag1)"/>
+<text x="164" y="122" text-anchor="middle" font-size="11" fill="#6b7f95">요약</text>
+
+<path d="M360 166 V114" stroke="#3d6fa8" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ag1)"/>
+<text x="394" y="142" text-anchor="middle" font-size="10.5" fill="#3d6fa8">지시</text>
+<path d="M328 199 H226" stroke="#3d6fa8" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ag1)"/>
+<text x="277" y="190" text-anchor="middle" font-size="10.5" fill="#3d6fa8">사람 피드백</text>
+
+<text x="360" y="368" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">퍼시버는 환경 피드백과 사람 피드백을 함께 받아 요약해서 컨트롤러에 넘긴다</text>
+<text x="360" y="388" text-anchor="middle" font-size="11.5" fill="#6b7f95">한 바퀴 돌고 끝나지 않고, 결과를 보고 다시 계획을 세우는 것이 에이전트다</text>
+</svg>

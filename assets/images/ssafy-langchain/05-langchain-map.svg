@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="lg5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="380" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">따로 배운 게 아니라, 한 물건의 부품들이었다</text>
+
+<rect x="252" y="58" width="216" height="52" rx="8" fill="#e8eef6" stroke="#3d6fa8" stroke-width="2"/>
+<text x="360" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">Agents</text>
+<text x="360" y="98" text-anchor="middle" font-size="10.5" fill="#40556b">상황을 보고 도구를 골라 실행</text>
+<text x="484" y="88" font-size="11" font-weight="700" fill="#3d6fa8">32편 · ReAct</text>
+
+
+<rect x="40" y="150" width="188" height="52" rx="8" fill="#ffffff" stroke="#c2703c" stroke-width="1.8"/>
+<text x="134" y="172" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a04040">Tools</text>
+<text x="134" y="190" text-anchor="middle" font-size="10.5" fill="#40556b">외부 API · DB · 계산기 연결</text>
+<text x="134" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#a04040">31편 · 도구와 MCP</text>
+<path d="M134 146 C134 108 182 90 246 86" stroke="#40556b" stroke-width="1.5" fill="none" marker-end="url(#lg5)"/>
+<text x="150" y="120" font-size="10.5" fill="#6b7f95">에이전트가 집어 든다</text>
+
+<rect x="464" y="150" width="216" height="52" rx="8" fill="#ffffff" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="572" y="172" text-anchor="middle" font-size="12.5" font-weight="700" fill="#4f8f68">Retrievers · Vector Stores</text>
+<text x="572" y="190" text-anchor="middle" font-size="10.5" fill="#40556b">문서를 색인하고 검색해 온다</text>
+<text x="572" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#4f8f68">30편 · RAG</text>
+
+<path d="M460 176 H240" stroke="#3d6fa8" stroke-width="1.5" stroke-dasharray="5 3" fill="none" marker-end="url(#lg5)"/>
+<text x="350" y="168" text-anchor="middle" font-size="10.5" font-weight="700" fill="#3d6fa8">검색기를 도구로 감싸면</text>
+<text x="350" y="196" text-anchor="middle" font-size="10.5" fill="#6b7f95">에이전트가 부를 수 있게 된다</text>
+
+<line x1="40" y1="252" x2="680" y2="252" stroke="#d5dde6" stroke-width="1"/>
+
+<rect x="40" y="272" width="196" height="52" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="138" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Prompt Templates</text>
+<text x="138" y="312" text-anchor="middle" font-size="10.5" fill="#6b7f95">18편 · 프롬프트 엔지니어링</text>
+
+<rect x="262" y="272" width="196" height="52" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="360" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Chains</text>
+<text x="360" y="312" text-anchor="middle" font-size="10.5" fill="#6b7f95">사람이 순서를 고정한다</text>
+
+<rect x="484" y="272" width="196" height="52" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="582" y="294" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Memory</text>
+<text x="582" y="312" text-anchor="middle" font-size="10.5" fill="#6b7f95">대화 기록과 상태를 유지</text>
+
+<text x="360" y="352" text-anchor="middle" font-size="11.5" font-weight="700" fill="#3d6fa8">Chains는 사람이 순서를 정하고, Agents는 모델이 순서를 정한다</text>
+<text x="360" y="370" text-anchor="middle" font-size="11" fill="#6b7f95">파이프라인에 박으면 RAG, 도구로 감싸 쥐여주면 에이전트가 된다</text>
+</svg>
