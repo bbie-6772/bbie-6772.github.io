@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ov1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">생각을 늘렸더니 생긴 새 문제, 그리고 세 가지 처방</text>
+
+<rect x="24" y="54" width="672" height="66" rx="10" fill="#ffffff" stroke="#a04040" stroke-width="1.4"/>
+<text x="46" y="78" font-size="12.5" font-weight="700" fill="#a04040">과도한 사고 (Overthinking)</text>
+<text x="46" y="100" font-size="11" fill="#40556b">"2 + 3은?" 에도 열 문단을 쓴다 — 답은 같은데 토큰과 시간만 몇 배로 나간다</text>
+
+<rect x="24" y="140" width="212" height="140" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="130" y="164" text-anchor="middle" font-size="12.5" font-weight="700" fill="#3d6fa8">① 모델을 고친다</text>
+<text x="130" y="184" text-anchor="middle" font-size="10.5" fill="#6b7f95">DeGRPO</text>
+<rect x="48" y="198" width="76" height="26" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="86" y="216" text-anchor="middle" font-size="10" fill="#1d3a5c">&lt;short&gt;</text>
+<rect x="136" y="198" width="76" height="26" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="174" y="216" text-anchor="middle" font-size="10" fill="#1d3a5c">&lt;think&gt;</text>
+<text x="130" y="246" text-anchor="middle" font-size="10.5" fill="#40556b">첫 토큰 하나로</text>
+<text x="130" y="262" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">길게 갈지 짧게 갈지 결정</text>
+
+<rect x="254" y="140" width="212" height="140" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="360" y="164" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c2703c">② 중간에 접는다</text>
+<text x="360" y="184" text-anchor="middle" font-size="10.5" fill="#6b7f95">InftyThink</text>
+<rect x="272" y="198" width="52" height="26" rx="5" fill="#fbeee6" stroke="#c2703c" stroke-width="1.3"/>
+<text x="298" y="216" text-anchor="middle" font-size="9.5" fill="#1d3a5c">생각 1</text>
+<path d="M328 211 H340" stroke="#40556b" stroke-width="1.2" marker-end="url(#ov1)"/>
+<rect x="344" y="198" width="52" height="26" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.3"/>
+<text x="370" y="216" text-anchor="middle" font-size="9.5" fill="#1d3a5c">요약</text>
+<path d="M400 211 H412" stroke="#40556b" stroke-width="1.2" marker-end="url(#ov1)"/>
+<rect x="416" y="198" width="34" height="26" rx="5" fill="#fbeee6" stroke="#c2703c" stroke-width="1.3"/>
+<text x="433" y="216" text-anchor="middle" font-size="9.5" fill="#1d3a5c">생각 2</text>
+<text x="360" y="246" text-anchor="middle" font-size="10.5" fill="#40556b">쌓지 않고 접어서 넘긴다</text>
+<text x="360" y="262" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">길이가 무한히 늘지 않는다</text>
+
+<rect x="484" y="140" width="212" height="140" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="590" y="164" text-anchor="middle" font-size="12.5" font-weight="700" fill="#7a5aa8">③ 입구에서 나눈다</text>
+<text x="590" y="184" text-anchor="middle" font-size="10.5" fill="#6b7f95">난이도 라우팅</text>
+<rect x="506" y="196" width="60" height="26" rx="6" fill="#efe9f7" stroke="#7a5aa8" stroke-width="1.4"/>
+<text x="536" y="214" text-anchor="middle" font-size="10" fill="#1d3a5c">질문</text>
+<path d="M570 203 L594 194" stroke="#40556b" stroke-width="1.2" marker-end="url(#ov1)"/>
+<path d="M570 215 L594 224" stroke="#40556b" stroke-width="1.2" marker-end="url(#ov1)"/>
+<rect x="598" y="180" width="76" height="24" rx="5" fill="#ffffff" stroke="#8fb0d4" stroke-width="1.3"/>
+<text x="636" y="197" text-anchor="middle" font-size="9.5" fill="#1d3a5c">빠른 모드</text>
+<rect x="598" y="214" width="76" height="24" rx="5" fill="#ffffff" stroke="#8fb0d4" stroke-width="1.3"/>
+<text x="636" y="231" text-anchor="middle" font-size="9.5" fill="#1d3a5c">깊은 모드</text>
+<text x="590" y="256" text-anchor="middle" font-size="10.5" fill="#40556b">요즘 상용 모델의 자동 모드가</text>
+<text x="590" y="272" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">사실상 이 방식이다</text>
+
+<text x="360" y="312" text-anchor="middle" font-size="11.5" fill="#6b7f95">세 처방 모두 결론이 같다 — <tspan font-weight="700" fill="#1d3a5c">깊이 생각할 곳을 골라서 생각하게 만든다</tspan></text>
+</svg>

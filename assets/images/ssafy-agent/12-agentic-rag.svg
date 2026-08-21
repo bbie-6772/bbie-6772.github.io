@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ar1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="360" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">검색기를 하나가 다 쥘 것인가, 나눠 맡길 것인가</text>
+
+<rect x="24" y="54" width="320" height="216" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="184" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">단일 에이전트형 (Router)</text>
+
+<rect x="40" y="96" width="60" height="28" rx="6" fill="#eef3f8" stroke="#8fb0d4" stroke-width="1.3"/>
+<text x="70" y="115" text-anchor="middle" font-size="10" fill="#1d3a5c">질문</text>
+<path d="M104 110 H124" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar1)"/>
+<rect x="128" y="92" width="80" height="36" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="168" y="107" text-anchor="middle" font-size="10" font-weight="700" fill="#1d3a5c">리트리버</text>
+<text x="168" y="121" text-anchor="middle" font-size="10" font-weight="700" fill="#1d3a5c">에이전트</text>
+
+<path d="M212 102 L238 90" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+<path d="M212 110 L238 128" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+<path d="M212 118 L238 166" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+<rect x="242" y="76" width="86" height="24" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.3"/>
+<text x="285" y="93" text-anchor="middle" font-size="9.5" fill="#1d3a5c">벡터 검색 A</text>
+<rect x="242" y="116" width="86" height="24" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.3"/>
+<text x="285" y="133" text-anchor="middle" font-size="9.5" fill="#1d3a5c">벡터 검색 B</text>
+<rect x="242" y="156" width="86" height="24" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.3"/>
+<text x="285" y="173" text-anchor="middle" font-size="9.5" fill="#1d3a5c">웹 검색 · 계산기</text>
+
+<path d="M168 132 V186" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar1)"/>
+<rect x="128" y="188" width="80" height="28" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="168" y="207" text-anchor="middle" font-size="10" fill="#1d3a5c">LLM → 답변</text>
+
+<text x="184" y="240" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">경로가 하나라 추적이 쉽다</text>
+<text x="184" y="258" text-anchor="middle" font-size="10.5" fill="#a04040">도구가 늘수록 혼자 다 판단해야 한다</text>
+
+<rect x="376" y="54" width="320" height="216" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="536" y="78" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">멀티 에이전트형</text>
+
+<rect x="392" y="96" width="52" height="28" rx="6" fill="#eef3f8" stroke="#8fb0d4" stroke-width="1.3"/>
+<text x="418" y="115" text-anchor="middle" font-size="10" fill="#1d3a5c">질문</text>
+<path d="M448 110 H464" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar1)"/>
+<rect x="468" y="92" width="66" height="36" rx="6" fill="#fbeee6" stroke="#c2703c" stroke-width="1.8"/>
+<text x="501" y="107" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d3a5c">마스터</text>
+<text x="501" y="121" text-anchor="middle" font-size="9.5" font-weight="700" fill="#1d3a5c">리트리버</text>
+
+<path d="M538 100 L558 82" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+<path d="M538 110 H558" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+<path d="M538 120 L558 158" stroke="#40556b" stroke-width="1.2" marker-end="url(#ar1)"/>
+
+<rect x="562" y="68" width="46" height="26" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="585" y="86" text-anchor="middle" font-size="9.5" fill="#1d3a5c">A</text>
+<rect x="562" y="98" width="46" height="26" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="585" y="116" text-anchor="middle" font-size="9.5" fill="#1d3a5c">B</text>
+<rect x="562" y="146" width="46" height="26" rx="5" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="585" y="164" text-anchor="middle" font-size="9.5" fill="#1d3a5c">C</text>
+
+<path d="M612 81 H628" stroke="#40556b" stroke-width="1.1" marker-end="url(#ar1)"/>
+<path d="M612 111 H628" stroke="#40556b" stroke-width="1.1" marker-end="url(#ar1)"/>
+<path d="M612 159 H628" stroke="#40556b" stroke-width="1.1" marker-end="url(#ar1)"/>
+<text x="634" y="84" font-size="9.5" fill="#6b7f95">벡터 검색</text>
+<text x="634" y="114" font-size="9.5" fill="#6b7f95">웹 검색</text>
+<text x="634" y="162" font-size="9.5" fill="#6b7f95">Slack · Gmail</text>
+
+<path d="M501 132 V186" stroke="#40556b" stroke-width="1.4" marker-end="url(#ar1)"/>
+<rect x="461" y="188" width="80" height="28" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="501" y="207" text-anchor="middle" font-size="10" fill="#1d3a5c">LLM → 답변</text>
+
+<text x="536" y="240" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4f8f68">도구를 나눠 맡아 전문화된다</text>
+<text x="536" y="258" text-anchor="middle" font-size="10.5" fill="#a04040">한 명이 잘못 가져오면 그대로 섞인다</text>
+
+<rect x="24" y="288" width="672" height="56" rx="8" fill="#eef3f8" stroke="#8fb0d4" stroke-width="1.2"/>
+<text x="360" y="310" text-anchor="middle" font-size="11.5" fill="#1d3a5c">둘 다 바뀐 건 한 가지 — 검색이 <tspan font-weight="700">파이프라인의 고정된 한 칸</tspan>이 아니라 <tspan font-weight="700">에이전트가 내리는 결정</tspan>이 됐다</text>
+<text x="360" y="332" text-anchor="middle" font-size="11" fill="#6b7f95">검색할지 말지 · 어느 도구로 · 뭐라고 물을지 · 결과가 부실하면 다시 할지</text>
+</svg>

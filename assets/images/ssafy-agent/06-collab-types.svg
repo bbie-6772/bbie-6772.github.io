@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ct1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">에이전트를 여럿 두면, 사이를 무엇으로 채울 것인가</text>
+
+<rect x="24" y="56" width="212" height="196" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="130" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">협력 (Cooperation)</text>
+<rect x="52" y="98" width="70" height="30" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="87" y="118" text-anchor="middle" font-size="10.5" fill="#1d3a5c">조사 담당</text>
+<rect x="140" y="98" width="70" height="30" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="175" y="118" text-anchor="middle" font-size="10.5" fill="#1d3a5c">작성 담당</text>
+<rect x="52" y="146" width="70" height="30" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="87" y="166" text-anchor="middle" font-size="10.5" fill="#1d3a5c">번역 담당</text>
+<rect x="140" y="146" width="70" height="30" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="175" y="166" text-anchor="middle" font-size="10.5" fill="#1d3a5c">검수 담당</text>
+<path d="M122 113 H136" stroke="#4f8f68" stroke-width="1.6" marker-end="url(#ct1)"/>
+<path d="M175 132 V142" stroke="#4f8f68" stroke-width="1.6" marker-end="url(#ct1)"/>
+<path d="M136 161 H126" stroke="#4f8f68" stroke-width="1.6" marker-end="url(#ct1)"/>
+<text x="130" y="204" text-anchor="middle" font-size="11" fill="#4f8f68" font-weight="700">목표가 하나, 일을 나눈다</text>
+<text x="130" y="224" text-anchor="middle" font-size="10.5" fill="#a04040">하나가 틀리면 전부 물든다</text>
+<text x="130" y="240" text-anchor="middle" font-size="10.5" fill="#a04040">무한 대화 루프 위험</text>
+
+<rect x="254" y="56" width="212" height="196" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="360" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">경쟁 (Competition)</text>
+<rect x="276" y="112" width="76" height="34" rx="6" fill="#fbeee6" stroke="#c2703c" stroke-width="1.6"/>
+<text x="314" y="134" text-anchor="middle" font-size="10.5" fill="#1d3a5c">찬성 측</text>
+<rect x="368" y="112" width="76" height="34" rx="6" fill="#fbeee6" stroke="#c2703c" stroke-width="1.6"/>
+<text x="406" y="134" text-anchor="middle" font-size="10.5" fill="#1d3a5c">반대 측</text>
+<path d="M354 124 H364" stroke="#c2703c" stroke-width="1.6" marker-end="url(#ct1)"/>
+<path d="M366 138 H356" stroke="#c2703c" stroke-width="1.6" marker-end="url(#ct1)"/>
+<text x="360" y="172" text-anchor="middle" font-size="10.5" fill="#6b7f95">서로의 허점을 찌른다</text>
+<text x="360" y="204" text-anchor="middle" font-size="11" fill="#4f8f68" font-weight="700">추론이 날카로워진다</text>
+<text x="360" y="224" text-anchor="middle" font-size="10.5" fill="#a04040">끝나지 않는 논쟁</text>
+<text x="360" y="240" text-anchor="middle" font-size="10.5" fill="#a04040">좋은 프롬프트 하나에 따라잡히기도</text>
+
+<rect x="484" y="56" width="212" height="196" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="590" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#7a5aa8">협력 + 경쟁</text>
+<rect x="546" y="98" width="88" height="30" rx="6" fill="#efe9f7" stroke="#7a5aa8" stroke-width="1.6"/>
+<text x="590" y="118" text-anchor="middle" font-size="10.5" fill="#1d3a5c">조율자</text>
+<rect x="506" y="152" width="76" height="30" rx="6" fill="#ffffff" stroke="#7a5aa8" stroke-width="1.4"/>
+<text x="544" y="172" text-anchor="middle" font-size="10.5" fill="#1d3a5c">찬성 측</text>
+<rect x="598" y="152" width="76" height="30" rx="6" fill="#ffffff" stroke="#7a5aa8" stroke-width="1.4"/>
+<text x="636" y="172" text-anchor="middle" font-size="10.5" fill="#1d3a5c">반대 측</text>
+<path d="M572 130 L550 148" stroke="#40556b" stroke-width="1.4" marker-end="url(#ct1)"/>
+<path d="M608 130 L630 148" stroke="#40556b" stroke-width="1.4" marker-end="url(#ct1)"/>
+<path d="M582 167 H594" stroke="#c2703c" stroke-width="1.4" stroke-dasharray="3 3"/>
+<text x="590" y="204" text-anchor="middle" font-size="11" fill="#4f8f68" font-weight="700">싸우게 두되 결론은 함께</text>
+<text x="590" y="224" text-anchor="middle" font-size="10.5" fill="#6b7f95">정책 결정, 전문가 혼합(MoE)</text>
+<text x="590" y="240" text-anchor="middle" font-size="10.5" fill="#a04040">설계가 가장 어렵다</text>
+
+<text x="360" y="288" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">셋 다 "여럿"이지만, 목표를 공유하느냐 충돌시키느냐가 갈린다</text>
+<text x="360" y="312" text-anchor="middle" font-size="11" fill="#6b7f95">품질을 나눠 올릴 일이면 협력 · 답이 하나로 정해지지 않는 일이면 경쟁</text>
+</svg>

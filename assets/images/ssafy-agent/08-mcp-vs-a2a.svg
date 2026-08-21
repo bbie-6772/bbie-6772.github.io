@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="ma1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="360" y="34" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">MCP는 아래로, A2A는 옆으로</text>
+
+<rect x="24" y="56" width="320" height="196" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="184" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">MCP — 에이전트와 도구 사이</text>
+<rect x="130" y="98" width="108" height="32" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="184" y="119" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">에이전트</text>
+<path d="M184 134 V152" stroke="#40556b" stroke-width="1.6" marker-end="url(#ma1)"/>
+<rect x="126" y="154" width="116" height="26" rx="6" fill="#1d3a5c"/>
+<text x="184" y="172" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">MCP</text>
+<rect x="44" y="200" width="76" height="28" rx="6" fill="#ffffff" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="82" y="219" text-anchor="middle" font-size="10" fill="#1d3a5c">파일 시스템</text>
+<rect x="146" y="200" width="76" height="28" rx="6" fill="#ffffff" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="184" y="219" text-anchor="middle" font-size="10" fill="#1d3a5c">데이터베이스</text>
+<rect x="248" y="200" width="76" height="28" rx="6" fill="#ffffff" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="286" y="219" text-anchor="middle" font-size="10" fill="#1d3a5c">웹 API</text>
+<path d="M170 184 L92 198" stroke="#40556b" stroke-width="1.2" marker-end="url(#ma1)"/>
+<path d="M184 184 V196" stroke="#40556b" stroke-width="1.2" marker-end="url(#ma1)"/>
+<path d="M200 184 L276 198" stroke="#40556b" stroke-width="1.2" marker-end="url(#ma1)"/>
+
+<rect x="376" y="56" width="320" height="196" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="536" y="80" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">A2A — 에이전트와 에이전트 사이</text>
+<rect x="396" y="112" width="92" height="32" rx="6" fill="#fbeee6" stroke="#c2703c" stroke-width="1.8"/>
+<text x="442" y="133" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1d3a5c">클라이언트</text>
+<rect x="492" y="112" width="88" height="32" rx="6" fill="#1d3a5c"/>
+<text x="536" y="133" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">A2A 라우터</text>
+<rect x="592" y="84" width="88" height="30" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="636" y="103" text-anchor="middle" font-size="10" fill="#1d3a5c">원격 에이전트 1</text>
+<rect x="592" y="142" width="88" height="30" rx="6" fill="#ffffff" stroke="#c2703c" stroke-width="1.4"/>
+<text x="636" y="161" text-anchor="middle" font-size="10" fill="#1d3a5c">원격 에이전트 2</text>
+<path d="M488 128 H488" stroke="#40556b" stroke-width="1.4"/>
+<path d="M490 128 H488" stroke="#40556b" stroke-width="1.4" marker-end="url(#ma1)"/>
+<path d="M580 122 L588 104" stroke="#40556b" stroke-width="1.4" marker-end="url(#ma1)"/>
+<path d="M580 136 L588 154" stroke="#40556b" stroke-width="1.4" marker-end="url(#ma1)"/>
+<text x="536" y="196" text-anchor="middle" font-size="10.5" fill="#6b7f95">주고받는 것: 맥락 · 작업 진행 상황 · 지시 · 데이터</text>
+<text x="536" y="216" text-anchor="middle" font-size="10.5" font-weight="700" fill="#a04040">주고받지 않는 것: 내부 메모리 · 사고 과정 · 도구 자체</text>
+
+<rect x="24" y="266" width="672" height="38" rx="8" fill="#eef3f8" stroke="#8fb0d4" stroke-width="1.2"/>
+<text x="360" y="290" text-anchor="middle" font-size="11.5" fill="#1d3a5c">같은 "표준 규격"이지만 층이 다르다 — MCP는 손을 규격화하고, A2A는 <tspan font-weight="700">동료와 나누는 대화</tspan>를 규격화한다</text>
+</svg>
