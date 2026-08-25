@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="372" rx="12" fill="#f7f9fb"/>
+<text x="360" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">가지치기는 지운 자리를 기억하는 값이 따로 필요하다</text>
+<text x="360" y="52" text-anchor="middle" font-size="11" fill="#6b7f95">기여도가 작은 값(2.0 미만)을 지우기로 하면</text>
+<text x="30" y="88" font-size="12" font-weight="700" fill="#1d3a5c">원본 — 숫자 8개를 저장한다</text>
+<text x="60" y="130" font-size="11" fill="#6b7f95">값</text>
+<text x="60" y="105" font-size="10" fill="#8fb0d4">칸 번호</text>
+<text x="152.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">0</text>
+<text x="212.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">1</text>
+<text x="272.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">2</text>
+<text x="332.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">3</text>
+<text x="392.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">4</text>
+<text x="452.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">5</text>
+<text x="512.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">6</text>
+<text x="572.0" y="105" text-anchor="middle" font-size="10" fill="#8fb0d4">7</text>
+<rect x="124" y="112" width="56" height="32" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="152.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">0.4</text>
+<rect x="184" y="112" width="56" height="32" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="212.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">3.1</text>
+<rect x="244" y="112" width="56" height="32" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="272.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">0.2</text>
+<rect x="304" y="112" width="56" height="32" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="332.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">2.4</text>
+<rect x="364" y="112" width="56" height="32" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="392.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">5.6</text>
+<rect x="424" y="112" width="56" height="32" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="452.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">0.1</text>
+<rect x="484" y="112" width="56" height="32" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="512.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">0.3</text>
+<rect x="544" y="112" width="56" height="32" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="572.0" y="133" text-anchor="middle" font-size="13" fill="#1d3a5c">4.2</text>
+<text x="30" y="168" font-size="11" fill="#a04040">붉은 칸 4개가 잘려나간다. 파란 칸 4개만 남는다.</text>
+<line x1="30" y1="190" x2="690" y2="190" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="30" y="218" font-size="12" font-weight="700" fill="#1d3a5c">가지치기 후 — 값 4개 + 위치 4개</text>
+<text x="60" y="262" font-size="11" fill="#6b7f95">값</text>
+<text x="60" y="306" font-size="11" fill="#6b7f95">위치</text>
+<rect x="124" y="240" width="56" height="32" rx="4" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="152.0" y="261" text-anchor="middle" font-size="13" fill="#1d3a5c">3.1</text>
+<rect x="124" y="284" width="56" height="32" rx="4" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="152.0" y="305" text-anchor="middle" font-size="13" fill="#1d3a5c">1</text>
+<rect x="184" y="240" width="56" height="32" rx="4" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="212.0" y="261" text-anchor="middle" font-size="13" fill="#1d3a5c">2.4</text>
+<rect x="184" y="284" width="56" height="32" rx="4" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="212.0" y="305" text-anchor="middle" font-size="13" fill="#1d3a5c">3</text>
+<rect x="244" y="240" width="56" height="32" rx="4" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="272.0" y="261" text-anchor="middle" font-size="13" fill="#1d3a5c">5.6</text>
+<rect x="244" y="284" width="56" height="32" rx="4" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="272.0" y="305" text-anchor="middle" font-size="13" fill="#1d3a5c">4</text>
+<rect x="304" y="240" width="56" height="32" rx="4" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="332.0" y="261" text-anchor="middle" font-size="13" fill="#1d3a5c">4.2</text>
+<rect x="304" y="284" width="56" height="32" rx="4" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="332.0" y="305" text-anchor="middle" font-size="13" fill="#1d3a5c">7</text>
+<text x="400" y="262" font-size="11" fill="#6b7f95">3.1은 원래 1번 칸,</text>
+<text x="400" y="306" font-size="11" fill="#6b7f95">4.2는 원래 7번 칸에 있었다는 뜻</text>
+<rect x="30" y="328" width="660" height="34" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="360" y="350" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">값 4개 + 위치 4개 = 여전히 숫자 8개. 절반을 지웠는데 저장량이 그대로다</text>
+</svg>

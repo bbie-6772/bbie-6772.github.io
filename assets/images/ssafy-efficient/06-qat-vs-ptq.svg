@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="q1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="380" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">언제 깎을 것인가 — 학습하면서 깎기 vs 다 학습하고 깎기</text>
+
+<rect x="26" y="52" width="320" height="284" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="186" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">QAT — 학습 중에 깎는다</text>
+
+<rect x="48" y="92" width="120" height="34" rx="6" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="108" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">학습 데이터</text>
+<rect x="200" y="92" width="120" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="260" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">사전학습 모델</text>
+
+<rect x="124" y="156" width="124" height="34" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="186" y="178" text-anchor="middle" font-size="11" fill="#1d3a5c">재학습 / 파인튜닝</text>
+<rect x="124" y="216" width="124" height="34" rx="6" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="186" y="238" text-anchor="middle" font-size="11" fill="#1d3a5c">양자화</text>
+<rect x="124" y="276" width="124" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="186" y="298" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">QAT 모델</text>
+
+<path d="M108 126 L172 152" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M260 126 L200 152" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M186 190 L186 212" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M186 250 L186 272" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<text x="186" y="326" text-anchor="middle" font-size="11" fill="#6b7f95">정확도는 잘 지키지만 학습을 다시 돌려야 한다</text>
+
+<rect x="374" y="52" width="320" height="284" rx="10" fill="#ffffff" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="534" y="76" text-anchor="middle" font-size="13" font-weight="700" fill="#4f8f68">PTQ — 다 학습하고 깎는다</text>
+
+<rect x="396" y="92" width="120" height="34" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="456" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">사전학습 모델</text>
+<rect x="548" y="92" width="124" height="34" rx="6" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.4"/>
+<text x="610" y="114" text-anchor="middle" font-size="11" fill="#1d3a5c">보정용 소량 데이터</text>
+
+<rect x="472" y="156" width="124" height="34" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="534" y="178" text-anchor="middle" font-size="11" fill="#1d3a5c">보정 (calibration)</text>
+<rect x="472" y="216" width="124" height="34" rx="6" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="534" y="238" text-anchor="middle" font-size="11" fill="#1d3a5c">양자화</text>
+<rect x="472" y="276" width="124" height="34" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="534" y="298" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">PTQ 모델</text>
+
+<path d="M456 126 L520 152" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M610 126 L548 152" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M534 190 L534 212" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<path d="M534 250 L534 272" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#q1)"/>
+<text x="534" y="326" text-anchor="middle" font-size="11" fill="#6b7f95">학습을 안 돌려도 된다 — LLM에선 사실상 이 길뿐</text>
+
+<text x="360" y="362" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">학습 데이터도 학습 비용도 감당이 안 되는 크기가 되면 선택지는 하나로 줄어든다</text>
+</svg>

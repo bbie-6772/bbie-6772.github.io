@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="400" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">ReLU를 지난 활성값은 음수가 아예 없다</text>
+<text x="360" y="50" text-anchor="middle" font-size="11" fill="#6b7f95">0 ~ +0.9 에만 값이 몰려 있는 활성값을 8비트에 담아본다면</text>
+
+<text x="30" y="84" font-size="12" font-weight="700" fill="#3d6fa8">대칭 (symmetric) — 0을 한가운데 고정</text>
+<rect x="100" y="98" width="472" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<rect x="336" y="98" width="236" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="218" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#a04040">쓰이지 않는 절반</text>
+<text x="454" y="117" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">실제 값이 들어가는 자리</text>
+<line x1="336" y1="94" x2="336" y2="130" stroke="#40556b" stroke-width="1.6"/>
+<text x="100" y="146" font-size="11" fill="#6b7f95">−0.9</text>
+<text x="336" y="146" text-anchor="middle" font-size="11" fill="#40556b">0</text>
+<text x="572" y="146" text-anchor="end" font-size="11" fill="#6b7f95">+0.9</text>
+<text x="592" y="118" font-size="11" fill="#40556b">int8 −127 ~ 127</text>
+<text x="30" y="172" font-size="11" fill="#a04040">256칸 중 음수 쪽 절반이 통째로 논다. 8비트를 썼는데 실제 해상도는 7비트짜리다.</text>
+
+<line x1="30" y1="198" x2="690" y2="198" stroke="#d5dde6" stroke-width="1.2"/>
+
+<text x="30" y="230" font-size="12" font-weight="700" fill="#4f8f68">비대칭 (asymmetric) — 값이 있는 구간에만 칸을 준다</text>
+<rect x="100" y="244" width="472" height="28" rx="4" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<text x="336" y="263" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">256칸 전부가 실제 값에 쓰인다</text>
+<line x1="100" y1="240" x2="100" y2="276" stroke="#40556b" stroke-width="1.6" stroke-dasharray="4 3"/>
+<text x="100" y="292" text-anchor="middle" font-size="11" fill="#40556b">0 (zero-point)</text>
+<text x="572" y="292" text-anchor="end" font-size="11" fill="#6b7f95">+0.9</text>
+<text x="592" y="264" font-size="11" fill="#40556b">uint8 0 ~ 255</text>
+<text x="30" y="318" font-size="11" fill="#4f8f68">같은 8비트로 두 배 촘촘하게 담긴다. 대신 0이 어느 칸인지 기억할 zero-point가 필요하다.</text>
+
+<rect x="30" y="336" width="660" height="50" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="360" y="357" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">가중치는 0을 중심으로 퍼져 있어 대칭이 잘 맞고, 활성값은 한쪽으로 쏠려 비대칭이 유리하다</text>
+<text x="360" y="375" text-anchor="middle" font-size="11" fill="#6b7f95">그래서 가중치와 활성값에 서로 다른 방식을 쓰는 경우가 많다</text>
+</svg>

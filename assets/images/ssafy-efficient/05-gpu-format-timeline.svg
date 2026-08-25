@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="300" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">GPU는 세대마다 더 짧은 숫자를 하나씩 늘려왔다</text>
+<text x="360" y="50" text-anchor="middle" font-size="11" fill="#6b7f95">각 세대에서 새로 지원하기 시작한 숫자 포맷</text>
+<line x1="46" y1="164" x2="678" y2="164" stroke="#8fb0d4" stroke-width="2"/>
+<circle cx="80" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="80" y1="164" x2="80" y2="144" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="28" y="92" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="80" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Pascal</text>
+<text x="80" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">INT8</text>
+<text x="80" y="182" text-anchor="middle" font-size="11" fill="#6b7f95">2016</text>
+<circle cx="196" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="196" y1="164" x2="196" y2="200" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="144" y="200" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="196" y="220" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Volta</text>
+<text x="196" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">FP16</text>
+<text x="196" y="156" text-anchor="middle" font-size="11" fill="#6b7f95">2017</text>
+<circle cx="312" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="312" y1="164" x2="312" y2="144" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="260" y="92" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="312" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Turing</text>
+<text x="312" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">INT4</text>
+<text x="312" y="182" text-anchor="middle" font-size="11" fill="#6b7f95">2018</text>
+<circle cx="428" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="428" y1="164" x2="428" y2="200" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="376" y="200" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="428" y="220" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Ampere</text>
+<text x="428" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">TF32 / BF16</text>
+<text x="428" y="156" text-anchor="middle" font-size="11" fill="#6b7f95">2020</text>
+<circle cx="544" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="544" y1="164" x2="544" y2="144" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="492" y="92" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="544" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Hopper</text>
+<text x="544" y="130" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">FP8</text>
+<text x="544" y="182" text-anchor="middle" font-size="11" fill="#6b7f95">2022</text>
+<circle cx="660" cy="164" r="6" fill="#3d6fa8"/>
+<line x1="660" y1="164" x2="660" y2="200" stroke="#8fb0d4" stroke-width="1.4"/>
+<rect x="608" y="200" width="104" height="52" rx="8" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.6"/>
+<text x="660" y="220" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">Blackwell Ultra</text>
+<text x="660" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#3d6fa8">FP6 / NVFP4</text>
+<text x="660" y="156" text-anchor="middle" font-size="11" fill="#6b7f95">2025</text>
+<text x="360" y="278" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">FP32·FP64는 처음부터 있었다. 늘어난 건 전부 &quot;더 짧은&quot; 쪽이다</text>
+</svg>

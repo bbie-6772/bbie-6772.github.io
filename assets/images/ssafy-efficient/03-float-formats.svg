@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="330" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">부동소수점은 같은 비트를 부호·지수·가수로 나눠 쓴다</text>
+<text x="360" y="50" text-anchor="middle" font-size="11" fill="#6b7f95">지수를 몇 비트 주느냐가 표현 범위를, 가수를 몇 비트 주느냐가 정밀도를 정한다</text>
+<text x="30" y="95" font-size="12" font-weight="700" fill="#1d3a5c">FP64 (double)</text>
+<rect x="150.0" y="76" width="8.1" height="28" rx="3" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<rect x="158.1" y="76" width="89.4" height="28" rx="3" fill="#3d6fa8" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="202.8" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">지수 11bit</text>
+<rect x="247.5" y="76" width="422.5" height="28" rx="3" fill="#cfe0f2" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="458.8" y="94" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">가수 52bit</text>
+<text x="30" y="143" font-size="12" font-weight="700" fill="#1d3a5c">FP32 (float)</text>
+<rect x="150.0" y="124" width="8.1" height="28" rx="3" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<rect x="158.1" y="124" width="65.0" height="28" rx="3" fill="#3d6fa8" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="190.6" y="142" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">8bit</text>
+<rect x="223.1" y="124" width="186.9" height="28" rx="3" fill="#cfe0f2" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="316.6" y="142" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">가수 23bit</text>
+<text x="30" y="191" font-size="12" font-weight="700" fill="#1d3a5c">FP16 (half)</text>
+<rect x="150.0" y="172" width="8.1" height="28" rx="3" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<rect x="158.1" y="172" width="40.6" height="28" rx="3" fill="#3d6fa8" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="178.4" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">5bit</text>
+<rect x="198.8" y="172" width="81.2" height="28" rx="3" fill="#cfe0f2" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="239.4" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">가수 10bit</text>
+<text x="30" y="239" font-size="12" font-weight="700" fill="#1d3a5c">BF16 (구글)</text>
+<rect x="150.0" y="220" width="8.1" height="28" rx="3" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.4"/>
+<rect x="158.1" y="220" width="65.0" height="28" rx="3" fill="#3d6fa8" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="190.6" y="238" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">8bit</text>
+<rect x="223.1" y="220" width="56.9" height="28" rx="3" fill="#cfe0f2" stroke="#8fb0d4" stroke-width="1.4"/>
+<text x="251.6" y="238" text-anchor="middle" font-size="11" font-weight="700" fill="#1d3a5c">7bit</text>
+<text x="30" y="292" font-size="11" fill="#6b7f95">한 칸 = 1비트</text>
+<rect x="150" y="268" width="540" height="44" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="420" y="288" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">BF16은 FP32의 지수 8비트를 그대로 두고 가수만 잘라낸 포맷이다</text>
+<text x="420" y="305" text-anchor="middle" font-size="11" fill="#6b7f95">범위는 FP32와 같고 정밀도만 포기했다 — 학습 중 값이 넘치지 않게 하려는 선택</text>
+</svg>

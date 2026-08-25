@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="qa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="330" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">QLoRA는 한 모델 안에서 정밀도를 두 가지로 나눠 쓴다</text>
+<text x="360" y="50" text-anchor="middle" font-size="11" fill="#6b7f95">안 배우는 쪽은 최대한 눌러 담고, 배우는 쪽만 해상도를 지킨다</text>
+
+<rect x="50" y="76" width="270" height="120" rx="10" fill="#e8eef6" stroke="#8fb0d4" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="185" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#40556b">원본 가중치</text>
+<text x="185" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#3d6fa8">4bit (NF4)</text>
+<text x="185" y="154" text-anchor="middle" font-size="11" fill="#6b7f95">학습하지 않는다 — 얼려둔다</text>
+<text x="185" y="174" text-anchor="middle" font-size="11" fill="#6b7f95">메모리를 가장 많이 잡아먹던 부분</text>
+
+<rect x="400" y="76" width="270" height="120" rx="10" fill="#fdf0dd" stroke="#c2703c" stroke-width="2"/>
+<text x="535" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#a04040">LoRA 어댑터 (A·B)</text>
+<text x="535" y="130" text-anchor="middle" font-size="16" font-weight="700" fill="#c2703c">BF16</text>
+<text x="535" y="154" text-anchor="middle" font-size="11" fill="#6b7f95">여기만 학습한다</text>
+<text x="535" y="174" text-anchor="middle" font-size="11" fill="#6b7f95">전체의 아주 작은 일부라 부담이 없다</text>
+
+<path d="M185 196 L185 226 L340 226 L340 244" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#qa)"/>
+<path d="M535 196 L535 226 L380 226 L380 244" stroke="#40556b" stroke-width="1.6" fill="none" marker-end="url(#qa)"/>
+<text x="212" y="220" font-size="11" fill="#6b7f95">계산할 때만 되돌려 쓴다</text>
+
+<rect x="230" y="248" width="260" height="42" rx="8" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.8"/>
+<text x="360" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1d3a5c">두 결과를 더해 최종 출력</text>
+
+<text x="360" y="314" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">전체를 강하게 눌렀는데도 목표 작업 성능은 지켜지는 이유가 여기에 있다</text>
+</svg>

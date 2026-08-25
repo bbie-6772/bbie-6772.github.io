@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs><marker id="w1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#40556b"/></marker></defs>
+<rect width="720" height="360" rx="12" fill="#f7f9fb"/>
+<text x="360" y="30" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">가중치만 깎을 것인가, 계산까지 정수로 할 것인가</text>
+
+<rect x="26" y="50" width="320" height="272" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.8"/>
+<text x="186" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#3d6fa8">W8A8 — 계산도 정수로</text>
+<rect x="56" y="90" width="112" height="32" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="112" y="111" text-anchor="middle" font-size="11" fill="#1d3a5c">가중치 INT8</text>
+<rect x="204" y="90" width="112" height="32" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="260" y="111" text-anchor="middle" font-size="11" fill="#1d3a5c">활성값 INT8</text>
+<rect x="106" y="150" width="160" height="34" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="186" y="172" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">행렬곱 (INT8)</text>
+<rect x="106" y="204" width="160" height="30" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="186" y="224" text-anchor="middle" font-size="11" fill="#40556b">중간 결과 INT32</text>
+<rect x="106" y="254" width="160" height="30" rx="6" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="186" y="274" text-anchor="middle" font-size="11" fill="#1d3a5c">다시 INT8로 양자화</text>
+<path d="M112 122 L172 146" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M260 122 L200 146" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M186 184 L186 200" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M186 234 L186 250" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<text x="186" y="308" text-anchor="middle" font-size="11" fill="#6b7f95">곱셈기 자체가 작아진다 — 속도와 전력이 같이 준다</text>
+
+<rect x="374" y="50" width="320" height="272" rx="10" fill="#ffffff" stroke="#c2703c" stroke-width="1.8"/>
+<text x="534" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#c2703c">W4A16 — 저장만 깎고 계산은 실수로</text>
+<rect x="404" y="90" width="112" height="32" rx="6" fill="#fdf0dd" stroke="#c2703c" stroke-width="1.6"/>
+<text x="460" y="111" text-anchor="middle" font-size="11" font-weight="700" fill="#a04040">가중치 4bit</text>
+<rect x="552" y="90" width="112" height="32" rx="6" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="608" y="111" text-anchor="middle" font-size="11" fill="#1d3a5c">활성값 FP16</text>
+<rect x="404" y="150" width="112" height="32" rx="6" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="460" y="171" text-anchor="middle" font-size="11" fill="#1d3a5c">역양자화</text>
+<rect x="404" y="200" width="112" height="30" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-width="1.4"/>
+<text x="460" y="220" text-anchor="middle" font-size="11" fill="#40556b">가중치 FP16</text>
+<rect x="454" y="250" width="160" height="34" rx="6" fill="#eaf3ec" stroke="#4f8f68" stroke-width="1.6"/>
+<text x="534" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">행렬곱 (FP16)</text>
+<path d="M460 122 L460 146" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M460 182 L460 196" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M460 230 L500 246" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<path d="M608 122 L580 246" stroke="#40556b" stroke-width="1.4" fill="none" marker-end="url(#w1)"/>
+<text x="534" y="308" text-anchor="middle" font-size="11" fill="#6b7f95">메모리는 크게 줄지만 계산은 그대로 FP16이다</text>
+
+<text x="360" y="344" text-anchor="middle" font-size="12" font-weight="700" fill="#a04040">모델을 못 올리는 게 문제면 W4A16, 계산이 느린 게 문제면 W8A8</text>
+</svg>

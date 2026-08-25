@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="720" height="300" rx="12" fill="#f7f9fb"/>
+<text x="360" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">같은 4비트 패턴, 읽는 방식에 따라 값이 달라진다</text>
+<rect x="44" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="63.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0000</text>
+<rect x="84" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="103.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0001</text>
+<rect x="124" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="143.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0010</text>
+<rect x="164" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="183.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0011</text>
+<rect x="204" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="223.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0100</text>
+<rect x="244" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="263.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0101</text>
+<rect x="284" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="303.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0110</text>
+<rect x="324" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="343.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">0111</text>
+<rect x="364" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="383.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1000</text>
+<rect x="404" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="423.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1001</text>
+<rect x="444" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="463.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1010</text>
+<rect x="484" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="503.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1011</text>
+<rect x="524" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="543.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1100</text>
+<rect x="564" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="583.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1101</text>
+<rect x="604" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="623.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1110</text>
+<rect x="644" y="52" width="38" height="24" rx="4" fill="#ffffff" stroke="#d5dde6" stroke-width="1.2"/>
+<text x="663.0" y="69" text-anchor="middle" font-size="11" fill="#40556b">1111</text>
+<text x="44" y="104" font-size="12" font-weight="700" fill="#1d3a5c">부호-크기 표현</text>
+<text x="160" y="104" font-size="11" fill="#6b7f95">맨 앞 비트는 부호, 나머지는 크기</text>
+<rect x="44" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="63.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">0</text>
+<rect x="84" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="103.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">1</text>
+<rect x="124" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="143.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">2</text>
+<rect x="164" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="183.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">3</text>
+<rect x="204" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="223.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">4</text>
+<rect x="244" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="263.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">5</text>
+<rect x="284" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="303.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">6</text>
+<rect x="324" y="112" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="343.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">7</text>
+<rect x="364" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="383.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-0</text>
+<rect x="404" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="423.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-1</text>
+<rect x="444" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="463.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-2</text>
+<rect x="484" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="503.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-3</text>
+<rect x="524" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="543.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-4</text>
+<rect x="564" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="583.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-5</text>
+<rect x="604" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="623.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-6</text>
+<rect x="644" y="112" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="663.0" y="131" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-7</text>
+<text x="44" y="176" font-size="12" font-weight="700" fill="#1d3a5c">2의 보수 표현</text>
+<text x="160" y="176" font-size="11" fill="#6b7f95">맨 앞 비트가 −8이라는 값을 그대로 가진다</text>
+<rect x="44" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="63.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">0</text>
+<rect x="84" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="103.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">1</text>
+<rect x="124" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="143.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">2</text>
+<rect x="164" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="183.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">3</text>
+<rect x="204" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="223.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">4</text>
+<rect x="244" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="263.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">5</text>
+<rect x="284" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="303.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">6</text>
+<rect x="324" y="184" width="38" height="28" rx="4" fill="#e8eef6" stroke="#3d6fa8" stroke-width="1.4"/>
+<text x="343.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">7</text>
+<rect x="364" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="383.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-8</text>
+<rect x="404" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="423.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-7</text>
+<rect x="444" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="463.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-6</text>
+<rect x="484" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="503.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-5</text>
+<rect x="524" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="543.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-4</text>
+<rect x="564" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="583.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-3</text>
+<rect x="604" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="623.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-2</text>
+<rect x="644" y="184" width="38" height="28" rx="4" fill="#f3e3e3" stroke="#a04040" stroke-width="1.4"/>
+<text x="663.0" y="203" text-anchor="middle" font-size="12" font-weight="700" fill="#1d3a5c">-1</text>
+<rect x="44" y="112" width="38" height="28" rx="4" fill="none" stroke="#a04040" stroke-width="2.6"/>
+<rect x="364" y="112" width="38" height="28" rx="4" fill="none" stroke="#a04040" stroke-width="2.6"/>
+<text x="44" y="252" font-size="12" fill="#a04040">부호-크기는 0000과 1000이 둘 다 0이다. 0이 두 개라 덧셈기가 예외 처리를 해야 한다.</text>
+<text x="44" y="272" font-size="12" fill="#3d6fa8">2의 보수는 0이 하나뿐이고, 음수 덧셈이 그냥 정수 덧셈으로 끝난다.</text>
+</svg>
