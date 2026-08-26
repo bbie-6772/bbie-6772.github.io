@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="360" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">같은 이미지처럼 생겼는데, CNN의 두 가정이 여기선 깨진다</text>
+  <text x="32" y="62" font-size="12" fill="#6b7f95">가로축은 시간이지만 세로축은 위치가 아니라 <tspan font-weight="700" fill="#1d3a5c">신호의 종류</tspan>다</text>
+
+  <!-- signal板 -->
+  <rect x="32" y="80" width="240" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="152" y="102" font-size="11" font-weight="700" fill="#6b7f95" text-anchor="middle">30초짜리 화면 한 장</text>
+  <g font-size="10" fill="#6b7f95">
+    <text x="46" y="128">뇌파</text><rect x="112" y="118" width="146" height="12" rx="3" fill="#dce7f3"/>
+    <text x="46" y="152">안구</text><rect x="112" y="142" width="146" height="12" rx="3" fill="#dce7f3"/>
+    <text x="46" y="176">근전도</text><rect x="112" y="166" width="146" height="12" rx="3" fill="#dce7f3"/>
+    <text x="46" y="200">심전도</text><rect x="112" y="190" width="146" height="12" rx="3" fill="#dce7f3"/>
+    <text x="46" y="224">호흡</text><rect x="112" y="214" width="146" height="12" rx="3" fill="#dce7f3"/>
+    <text x="46" y="248">산소포화도</text><rect x="112" y="238" width="146" height="12" rx="3" fill="#dce7f3"/>
+  </g>
+
+  <!-- assumption 1 -->
+  <rect x="292" y="80" width="396" height="84" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="310" y="104" font-size="12" font-weight="700" fill="#a04040">가정 1 — 가까운 것끼리 더 관련 있다</text>
+  <text x="310" y="128" font-size="11" fill="#6b7f95">사진에서는 맞다. 옆 화소는 같은 물체의 일부니까.</text>
+  <text x="310" y="150" font-size="11" fill="#1d3a5c">여기선 틀렸다. <tspan font-weight="700">줄이 붙어 있다고 관련 있는 신호가 아니다.</tspan></text>
+
+  <!-- assumption 2 -->
+  <rect x="292" y="176" width="396" height="84" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="310" y="200" font-size="12" font-weight="700" fill="#a04040">가정 2 — 어디에 있든 같은 것이다</text>
+  <text x="310" y="224" font-size="11" fill="#6b7f95">사진에서는 맞다. 고양이는 어디 있어도 고양이니까.</text>
+  <text x="310" y="246" font-size="11" fill="#1d3a5c">여기선 틀렸다. <tspan font-weight="700">몇 번째 줄인지가 곧 신호의 정체다.</tspan></text>
+
+  <rect x="32" y="278" width="656" height="66" rx="10" fill="#e8f0f8" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="52" y="304" font-size="13" fill="#1d3a5c">그래서 <tspan font-weight="700" fill="#3d6fa8">비전 트랜스포머</tspan>를 썼다. 위치를 따로 알려주고, 멀리 떨어진 줄끼리도 관계를 보게 한다.</text>
+  <text x="52" y="330" font-size="12" fill="#6b7f95">더 좋은 모델이라 고른 게 아니라, 이 데이터에 맞는 가정을 가진 모델이라 고른 것이다.</text>
+</svg>

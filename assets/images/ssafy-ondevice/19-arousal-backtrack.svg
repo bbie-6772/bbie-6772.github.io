@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="400" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">안 보이는 걸 찾는 대신, 잘 보이는 그다음 장면을 찾는다</text>
+
+  <defs>
+    <marker id="ab" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+
+  <rect x="32" y="62" width="656" height="164" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+
+  <text x="225" y="92" font-size="11" fill="#6b7f95" text-anchor="middle">움직임이 너무 미세해서</text>
+  <text x="225" y="108" font-size="11" fill="#6b7f95" text-anchor="middle">영상으로는 안 보인다</text>
+  <text x="225" y="130" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">무호흡 구간</text>
+
+  <text x="400" y="92" font-size="11" fill="#6b7f95" text-anchor="middle">몸을 크게 뒤척인다</text>
+  <text x="400" y="108" font-size="11" fill="#6b7f95" text-anchor="middle">영상에 잘 보인다</text>
+  <text x="400" y="130" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">호흡 각성</text>
+
+  <line x1="72" y1="164" x2="620" y2="164" stroke="#d5dde6" stroke-width="2"/>
+  <text x="648" y="168" font-size="11" fill="#6b7f95">시간</text>
+
+  <rect x="150" y="152" width="180" height="24" rx="4" fill="#f0e2e2" stroke="#a04040" stroke-dasharray="4 3"/>
+  <rect x="366" y="142" width="68" height="44" rx="4" fill="#3d6fa8"/>
+
+  <line x1="380" y1="204" x2="170" y2="204" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="470" y="208" font-size="12" font-weight="700" fill="#3d6fa8">여기서 거꾸로 되짚는다</text>
+
+  <rect x="32" y="240" width="656" height="60" rx="10" fill="#e8f0f8" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="52" y="266" font-size="13" fill="#1d3a5c">기도가 막히면 몸이 <tspan font-weight="700">무의식적으로 크게 움직여 기도를 다시 연다.</tspan></text>
+  <text x="52" y="288" font-size="12" fill="#6b7f95">그러니 각성이 보였다면, 그 직전에 무호흡이 있었다는 뜻이다.</text>
+
+  <rect x="32" y="316" width="320" height="70" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="192" y="340" font-size="12" font-weight="700" fill="#6b7f95" text-anchor="middle">그냥 뒤척인 것과 구분은?</text>
+  <text x="192" y="362" font-size="11" fill="#6b7f95" text-anchor="middle">움직임 범위가 더 크고,</text>
+  <text x="192" y="378" font-size="11" fill="#1d3a5c" text-anchor="middle">가슴 위쪽 움직임의 강도가 더 세다</text>
+
+  <rect x="368" y="316" width="320" height="70" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="528" y="340" font-size="12" font-weight="700" fill="#6b7f95" text-anchor="middle">문제를 바꿔서 얻은 것</text>
+  <text x="528" y="362" font-size="11" fill="#6b7f95" text-anchor="middle">몸에 아무것도 안 붙이고</text>
+  <text x="528" y="378" font-size="11" fill="#1d3a5c" text-anchor="middle">카메라 한 대로 잴 수 있게 됐다</text>
+</svg>

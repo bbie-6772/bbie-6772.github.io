@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">같은 문제에 답이 세 개 — 무엇을 움직일 것인가</text>
+  <text x="32" y="62" font-size="12" fill="#6b7f95">파란 원은 모델이 잘 아는 영역, 회색 점은 실제로 들어온 데이터</text>
+
+  <defs>
+    <marker id="a7" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+
+  <!-- 1 -->
+  <rect x="32" y="78" width="206" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="135" y="102" font-size="12" font-weight="700" fill="#6b7f95" text-anchor="middle">모델을 키운다</text>
+  <circle cx="120" cy="172" r="60" fill="none" stroke="#8fb0d4" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="120" cy="172" r="34" fill="#dce7f3" stroke="#3d6fa8" stroke-width="1.5"/>
+  <g fill="#6b7f95">
+    <circle cx="176" cy="150" r="4"/><circle cx="186" cy="176" r="4"/><circle cx="172" cy="198" r="4"/>
+  </g>
+  <text x="135" y="248" font-size="11" fill="#6b7f95" text-anchor="middle">원을 넓힌다 — 비싸고 오래 걸린다</text>
+
+  <!-- 2 -->
+  <rect x="256" y="78" width="206" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="359" y="102" font-size="12" font-weight="700" fill="#6b7f95" text-anchor="middle">모델을 옮긴다 (40편)</text>
+  <circle cx="330" cy="172" r="34" fill="none" stroke="#8fb0d4" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <circle cx="386" cy="172" r="34" fill="#dce7f3" stroke="#3d6fa8" stroke-width="1.5"/>
+  <line x1="364" y1="148" x2="386" y2="148" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+  <g fill="#6b7f95">
+    <circle cx="386" cy="160" r="4"/><circle cx="398" cy="180" r="4"/><circle cx="376" cy="188" r="4"/>
+  </g>
+  <text x="359" y="248" font-size="11" fill="#6b7f95" text-anchor="middle">원을 데이터 쪽으로 밀어준다</text>
+
+  <!-- 3 -->
+  <rect x="480" y="78" width="208" height="180" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="584" y="102" font-size="12" font-weight="700" fill="#3d6fa8" text-anchor="middle">데이터를 옮긴다 (이번 편)</text>
+  <circle cx="560" cy="172" r="34" fill="#dce7f3" stroke="#3d6fa8" stroke-width="1.5"/>
+  <g fill="#c3ccd6">
+    <circle cx="652" cy="142" r="4"/><circle cx="660" cy="184" r="4"/><circle cx="646" cy="220" r="4"/>
+  </g>
+  <line x1="644" y1="146" x2="600" y2="162" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+  <line x1="652" y1="185" x2="600" y2="178" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+  <line x1="638" y1="216" x2="592" y2="196" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a7)"/>
+  <g fill="#6b7f95">
+    <circle cx="556" cy="164" r="4"/><circle cx="572" cy="180" r="4"/><circle cx="550" cy="186" r="4"/>
+  </g>
+  <text x="584" y="248" font-size="11" fill="#6b7f95" text-anchor="middle">원은 그대로, 데이터를 안으로 끌어온다</text>
+
+  <rect x="32" y="272" width="656" height="36" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="296" font-size="13" fill="#1d3a5c">앞의 둘은 <tspan font-weight="700">모델을 건드린다.</tspan> 마지막 하나만 <tspan font-weight="700">모델을 아예 안 건드린다.</tspan></text>
+</svg>

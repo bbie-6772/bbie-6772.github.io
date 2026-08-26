@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="360" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">0.0234를 곱하고 싶은데 소수를 못 쓴다면</text>
+  <text x="32" y="62" font-size="12" fill="#6b7f95">잠깐 크게 부풀려 정수로 만들고, 계산이 끝난 뒤 그만큼 다시 밀어 내린다</text>
+
+  <defs>
+    <marker id="a3" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <g>
+    <rect x="32" y="84" width="196" height="140" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="130" y="112" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">1. 스케일 업</text>
+    <text x="130" y="144" font-size="12" fill="#6b7f95" text-anchor="middle">M에 2를 15번 곱한다</text>
+    <text x="130" y="176" font-size="15" font-weight="700" fill="#1d3a5c" text-anchor="middle">0.0234 → 767</text>
+    <text x="130" y="202" font-size="12" fill="#6b7f95" text-anchor="middle">이제 정수다</text>
+
+    <line x1="236" y1="154" x2="262" y2="154" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a3)"/>
+
+    <rect x="270" y="84" width="196" height="140" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="368" y="112" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">2. 정수로만 계산</text>
+    <text x="368" y="144" font-size="12" fill="#6b7f95" text-anchor="middle">정수 누적 결과 12,000에 곱한다</text>
+    <text x="368" y="176" font-size="15" font-weight="700" fill="#1d3a5c" text-anchor="middle">9,204,000</text>
+    <text x="368" y="202" font-size="12" fill="#6b7f95" text-anchor="middle">가속기가 맡을 수 있는 구간</text>
+
+    <line x1="474" y1="154" x2="500" y2="154" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a3)"/>
+
+    <rect x="508" y="84" width="180" height="140" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="598" y="112" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">3. 스케일 다운</text>
+    <text x="598" y="144" font-size="12" fill="#6b7f95" text-anchor="middle">비트를 15칸 밀어 내린다</text>
+    <text x="598" y="176" font-size="15" font-weight="700" fill="#1d3a5c" text-anchor="middle">280</text>
+    <text x="598" y="202" font-size="12" fill="#6b7f95" text-anchor="middle">나눗셈 없이 끝</text>
+  </g>
+
+  <rect x="32" y="244" width="656" height="88" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="274" font-size="13" fill="#1d3a5c">그냥 실수로 계산했으면 <tspan font-weight="700">12,000 × 0.0234 = 280.8</tspan></text>
+  <text x="52" y="300" font-size="13" fill="#1d3a5c">정수로만 돌아서 나온 답은 <tspan font-weight="700" fill="#3d6fa8">280</tspan>. 소수점 아래를 버린 만큼만 차이가 난다.</text>
+  <text x="52" y="322" font-size="12" fill="#6b7f95">비트를 오른쪽으로 한 칸 미는 건 2로 나누는 것과 같다. 회로에서 제일 싼 연산이다.</text>
+</svg>

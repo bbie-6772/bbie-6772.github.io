@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="42" font-size="17" font-weight="700" fill="#1d3a5c">전부 정수로 바꿔놨는데, 계산 도중에 실수가 되살아난다</text>
+
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <g font-size="12">
+    <rect x="32" y="86" width="118" height="76" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="91" y="116" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">입력값</text>
+    <text x="91" y="138" fill="#3d6fa8" text-anchor="middle">8비트 정수</text>
+
+    <line x1="156" y1="124" x2="182" y2="124" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a2)"/>
+
+    <rect x="190" y="86" width="118" height="76" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="249" y="116" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">가중치</text>
+    <text x="249" y="138" fill="#3d6fa8" text-anchor="middle">8비트 정수</text>
+
+    <line x1="314" y1="124" x2="340" y2="124" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a2)"/>
+
+    <rect x="348" y="86" width="118" height="76" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="407" y="116" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">곱하고 더하기</text>
+    <text x="407" y="138" fill="#3d6fa8" text-anchor="middle">정수 연산</text>
+
+    <line x1="472" y1="124" x2="498" y2="124" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a2)"/>
+
+    <rect x="506" y="86" width="182" height="76" rx="10" fill="#fbf2f2" stroke="#a04040" stroke-width="2"/>
+    <text x="597" y="116" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">스케일 되돌리기</text>
+    <text x="597" y="138" fill="#a04040" text-anchor="middle">S를 곱한다 — 실수!</text>
+  </g>
+
+  <text x="597" y="184" font-size="26" fill="#a04040" text-anchor="middle">▲</text>
+
+  <rect x="32" y="200" width="656" height="88" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="230" font-size="13" fill="#1d3a5c">저장된 값이 정수인 것과, <tspan font-weight="700">계산 과정이 정수인 것</tspan>은 다른 이야기다.</text>
+  <text x="52" y="256" font-size="13" fill="#6b7f95">스케일 S는 실수라서, 이 한 칸 때문에 정수만 아는 가속기는 이 계층을 못 맡는다.</text>
+  <text x="52" y="278" font-size="13" fill="#6b7f95">못 맡으면 그 부분만 CPU로 되돌아가고, 그 왕복이 제일 비싸다.</text>
+</svg>

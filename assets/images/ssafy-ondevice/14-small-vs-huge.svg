@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">작은 모델에 안경을 씌운 쪽이 이겼다</text>
+  <text x="32" y="62" font-size="12" fill="#6b7f95">어두운 환경 벤치마크(ImageNet-ES) 기준</text>
+
+  <rect x="32" y="80" width="316" height="164" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="190" y="106" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">작은 모델 + 적응적 센싱</text>
+  <text x="190" y="134" font-size="12" fill="#1d3a5c" text-anchor="middle">EfficientNet-B3 + Lens</text>
+  <line x1="72" y1="150" x2="308" y2="150" stroke="#eef1f4" stroke-width="1"/>
+  <text x="72" y="176" font-size="12" fill="#6b7f95">파라미터</text>
+  <text x="308" y="176" font-size="12" font-weight="700" fill="#1d3a5c" text-anchor="end">50배 적음</text>
+  <text x="72" y="204" font-size="12" fill="#6b7f95">학습 데이터</text>
+  <text x="308" y="204" font-size="12" font-weight="700" fill="#1d3a5c" text-anchor="end">200만 배 적음</text>
+  <text x="72" y="232" font-size="12" fill="#6b7f95">정확도</text>
+  <text x="308" y="232" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="end">4~10% 더 높음</text>
+
+  <rect x="372" y="80" width="316" height="164" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="530" y="106" font-size="13" font-weight="700" fill="#6b7f95" text-anchor="middle">초거대 모델 + 자동노출</text>
+  <text x="530" y="134" font-size="12" fill="#1d3a5c" text-anchor="middle">OpenCLIP-h + Auto-Exposure</text>
+  <line x1="412" y1="150" x2="648" y2="150" stroke="#eef1f4" stroke-width="1"/>
+  <text x="412" y="176" font-size="12" fill="#6b7f95">파라미터</text>
+  <text x="648" y="176" font-size="12" font-weight="700" fill="#1d3a5c" text-anchor="end">기준</text>
+  <text x="412" y="204" font-size="12" fill="#6b7f95">학습 데이터</text>
+  <text x="648" y="204" font-size="12" font-weight="700" fill="#1d3a5c" text-anchor="end">기준</text>
+  <text x="412" y="232" font-size="12" fill="#6b7f95">정확도</text>
+  <text x="648" y="232" font-size="13" font-weight="700" fill="#6b7f95" text-anchor="end">기준</text>
+
+  <rect x="32" y="258" width="656" height="50" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="280" font-size="13" fill="#1d3a5c">같은 자동노출끼리 비교해도, Lens를 얹으면 ResNet50이 <tspan font-weight="700" fill="#3d6fa8">+47.56%</tspan>, DINOv2-b가 <tspan font-weight="700" fill="#3d6fa8">+8.52%</tspan>.</text>
+  <text x="52" y="300" font-size="12" fill="#6b7f95">모델이 크든 작든, 센서를 잘 맞춰주면 그만큼은 그냥 얻는다.</text>
+</svg>

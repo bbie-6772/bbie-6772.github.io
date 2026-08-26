@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="42" font-size="17" font-weight="700" fill="#1d3a5c">전용으로 갈수록, 할 수 있는 일은 줄고 전기당 성능은 오른다</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <line x1="40" y1="94" x2="676" y2="94" stroke="#8fb0d4" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="40" y="84" font-size="12" fill="#6b7f95">아무거나 다 한다 (범용)</text>
+  <text x="672" y="84" font-size="12" fill="#6b7f95" text-anchor="end">한 가지만 잘한다 (전용)</text>
+
+  <g>
+    <rect x="40" y="112" width="146" height="112" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="113" y="140" font-size="16" font-weight="700" fill="#1d3a5c" text-anchor="middle">CPU</text>
+    <text x="113" y="164" font-size="12" fill="#3d6fa8" text-anchor="middle">복잡한 순서 처리</text>
+    <text x="113" y="188" font-size="11" fill="#6b7f95" text-anchor="middle">코어 몇 개가</text>
+    <text x="113" y="205" font-size="11" fill="#6b7f95" text-anchor="middle">차례차례 똑똑하게</text>
+
+    <rect x="204" y="112" width="146" height="112" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+    <text x="277" y="140" font-size="16" font-weight="700" fill="#1d3a5c" text-anchor="middle">GPU</text>
+    <text x="277" y="164" font-size="12" fill="#3d6fa8" text-anchor="middle">같은 계산 대량 반복</text>
+    <text x="277" y="188" font-size="11" fill="#6b7f95" text-anchor="middle">코어 수천 개가</text>
+    <text x="277" y="205" font-size="11" fill="#6b7f95" text-anchor="middle">한꺼번에</text>
+
+    <rect x="368" y="112" width="146" height="112" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="441" y="140" font-size="16" font-weight="700" fill="#1d3a5c" text-anchor="middle">NPU</text>
+    <text x="441" y="164" font-size="12" fill="#3d6fa8" text-anchor="middle">신경망 연산 전용</text>
+    <text x="441" y="188" font-size="11" fill="#6b7f95" text-anchor="middle">폰·차·가전 안에</text>
+    <text x="441" y="205" font-size="11" fill="#6b7f95" text-anchor="middle">들어가는 회로</text>
+
+    <rect x="532" y="112" width="146" height="112" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="605" y="140" font-size="16" font-weight="700" fill="#1d3a5c" text-anchor="middle">TPU</text>
+    <text x="605" y="164" font-size="12" fill="#3d6fa8" text-anchor="middle">행렬 곱 전용</text>
+    <text x="605" y="188" font-size="11" fill="#6b7f95" text-anchor="middle">구글이 만든</text>
+    <text x="605" y="205" font-size="11" fill="#6b7f95" text-anchor="middle">신경망 전담 칩</text>
+  </g>
+
+  <rect x="40" y="242" width="638" height="66" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="268" font-size="14" font-weight="700" fill="#1d3a5c">MCU</text>
+  <text x="112" y="268" font-size="12" fill="#6b7f95">— 이 줄 위에 놓기 애매한 친구. 성능이 아니라 <tspan font-weight="700" fill="#1d3a5c">전력과 크기</tspan>가 기준이다.</text>
+  <text x="60" y="292" font-size="12" fill="#6b7f95">밀리와트급으로 돌아가는 손톱만 한 컴퓨터. 센서 옆에 붙어 아주 작은 모델을 돌린다.</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="330" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">자원을 부으면 성능이 오른다 — 예측이 되니까 투자가 됐다</text>
+
+  <rect x="32" y="60" width="360" height="200" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <line x1="76" y1="230" x2="368" y2="230" stroke="#d5dde6" stroke-width="1.5"/>
+  <line x1="76" y1="86" x2="76" y2="230" stroke="#d5dde6" stroke-width="1.5"/>
+  <text x="72" y="80" font-size="11" fill="#6b7f95" text-anchor="end">낮음</text>
+  <text x="60" y="152" font-size="11" fill="#6b7f95" text-anchor="middle">오차</text>
+  <text x="222" y="252" font-size="11" fill="#6b7f95" text-anchor="middle">모델 크기 · 학습 데이터 · 컴퓨팅 자원</text>
+
+  <path d="M 96 104 L 348 210" stroke="#3d6fa8" stroke-width="2.5" fill="none"/>
+  <circle cx="96" cy="104" r="4" fill="#3d6fa8"/>
+  <circle cx="180" cy="139" r="4" fill="#3d6fa8"/>
+  <circle cx="264" cy="175" r="4" fill="#3d6fa8"/>
+  <circle cx="348" cy="210" r="4" fill="#3d6fa8"/>
+  <text x="100" y="194" font-size="12" font-weight="700" fill="#3d6fa8">곧게 내려간다</text>
+  <text x="100" y="212" font-size="11" fill="#6b7f95">= 얼마 쓰면 얼마 나아질지 안다</text>
+
+  <rect x="412" y="60" width="276" height="200" rx="10" fill="#fbf2f2" stroke="#a04040" stroke-width="2"/>
+  <text x="550" y="88" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">그런데 이 그래프에 없는 축</text>
+  <text x="434" y="120" font-size="12" fill="#1d3a5c">학습 데이터에 <tspan font-weight="700">한 번도 없던 상황</tspan></text>
+  <text x="434" y="146" font-size="12" fill="#6b7f95">역광, 안개, 처음 보는 각도,</text>
+  <text x="434" y="166" font-size="12" fill="#6b7f95">공장 조명이 반쯤 나간 새벽</text>
+  <text x="434" y="200" font-size="12" fill="#1d3a5c">세상의 모든 경우를 미리 담는 건</text>
+  <text x="434" y="222" font-size="14" font-weight="700" fill="#a04040">애초에 불가능하다</text>
+
+  <text x="32" y="296" font-size="13" fill="#1d3a5c">특히 로봇처럼 <tspan font-weight="700">직접 움직이는 AI</tspan>는 경우의 수가 곱하기로 늘어난다.</text>
+  <text x="32" y="318" font-size="12" fill="#6b7f95">환경(빛·날씨·조도) × 행동(시점·거리·각도) — 데이터를 아무리 모아도 끝이 없다.</text>
+</svg>

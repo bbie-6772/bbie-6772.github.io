@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">네 기법 모두 엔트로피를 줄이는 쪽으로 움직인다</text>
+  <text x="32" y="62" font-size="12" fill="#6b7f95">뒤에 나온 것이 앞의 약점을 하나씩 메운다</text>
+
+  <defs>
+    <marker id="a5" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <!-- lane 1 -->
+  <rect x="32" y="82" width="656" height="106" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="106" font-size="12" font-weight="700" fill="#6b7f95">합성곱 모델 — 무엇을 돌리나</text>
+
+  <rect x="60" y="118" width="230" height="54" rx="8" fill="#e8f0f8" stroke="#3d6fa8"/>
+  <text x="175" y="140" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">TENT</text>
+  <text x="175" y="160" font-size="11" fill="#6b7f95" text-anchor="middle">정규화 통계 재계산 + 스케일·이동</text>
+
+  <line x1="300" y1="145" x2="336" y2="145" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a5)"/>
+  <text x="318" y="136" font-size="10" fill="#6b7f95" text-anchor="middle">불안정</text>
+
+  <rect x="346" y="118" width="314" height="54" rx="8" fill="#e8f0f8" stroke="#3d6fa8"/>
+  <text x="503" y="140" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">SAR</text>
+  <text x="503" y="160" font-size="11" fill="#6b7f95" text-anchor="middle">확신 있는 샘플만 골라 쓰고, 손실을 평탄하게</text>
+
+  <!-- lane 2 -->
+  <rect x="32" y="202" width="656" height="106" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="226" font-size="12" font-weight="700" fill="#6b7f95">비전언어 모델 — 무엇을 돌리나</text>
+
+  <rect x="60" y="238" width="230" height="54" rx="8" fill="#e8f0f8" stroke="#3d6fa8"/>
+  <text x="175" y="260" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">TPT</text>
+  <text x="175" y="280" font-size="11" fill="#6b7f95" text-anchor="middle">증강 6장을 골라 텍스트 프롬프트만</text>
+
+  <line x1="300" y1="265" x2="336" y2="265" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a5)"/>
+  <text x="318" y="256" font-size="10" fill="#6b7f95" text-anchor="middle">기준 없음</text>
+
+  <rect x="346" y="238" width="314" height="54" rx="8" fill="#e8f0f8" stroke="#3d6fa8"/>
+  <text x="503" y="260" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">PromptAlign</text>
+  <text x="503" y="280" font-size="11" fill="#6b7f95" text-anchor="middle">저장해둔 학습 통계에 맞춰 정렬까지</text>
+</svg>

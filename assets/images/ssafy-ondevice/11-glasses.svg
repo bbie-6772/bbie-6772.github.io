@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="300" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">안 보일 때, 사람은 눈을 고치지 않는다</text>
+
+  <defs>
+    <marker id="a6" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <!-- AI way -->
+  <rect x="32" y="60" width="316" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="190" y="86" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">거대화 전략</text>
+  <text x="190" y="118" font-size="12" fill="#1d3a5c" text-anchor="middle">어두운 사진을 못 알아본다</text>
+  <line x1="190" y1="130" x2="190" y2="148" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a6)"/>
+  <rect x="70" y="154" width="240" height="42" rx="8" fill="#fbf2f2" stroke="#a04040"/>
+  <text x="190" y="180" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">어두운 사진을 더 많이 학습시킨다</text>
+  <text x="190" y="220" font-size="11" fill="#6b7f95" text-anchor="middle">전부 공부와 노력의 문제라고 본다</text>
+
+  <!-- human way -->
+  <rect x="372" y="60" width="316" height="180" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="530" y="86" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">사람의 방식</text>
+  <text x="530" y="118" font-size="12" fill="#1d3a5c" text-anchor="middle">어두워서 잘 안 보인다</text>
+  <line x1="530" y1="130" x2="530" y2="148" stroke="#8fb0d4" stroke-width="2" marker-end="url(#a6)"/>
+  <rect x="410" y="154" width="240" height="42" rx="8" fill="#e8f0f8" stroke="#3d6fa8"/>
+  <text x="530" y="180" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">안경을 찾는다 · 선글라스를 쓴다</text>
+  <text x="530" y="220" font-size="11" fill="#6b7f95" text-anchor="middle">뇌가 아니라 감각기관 쪽을 손본다</text>
+
+  <rect x="32" y="252" width="656" height="36" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="276" font-size="13" fill="#1d3a5c">적응적 센싱은 <tspan font-weight="700">AI에게도 안경을 씌워주자</tspan>는 발상이다.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="360" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-size="17" font-weight="700" fill="#1d3a5c">다시 학습하는 게 아니라, 손잡이 두 개만 돌린다</text>
+
+  <!-- left: retrain -->
+  <rect x="32" y="60" width="316" height="228" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="190" y="86" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">다시 학습하기</text>
+  <g>
+    <rect x="72" y="102" width="236" height="26" rx="5" fill="#f0d6d6" stroke="#a04040"/>
+    <rect x="72" y="134" width="236" height="26" rx="5" fill="#f0d6d6" stroke="#a04040"/>
+    <rect x="72" y="166" width="236" height="26" rx="5" fill="#f0d6d6" stroke="#a04040"/>
+    <rect x="72" y="198" width="236" height="26" rx="5" fill="#f0d6d6" stroke="#a04040"/>
+  </g>
+  <text x="190" y="252" font-size="12" fill="#a04040" text-anchor="middle">전부 다시 계산 — 라벨도 필요하다</text>
+  <text x="190" y="272" font-size="11" fill="#6b7f95" text-anchor="middle">현장에서는 둘 다 없다</text>
+
+  <!-- right: TTA -->
+  <rect x="372" y="60" width="316" height="228" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="530" y="86" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">테스트 타임 적응</text>
+  <g>
+    <rect x="412" y="102" width="236" height="26" rx="5" fill="#eef1f4" stroke="#d5dde6"/>
+    <text x="530" y="120" font-size="11" fill="#6b7f95" text-anchor="middle">그대로 둔다</text>
+    <rect x="412" y="134" width="236" height="26" rx="5" fill="#eef1f4" stroke="#d5dde6"/>
+    <text x="530" y="152" font-size="11" fill="#6b7f95" text-anchor="middle">그대로 둔다</text>
+    <rect x="412" y="166" width="236" height="26" rx="5" fill="#dce7f3" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="530" y="184" font-size="11" font-weight="700" fill="#3d6fa8" text-anchor="middle">배치 정규화의 스케일·이동만</text>
+    <rect x="412" y="198" width="236" height="26" rx="5" fill="#eef1f4" stroke="#d5dde6"/>
+    <text x="530" y="216" font-size="11" fill="#6b7f95" text-anchor="middle">그대로 둔다</text>
+  </g>
+  <text x="530" y="252" font-size="12" fill="#3d6fa8" text-anchor="middle">전체 파라미터의 1%도 안 되는 부분만</text>
+  <text x="530" y="272" font-size="11" fill="#6b7f95" text-anchor="middle">라벨 없이, 들어온 데이터만 보고</text>
+
+  <rect x="32" y="304" width="656" height="42" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="330" font-size="13" fill="#1d3a5c">모델이 <tspan font-weight="700">무엇을 아는지</tspan>는 건드리지 않는다. <tspan font-weight="700">어떤 눈금으로 보는지</tspan>만 다시 맞춘다.</text>
+</svg>
