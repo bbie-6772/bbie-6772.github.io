@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="380" rx="12" fill="#f7f9fb"/>
+
+  <text x="36" y="44" font-size="17" font-weight="700" fill="#1d3a5c">지난 프로젝트 — 문서도 코드도 AI가 만들었다</text>
+
+  <rect x="36" y="62" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="94" y="84" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="94" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">아이디어</text>
+
+  <rect x="169" y="62" width="116" height="58" rx="8" fill="#ffffff" stroke="#a04040"/>
+  <text x="227" y="84" font-size="11" fill="#a04040" text-anchor="middle">AI</text>
+  <text x="227" y="104" font-size="13" fill="#a04040" text-anchor="middle">spec 작성</text>
+
+  <rect x="302" y="62" width="116" height="58" rx="8" fill="#ffffff" stroke="#a04040"/>
+  <text x="360" y="84" font-size="11" fill="#a04040" text-anchor="middle">AI</text>
+  <text x="360" y="104" font-size="13" fill="#a04040" text-anchor="middle">구현</text>
+
+  <rect x="435" y="62" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="493" y="84" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="493" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">적용</text>
+
+  <rect x="568" y="62" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="626" y="84" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="626" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">디버깅</text>
+
+  <g stroke="#8fb0d4" stroke-width="2" fill="#8fb0d4">
+    <path d="M155 91 L164 91"/><path d="M166 91 l-8 -4 v8 z"/>
+    <path d="M288 91 L297 91"/><path d="M299 91 l-8 -4 v8 z"/>
+    <path d="M421 91 L430 91"/><path d="M432 91 l-8 -4 v8 z"/>
+    <path d="M554 91 L563 91"/><path d="M565 91 l-8 -4 v8 z"/>
+  </g>
+
+  <text x="36" y="146" font-size="13" fill="#6b7f95">무엇을 만들지도, 어떻게 만들지도 내 손을 거치지 않았다</text>
+
+  <line x1="36" y1="172" x2="684" y2="172" stroke="#d5dde6" stroke-width="1"/>
+
+  <text x="36" y="212" font-size="17" font-weight="700" fill="#1d3a5c">이번 프로젝트 — 문서는 내가 쓰고 AI는 반박만 한다</text>
+
+  <rect x="36" y="230" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="94" y="252" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="94" y="272" font-size="13" fill="#1d3a5c" text-anchor="middle">아이디어</text>
+
+  <rect x="169" y="230" width="116" height="58" rx="8" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="227" y="252" font-size="11" fill="#3d6fa8" text-anchor="middle">나</text>
+  <text x="227" y="272" font-size="13" fill="#3d6fa8" text-anchor="middle">spec 작성</text>
+
+  <rect x="302" y="230" width="116" height="58" rx="8" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="360" y="252" font-size="11" fill="#3d6fa8" text-anchor="middle">AI</text>
+  <text x="360" y="272" font-size="13" fill="#3d6fa8" text-anchor="middle">반박</text>
+
+  <rect x="435" y="230" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="493" y="252" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="493" y="272" font-size="13" fill="#1d3a5c" text-anchor="middle">수정</text>
+
+  <rect x="568" y="230" width="116" height="58" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="626" y="252" font-size="11" fill="#6b7f95" text-anchor="middle">나</text>
+  <text x="626" y="272" font-size="13" fill="#1d3a5c" text-anchor="middle">구현</text>
+
+  <g stroke="#3d6fa8" stroke-width="2" fill="#3d6fa8">
+    <path d="M155 259 L164 259"/><path d="M166 259 l-8 -4 v8 z"/>
+    <path d="M288 259 L297 259"/><path d="M299 259 l-8 -4 v8 z"/>
+    <path d="M421 259 L430 259"/><path d="M432 259 l-8 -4 v8 z"/>
+    <path d="M554 259 L563 259"/><path d="M565 259 l-8 -4 v8 z"/>
+  </g>
+
+  <path d="M493 296 L493 320 L360 320 L360 296" stroke="#8fb0d4" stroke-width="2" fill="none"/>
+  <path d="M360 296 l-4 8 h8 z" fill="#8fb0d4"/>
+  <text x="426" y="344" font-size="12" fill="#6b7f95" text-anchor="middle">고친 문서를 다시 반박받는다</text>
+</svg>

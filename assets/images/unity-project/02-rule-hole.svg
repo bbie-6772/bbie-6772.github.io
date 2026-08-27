@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+
+  <text x="36" y="40" font-size="16" font-weight="700" fill="#1d3a5c">각각은 멀쩡한 규칙 세 개</text>
+
+  <rect x="36" y="58" width="190" height="66" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="131" y="84" font-size="13" fill="#1d3a5c" text-anchor="middle">보스를 못 잡으면</text>
+  <text x="131" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">광폭화한다</text>
+
+  <rect x="265" y="58" width="190" height="66" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="360" y="84" font-size="13" fill="#1d3a5c" text-anchor="middle">광폭화하면 멈췄던</text>
+  <text x="360" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">메인 타이머가 다시 돈다</text>
+
+  <rect x="494" y="58" width="190" height="66" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="589" y="84" font-size="13" fill="#1d3a5c" text-anchor="middle">대시에는</text>
+  <text x="589" y="104" font-size="13" fill="#1d3a5c" text-anchor="middle">무적 시간이 있다</text>
+
+  <path d="M131 132 L131 158 L360 158" stroke="#8fb0d4" stroke-width="2" fill="none"/>
+  <path d="M589 132 L589 158 L360 158" stroke="#8fb0d4" stroke-width="2" fill="none"/>
+  <path d="M360 132 L360 176" stroke="#8fb0d4" stroke-width="2" fill="none"/>
+  <path d="M360 176 l-4 -8 h8 z" fill="#8fb0d4"/>
+
+  <rect x="180" y="184" width="360" height="54" rx="8" fill="#ffffff" stroke="#a04040"/>
+  <text x="360" y="206" font-size="14" font-weight="700" fill="#a04040" text-anchor="middle">보스를 무시하고 5분간 도망만 쳐도</text>
+  <text x="360" y="226" font-size="14" font-weight="700" fill="#a04040" text-anchor="middle">게임을 클리어할 수 있다</text>
+
+  <text x="360" y="268" font-size="13" fill="#6b7f95" text-anchor="middle">싸우는 게 코어 루프인데, 안 싸우는 쪽이 정답이 되어버린다</text>
+  <text x="360" y="292" font-size="13" fill="#3d6fa8" text-anchor="middle">규칙 하나하나를 볼 때는 절대 안 보이는 종류의 구멍이다</text>
+</svg>
