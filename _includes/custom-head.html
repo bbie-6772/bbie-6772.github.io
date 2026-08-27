@@ -10,3 +10,7 @@
 <link rel="shortcut icon" href="/assets/images/favicon//favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon//apple-touch-icon.png" />
 <link rel="manifest" href="/assets/images/favicon//site.webmanifest" />
+
+{%- if site.yat.google_adsense != '' -%}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.yat.google_adsense }}" crossorigin="anonymous"></script>
+{%- endif -%}

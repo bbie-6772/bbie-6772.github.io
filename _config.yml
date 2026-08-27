@@ -73,6 +73,11 @@ yat:
   # google_analytics: [Measurement ID]
   # enableDNT: "false"
 
+  # Google AdSense
+  # AdSense 가입 후 발급받는 게시자 ID (ca-pub-로 시작) 를 넣으세요.
+  # 값이 비어있으면 광고 스크립트와 ads.txt 는 출력되지 않습니다.
+  google_adsense: "ca-pub-4965364380854237"
+
   # If you want to generate website sitemap, you can set true
   sitemap: true
 
