@@ -5,7 +5,7 @@ subtitle: 코드를 주지 않는 AI에게 기획서를 맡겨봤다
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/00-banner.svg
+  image: /assets/images/unity-project/00-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
