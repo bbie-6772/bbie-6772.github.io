@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="Update와 FixedUpdate 호출 타이밍">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <g font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+    <text x="32" y="42" font-size="18" font-weight="700" fill="#1d3a5c">한 프레임에 FixedUpdate는 0번일 수도, 2번일 수도 있다</text>
+    <text x="32" y="66" font-size="13" fill="#6b7f95">Update는 프레임마다 한 번, FixedUpdate는 누적 시간이 0.02초를 넘길 때마다</text>
+
+    <rect x="220" y="92" width="92" height="176" fill="#a04040" opacity="0.08"/>
+
+    <g stroke="#d5dde6" stroke-width="1" stroke-dasharray="3 3">
+      <line x1="128" y1="92" x2="128" y2="268"/>
+      <line x1="220" y1="92" x2="220" y2="268"/>
+      <line x1="312" y1="92" x2="312" y2="268"/>
+      <line x1="404" y1="92" x2="404" y2="268"/>
+      <line x1="496" y1="92" x2="496" y2="268"/>
+      <line x1="588" y1="92" x2="588" y2="268"/>
+      <line x1="680" y1="92" x2="680" y2="268"/>
+    </g>
+
+    <g font-size="11" fill="#6b7f95" text-anchor="middle">
+      <text x="174" y="86">F1</text>
+      <text x="266" y="86">F2</text>
+      <text x="358" y="86">F3</text>
+      <text x="450" y="86">F4</text>
+      <text x="542" y="86">F5</text>
+      <text x="634" y="86">F6</text>
+    </g>
+
+    <text x="32" y="134" font-size="13" font-weight="700" fill="#1d3a5c">Update</text>
+    <g fill="#ffffff" stroke="#8fb0d4" stroke-width="1.5">
+      <rect x="136" y="110" width="76" height="38" rx="6"/>
+      <rect x="228" y="110" width="76" height="38" rx="6"/>
+      <rect x="320" y="110" width="76" height="38" rx="6"/>
+      <rect x="412" y="110" width="76" height="38" rx="6"/>
+      <rect x="504" y="110" width="76" height="38" rx="6"/>
+      <rect x="596" y="110" width="76" height="38" rx="6"/>
+    </g>
+    <g font-size="11" fill="#3d6fa8" text-anchor="middle">
+      <text x="174" y="134">Update</text>
+      <text x="266" y="134">Update</text>
+      <text x="358" y="134">Update</text>
+      <text x="450" y="134">Update</text>
+      <text x="542" y="134">Update</text>
+      <text x="634" y="134">Update</text>
+    </g>
+    <text x="266" y="166" font-size="11" font-weight="700" fill="#a04040" text-anchor="middle">대시 키 눌림</text>
+
+    <text x="32" y="234" font-size="13" font-weight="700" fill="#1d3a5c">FixedUpdate</text>
+    <g fill="#ffffff" stroke="#8fb0d4" stroke-width="1.5">
+      <rect x="146" y="210" width="56" height="38" rx="6"/>
+      <rect x="318" y="210" width="36" height="38" rx="6"/>
+      <rect x="362" y="210" width="36" height="38" rx="6"/>
+      <rect x="422" y="210" width="56" height="38" rx="6"/>
+      <rect x="606" y="210" width="56" height="38" rx="6"/>
+    </g>
+    <g font-size="10" fill="#3d6fa8" text-anchor="middle">
+      <text x="174" y="234">Fixed</text>
+      <text x="336" y="234">Fixed</text>
+      <text x="380" y="234">Fixed</text>
+      <text x="450" y="234">Fixed</text>
+      <text x="634" y="234">Fixed</text>
+    </g>
+    <rect x="238" y="210" width="56" height="38" rx="6" fill="none" stroke="#a04040" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="266" y="234" font-size="11" font-weight="700" fill="#a04040" text-anchor="middle">0번</text>
+    <rect x="514" y="210" width="56" height="38" rx="6" fill="none" stroke="#6b7f95" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="542" y="234" font-size="11" fill="#6b7f95" text-anchor="middle">0번</text>
+
+    <text x="32" y="300" font-size="12" font-weight="700" fill="#a04040">F2에서 누른 대시 키는 FixedUpdate가 한 번도 안 돌아 그대로 사라진다</text>
+    <text x="32" y="322" font-size="11" fill="#6b7f95">Fixed Timestep 기본값 0.02초 = 초당 50회. 프레임 속도와 상관없이 누적 시간으로만 결정된다</text>
+  </g>
+</svg>

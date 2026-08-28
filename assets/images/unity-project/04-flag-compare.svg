@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 370" width="100%" role="img" aria-label="대시 깃발 대입판과 OR판 비교">
+  <rect x="0" y="0" width="720" height="370" rx="12" fill="#f7f9fb"/>
+  <g font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+    <text x="32" y="42" font-size="18" font-weight="700" fill="#1d3a5c">깃발을 내리는 쪽이 누구냐가 갈랐다</text>
+    <text x="32" y="66" font-size="13" fill="#6b7f95">Update가 매 프레임 도는 동안 FixedUpdate는 걸러질 수 있다</text>
+
+    <rect x="32" y="86" width="316" height="252" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+    <rect x="372" y="86" width="316" height="252" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+
+    <text x="52" y="114" font-size="14" font-weight="700" fill="#a04040">대입 — 버그판</text>
+    <text x="392" y="114" font-size="14" font-weight="700" fill="#3d6fa8">OR — 수정판</text>
+
+    <g font-family="Consolas, Menlo, monospace" font-size="11" fill="#1d3a5c">
+      <text x="52" y="138">_dashInput = 키입력</text>
+      <text x="392" y="138">_dashInput = _dashInput</text>
+      <text x="392" y="154">             || 키입력</text>
+    </g>
+
+    <g font-size="12" fill="#1d3a5c">
+      <text x="52" y="192">Update — 키 누름</text>
+      <text x="52" y="240">Update — 안 누름</text>
+      <text x="52" y="288">FixedUpdate — 읽음</text>
+      <text x="392" y="192">Update — 키 누름</text>
+      <text x="392" y="240">Update — 안 누름</text>
+      <text x="392" y="288">FixedUpdate — 소비</text>
+    </g>
+
+    <rect x="244" y="176" width="88" height="22" rx="5" fill="#e8eff7" stroke="#8fb0d4"/>
+    <text x="288" y="192" font-size="11" fill="#3d6fa8" text-anchor="middle">true</text>
+    <rect x="244" y="224" width="88" height="22" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+    <text x="288" y="240" font-size="11" font-weight="700" fill="#a04040" text-anchor="middle">false 덮어씀</text>
+    <rect x="244" y="272" width="88" height="22" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+    <text x="288" y="288" font-size="11" font-weight="700" fill="#a04040" text-anchor="middle">대시 안 나감</text>
+
+    <rect x="584" y="176" width="88" height="22" rx="5" fill="#e8eff7" stroke="#8fb0d4"/>
+    <text x="628" y="192" font-size="11" fill="#3d6fa8" text-anchor="middle">true</text>
+    <rect x="584" y="224" width="88" height="22" rx="5" fill="#e8eff7" stroke="#8fb0d4"/>
+    <text x="628" y="240" font-size="11" fill="#3d6fa8" text-anchor="middle">true 유지</text>
+    <rect x="584" y="272" width="88" height="22" rx="5" fill="#dce8f5" stroke="#3d6fa8" stroke-width="1.5"/>
+    <text x="628" y="288" font-size="11" font-weight="700" fill="#3d6fa8" text-anchor="middle">대시 실행</text>
+
+    <text x="52" y="322" font-size="11" fill="#6b7f95">세우는 쪽과 내리는 쪽이 둘 다 Update</text>
+    <text x="392" y="322" font-size="11" fill="#6b7f95">세우는 쪽 Update, 내리는 쪽 FixedUpdate</text>
+
+    <text x="32" y="358" font-size="12" font-weight="700" fill="#1d3a5c">깃발은 세운 쪽과 내리는 쪽이 달라야 산다</text>
+  </g>
+</svg>
