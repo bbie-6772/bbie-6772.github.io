@@ -27,16 +27,33 @@ sidebar:
 
     {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
     {%- if result.size == 0 -%}
+    {%- comment -%} Navigate within the same category (series); blank at series ends {%- endcomment -%}
+    {%- assign prev_post = nil -%}
+    {%- assign next_post = nil -%}
+    {%- assign found = false -%}
+    {%- for item in site.categories[page.categories.first] -%}
+      {%- if found -%}
+        {%- assign prev_post = item -%}
+        {%- break -%}
+      {%- elsif item.url == page.url -%}
+        {%- assign found = true -%}
+      {%- else -%}
+        {%- assign next_post = item -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- unless found -%}
+      {%- assign next_post = nil -%}
+    {%- endunless -%}
     <div class="post-nav">
-      {%- if page.previous -%}
-        <a class="previous" href="{{ page.previous.url | relative_url }}" title="{{
-          page.previous.title | escape }}">{{ page.previous.title | escape | truncatewords: 6 }}</a>
+      {%- if prev_post -%}
+        <a class="previous" href="{{ prev_post.url | relative_url }}" title="{{
+          prev_post.title | escape }}">{{ prev_post.title | escape | truncatewords: 6 }}</a>
       {%- else -%}
       <span></span>
       {%- endif -%}
 
-      {%- if page.next -%}
-        <a class="next" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | escape }}">{{ page.next.title | escape | truncatewords: 6 }}</a>
+      {%- if next_post -%}
+        <a class="next" href="{{ next_post.url | relative_url }}" title="{{ next_post.title | escape }}">{{ next_post.title | escape | truncatewords: 6 }}</a>
       {%- else -%}
       <span></span>
       {%- endif -%}

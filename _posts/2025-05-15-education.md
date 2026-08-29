@@ -3,7 +3,7 @@ layout: post
 title: 교육 운영 매니저 - < 7 >
 subtitle: 진로 고민과 마무리
 author: bbie
-categories: 
+categories: Education Product Manager
 banner:
   image: https://github.com/user-attachments/assets/4c50bf14-ceba-4c29-b13e-d6a228bae1f4
   opacity: 0.618
