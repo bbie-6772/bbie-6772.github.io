@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 375" width="100%" role="img" aria-label="좀비별 쿨다운과 플레이어 무적의 초당 데미지 비교 - 마릿수가 늘면 앞쪽만 커진다">
+  <rect x="0" y="0" width="720" height="375" rx="12" fill="#f7f9fb"/>
+  <g font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+    <text x="32" y="42" font-size="18" font-weight="700" fill="#1d3a5c">무적을 누가 소유하느냐가 난이도를 정한다</text>
+    <text x="32" y="66" font-size="13" fill="#6b7f95">데미지 10을 0.5초 간격으로 받을 때, 1초 동안 깎이는 총합</text>
+
+    <rect x="32" y="86" width="316" height="240" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+    <rect x="372" y="86" width="316" height="240" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+
+    <text x="52" y="112" font-size="14" font-weight="700" fill="#a04040">좀비가 각자 쿨다운을 소유</text>
+    <text x="392" y="112" font-size="14" font-weight="700" fill="#3d6fa8">플레이어가 무적을 소유</text>
+
+    <text x="52" y="134" font-size="11" fill="#6b7f95">둘러싼 마릿수가 그대로 곱해진다</text>
+    <text x="392" y="134" font-size="11" fill="#6b7f95">마릿수가 식에서 사라진다</text>
+
+    <line x1="52" y1="290" x2="328" y2="290" stroke="#d5dde6" stroke-width="1.5"/>
+    <line x1="392" y1="290" x2="668" y2="290" stroke="#d5dde6" stroke-width="1.5"/>
+
+    <g>
+      <rect x="78" y="273" width="44" height="17" rx="3" fill="#e3b4b4" stroke="#a04040"/>
+      <rect x="168" y="240" width="44" height="50" rx="3" fill="#cf8888" stroke="#a04040"/>
+      <rect x="258" y="150" width="44" height="140" rx="3" fill="#a04040"/>
+    </g>
+    <g font-size="11" font-weight="700" fill="#a04040" text-anchor="middle">
+      <text x="100" y="266">20/초</text>
+      <text x="190" y="233">60/초</text>
+      <text x="280" y="143">180/초</text>
+    </g>
+
+    <g>
+      <rect x="438" y="273" width="44" height="17" rx="3" fill="#8fb0d4" stroke="#3d6fa8"/>
+      <rect x="528" y="273" width="44" height="17" rx="3" fill="#8fb0d4" stroke="#3d6fa8"/>
+      <rect x="618" y="273" width="44" height="17" rx="3" fill="#8fb0d4" stroke="#3d6fa8"/>
+    </g>
+    <g font-size="11" font-weight="700" fill="#3d6fa8" text-anchor="middle">
+      <text x="460" y="266">20/초</text>
+      <text x="550" y="266">20/초</text>
+      <text x="640" y="266">20/초</text>
+    </g>
+
+    <g font-size="11" fill="#6b7f95" text-anchor="middle">
+      <text x="100" y="308">1마리</text>
+      <text x="190" y="308">3마리</text>
+      <text x="280" y="308">9마리</text>
+      <text x="460" y="308">1마리</text>
+      <text x="550" y="308">3마리</text>
+      <text x="640" y="308">9마리</text>
+    </g>
+
+    <text x="32" y="358" font-size="12" font-weight="700" fill="#1d3a5c">누가 쿨다운을 소유하느냐에 따라 마릿수가 식에 곱해지기도 하고 사라지기도 한다</text>
+  </g>
+</svg>

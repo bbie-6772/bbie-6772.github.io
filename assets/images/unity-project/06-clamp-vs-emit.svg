@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="클램프는 숫자만 가두고 발행은 못 가둔다">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <g font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+    <text x="32" y="42" font-size="18" font-weight="700" fill="#1d3a5c">클램프는 숫자만 가둔다</text>
+    <text x="32" y="66" font-size="13" fill="#6b7f95">체력 10인 좀비에 데미지 10짜리 산탄 5발이 한꺼번에 박힌 순간</text>
+
+    <rect x="32" y="86" width="316" height="200" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+    <rect x="372" y="86" width="316" height="200" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+
+    <text x="52" y="112" font-size="14" font-weight="700" fill="#a04040">Mathf.Max만 — 버그판</text>
+    <text x="392" y="112" font-size="14" font-weight="700" fill="#3d6fa8">_alreadyDead 추가 — 수정판</text>
+
+    <text x="52" y="138" font-size="11" fill="#6b7f95">체력 — 두 판 모두 0에서 멈춘다</text>
+    <text x="392" y="138" font-size="11" fill="#6b7f95">체력 — 두 판 모두 0에서 멈춘다</text>
+
+    <g font-size="11" fill="#1d3a5c" text-anchor="middle">
+      <rect x="52" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="74" y="163">0</text>
+      <rect x="104" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="126" y="163">0</text>
+      <rect x="156" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="178" y="163">0</text>
+      <rect x="208" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="230" y="163">0</text>
+      <rect x="260" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="282" y="163">0</text>
+
+      <rect x="392" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="414" y="163">0</text>
+      <rect x="444" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="466" y="163">0</text>
+      <rect x="496" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="518" y="163">0</text>
+      <rect x="548" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="570" y="163">0</text>
+      <rect x="600" y="146" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="622" y="163">0</text>
+    </g>
+
+    <text x="52" y="196" font-size="11" fill="#6b7f95">OnDied 발행 — 여기가 갈린다</text>
+    <text x="392" y="196" font-size="11" fill="#6b7f95">OnDied 발행 — 여기가 갈린다</text>
+
+    <g font-size="11" text-anchor="middle">
+      <rect x="52" y="204" width="44" height="26" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+      <text x="74" y="221" fill="#a04040">발행</text>
+      <rect x="104" y="204" width="44" height="26" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+      <text x="126" y="221" fill="#a04040">발행</text>
+      <rect x="156" y="204" width="44" height="26" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+      <text x="178" y="221" fill="#a04040">발행</text>
+      <rect x="208" y="204" width="44" height="26" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+      <text x="230" y="221" fill="#a04040">발행</text>
+      <rect x="260" y="204" width="44" height="26" rx="5" fill="#f7ebeb" stroke="#a04040"/>
+      <text x="282" y="221" fill="#a04040">발행</text>
+
+      <rect x="392" y="204" width="44" height="26" rx="5" fill="#dce8f5" stroke="#3d6fa8" stroke-width="1.5"/>
+      <text x="414" y="221" fill="#3d6fa8">발행</text>
+      <rect x="444" y="204" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="466" y="221" fill="#6b7f95">차단</text>
+      <rect x="496" y="204" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="518" y="221" fill="#6b7f95">차단</text>
+      <rect x="548" y="204" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="570" y="221" fill="#6b7f95">차단</text>
+      <rect x="600" y="204" width="44" height="26" rx="5" fill="#eef2f6" stroke="#d5dde6"/>
+      <text x="622" y="221" fill="#6b7f95">차단</text>
+    </g>
+
+    <text x="52" y="262" font-size="12" font-weight="700" fill="#a04040">한 마리 잡고 죽음 이벤트 5개</text>
+    <text x="392" y="262" font-size="12" font-weight="700" fill="#3d6fa8">한 마리 잡고 죽음 이벤트 1개</text>
+
+    <text x="32" y="320" font-size="12" font-weight="700" fill="#1d3a5c">숫자를 가둔 것과 발행을 가둔 것은 다른 문제다</text>
+  </g>
+</svg>
