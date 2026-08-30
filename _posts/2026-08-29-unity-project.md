@@ -150,8 +150,8 @@ if (_alreadyDead) return;
 _currentHealth = Mathf.Max(_currentHealth - amount, 0f);
 if (_currentHealth <= 0f)
 {
-    _alreadyDead = true;
     OnDied?.Invoke();
+    _alreadyDead = true;
 }
 ```
 
