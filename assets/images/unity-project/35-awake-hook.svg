@@ -1,0 +1,31 @@
+<svg viewBox="0 0 720 340" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="hb" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="36" y="42" font-size="19" font-weight="700" fill="#1d3a5c">자식이 Awake를 선언하면 부모의 가드가 조용히 사라진다</text>
+
+  <rect x="36" y="70" width="310" height="220" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="100" font-size="14" font-weight="700" fill="#a04040">자식이 void Awake()를 선언</text>
+  <text x="60" y="128" font-size="12" fill="#6b7f95">부모 SpawnerBase.Awake</text>
+  <text x="60" y="150" font-size="13" font-family="monospace" fill="#a04040">가려짐 — 실행 안 됨</text>
+  <text x="60" y="180" font-size="12" fill="#6b7f95">프리팹 미설정 가드</text>
+  <text x="60" y="202" font-size="13" font-family="monospace" fill="#a04040">사라짐</text>
+  <text x="60" y="232" font-size="12" fill="#6b7f95">컴파일러 반응</text>
+  <text x="60" y="254" font-size="13" font-family="monospace" fill="#a04040">CS0108 경고 — 빌드는 통과</text>
+  <text x="60" y="278" font-size="12" fill="#a04040" font-weight="700">깜빡하면 아무도 못 잡는다</text>
+
+  <rect x="374" y="70" width="310" height="220" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="398" y="100" font-size="14" font-weight="700" fill="#3d6fa8">부모가 Awake를 독점하고 훅을 연다</text>
+  <text x="398" y="128" font-size="12" fill="#6b7f95">부모 SpawnerBase.Awake</text>
+  <text x="398" y="150" font-size="13" font-family="monospace" fill="#1d3a5c">항상 실행</text>
+  <line x1="470" y1="162" x2="470" y2="184" stroke="#3d6fa8" stroke-width="2" marker-end="url(#hb)"/>
+  <text x="398" y="206" font-size="12" fill="#6b7f95">자식이 채우는 자리</text>
+  <text x="398" y="228" font-size="13" font-family="monospace" fill="#3d6fa8">OnInit()</text>
+  <text x="398" y="256" font-size="12" fill="#3d6fa8">Awake라는 이름을 아예 못 쓰게 한다</text>
+  <text x="398" y="278" font-size="12" fill="#3d6fa8" font-weight="700">깜빡할 자리가 없어진다</text>
+
+  <text x="36" y="322" font-size="12" fill="#6b7f95">base.Awake()를 부르는 관례로 갈 수도 있지만, 그건 사람이 기억해야 하는 규칙이고 컴파일러는 안 잡아준다</text>
+</svg>
