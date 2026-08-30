@@ -1,0 +1,33 @@
+<svg viewBox="0 0 720 320" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="ab" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3d6fa8"/>
+    </marker>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#a04040"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+  <text x="36" y="44" font-size="19" font-weight="700" fill="#1d3a5c">완성된 코드와 발동 지점은 다른 것이다</text>
+
+  <text x="36" y="88" font-size="13" fill="#6b7f95">정상</text>
+  <rect x="36" y="100" width="140" height="54" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="106" y="132" font-size="14" text-anchor="middle" fill="#1d3a5c" font-family="monospace">Start()</text>
+  <text x="231" y="118" font-size="12" text-anchor="middle" fill="#3d6fa8" font-family="monospace">StartCoroutine</text>
+  <line x1="180" y1="128" x2="278" y2="128" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ab)"/>
+  <rect x="286" y="100" width="170" height="54" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="371" y="132" font-size="14" text-anchor="middle" fill="#1d3a5c" font-family="monospace">SpawnLoop()</text>
+  <line x1="460" y1="128" x2="530" y2="128" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="540" y="133" font-size="15" font-weight="700" fill="#3d6fa8">좀비가 나온다</text>
+
+  <text x="36" y="204" font-size="13" fill="#6b7f95">내가 쓴 것</text>
+  <rect x="36" y="216" width="140" height="54" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="106" y="248" font-size="14" text-anchor="middle" fill="#1d3a5c" font-family="monospace">Start()</text>
+  <text x="231" y="234" font-size="12" text-anchor="middle" fill="#a04040" font-family="monospace">부르는 줄이 없음</text>
+  <line x1="180" y1="244" x2="278" y2="244" stroke="#a04040" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#ar)"/>
+  <rect x="286" y="216" width="170" height="54" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="371" y="242" font-size="14" text-anchor="middle" fill="#1d3a5c" font-family="monospace">SpawnLoop()</text>
+  <text x="371" y="260" font-size="11" text-anchor="middle" fill="#6b7f95">본문은 완성되어 있다</text>
+  <line x1="460" y1="244" x2="530" y2="244" stroke="#a04040" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="540" y="249" font-size="15" font-weight="700" fill="#a04040">아무 일도 없다</text>
+</svg>

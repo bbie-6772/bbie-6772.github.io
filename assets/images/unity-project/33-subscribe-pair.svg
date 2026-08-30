@@ -1,0 +1,31 @@
+<svg viewBox="0 0 720 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="330" rx="12" fill="#f7f9fb"/>
+  <text x="36" y="42" font-size="19" font-weight="700" fill="#1d3a5c">풀링에서 객체는 죽지 않는다 — 그래서 짝이 중요하다</text>
+  <text x="36" y="68" font-size="12" fill="#6b7f95">같은 좀비를 세 번 꺼내 썼을 때 남는 구독자 수</text>
+
+  <rect x="36" y="88" width="310" height="200" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="118" font-size="14" font-weight="700" fill="#a04040">Awake 구독 — 풀링에선 해제 시점이 없다</text>
+  <text x="60" y="146" font-size="12" fill="#6b7f95">1회차 꺼냄</text>
+  <text x="250" y="146" font-size="13" font-family="monospace" fill="#1d3a5c">구독자 1</text>
+  <text x="60" y="176" font-size="12" fill="#6b7f95">2회차 꺼냄</text>
+  <text x="250" y="176" font-size="13" font-family="monospace" fill="#1d3a5c">구독자 2</text>
+  <text x="60" y="206" font-size="12" fill="#6b7f95">3회차 꺼냄</text>
+  <text x="250" y="206" font-size="13" font-family="monospace" fill="#a04040" font-weight="700">구독자 3</text>
+  <line x1="60" y1="224" x2="322" y2="224" stroke="#d5dde6" stroke-width="1"/>
+  <text x="60" y="250" font-size="12" fill="#a04040">꺼낼 때 초기화를 다시 태우면 그대로 쌓인다</text>
+  <text x="60" y="270" font-size="12" fill="#a04040" font-weight="700">한 번 맞고 세 번 깜빡인다</text>
+
+  <rect x="374" y="88" width="310" height="200" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="398" y="118" font-size="14" font-weight="700" fill="#3d6fa8">OnEnable 구독 / OnDisable 해제</text>
+  <text x="398" y="146" font-size="12" fill="#6b7f95">1회차 꺼냄</text>
+  <text x="588" y="146" font-size="13" font-family="monospace" fill="#1d3a5c">구독자 1</text>
+  <text x="398" y="176" font-size="12" fill="#6b7f95">2회차 꺼냄</text>
+  <text x="588" y="176" font-size="13" font-family="monospace" fill="#1d3a5c">구독자 1</text>
+  <text x="398" y="206" font-size="12" fill="#6b7f95">3회차 꺼냄</text>
+  <text x="588" y="206" font-size="13" font-family="monospace" fill="#3d6fa8" font-weight="700">구독자 1</text>
+  <line x1="398" y1="224" x2="660" y2="224" stroke="#d5dde6" stroke-width="1"/>
+  <text x="398" y="250" font-size="12" fill="#3d6fa8">활성·비활성마다 짝으로 돈다</text>
+  <text x="398" y="270" font-size="12" fill="#3d6fa8" font-weight="700">풀링을 붙여도 이 파일은 손댈 게 없다</text>
+
+  <text x="36" y="312" font-size="12" fill="#6b7f95">Ducktopia에서 Redis pub/sub 구독을 서버별로 갈라놓지 못해 헬스체크가 뒤엉켰던 것과 같은 모양이다</text>
+</svg>
