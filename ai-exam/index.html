@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Engineering 이론과 Python 실습을 함께 점검하는 100문항 모의고사">
+  <meta name="theme-color" content="#101828">
+  <title>AI Engineering 종합 모의고사</title>
+  <link rel="icon" href="../assets/images/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=1">
+</head>
+<body>
+  <a class="skip-link" href="#question-panel">문제로 바로 가기</a>
+
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="AI Exam Lab 홈">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span>
+        <strong>AI Exam Lab</strong>
+        <small>100-question practice</small>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="button button-quiet" id="reset-button" type="button">처음부터</button>
+      <button class="button button-primary" id="submit-button" type="button">답안 제출</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">AI ENGINEERING · FULL PRACTICE TEST</p>
+        <h1 id="page-title">AI Engineering 종합 모의고사</h1>
+        <p class="hero-copy">
+          머신러닝 기초부터 LLM Agent, 모델 경량화, Python 실습까지 한 번에 점검합니다.
+          답안은 이 브라우저에 자동 저장됩니다.
+        </p>
+      </div>
+      <dl class="hero-facts" aria-label="시험 구성">
+        <div><dt>전체</dt><dd>100문항</dd></div>
+        <div><dt>이론</dt><dd>88문항</dd></div>
+        <div><dt>실습</dt><dd>12문항</dd></div>
+      </dl>
+    </section>
+
+    <section class="progress-panel" aria-labelledby="progress-title">
+      <div class="progress-copy">
+        <div>
+          <p class="section-kicker" id="progress-title">진행 상황</p>
+          <p><strong id="answered-count">0</strong> / 100 답변 · <span id="remaining-count">100</span>문항 남음</p>
+        </div>
+        <output id="save-status" class="save-status" aria-live="polite">저장 준비</output>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="답변 진행률" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track">
+        <span id="progress-bar"></span>
+      </div>
+    </section>
+
+    <section class="result-panel" id="result-panel" aria-labelledby="result-title" hidden>
+      <div class="result-heading">
+        <div>
+          <p class="section-kicker">채점 결과</p>
+          <h2 id="result-title">현재 점수</h2>
+        </div>
+        <button class="button button-secondary" id="review-wrong-button" type="button">오답만 복습</button>
+      </div>
+      <div class="score-grid">
+        <div class="score-card score-card-main">
+          <span>총점</span>
+          <strong><span id="total-score">0</span><small> / 100</small></strong>
+        </div>
+        <div class="score-card">
+          <span>자동 채점</span>
+          <strong><span id="auto-score">0</span><small> / 88</small></strong>
+        </div>
+        <div class="score-card">
+          <span>실습 자기채점</span>
+          <strong><span id="practical-score">0</span><small> / 12</small></strong>
+        </div>
+        <div class="score-card">
+          <span>미응답</span>
+          <strong id="unanswered-score">0</strong>
+        </div>
+      </div>
+      <div class="section-results" id="section-results" aria-label="영역별 성취도"></div>
+      <p class="result-note" id="result-note"></p>
+    </section>
+
+    <section class="filter-panel" aria-label="문항 필터">
+      <label>
+        <span>영역</span>
+        <select id="section-filter">
+          <option value="all">전체 영역</option>
+        </select>
+      </label>
+      <label>
+        <span>유형</span>
+        <select id="type-filter">
+          <option value="all">전체 유형</option>
+          <option value="mcq">객관식</option>
+          <option value="short">단답형</option>
+          <option value="practical">실습형</option>
+        </select>
+      </label>
+      <label>
+        <span>상태</span>
+        <select id="status-filter">
+          <option value="all">전체 상태</option>
+          <option value="unanswered">미응답</option>
+          <option value="answered">응답 완료</option>
+          <option value="flagged">검토 표시</option>
+          <option value="wrong" disabled>오답</option>
+        </select>
+      </label>
+      <button class="button button-secondary" id="clear-filters-button" type="button">필터 해제</button>
+    </section>
+
+    <div class="exam-layout">
+      <aside class="navigator" aria-labelledby="navigator-title">
+        <div class="navigator-heading">
+          <h2 id="navigator-title">문항 이동</h2>
+          <span id="visible-count">100개 표시</span>
+        </div>
+        <div class="navigator-legend" aria-label="문항 상태 범례">
+          <span><i class="legend-dot answered"></i>응답</span>
+          <span><i class="legend-dot flagged"></i>검토</span>
+          <span id="wrong-legend" hidden><i class="legend-dot wrong"></i>오답</span>
+        </div>
+        <nav class="question-grid" id="question-grid" aria-label="문항 번호"></nav>
+      </aside>
+
+      <section class="question-panel" id="question-panel" aria-live="polite">
+        <div id="question-content"></div>
+        <div class="question-actions">
+          <button class="button button-secondary" id="previous-button" type="button">이전</button>
+          <label class="flag-control">
+            <input id="flag-input" type="checkbox">
+            <span>나중에 검토</span>
+          </label>
+          <button class="button button-primary" id="next-button" type="button">다음</button>
+        </div>
+      </section>
+    </div>
+
+    <noscript>
+      <p class="noscript-message">이 시험 사이트를 사용하려면 JavaScript를 켜야 합니다.</p>
+    </noscript>
+  </main>
+
+  <footer class="site-footer">
+    <p>공개 학습 내용을 바탕으로 재구성한 비공식 문항이며, 모든 채점은 브라우저 안에서 처리됩니다.</p>
+    <a href="../">삐에로의 지식창고로 돌아가기</a>
+  </footer>
+
+  <script src="./questions.js?v=1"></script>
+  <script src="./scoring.js?v=1"></script>
+  <script src="./app.js?v=1"></script>
+</body>
+</html>
