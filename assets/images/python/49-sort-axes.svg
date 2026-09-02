@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">정렬을 고르는 네 가지 축</text>
+
+  <rect x="24" y="56" width="320" height="124" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="44" y="88" font-size="15" font-weight="700" fill="#3d6fa8">1. 얼마나 빠른가</text>
+  <text x="44" y="114" font-size="12.5" fill="#6b7f95">최선과 최악의 시간복잡도.</text>
+  <text x="44" y="136" font-size="12.5" fill="#6b7f95">n이 커질수록 격차가 벌어진다.</text>
+  <text x="44" y="160" font-size="12.5" fill="#1d3a5c">O(n^2) / O(n log n) / O(n+k)</text>
+
+  <rect x="376" y="56" width="320" height="124" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="396" y="88" font-size="15" font-weight="700" fill="#3d6fa8">2. 안정성 (Stable)</text>
+  <text x="396" y="114" font-size="12.5" fill="#6b7f95">값이 똑같은 두 원소의 원래 순서가</text>
+  <text x="396" y="136" font-size="12.5" fill="#6b7f95">정렬이 끝난 뒤에도 유지되는가.</text>
+  <text x="396" y="160" font-size="12.5" fill="#1d3a5c">2차 정렬을 할 수 있느냐를 가른다</text>
+
+  <rect x="24" y="196" width="320" height="124" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="44" y="228" font-size="15" font-weight="700" fill="#3d6fa8">3. 적응성 (Adaptive)</text>
+  <text x="44" y="254" font-size="12.5" fill="#6b7f95">이미 거의 정렬된 입력이 들어왔을 때</text>
+  <text x="44" y="276" font-size="12.5" fill="#6b7f95">더 빨라지는가.</text>
+  <text x="44" y="300" font-size="12.5" fill="#1d3a5c">삽입 정렬이 여기서 이긴다</text>
+
+  <rect x="376" y="196" width="320" height="124" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="396" y="228" font-size="15" font-weight="700" fill="#3d6fa8">4. 제자리 정렬 (In-place)</text>
+  <text x="396" y="254" font-size="12.5" fill="#6b7f95">원본 배열 말고 추가 메모리를</text>
+  <text x="396" y="276" font-size="12.5" fill="#6b7f95">얼마나 더 쓰는가.</text>
+  <text x="396" y="300" font-size="12.5" fill="#a04040">카운팅 · 기수 정렬은 여기서 진다</text>
+</svg>
