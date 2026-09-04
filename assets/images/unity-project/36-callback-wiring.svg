@@ -1,0 +1,42 @@
+<svg viewBox="0 0 720 360" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="cw" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="720" height="360" rx="12" fill="#f7f9fb"/>
+  <text x="30" y="40" font-size="19" font-weight="700" fill="#1d3a5c">인자는 배선하는 쪽이 아니라 호출하는 쪽이 채운다</text>
+
+  <rect x="30" y="68" width="196" height="176" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="46" y="96" font-size="14" font-weight="700" fill="#1d3a5c">EnemySpawner</text>
+  <text x="46" y="118" font-size="12" fill="#6b7f95">하는 일 — 배선</text>
+  <text x="46" y="146" font-size="12" font-family="monospace" fill="#3d6fa8">SetHeartCallback(</text>
+  <text x="58" y="166" font-size="12" font-family="monospace" fill="#3d6fa8">_heart.SpawnHeart)</text>
+  <text x="46" y="196" font-size="12" fill="#a04040">괄호를 안 붙인다</text>
+  <text x="46" y="218" font-size="12" fill="#6b7f95">좌표를 아직 모른다</text>
+
+  <rect x="262" y="68" width="196" height="176" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="278" y="96" font-size="14" font-weight="700" fill="#1d3a5c">EnemyDeath</text>
+  <text x="278" y="118" font-size="12" fill="#6b7f95">하는 일 — 보관하고 호출</text>
+  <text x="278" y="146" font-size="12" font-family="monospace" fill="#1d3a5c">Action&lt;Vector2&gt;</text>
+  <text x="278" y="166" font-size="12" font-family="monospace" fill="#3d6fa8">_spawnHeart(myPos)</text>
+  <text x="278" y="196" font-size="12" fill="#3d6fa8" font-weight="700">여기서 좌표가 채워진다</text>
+  <text x="278" y="218" font-size="12" fill="#6b7f95">죽는 순간의 자기 위치</text>
+
+  <rect x="494" y="68" width="196" height="176" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="510" y="96" font-size="14" font-weight="700" fill="#1d3a5c">HeartSpawner</text>
+  <text x="510" y="118" font-size="12" fill="#6b7f95">하는 일 — 실행</text>
+  <text x="510" y="146" font-size="12" font-family="monospace" fill="#1d3a5c">SpawnHeart(pos)</text>
+  <text x="510" y="172" font-size="12" fill="#6b7f95">누가 불렀는지 모른다</text>
+  <text x="510" y="200" font-size="12" fill="#6b7f95">좀비도 스포너도</text>
+  <text x="510" y="220" font-size="12" fill="#6b7f95">알 필요가 없다</text>
+
+  <line x1="226" y1="156" x2="258" y2="156" stroke="#3d6fa8" stroke-width="2" marker-end="url(#cw)"/>
+  <line x1="458" y1="156" x2="490" y2="156" stroke="#3d6fa8" stroke-width="2" marker-end="url(#cw)"/>
+  <text x="196" y="262" font-size="11" fill="#6b7f95">메서드 참조를 넘긴다</text>
+  <text x="432" y="262" font-size="11" fill="#6b7f95">좌표를 붙여서 부른다</text>
+
+  <rect x="30" y="282" width="660" height="52" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="50" y="306" font-size="13" fill="#1d3a5c"><tspan font-family="monospace" fill="#3d6fa8">spawner.SpawnHeart</tspan> 는 전화번호를 적어주는 것이고,</text>
+  <text x="50" y="326" font-size="13" fill="#1d3a5c"><tspan font-family="monospace" fill="#a04040">spawner.SpawnHeart(pos)</tspan> 는 지금 전화를 거는 것이다</text>
+</svg>
