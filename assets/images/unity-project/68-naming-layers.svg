@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">같은 단어가 두 층에서 다른 뜻으로 쓰이고 있었다</text>
+
+  <rect x="40" y="72" width="300" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="100" font-size="13" font-weight="700" fill="#3d6fa8">층 1 — 게임이 어느 화면인가</text>
+  <rect x="60" y="116" width="80" height="30" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="100" y="136" font-size="12" fill="#1d3a5c" text-anchor="middle">일반</text>
+  <rect x="150" y="116" width="80" height="30" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="190" y="136" font-size="12" fill="#1d3a5c" text-anchor="middle">보스전</text>
+  <rect x="240" y="116" width="80" height="30" rx="6" fill="#f7f9fb" stroke="#3d6fa8"/>
+  <text x="280" y="136" font-size="12" fill="#3d6fa8" text-anchor="middle">결과</text>
+
+  <text x="60" y="180" font-size="13" font-weight="700" fill="#3d6fa8">층 2 — 이겼나 졌나</text>
+  <rect x="60" y="196" width="70" height="30" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="95" y="216" font-size="12" fill="#1d3a5c" text-anchor="middle">미정</text>
+  <rect x="140" y="196" width="70" height="30" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="175" y="216" font-size="12" fill="#1d3a5c" text-anchor="middle">승리</text>
+  <rect x="220" y="196" width="70" height="30" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="255" y="216" font-size="12" fill="#1d3a5c" text-anchor="middle">패배</text>
+
+  <text x="380" y="100" font-size="13" font-weight="700" fill="#a04040">GameState 라고 이름 붙이면</text>
+  <rect x="380" y="114" width="300" height="66" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="400" y="140" font-size="12" fill="#1d3a5c">두 층 어느 쪽에도 어울린다</text>
+  <text x="400" y="162" font-size="12" fill="#a04040">보스전이 붙어 둘이 공존하면 구분 불가</text>
+
+  <text x="380" y="212" font-size="13" font-weight="700" fill="#3d6fa8">이름을 층에 맞추면</text>
+  <rect x="380" y="226" width="300" height="66" rx="10" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="400" y="252" font-size="12" fill="#1d3a5c">GamePhase — 어느 화면인가</text>
+  <text x="400" y="274" font-size="12" fill="#1d3a5c">GameOutcome — 이겼나 졌나</text>
+
+  <text x="40" y="282" font-size="12" fill="#6b7f95">결과 화면에 들어간 시점엔</text>
+  <text x="40" y="302" font-size="12" fill="#6b7f95">승패가 이미 정해져 있다</text>
+</svg>
