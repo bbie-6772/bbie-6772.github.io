@@ -5,7 +5,7 @@ subtitle: 미뤄둔 한 줄이 네 번째로 청구서를 보내왔다
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/70-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"

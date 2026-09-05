@@ -5,7 +5,7 @@ subtitle: 사건과 상태 - 같은 신호를 재활용해도 되는가
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/72-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"

@@ -5,7 +5,7 @@ subtitle: 두 줄의 순서를 바꿨더니 동작했다, 그래서 되돌아갔
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/71-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"

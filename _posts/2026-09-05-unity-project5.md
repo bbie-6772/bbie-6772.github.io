@@ -5,7 +5,7 @@ subtitle: ScriptableObject를 처음 쓰며 - 그래서 이건 언제 쓰는 건
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/74-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"

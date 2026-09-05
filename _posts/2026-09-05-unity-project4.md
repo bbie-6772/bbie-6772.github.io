@@ -5,7 +5,7 @@ subtitle: 시계를 두 개 두지 않기 위해 코루틴을 버렸다
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/73-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
