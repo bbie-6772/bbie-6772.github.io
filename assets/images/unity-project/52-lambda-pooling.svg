@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">같은 좀비를 재사용할 때 구독이 쌓인다</text>
+  <text x="30" y="62" font-size="12.5" fill="#6b7f95">글자가 똑같아도 람다는 매번 다른 객체다. 그래서 해제가 아무것도 지우지 못한다.</text>
+
+  <text x="40" y="100" font-size="13.5" font-weight="700" fill="#3d6fa8">명명된 메서드</text>
+  <rect x="40" y="114" width="290" height="140" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="58" y="142" font-size="12" fill="#1d3a5c">켤 때 : += HandleDamaged</text>
+  <text x="58" y="166" font-size="12" fill="#1d3a5c">끌 때 : -= HandleDamaged</text>
+  <text x="58" y="196" font-size="12.5" fill="#3d6fa8">같은 대상을 가리키므로 지워진다</text>
+  <text x="58" y="226" font-size="13" font-weight="700" fill="#1d3a5c">100번 재사용 → 구독 1개</text>
+
+  <text x="390" y="100" font-size="13.5" font-weight="700" fill="#a04040">람다</text>
+  <rect x="390" y="114" width="290" height="140" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="408" y="142" font-size="12" fill="#1d3a5c">켤 때 : += () =&gt; Flash()</text>
+  <text x="408" y="166" font-size="12" fill="#1d3a5c">끌 때 : -= () =&gt; Flash()</text>
+  <text x="408" y="196" font-size="12.5" fill="#a04040">글자만 같고 다른 객체라 안 지워진다</text>
+  <text x="408" y="226" font-size="13" font-weight="700" fill="#a04040">100번 재사용 → 구독 100개</text>
+
+  <rect x="40" y="276" width="640" height="42" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="303" font-size="12.5" fill="#1d3a5c">에러도 예외도 안 난다. 피격 처리가 100번 돌고 데미지 숫자만 조용히 틀린다.</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <defs>
+    <marker id="b" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#3d6fa8"/>
+    </marker>
+    <marker id="r" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#a04040"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">여는 쪽과 닫는 쪽이 다르면 순서에 걸린다</text>
+
+  <text x="40" y="80" font-size="13.5" font-weight="700" fill="#a04040">고치기 전</text>
+  <rect x="40" y="94" width="290" height="150" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="58" y="122" font-size="12.5" fill="#1d3a5c">화면이 두 가지를 다 한다</text>
+  <text x="58" y="150" font-size="12" fill="#6b7f95">1. Select() 호출</text>
+  <text x="58" y="172" font-size="12" fill="#a04040">   └ 남았으면 창이 다시 켜진다</text>
+  <text x="58" y="196" font-size="12" fill="#6b7f95">2. 패널 끄기</text>
+  <text x="58" y="218" font-size="12" fill="#a04040">   └ 방금 켜진 것을 다시 끈다</text>
+
+  <text x="390" y="80" font-size="13.5" font-weight="700" fill="#3d6fa8">고친 뒤</text>
+  <rect x="390" y="94" width="290" height="150" rx="10" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="408" y="122" font-size="12.5" fill="#1d3a5c">화면은 한 가지만 한다</text>
+  <text x="408" y="150" font-size="12" fill="#6b7f95">1. Select() 호출 — 끝</text>
+  <text x="408" y="182" font-size="12.5" fill="#3d6fa8">닫는 신호는 선택기가 보낸다</text>
+  <text x="408" y="204" font-size="12" fill="#6b7f95">OnSelectionOpened / OnSelectionClosed</text>
+  <text x="408" y="226" font-size="12" fill="#6b7f95">여는 쪽과 닫는 쪽이 같은 자리</text>
+
+  <line x1="330" y1="169" x2="382" y2="169" stroke="#3d6fa8" stroke-width="2" marker-end="url(#b)"/>
+
+  <text x="40" y="286" font-size="12.5" fill="#a04040">결과가 순서에 걸려 있으면, 다음 수정에서 조용히 깨진다.</text>
+  <text x="40" y="310" font-size="12.5" fill="#3d6fa8">여는 신호를 가진 쪽이 닫는 신호도 가지면 순서 자체가 사라진다.</text>
+</svg>
