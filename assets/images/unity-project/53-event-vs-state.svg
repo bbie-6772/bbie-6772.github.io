@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="350" rx="12" fill="#f7f9fb"/>
+  <defs>
+    <marker id="g" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#3d6fa8"/>
+    </marker>
+    <marker id="x" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#a04040"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">신호 하나에 두 가지 뜻을 담으면 엉뚱한 곳이 반응한다</text>
+
+  <text x="40" y="80" font-size="13.5" font-weight="700" fill="#a04040">신호가 하나일 때</text>
+  <rect x="40" y="94" width="290" height="170" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="60" y="124" font-size="12.5" fill="#1d3a5c">맞았다  (피격)</text>
+  <text x="60" y="150" font-size="12.5" fill="#1d3a5c">최대 체력이 늘었다  (카드)</text>
+  <text x="185" y="178" font-size="12" fill="#a04040" text-anchor="middle">같은 OnDamaged로 알린다</text>
+  <line x1="185" y1="188" x2="185" y2="208" stroke="#a04040" stroke-width="2" marker-end="url(#x)"/>
+  <text x="60" y="230" font-size="12.5" fill="#6b7f95">체력바 갱신 — 맞다</text>
+  <text x="60" y="252" font-size="12.5" fill="#a04040">빨간 피격 연출 — 카드에도 나간다</text>
+
+  <text x="390" y="80" font-size="13.5" font-weight="700" fill="#3d6fa8">신호를 둘로 나눈 뒤</text>
+  <rect x="390" y="94" width="290" height="170" rx="10" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="410" y="124" font-size="12.5" fill="#1d3a5c">OnDamaged — 사건</text>
+  <text x="410" y="146" font-size="11.5" fill="#6b7f95">"방금 맞았다"</text>
+  <line x1="530" y1="156" x2="530" y2="176" stroke="#3d6fa8" stroke-width="2" marker-end="url(#g)"/>
+  <text x="410" y="196" font-size="12" fill="#6b7f95">피격 연출만 구독</text>
+
+  <text x="410" y="226" font-size="12.5" fill="#1d3a5c">OnHealthChanged — 상태</text>
+  <text x="410" y="248" font-size="11.5" fill="#6b7f95">"체력 값이 달라졌다" — 체력바가 구독</text>
+
+  <rect x="40" y="288" width="640" height="42" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="315" font-size="12.5" fill="#1d3a5c">사건과 상태는 다른 질문에 답한다. 한 신호로 겸하면 한쪽이 반드시 거짓말을 한다.</text>
+</svg>

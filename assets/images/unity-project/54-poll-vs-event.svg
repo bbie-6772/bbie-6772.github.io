@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="330" rx="12" fill="#f7f9fb"/>
+
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">갱신 방식은 값이 얼마나 자주 변하는지로 정한다</text>
+
+  <rect x="40" y="70" width="300" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="98" font-size="13.5" font-weight="700" fill="#3d6fa8">가끔 변한다 → 이벤트</text>
+  <text x="60" y="126" font-size="12.5" fill="#1d3a5c">체력</text>
+  <text x="60" y="148" font-size="12" fill="#6b7f95">맞았을 때, 카드 먹었을 때만</text>
+
+  <rect x="60" y="166" width="260" height="26" rx="4" fill="#f7f9fb" stroke="#d5dde6"/>
+  <circle cx="96" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="188" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="286" cy="179" r="5" fill="#3d6fa8"/>
+  <text x="60" y="216" font-size="12" fill="#6b7f95">변한 순간에만 그린다</text>
+  <text x="60" y="238" font-size="12" fill="#a04040">폴링하면 대부분의 프레임이 헛일</text>
+
+  <rect x="380" y="70" width="300" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="400" y="98" font-size="13.5" font-weight="700" fill="#3d6fa8">계속 변한다 → 폴링</text>
+  <text x="400" y="126" font-size="12.5" fill="#1d3a5c">대시 쿨타임, 남은 시간</text>
+  <text x="400" y="148" font-size="12" fill="#6b7f95">매 프레임 줄어든다</text>
+
+  <rect x="400" y="166" width="260" height="26" rx="4" fill="#f7f9fb" stroke="#d5dde6"/>
+  <circle cx="412" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="440" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="468" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="496" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="524" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="552" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="580" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="608" cy="179" r="5" fill="#3d6fa8"/>
+  <circle cx="636" cy="179" r="5" fill="#3d6fa8"/>
+  <text x="400" y="216" font-size="12" fill="#6b7f95">어차피 매번 그려야 한다</text>
+  <text x="400" y="238" font-size="12" fill="#a04040">이벤트로 하면 초당 50번 발화</text>
+
+  <text x="40" y="290" font-size="12.5" fill="#3d6fa8">반대로 고르면 양쪽 다 낭비가 된다. 값의 성질이 방식을 정한다.</text>
+</svg>
