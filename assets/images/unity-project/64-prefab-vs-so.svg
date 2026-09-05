@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <defs>
+    <marker id="p" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="40" font-size="17" font-weight="700" fill="#1d3a5c">프리팹은 복사되고, SO는 공유된다</text>
+  <text x="30" y="62" font-size="12.5" fill="#6b7f95">둘 다 에셋 파일이지만 꺼내 쓸 때 일어나는 일이 다르다.</text>
+
+  <rect x="40" y="86" width="290" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="114" font-size="13.5" font-weight="700" fill="#3d6fa8">프리팹 — 복사</text>
+  <rect x="60" y="130" width="80" height="34" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="100" y="152" font-size="12" fill="#1d3a5c" text-anchor="middle">좀비 원본</text>
+  <line x1="145" y1="147" x2="185" y2="147" stroke="#3d6fa8" stroke-width="2" marker-end="url(#p)"/>
+  <rect x="195" y="122" width="110" height="24" rx="5" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="250" y="139" font-size="11.5" fill="#1d3a5c" text-anchor="middle">좀비 A (체력 30)</text>
+  <rect x="195" y="152" width="110" height="24" rx="5" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="250" y="169" font-size="11.5" fill="#1d3a5c" text-anchor="middle">좀비 B (체력 100)</text>
+  <text x="60" y="204" font-size="12" fill="#6b7f95">꺼낼 때마다 새 것이 생긴다</text>
+  <text x="60" y="228" font-size="12" fill="#6b7f95">각자 자기 상태를 갖는다</text>
+  <text x="60" y="252" font-size="12.5" fill="#3d6fa8">한 마리가 다쳐도 원본은 그대로</text>
+
+  <rect x="390" y="86" width="290" height="180" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="410" y="114" font-size="13.5" font-weight="700" fill="#a04040">SO — 공유</text>
+  <rect x="410" y="130" width="110" height="34" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="465" y="152" font-size="12" fill="#1d3a5c" text-anchor="middle">카드 파일 하나</text>
+  <line x1="525" y1="140" x2="565" y2="128" stroke="#a04040" stroke-width="2"/>
+  <line x1="525" y1="147" x2="565" y2="147" stroke="#a04040" stroke-width="2"/>
+  <line x1="525" y1="154" x2="565" y2="166" stroke="#a04040" stroke-width="2"/>
+  <text x="575" y="132" font-size="11.5" fill="#6b7f95">버튼</text>
+  <text x="575" y="151" font-size="11.5" fill="#6b7f95">선택기</text>
+  <text x="575" y="170" font-size="11.5" fill="#6b7f95">적용부</text>
+  <text x="410" y="204" font-size="12" fill="#6b7f95">몇 곳에서 참조하든 파일은 하나</text>
+  <text x="410" y="228" font-size="12" fill="#a04040">게임 중에 값을 바꾸면</text>
+  <text x="410" y="252" font-size="12.5" font-weight="700" fill="#a04040">멈춰도 그 값이 파일에 남는다</text>
+
+  <rect x="40" y="286" width="640" height="42" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="60" y="313" font-size="12.5" fill="#1d3a5c">그래서 SO는 읽기 전용으로 다룬다. 변하는 값은 게임이 도는 동안만 사는 객체가 갖는다.</text>
+</svg>
