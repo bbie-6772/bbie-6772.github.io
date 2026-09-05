@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="350" rx="12" fill="#f7f9fb"/>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#3d6fa8"/>
+    </marker>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#a04040"/>
+    </marker>
+  </defs>
+
+  <text x="30" y="42" font-size="17" font-weight="700" fill="#1d3a5c">되돌아오는 이벤트가 큐가 된다</text>
+  <text x="30" y="64" font-size="12.5" fill="#6b7f95">기다리는 코드를 만들지 않고, 선택이 끝났다는 신호를 다시 받는 것으로 대신한다.</text>
+
+  <rect x="40" y="100" width="150" height="70" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="115" y="130" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">한 프레임에</text>
+  <text x="115" y="150" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">레벨업 3번</text>
+
+  <line x1="190" y1="135" x2="255" y2="135" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="265" y="100" width="170" height="70" rx="10" fill="#ffffff" stroke="#3d6fa8"/>
+  <text x="350" y="128" font-size="13" font-weight="700" fill="#3d6fa8" text-anchor="middle">_pendingLevelUps</text>
+  <text x="350" y="152" font-size="13" fill="#1d3a5c" text-anchor="middle">0 → 3 으로 누적</text>
+
+  <line x1="435" y1="135" x2="500" y2="135" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="510" y="100" width="170" height="70" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="595" y="128" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">첫 번째만</text>
+  <text x="595" y="150" font-size="13" fill="#1d3a5c" text-anchor="middle">카드 창을 연다</text>
+
+  <line x1="595" y1="170" x2="595" y2="215" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="480" y="222" width="200" height="62" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="580" y="248" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">플레이어가 카드 선택</text>
+  <text x="580" y="270" font-size="12.5" fill="#6b7f95" text-anchor="middle">Select() 호출</text>
+
+  <line x1="480" y1="253" x2="360" y2="253" stroke="#a04040" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="420" y="243" font-size="11.5" fill="#a04040" text-anchor="middle">카운터 1 감소</text>
+
+  <rect x="180" y="222" width="170" height="62" rx="10" fill="#ffffff" stroke="#a04040"/>
+  <text x="265" y="248" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">남았나?</text>
+  <text x="265" y="270" font-size="12.5" fill="#6b7f95" text-anchor="middle">남았으면 다시 연다</text>
+
+  <path d="M180,240 L120,240 L120,180" fill="none" stroke="#a04040" stroke-width="2" stroke-dasharray="5 4"/>
+  <path d="M120,180 L360,180 L360,170" fill="none" stroke="#a04040" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+
+  <text x="30" y="322" font-size="12.5" fill="#3d6fa8">기다리는 코드는 한 줄도 없다. 신호가 돌아오는 것이 곧 기다림이다.</text>
+</svg>
