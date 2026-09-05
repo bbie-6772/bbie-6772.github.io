@@ -5,7 +5,7 @@ subtitle: 방향이 틀렸을 때 그걸 알려주는 것들
 author: bbie
 categories: unity-project
 banner:
-  image: /assets/images/unity-project/42-banner.jpg
+  image: /assets/images/unity-project/75-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
