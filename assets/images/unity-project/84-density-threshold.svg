@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" role="img" aria-label="좀비 수에 따른 프레임 타임 변화. 682마리와 753마리 사이에서 5배로 뛴다">
+  <rect x="0" y="0" width="720" height="380" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="40" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="700" fill="#1d3a5c">100마리 늘었는데 프레임 타임은 5배</text>
+
+  <rect x="486" y="70" width="74" height="230" fill="#a04040" opacity="0.09"/>
+  <text x="523" y="62" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" fill="#a04040">여기서 갈린다</text>
+
+  <line x1="90" y1="300" x2="660" y2="300" stroke="#6b7f95"/>
+  <line x1="90" y1="70" x2="90" y2="300" stroke="#6b7f95"/>
+
+  <line x1="90" y1="211" x2="660" y2="211" stroke="#d5dde6"/>
+  <line x1="90" y1="123" x2="660" y2="123" stroke="#d5dde6"/>
+  <text x="82" y="304" text-anchor="end" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">0</text>
+  <text x="82" y="215" text-anchor="end" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">5</text>
+  <text x="82" y="127" text-anchor="end" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">10</text>
+  <text x="46" y="88" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#1d3a5c">CPU (ms)</text>
+
+  <text x="194" y="320" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">400</text>
+  <text x="297" y="320" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">500</text>
+  <text x="401" y="320" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">600</text>
+  <text x="505" y="320" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">700</text>
+  <text x="608" y="320" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">800</text>
+  <text x="375" y="340" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#1d3a5c">동시에 살아 있는 좀비 수</text>
+
+  <polyline points="135,264 311,250 404,265 486,259 560,98 642,94" fill="none" stroke="#3d6fa8" stroke-width="2.5"/>
+  <circle cx="135" cy="264" r="4.5" fill="#3d6fa8"/>
+  <circle cx="311" cy="250" r="4.5" fill="#3d6fa8"/>
+  <circle cx="404" cy="265" r="4.5" fill="#8fb0d4"/>
+  <circle cx="486" cy="259" r="4.5" fill="#3d6fa8"/>
+  <circle cx="560" cy="98" r="5.5" fill="#a04040"/>
+  <circle cx="642" cy="94" r="5.5" fill="#a04040"/>
+
+  <text x="135" y="284" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#1d3a5c">343 / 2.05</text>
+  <text x="311" y="240" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#1d3a5c">513 / 2.80</text>
+  <text x="404" y="285" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#6b7f95">603 / 1.99</text>
+  <text x="470" y="284" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" fill="#1d3a5c">682 / 2.32</text>
+  <text x="556" y="88" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" fill="#a04040">753 / 11.41</text>
+  <text x="640" y="84" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="11" font-weight="700" fill="#a04040">833 / 11.63</text>
+
+  <line x1="32" y1="352" x2="688" y2="352" stroke="#d5dde6"/>
+  <text x="375" y="372" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">603 지점은 단일 프레임 측정이라 튄 값일 수 있다. 신뢰도 낮음으로 둔다</text>
+</svg>

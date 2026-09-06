@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="좀비의 소멸 알림이 스포너를 거쳐 UI로 흐르는 구조">
+  <rect x="0" y="0" width="720" height="300" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="44" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="700" fill="#1d3a5c">소멸 알림은 스포너를 거쳐 흐른다</text>
+
+  <rect x="32" y="86" width="176" height="82" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="120" y="118" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="700" fill="#1d3a5c">EnemyDeath</text>
+  <text x="120" y="142" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">죽는 좀비</text>
+  <text x="120" y="196" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">스포너를 모른다</text>
+
+  <rect x="272" y="86" width="176" height="82" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="360" y="118" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="700" fill="#1d3a5c">EnemySpawner</text>
+  <text x="360" y="142" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#3d6fa8">Cleanup() : AliveCount--</text>
+  <text x="360" y="196" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" fill="#3d6fa8">중계 지점</text>
+
+  <rect x="512" y="86" width="176" height="82" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="600" y="118" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="700" fill="#1d3a5c">CountZombieText</text>
+  <text x="600" y="142" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">화면 표시</text>
+  <text x="600" y="196" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">구독자를 모른다</text>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3d6fa8"/>
+    </marker>
+  </defs>
+  <line x1="214" y1="127" x2="264" y2="127" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="239" y="112" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#3d6fa8">콜백</text>
+  <line x1="454" y1="127" x2="504" y2="127" stroke="#3d6fa8" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="479" y="112" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#3d6fa8">이벤트</text>
+
+  <line x1="32" y1="228" x2="688" y2="228" stroke="#d5dde6"/>
+  <text x="360" y="256" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" fill="#1d3a5c">양 끝은 서로를 모르고, 가운데만 둘 다 안다</text>
+</svg>

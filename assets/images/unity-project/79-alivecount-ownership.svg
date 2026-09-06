@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="좀비 수를 UI가 소유하던 구조에서 스포너가 소유하는 구조로 옮긴 비교">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="42" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="700" fill="#1d3a5c">숫자의 주인을 옮겼다</text>
+
+  <rect x="32" y="66" width="312" height="188" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="94" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700" fill="#a04040">바꾸기 전</text>
+  <rect x="52" y="106" width="272" height="58" rx="8" fill="#f7f9fb" stroke="#a04040"/>
+  <text x="188" y="130" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="700" fill="#1d3a5c">CountZombieText</text>
+  <text x="188" y="152" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#a04040">_aliveCount 를 직접 센다</text>
+  <text x="52" y="192" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">UI를 껐다 켜면 꺼져 있던 동안 죽은 만큼</text>
+  <text x="52" y="212" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">숫자가 영구히 어긋난다</text>
+  <text x="52" y="236" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" fill="#a04040">표시하는 쪽이 값을 가지고 있다</text>
+
+  <rect x="376" y="66" width="312" height="188" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="396" y="94" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700" fill="#3d6fa8">바꾼 뒤</text>
+  <rect x="396" y="106" width="272" height="58" rx="8" fill="#f7f9fb" stroke="#3d6fa8"/>
+  <text x="532" y="130" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="14" font-weight="700" fill="#1d3a5c">EnemySpawner</text>
+  <text x="532" y="152" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#3d6fa8">AliveCount { get; private set; }</text>
+  <text x="396" y="192" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">UI는 읽어서 표시만 한다</text>
+  <text x="396" y="212" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" fill="#6b7f95">UI가 꺼져 있어도 값은 스포너에 남는다</text>
+  <text x="396" y="236" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" fill="#3d6fa8">만드는 쪽이 값을 가진다</text>
+
+  <line x1="32" y1="282" x2="688" y2="282" stroke="#d5dde6"/>
+  <text x="360" y="310" text-anchor="middle" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif" font-size="12.5" fill="#1d3a5c">이미 같은 구조가 있었다 : Health.CurrentHp - HealthBar , GameTimer.Remaining - 남은 시간</text>
+</svg>
