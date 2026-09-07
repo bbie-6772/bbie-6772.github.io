@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">Stack은 Thread마다 하나씩, Heap은 같이 본다</text>
+
+<rect x="24" y="56" width="330" height="70" rx="8" fill="#ffffff" stroke="#c9a0a0"/>
+<text x="44" y="80" font-size="12.5" font-weight="700" fill="#a04040">내가 알고 있던 것 (틀림)</text>
+<text x="44" y="102" font-size="12.5" fill="#6b7f95">Stack을 Process가 공유하고</text>
+<text x="44" y="119" font-size="12.5" fill="#6b7f95">Heap을 Thread가 하나씩 가진다</text>
+
+<rect x="366" y="56" width="330" height="70" rx="8" fill="#ffffff" stroke="#a8c39c"/>
+<text x="386" y="80" font-size="12.5" font-weight="700" fill="#3d6fa8">실제 (소속이 정반대)</text>
+<text x="386" y="102" font-size="12.5" fill="#6b7f95">Stack은 Thread마다 따로 있고</text>
+<text x="386" y="119" font-size="12.5" fill="#6b7f95">Heap과 전역 데이터는 같이 접근한다</text>
+
+<rect x="24" y="146" width="672" height="150" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+<text x="44" y="172" font-size="14" font-weight="700" fill="#3d6fa8">Process</text>
+
+<rect x="44" y="188" width="180" height="42" rx="6" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="134" y="214" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">Heap</text>
+<rect x="44" y="238" width="180" height="42" rx="6" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="134" y="264" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">Global Data</text>
+<text x="134" y="184" font-size="11.5" font-weight="700" fill="#a04040" text-anchor="middle">여기가 공유 구역</text>
+
+<rect x="256" y="188" width="200" height="92" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="356" y="212" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">Thread A</text>
+<rect x="276" y="226" width="160" height="38" rx="5" fill="#ffffff" stroke="#8fb0d4"/>
+<text x="356" y="250" font-size="12.5" fill="#1d3a5c" text-anchor="middle">Stack A (A만 본다)</text>
+
+<rect x="476" y="188" width="200" height="92" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="576" y="212" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">Thread B</text>
+<rect x="496" y="226" width="160" height="38" rx="5" fill="#ffffff" stroke="#8fb0d4"/>
+<text x="576" y="250" font-size="12.5" fill="#1d3a5c" text-anchor="middle">Stack B (B만 본다)</text>
+
+<text x="24" y="322" font-size="12.5" font-weight="700" fill="#a04040">단, Heap에 있다고 반드시 공유되는 건 아니다. 그 주소를 실제로 들고 있는 Thread가 누구냐가 기준이다</text>
+</svg>

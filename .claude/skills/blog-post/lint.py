@@ -119,7 +119,9 @@ def check_body(body, offset, out):
                 out("ERROR", n, "인라인 수식 안의 < > 는 HTML로 먹힌다 → \\lt \\gt 로 바꿔라")
 
         # --- Liquid ---
-        if "{{" in line or "{%" in line:
+        # post_url / raw 는 의도한 Liquid다
+        liquid = re.sub(r"\{%\s*(post_url|raw|endraw)\b[^%]*%\}", "", line)
+        if "{{" in liquid or "{%" in liquid:
             out("ERROR", n, "본문의 {{ 또는 {% 는 Liquid가 해석한다. 코드블록 안으로 넣거나 {% raw %}로 감싸라")
 
         # --- 표 열 수 ---

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect x="0" y="0" width="720" height="320" rx="12" fill="#f7f9fb"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">Process 하나 안에서 Thread 넷이 각자 일한다</text>
+<text x="24" y="58" font-size="12.5" fill="#6b7f95">Thread는 작업 그 자체가 아니라, 작업을 수행하는 실행 흐름이다</text>
+
+<rect x="24" y="76" width="672" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+<text x="44" y="102" font-size="14" font-weight="700" fill="#3d6fa8">Game Process</text>
+<text x="44" y="121" font-size="12" fill="#6b7f95">실행 중인 프로그램의 주소 공간과 자원을 묶은 단위</text>
+
+<rect x="44" y="136" width="150" height="98" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="119" y="163" font-size="13.5" font-weight="700" fill="#1d3a5c" text-anchor="middle">Main Thread</text>
+<text x="119" y="188" font-size="12" fill="#6b7f95" text-anchor="middle">게임 루프</text>
+<text x="119" y="207" font-size="12" fill="#6b7f95" text-anchor="middle">입력 처리</text>
+
+<rect x="206" y="136" width="150" height="98" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="281" y="163" font-size="13.5" font-weight="700" fill="#1d3a5c" text-anchor="middle">AI Thread</text>
+<text x="281" y="188" font-size="12" fill="#6b7f95" text-anchor="middle">경로 탐색</text>
+<text x="281" y="207" font-size="12" fill="#6b7f95" text-anchor="middle">행동 판단</text>
+
+<rect x="368" y="136" width="150" height="98" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="443" y="163" font-size="13.5" font-weight="700" fill="#1d3a5c" text-anchor="middle">Network Thread</text>
+<text x="443" y="188" font-size="12" fill="#6b7f95" text-anchor="middle">패킷 송수신</text>
+
+<rect x="530" y="136" width="146" height="98" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="603" y="163" font-size="13.5" font-weight="700" fill="#1d3a5c" text-anchor="middle">Worker Thread</text>
+<text x="603" y="188" font-size="12" fill="#6b7f95" text-anchor="middle">저장 / 로딩</text>
+
+<text x="24" y="286" font-size="12.5" font-weight="700" fill="#a04040">장보기로 옮기면 — Process는 장보기 프로젝트, Thread는 장보러 간 사람,</text>
+<text x="24" y="305" font-size="12.5" font-weight="700" fill="#a04040">Task는 우유 사기 같은 개별 심부름이다</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs>
+<marker id="d1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6b7f95"/></marker>
+</defs>
+<rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">지우는 것을 그 자리에서 하지 않고, 안전한 지점까지 미룬다</text>
+
+<rect x="24" y="58" width="672" height="112" rx="10" fill="#ffffff" stroke="#c9a0a0"/>
+<text x="44" y="84" font-size="13.5" font-weight="700" fill="#a04040">돌면서 바로 지울 때</text>
+<rect x="44" y="98" width="132" height="46" rx="6" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="110" y="126" font-size="12.5" fill="#1d3a5c" text-anchor="middle">목록을 순회</text>
+<path d="M182,121 L204,121" stroke="#6b7f95" stroke-width="2" marker-end="url(#d1)"/>
+<rect x="210" y="98" width="132" height="46" rx="6" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="276" y="126" font-size="12.5" fill="#1d3a5c" text-anchor="middle">중간에서 삭제</text>
+<path d="M348,121 L370,121" stroke="#6b7f95" stroke-width="2" marker-end="url(#d1)"/>
+<rect x="376" y="98" width="300" height="46" rx="6" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="526" y="120" font-size="12.5" font-weight="700" fill="#a04040" text-anchor="middle">순회하던 자리가 어긋난다</text>
+<text x="526" y="137" font-size="12" fill="#6b7f95" text-anchor="middle">건너뛰거나, 이미 지운 것을 또 만진다</text>
+
+<rect x="24" y="186" width="672" height="112" rx="10" fill="#ffffff" stroke="#a8c39c"/>
+<text x="44" y="212" font-size="13.5" font-weight="700" fill="#3d6fa8">요청만 적어두고 나중에 치울 때</text>
+<rect x="44" y="226" width="132" height="46" rx="6" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="110" y="254" font-size="12.5" fill="#1d3a5c" text-anchor="middle">목록을 순회</text>
+<path d="M182,249 L204,249" stroke="#6b7f95" stroke-width="2" marker-end="url(#d1)"/>
+<rect x="210" y="226" width="150" height="46" rx="6" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="285" y="247" font-size="12.5" fill="#1d3a5c" text-anchor="middle">지워달라고 적어둠</text>
+<text x="285" y="264" font-size="11.5" fill="#6b7f95" text-anchor="middle">목록은 그대로 둔다</text>
+<path d="M366,249 L388,249" stroke="#6b7f95" stroke-width="2" marker-end="url(#d1)"/>
+<rect x="394" y="226" width="140" height="46" rx="6" fill="#eaf3e8" stroke="#a8c39c"/>
+<text x="464" y="247" font-size="12.5" font-weight="700" fill="#1d3a5c" text-anchor="middle">안전한 지점</text>
+<text x="464" y="264" font-size="11.5" fill="#6b7f95" text-anchor="middle">순회가 끝난 뒤</text>
+<path d="M540,249 L562,249" stroke="#6b7f95" stroke-width="2" marker-end="url(#d1)"/>
+<rect x="568" y="226" width="108" height="46" rx="6" fill="#eaf3e8" stroke="#a8c39c"/>
+<text x="622" y="254" font-size="12.5" fill="#1d3a5c" text-anchor="middle">한꺼번에 삭제</text>
+
+<text x="24" y="326" font-size="12.5" font-weight="700" fill="#1d3a5c">유니티의 Destroy 가 그 프레임 안에서 바로 사라지지 않는 것도 같은 이유다</text>
+</svg>
