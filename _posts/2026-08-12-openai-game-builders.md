@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders Seoul - < 1 >
 subtitle: 복잡한 오케스트레이션을 Agent-first 구조로 다시 설계하기
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, RAG, MCP, AI-Agent, Architecture]
+tags: [Game, AI, Codex, RAG, MCP, AI-Agent, Architecture]
 ---
 
 ## 개요

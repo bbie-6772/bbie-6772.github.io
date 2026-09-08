@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 13 >
 subtitle: 인자를 안 쓰는 메서드가 알려준 것
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/93-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 이벤트, 리팩터링]
+tags: [Game, Unity, C#, Event, Refactoring]
 ---
 
 ## 개요

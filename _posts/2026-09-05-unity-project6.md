@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 12 >
 subtitle: 방향이 틀렸을 때 그걸 알려주는 것들
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/75-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 네이밍, 트러블슈팅]
+tags: [Game, Unity, C#, Naming, Troubleshooting]
 ---
 
 ## 개요

@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders - < 6 >
 subtitle: AI가 만든 코드를 디버깅하며 알게 된 것
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#1e3a5f"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, Unity, WebGL, Debugging, Font, AI-Agent]
+tags: [Game, AI, Codex, Unity, WebGL, Debugging, Font, AI-Agent]
 ---
 
 ## 개요

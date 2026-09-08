@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders Seoul - < 3 >
 subtitle: 3D 트랙을 접고, 남은 기획서를 칭찬 대신 공격으로 검토하기
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#3b1f2b"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, RAG, MCP, Unity, Spec, MVP, AI-Agent, Architecture]
+tags: [Game, AI, Codex, RAG, MCP, Unity, Spec, MVP, AI-Agent, Architecture]
 ---
 
 ## 개요

@@ -3,7 +3,7 @@ layout: post
 title: Jekyll에 어서오세요!
 subtitle: 대단한 정적 사이트 생성기
 author: Jeffrey
-categories: example
+categories: Example
 banner:
   video: https://vjs.zencdn.net/v/oceans.mp4
   loop: true

@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders Seoul - < 2 >
 subtitle: 하나의 이야기를 2D와 3D로 동시에 만들어보는 이유
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#111827"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, Unity, PixelLab, MVP, AI-Agent, Architecture]
+tags: [Game, AI, Codex, Unity, PixelLab, MVP, AI-Agent, Architecture]
 ---
 
 ## 개요

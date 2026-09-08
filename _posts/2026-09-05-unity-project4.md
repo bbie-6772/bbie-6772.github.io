@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 10 >
 subtitle: 시계를 두 개 두지 않기 위해 코루틴을 버렸다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/73-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, ScriptableObject, 설계]
+tags: [Game, Unity, C#, ScriptableObject, Architecture]
 ---
 
 ## 개요

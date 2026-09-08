@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders - < 5 >
 subtitle: 계획대로 나눈 역할이 계획대로 흘러가진 않았다
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#1e3a5f"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, Unity, PixelLab, PixelArt, Animation, Collaboration]
+tags: [Game, AI, Codex, Unity, PixelLab, PixelArt, Animation, Collaboration]
 ---
 
 ## 개요

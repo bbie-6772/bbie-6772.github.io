@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 8 >
 subtitle: 두 줄의 순서를 바꿨더니 동작했다, 그래서 되돌아갔다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/71-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 이벤트, 트러블슈팅]
+tags: [Game, Unity, C#, Event, Troubleshooting]
 ---
 
 ## 개요

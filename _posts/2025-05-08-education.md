@@ -3,7 +3,7 @@ layout: post
 title: 교육 운영 매니저 - < 2 >
 subtitle: 교육 운영 직무
 author: bbie
-categories: Education Product Manager
+categories: Education-Product-Manager
 banner:
   image: https://github.com/user-attachments/assets/4c50bf14-ceba-4c29-b13e-d6a228bae1f4
   opacity: 0.618

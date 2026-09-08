@@ -3,7 +3,7 @@ layout: post
 title: 웹소켓을 이용한 타워디펜스 - <5>
 subtitle: TowerDefense
 author: bbie
-categories: WebSocket2
+categories: WebSocket-TowerDefense
 banner:
   image: https://github.com/user-attachments/assets/305f33cb-2c72-4636-ab9b-b001a718e0ff
   opacity: 0.618

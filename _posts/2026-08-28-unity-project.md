@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 2 >
 subtitle: 입력이 사라졌다 - Update와 FixedUpdate 사이에서
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/05-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 물리, 트러블슈팅]
+tags: [Game, Unity, C#, Physics, Troubleshooting]
 ---
 
 ## 개요

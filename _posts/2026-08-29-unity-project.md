@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 3 >
 subtitle: 부호만 세 번 틀렸다 - 방향, 가드, 그리고 무적 시간
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/19-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 물리, 트러블슈팅]
+tags: [Game, Unity, C#, Physics, Troubleshooting]
 ---
 
 ## 개요

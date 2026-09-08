@@ -3,7 +3,7 @@ layout: post
 title: SQL 과제 제출
 subtitle: 게임서버 개발 부트캠프
 author: bbie
-categories: Pre-camp
+categories: Pre-Camp
 tags: [SQL, TIL]
 ---
 

@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 14 >
 subtitle: 세 번 세운 가설이 전부 틀렸다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/94-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 최적화, 프로파일링]
+tags: [Game, Unity, C#, Optimization, Profiling]
 ---
 
 ## 개요

@@ -3,9 +3,9 @@ layout: post
 title: 블로그 개선 - 미래의 나와 AI를 위한 기억 찾기
 subtitle: 본문 검색과 WebMCP를 붙이고, 다시 블로그다운 화면으로 다듬기
 author: bbie
-categories: Study
+categories: Blog
 banner:
-  image: /assets/images/ai/series-banner-v2.png
+  image: /assets/images/banners/home.jpeg
   opacity: 0.618
   background: "#000"
   height: "50vh"

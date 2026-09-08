@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 4 >
 subtitle: 코드는 다 썼는데 아무 일도 안 일어났다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/30-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 코루틴, 트러블슈팅]
+tags: [Game, Unity, C#, Coroutine, Troubleshooting]
 ---
 
 ## 개요

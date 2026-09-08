@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 15 >
 subtitle: 상한을 넣었는데 발동할 일이 없었다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/95-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 최적화, 밸런싱]
+tags: [Game, Unity, C#, Optimization, Game-Balance]
 ---
 
 ## 개요

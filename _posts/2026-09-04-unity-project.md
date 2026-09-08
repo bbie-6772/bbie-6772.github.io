@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 6 >
 subtitle: 같은 기준을 두 번 적용했더니 답이 갈렸다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/41-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 설계, 델리게이트]
+tags: [Game, Unity, C#, Architecture, Delegate]
 ---
 
 ## 개요

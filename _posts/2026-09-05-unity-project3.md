@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 9 >
 subtitle: 사건과 상태 - 같은 신호를 재활용해도 되는가
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/72-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 이벤트, UI]
+tags: [Game, Unity, C#, Event, UI]
 ---
 
 ## 개요

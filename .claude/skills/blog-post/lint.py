@@ -14,6 +14,7 @@ import os
 import re
 import sys
 
+TAXONOMY = re.compile(r"^(sVLM|[A-Z0-9][A-Za-z0-9+#.]*(-[A-Za-z0-9+#.]+)*)$")
 REQUIRED_FM = ["layout", "title", "subtitle", "author", "categories", "banner", "tags"]
 BANNER_KEYS = ["image", "opacity", "background", "height", "min_height"]
 # 857b6ba: monospace 폴백에서 폭이 섞여 코드블록 정렬이 깨진 문자들
@@ -65,6 +66,14 @@ def check_front_matter(fm, path, out):
     tags = fm.get("tags", "")
     if isinstance(tags, str) and tags and not tags.startswith("["):
         out("WARN", 1, "tags는 [A, B] 형태 리스트로 쓴다")
+    # 카테고리/태그 표기: 영문 Title-Case + 하이픈 (jekyll.md '카테고리·태그 표기 규칙')
+    cat = fm.get("categories", "")
+    if isinstance(cat, str) and cat and not TAXONOMY.match(cat):
+        out("WARN", 1, f"categories 표기가 관례와 다르다 (영문 Title-Case + 하이픈): {cat}")
+    if isinstance(tags, str) and tags.startswith("["):
+        for t in [x.strip() for x in tags.strip("[]").split(",") if x.strip()]:
+            if not TAXONOMY.match(t):
+                out("WARN", 1, f"태그 표기가 관례와 다르다 (영문 Title-Case + 하이픈): {t}")
     title = fm.get("title", "")
     # ': ' 는 YAML 매핑, ' #' 는 주석 시작. 'C#'처럼 앞에 공백 없는 #은 안전하다
     if isinstance(title, str) and re.search(r":\s|\s#", title) and not title.startswith(("'", '"')):

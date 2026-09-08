@@ -3,14 +3,14 @@ layout: post
 title: Blog - < 검색은 왜 원하는 글을 못 찾았나 >
 subtitle: GitHub Pages 검색을 고치며 배운 색인, 관련도, 그리고 생성 결과 검증
 author: bbie
-categories: blog
+categories: Blog
 banner:
   image: /assets/images/banners/home.jpeg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [blog, Jekyll, GitHub-Pages, Search-Engine, Search-Index, Fuzzy-Search, Debugging, Performance]
+tags: [Blog, Jekyll, GitHub-Pages, Search-Engine, Search-Index, Fuzzy-Search, Debugging, Performance]
 ---
 
 ## 개요

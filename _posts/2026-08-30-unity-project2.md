@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 5 >
 subtitle: 상속 계층을 세우는 데 오전을 다 썼고, 그동안 화면엔 좀비가 없었다
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/34-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, 상속, 설계]
+tags: [Game, Unity, C#, Inheritance, Architecture]
 ---
 
 ## 개요

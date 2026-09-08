@@ -3,14 +3,14 @@ layout: post
 title: 유니티 학습 프로젝트 - < 11 >
 subtitle: ScriptableObject를 처음 쓰며 - 그래서 이건 언제 쓰는 건가
 author: bbie
-categories: unity-project
+categories: Unity-Project
 banner:
   image: /assets/images/unity-project/74-banner.jpg
   opacity: 0.618
   background: "#000"
   height: "50vh"
   min_height: "20vh"
-tags: [game, Unity, csharp, ScriptableObject, 설계]
+tags: [Game, Unity, C#, ScriptableObject, Architecture]
 ---
 
 ## 개요

@@ -3,14 +3,14 @@ layout: post
 title: OpenAI Game Builders Seoul - < 4 >
 subtitle: 8일 96시간, 13스테이지 계획을 산수로 접은 기록
 author: bbie
-categories: openai_game_builders
+categories: OpenAI-Game-Builders
 banner:
   image: https://openaigame2026.com/assets/openai-social-card.jpg
   opacity: 0.9
   background: "#1e3a5f"
   height: "50vh"
   min_height: "20vh"
-tags: [game, ai, Codex, Unity, PixelArt, Spec, Collaboration, AI-Agent]
+tags: [Game, AI, Codex, Unity, PixelArt, Spec, Collaboration, AI-Agent]
 ---
 
 ## 개요

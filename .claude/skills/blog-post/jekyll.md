@@ -11,6 +11,20 @@
 - 배너는 시리즈에서 실제 사용 중인 것을 재사용한다. 공통 배너 교체 요청이면 기존 자산을 보존하고 버전을 추가하며 요청 범위의 참조를 함께 갱신한다.
 - 실물 이미지는 제공된 자산 또는 URL을 사용한다. 로컬 자산은 프로젝트의 `assets/images/<series>/` 아래에 두며 임시 경로를 참조하지 않는다.
 
+## 카테고리·태그 표기 규칙
+
+전체 포스트를 한 번 정리해 맞춘 관례다. 새 글도 여기에 맞추고, 임의로 새 표기를 만들지 않는다.
+
+- 카테고리는 글마다 하나이며 시리즈 단위다. `Title-Case`에 하이픈으로 잇는다: `Unity-Project`, `AI-Practice`, `NHN-Hackathon`, `OpenAI-Game-Builders`, `Education-Product-Manager`. 공백·언더스코어·전부 소문자 표기는 쓰지 않는다.
+- 새 시리즈를 시작할 때만 새 카테고리를 만든다. 기존 시리즈의 후속 글이면 `_posts`에서 그 시리즈의 카테고리를 그대로 확인해 쓴다.
+- 태그도 `Title-Case` + 하이픈이며 영문으로 쓴다: `Game-Design`, `Troubleshooting`, `Deep-Learning`, `On-Device`, `Prompt-Engineering`. 한글 태그(`트러블슈팅`, `설계`)는 쓰지 않는다.
+- 약어·고유명사는 원래 표기를 지킨다: `AI`, `NLP`, `ML`, `LLM`, `SSAFY`, `C#`, `C++`, `PyTorch`, `JavaScript`, `Unity`, `ScriptableObject`.
+- 같은 개념에 이미 태그가 있으면 그것을 쓴다. 대소문자만 다른 변형(`ai`/`AI`), 붙여쓴 변형(`deeplearning`), 유의어 중복(`Prompting` 대 `Prompt-Engineering`)을 새로 만들지 않는다. 태그를 붙이기 전에 기존 태그 목록을 확인한다.
+
+```text
+grep -h '^tags:' _posts/*.md | sed 's/tags: \[//;s/\]//' | tr ',' '\n' | sed 's/^ *//' | sort -u
+```
+
 ## Liquid·수식
 
 Jekyll은 코드블록 안에서도 Liquid를 처리한다. 코드 예제에서 `{{ ... }}`나 `{% ... %}` 자체를 보여주려면 그 예제를 `{% raw %}`와 `{% endraw %}`로 감싼다. 코드블록만 추가해 해결됐다고 보고하지 않는다.
