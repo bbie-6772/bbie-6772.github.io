@@ -2,6 +2,7 @@
 layout: post
 title: Markdown 예제1
 subtitle: 각 게시물에 부제목도 있어요!
+author: bbie
 categories: Example
 tags: [Markdown]
 ---

@@ -114,7 +114,9 @@ def check_body(body, offset, out):
             out("ERROR", n, "$$ 는 반드시 단독 줄에 둔다 (kramdown이 문단으로 먹는다)")
 
         # --- kramdown 백슬래시 함정 (7f6360e, db0a49a) ---
-        for m in re.finditer(r"\\([^A-Za-z])", line):
+        # 표 행의 \\ 같은 표기는 문자를 그대로 보여주려는 이스케이프다
+        is_table_row = line.strip().startswith("|") and line.strip().endswith("|")
+        for m in re.finditer(r"\\([^A-Za-z])", "" if is_table_row else line):
             ch = m.group(1)
             if ch in "{}%\\":
                 out("ERROR", n, rf"'\{ch}' — kramdown이 백슬래시를 먹어 수식이 통째로 깨진다(7f6360e). "
@@ -128,8 +130,9 @@ def check_body(body, offset, out):
                 out("ERROR", n, "인라인 수식 안의 < > 는 HTML로 먹힌다 → \\lt \\gt 로 바꿔라")
 
         # --- 표 열 수 ---
-        if line.strip().startswith("|") and line.strip().endswith("|"):
-            table_widths.append((n, line.count("|")))
+        if is_table_row:
+            # 셀 안의 \| 는 열 구분자가 아니다
+            table_widths.append((n, line.replace("\\|", "").count("|")))
         elif table_widths:
             widths = {w for _, w in table_widths}
             if len(widths) > 1:
