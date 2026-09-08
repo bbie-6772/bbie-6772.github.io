@@ -261,3 +261,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+# Build tools and development fixtures are not public site assets.
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - scripts
+  - test
+  - docs

@@ -1,0 +1,34 @@
+---
+layout: default
+title: 기억 찾기
+permalink: /search/
+memory_search: true
+header_transparent: false
+---
+<link rel="stylesheet" href="{{ '/assets/css/memory-search.css' | relative_url }}">
+<section class="memory-page">
+  <header class="memory-intro">
+  <p class="memory-eyebrow">삐에로의 지식창고 <span>/</span> 기억 찾기</p>
+  <h1>그때, 어떻게 생각했더라?</h1>
+  <p>기억나는 기술명이나 문장으로, 글 속의 고민과 해결 과정을 찾아보세요.</p>
+  </header>
+  <form id="memory-search" role="search">
+    <label for="memory-query">기억나는 단서</label>
+    <div class="memory-query-row"><input id="memory-query" name="q" type="search" required maxlength="200" placeholder="예: 스레드, 멀티스레드, 컴퓨터 CS 지식"><button type="submit">본문 검색</button></div>
+    <div class="memory-filters">
+      <label>연도<select name="year"><option value="">모든 연도</option></select></label>
+      <label>분류<select name="category"><option value="">모든 분류</option></select></label>
+      <label>태그<select name="tag"><option value="">모든 태그</option></select></label>
+    </div>
+  </form>
+  <p id="memory-status" role="status">짧은 검색어부터 시작해 보세요. 본문과 코드에서도 찾습니다.</p>
+  <ol id="memory-results" aria-label="검색 결과" aria-busy="false"></ol>
+  <noscript>본문 검색에는 JavaScript가 필요합니다. <a href="{{ '/archives.html' | relative_url }}">글 목록</a>에서 찾아보세요.</noscript>
+  <details class="memory-ai"><summary>AI와 함께 기억 찾기</summary>
+    <p id="memory-agent-support">브라우저의 AI 도구 지원을 확인하고 있습니다.</p>
+    <p id="memory-agent-status" role="status"></p>
+    <p>AI에 <a href="{{ '/memory/index.json' | relative_url }}">글·구간 목록</a>을 전달하면 필요한 글의 자료를 골라 읽을 수 있습니다. 기록 날짜와 원문을 함께 확인해 주세요.</p>
+    <p><a href="{{ '/memory-guide/' | relative_url }}">AI 자료 사용 안내</a></p>
+  </details>
+</section>
+<script type="module" src="{{ '/assets/js/memory-ui.mjs' | relative_url }}"></script>

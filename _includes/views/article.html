@@ -7,3 +7,30 @@
     </div>
 
 </article>
+
+{% if page.collection == 'posts' %}
+{%- assign name = 'excerpt.default_image' -%}
+{%- include functions.html func='get_value' -%}
+{%- assign memory_image = page.excerpt_image | default: page.banner.image -%}
+{%- if memory_image == nil and page.banner.first == nil -%}
+  {%- assign memory_image = page.banner -%}
+{%- endif -%}
+{%- assign memory_image = memory_image | default: return | default: '/assets/images/default-image.jpeg' -%}
+{%- if memory_image == 'NO_EXCERPT_IMAGE' -%}
+  {%- assign memory_image = '' -%}
+{%- else -%}
+  {%- assign memory_image = memory_image | relative_url -%}
+{%- endif -%}
+<script type="application/json" id="memory-post">
+{
+  "id": {{ page.path | split: '/' | last | remove: '.md' | jsonify | replace: '<', '\u003c' }},
+  "title": {{ page.title | jsonify | replace: '<', '\u003c' }},
+  "date": {{ page.date | date: '%Y-%m-%d' | jsonify }},
+  "url": {{ page.url | relative_url | jsonify }},
+  "image": {{ memory_image | jsonify | replace: '<', '\u003c' }},
+  "baseurl": {{ site.baseurl | jsonify }},
+  "categories": {{ page.categories | jsonify | replace: '<', '\u003c' }},
+  "tags": {{ page.tags | jsonify | replace: '<', '\u003c' }}
+}
+</script>
+{% endif %}

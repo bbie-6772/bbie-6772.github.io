@@ -888,6 +888,20 @@ $transition-speed: 0.3s;
 
 
 // 검색 바 스타일  
+#search-bar {
+  display: inline-block;
+  width: 205px;
+  vertical-align: middle;
+  margin: 0;
+  line-height: 1.4;
+  #search-input {
+    width: 100%;
+    margin: 0;
+    padding: 7px;
+    font-size: 13px;
+  }
+}
+
 #search-bar-container {
   max-width: 800px;
   margin: 20px auto;

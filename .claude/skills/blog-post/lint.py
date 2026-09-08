@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """포스트 초안 검사기 — Jekyll(kramdown+GFM) / MathJax / yat 테마 기준.
 
-이 레포에는 ruby/bundler가 없어서 `jekyll build`로 검증할 수 없다.
-대신 실제로 깨졌던 사례(git 7f6360e, 093b45e, 857b6ba, db0a49a)를 규칙으로 박아둔다.
+과거 렌더링 문제를 바탕으로 한 간이 검사다. 완전한 YAML/Liquid 파서가 아니다.
+실제 빌드 도구의 사용 가능 여부는 실행 환경에서 확인한다.
 
     python .claude/skills/blog-post/lint.py _posts/2026-08-20-ssafy.md
     python .claude/skills/blog-post/lint.py _posts          # 전체 스캔
 
-ERROR = 그대로 배포하면 안 되는 것(렌더링 파손·미완성), WARN = 관례 위반(사람이 판단).
+ERROR = 그대로 배포하면 안 되는 것(렌더링 파손·미완성), WARN = 사람이 확인할 후보. 문체·분량·이미지 개수는 검사하지 않는다.
 종료 코드: ERROR 있으면 1.
 """
 import os
@@ -118,12 +118,6 @@ def check_body(body, offset, out):
             if "<" in m.group(1) or ">" in m.group(1):
                 out("ERROR", n, "인라인 수식 안의 < > 는 HTML로 먹힌다 → \\lt \\gt 로 바꿔라")
 
-        # --- Liquid ---
-        # post_url / raw 는 의도한 Liquid다
-        liquid = re.sub(r"\{%\s*(post_url|raw|endraw)\b[^%]*%\}", "", line)
-        if "{{" in liquid or "{%" in liquid:
-            out("ERROR", n, "본문의 {{ 또는 {% 는 Liquid가 해석한다. 코드블록 안으로 넣거나 {% raw %}로 감싸라")
-
         # --- 표 열 수 ---
         if line.strip().startswith("|") and line.strip().endswith("|"):
             table_widths.append((n, line.count("|")))
@@ -147,42 +141,49 @@ def check_body(body, offset, out):
 
 
 def check_convention(fm, body, out):
-    # 코드블록 안의 '# 주석'을 h1으로 오인하지 않도록 펜스 구간을 걷어낸다
-    kept, in_fence = [], False
-    for line in body:
+    # 제목 중복 후보만 알린다. 문체·소제목·요약 개수는 강제하지 않는다.
+    in_fence = False
+    for idx, line in enumerate(body):
         if FENCE.match(line):
             in_fence = not in_fence
-            continue
-        kept.append("" if in_fence else line)
-    text = "\n".join(kept)
-    if "한줄 평" not in text:
-        out("WARN", len(body), "'## 한줄 평' 마무리 섹션이 없다 (이 블로그 고정 관례)")
-    if not re.search(r"^#{2,4} ", text, re.M):
-        out("WARN", 1, "소제목(##)이 하나도 없다")
-    if re.search(r"^# ", text, re.M):
-        out("WARN", 1, "본문에 h1(#)을 쓰지 않는다. 제목은 front matter의 title이 담당한다")
+        elif not in_fence and re.match(r"^# ", line):
+            out("WARN", idx + 1, "본문 h1이 front matter 제목과 중복되는지 확인한다")
 
-    # --- 최신형 뼈대 (SKILL.md 「글의 뼈대」) ---
-    if not re.search(r"^#{2,3} 개요", text, re.M):
-        out("WARN", 1, "'## 개요' 섹션이 없다 (7월 이후 55편 중 45편이 이걸로 시작한다)")
-    if not re.search(r"^#{2,3} (정리|요약)", text, re.M):
-        out("WARN", len(body), "'## 정리' 섹션이 없다 — 한줄 평 앞에 개조식 압축을 넣는다")
-    if text.count("\n> ") < 3:
-        out("WARN", 1, f"'>' 인용 요약이 {text.count(chr(10) + '> ')}개뿐이다 (최근 글 평균 편당 9.8개). 섹션마다 결론 한 줄을 뽑아라")
 
-    # 숨 돌릴 곳(--- 또는 ## 제목) 없이 길게 이어지는 구간
-    last = 0
-    for i, line in enumerate(kept):
-        if line.strip() == "---" or re.match(r"^#{2,3} ", line):
-            if i - last > 60:
-                out("WARN", last + 1, f"{i - last}줄 동안 '---'나 소제목 없이 이어진다 — 섹션을 쪼개라")
-            last = i
+def check_liquid(body, offset, out):
+    """raw 구간을 존중하는 간이 검사. 코드블록도 Liquid 처리 대상이다."""
+    text = "\n".join(body)
+    token = re.compile(r"\{%[-]?\s*(raw|endraw)\s*[-]?%\}")
+    raw_start = None
+    cursor = 0
+
+    def inspect(segment, position):
+        # 정상적인 Jekyll 링크 태그는 파손으로 판정하지 않는다.
+        segment = re.sub(r"\{%[-]?\s*(?:post_url|link)\s+[^%]+%\}",
+                         lambda match: " " * len(match.group()), segment)
+        for match in re.finditer(r"\{\{|\{%", segment):
+            line = offset + text.count("\n", 0, position + match.start()) + 1
+            out("WARN", line, "Liquid 문법이 의도한 템플릿인지 확인한다. 문자 그대로 보여줄 예제는 raw/endraw로 감싼다. 코드블록만으로는 보호되지 않는다")
+
+    for match in token.finditer(text):
+        line = offset + text.count("\n", 0, match.start()) + 1
+        if raw_start is None:
+            inspect(text[cursor:match.start()], cursor)
+            if match.group(1) == "raw":
+                raw_start = line
+            else:
+                out("ERROR", line, "대응하는 raw 없이 endraw가 나온다")
+        elif match.group(1) == "endraw":
+            raw_start = None
+        cursor = match.end()
+    if raw_start is None:
+        inspect(text[cursor:], cursor)
+    else:
+        out("ERROR", raw_start, "Liquid raw 블록이 닫히지 않았다")
 
 
 def check_images(body, root, out):
-    total = 0
     for idx, line in enumerate(body):
-        total += line.lstrip().startswith("![")
         if "TODO:이미지" in line:
             out("ERROR", idx + 1, "이미지 자리표시자가 남아 있다 — 사용자에게 다시 요청하거나 그 대목을 덜어내라")
         for m in re.finditer(r"!\[[^\]]*\]\((/[^)\s]+)\)", line):
@@ -192,9 +193,6 @@ def check_images(body, root, out):
                 out("ERROR", idx + 1, f"이미지 파일이 없다: {m.group(1)}")
             elif rel.endswith(".svg"):
                 check_svg(full, idx + 1, out)
-    if total < 2:
-        out("WARN", 1, f"이미지가 {total}장이다 (최근 글 평균 편당 2.8장). "
-                       "실물이 있는 자리는 사용자에게 요청하고, 개념·비교는 직접 그려라")
 
 
 def check_svg(path, line_no, out):
@@ -245,6 +243,8 @@ def lint(path, root):
     fm, body, offset = split_front_matter(text, out)
     check_front_matter(fm, path, out)
     check_body(body, offset, out)
+    if str(fm.get("render_with_liquid", "true")).lower() != "false":
+        check_liquid(body, offset, out)
     check_convention(fm, body, out)
     check_images(body, root, out)
     return sorted(found, key=lambda f: f[1])

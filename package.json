@@ -1,0 +1,12 @@
+{
+  "name": "bbie-blog-memory-search",
+  "private": true,
+  "scripts": {
+    "build:memory": "node scripts/build-memory.mjs",
+    "test:memory": "node --test test/memory.test.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "1.2.0",
+    "pagefind": "1.5.2"
+  }
+}

@@ -3,11 +3,13 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body{% if page.memory_search %} class="memory-search-page"{% endif %}>
 
     {%- include views/header.html -%}
 
+    {%- unless page.memory_search -%}
     {%- include views/banner.html -%}
+    {%- endunless -%}
 
     {%- include extensions/hashlocate.html -%}
 
