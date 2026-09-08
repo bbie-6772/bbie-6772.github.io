@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<defs>
+<marker id="c1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#3d6fa8"/></marker>
+<marker id="c2" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#a04040"/></marker>
+</defs>
+<rect x="0" y="0" width="720" height="400" rx="12" fill="#f7f9fb"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">같은 크기의 자원과 같은 자원은 다르다</text>
+<text x="24" y="58" font-size="12.5" fill="#6b7f95">Buffer a(100);  Buffer b = a;  Buffer c = std::move(a);  — 개념도</text>
+
+<text x="24" y="94" font-size="12.5" font-weight="700" fill="#3d6fa8">복사 — b 는 자기 몫의 100칸을 새로 할당받는다</text>
+<rect x="24" y="108" width="110" height="38" rx="6" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="79" y="132" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">b.data</text>
+<rect x="300" y="104" width="230" height="46" rx="8" fill="#ffffff" stroke="#8fb0d4"/>
+<text x="415" y="132" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">새 할당 100칸 (내용만 같음)</text>
+<path d="M138,127 L295,127" stroke="#3d6fa8" stroke-width="2" marker-end="url(#c1)"/>
+<text x="548" y="132" font-size="12.5" fill="#6b7f95">O(N) — 칸을 다 복제</text>
+
+<text x="24" y="196" font-size="12.5" font-weight="700" fill="#3d6fa8">이동 — c 는 a 가 쓰던 그 100칸을 그대로 넘겨받는다</text>
+<rect x="24" y="210" width="110" height="38" rx="6" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="79" y="234" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">c.data</text>
+<rect x="300" y="206" width="230" height="46" rx="8" fill="#ffffff" stroke="#8fb0d4"/>
+<text x="415" y="234" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">원래 a 가 쓰던 100칸</text>
+<path d="M138,229 L295,229" stroke="#3d6fa8" stroke-width="2" marker-end="url(#c1)"/>
+<text x="548" y="234" font-size="12.5" fill="#6b7f95">O(1) — 주소만 이사</text>
+
+<rect x="24" y="272" width="110" height="38" rx="6" fill="#faeded" stroke="#a04040"/>
+<text x="79" y="296" font-size="13" font-weight="700" fill="#a04040" text-anchor="middle">a.data</text>
+<rect x="300" y="270" width="120" height="42" rx="8" fill="#ffffff" stroke="#d5dde6" stroke-dasharray="5 4"/>
+<text x="360" y="296" font-size="13" font-weight="700" fill="#6b7f95" text-anchor="middle">nullptr</text>
+<path d="M138,291 L295,291" stroke="#a04040" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#c2)"/>
+<text x="438" y="288" font-size="12.5" fill="#6b7f95">a 는 파괴된 게 아니다. 살아 있고</text>
+<text x="438" y="306" font-size="12.5" fill="#6b7f95">소유한 자원만 비어 있는 상태다</text>
+
+<rect x="24" y="336" width="672" height="44" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="44" y="363" font-size="13" fill="#1d3a5c">b 와 c 의 칸 수는 같지만, 같은 할당을 나눠 가진 것이 아니다. 소멸자는 각자 자기 것만 해제한다.</text>
+</svg>
