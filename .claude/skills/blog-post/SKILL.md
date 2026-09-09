@@ -76,6 +76,10 @@ description: 삐에로의 지식창고(bbie-6772.github.io)의 Jekyll 글을 작
 
 `scripts/post-lint.py`는 이 중 기계로 판정 가능한 것만 `문체 후보:` WARN으로 알린다. WARN은 판정이 아니라 확인 요청이다.
 
+표만으로 어떻게 고칠지 안 잡히면 [examples/rewrite-pairs.md](examples/rewrite-pairs.md)를 읽는다. 문장을 실제로 고칠 때만 읽고, 새 글을 처음 쓸 때는 읽지 않는다.
+
+고친 표현은 [voice/corrections.md](voice/corrections.md)에 한 줄 덧붙인다. 같은 항목이 5회 쌓이면 그때 규칙으로 올린다.
+
 ## 구조와 독자
 
 독자가 필요한 배경을 따라올 수 있도록 용어를 풀어 설명한다. 독자 수준은 주제와 요청에 맞추고, 모든 글을 특정 연령에 맞추거나 쉬운 비유로 늘리지 않는다.
