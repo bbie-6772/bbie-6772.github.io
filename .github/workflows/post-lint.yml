@@ -1,0 +1,34 @@
+name: post-lint
+
+on:
+  push:
+    paths: ['_posts/**', 'assets/images/**', 'scripts/post-lint.py']
+  pull_request:
+    paths: ['_posts/**', 'assets/images/**', 'scripts/post-lint.py']
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 기존 글의 미해결 ERROR가 새 글을 막지 않도록, 이번 변경분만 검사한다.
+      - name: 변경된 포스트만 검사
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+          else
+            base="${{ github.event.before }}"
+          fi
+          if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+            base="$(git rev-parse HEAD~1 2>/dev/null || git rev-parse HEAD)"
+          fi
+          files=$(git diff --name-only --diff-filter=d "$base" HEAD -- '_posts/*.md')
+          if [ -z "$files" ]; then
+            echo "검사할 포스트 없음"
+            exit 0
+          fi
+          echo "$files"
+          python3 scripts/post-lint.py $files

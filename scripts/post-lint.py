@@ -4,10 +4,11 @@
 과거 렌더링 문제를 바탕으로 한 간이 검사다. 완전한 YAML/Liquid 파서가 아니다.
 실제 빌드 도구의 사용 가능 여부는 실행 환경에서 확인한다.
 
-    python .claude/skills/blog-post/lint.py _posts/2026-08-20-ssafy.md
-    python .claude/skills/blog-post/lint.py _posts          # 전체 스캔
+    python scripts/post-lint.py _posts/2026-08-20-ssafy.md
+    python scripts/post-lint.py _posts          # 전체 스캔
 
-ERROR = 그대로 배포하면 안 되는 것(렌더링 파손·미완성), WARN = 사람이 확인할 후보. 문체·분량·이미지 개수는 검사하지 않는다.
+ERROR = 그대로 배포하면 안 되는 것(렌더링 파손·미완성), WARN = 사람이 확인할 후보.
+문체 교정 후보는 WARN으로만 제시하며, 분량·이미지 개수는 검사하지 않는다.
 종료 코드: ERROR 있으면 1.
 """
 import os
@@ -244,6 +245,74 @@ def _num(v):
         return None
 
 
+# --- 문체 교정 후보 (전부 WARN) ---
+# 오탐이 큰 후보는 _posts 265건 측정으로 걸러냈다. 남긴 것들의 제외 조건이 3번째 항목이다.
+# 무생물 주어 사역('이 도구는 시간을 단축시켜 줍니다')은 정규식 오탐이 커서 넣지 않는다.
+SLOP = [
+    (re.compile(r"[을를]\s*가지고\s*있(?!는)"), "'~을 가지고 있다' → '~이 있다'", None),
+    (re.compile(r"[함음]에\s*있어"), "'~함에 있어' → '~할 때'", None),
+    (re.compile(r"(되어지|보여지|불려지|쓰여지)"), "이중피동 — 능동이나 단일 피동으로", None),
+    (re.compile(r"중\s*하나(다|이다|입니다|였다|이었다|였습니다)"),
+     "'~중 하나다' — one of the 직역. 무엇 중에서 왜 그것인지 쓴다",
+     re.compile(r"(둘|셋|넷|다섯|여섯|[0-9])\s*중\s*하나")),
+    (re.compile(r"[라다]고\s*할\s*수\s*있"), "'~라고 할 수 있다' — 단정하거나 근거를 쓴다", None),
+    (re.compile(r"중요한\s*역할"), "'중요한 역할을 한다' — 무엇이 어떻게 달라지는지 쓴다", None),
+    (re.compile(r"(획기적|혁신적|무궁무진)"), "근거 없는 수식어 — 무엇과 견줘 그런지 쓴다", None),
+    (re.compile(r"(알아보겠|살펴보겠|알아봅시다|살펴봅시다)"), "정형 도입구 — 본론으로 바로 들어간다", None),
+    (re.compile(r"^\s*(결론적으로|마무리하며)"), "정형 마무리구 — 남길 말이 있으면 그 말만 쓴다", None),
+]
+# 단어 자체가 아니라 문단마다 반복되는 것이 문제다. 그래서 문단 첫머리만, 3회부터 센다.
+CONJ = re.compile(r"^\s*(또한|게다가|더욱이|따라서|결과적으로|뿐만\s*아니라)")
+CONJ_LIMIT = 3
+# 문장 길이 변동계수. _posts 165건(문장 20개 이상) 분포에서 하위 5%가 0.538,
+# 최솟값이 0.292였다. 0.45는 사람 글 2%(3건)만 건드린다.
+CV_MIN_SENTENCES = 20
+CV_FLOOR = 0.45
+
+
+def check_slop(body, offset, out):
+    """번역투·빈 수식어·균질한 리듬의 교정 후보. 전부 WARN이며 판단은 사람이 한다."""
+    prose, in_fence, prev_blank = [], False, True
+    for idx, line in enumerate(body):
+        if FENCE.match(line):
+            in_fence = not in_fence
+            prev_blank = False
+            continue
+        if in_fence:
+            continue
+        stripped = line.strip()
+        if not stripped:
+            prev_blank = True
+            continue
+        # 인용·표·헤딩·들여쓴 코드는 저자가 옮겨 온 것이거나 산문이 아니다
+        if stripped.startswith(("#", ">", "|")) or line.startswith(("    ", "	")):
+            prev_blank = False
+            continue
+        prose.append((idx + offset + 1, line, prev_blank))
+        prev_blank = False
+
+    for n, line, _ in prose:
+        for rx, msg, skip in SLOP:
+            if rx.search(line) and not (skip and skip.search(line)):
+                out("WARN", n, f"문체 후보: {msg}")
+
+    conj = [n for n, line, first in prose if first and CONJ.match(line)]
+    if len(conj) >= CONJ_LIMIT:
+        lines = ", ".join(f"L{n}" for n in conj)
+        out("WARN", conj[0], f"문단 첫머리 접속사가 {len(conj)}회 — 연결어 없이 이어지는지 본다 ({lines})")
+
+    text = " ".join(l for _, l, _ in prose)
+    text = re.sub(r"`[^`]*`", "", text)
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    lengths = [len(p.strip()) for p in re.split(r"(?<=[.!?다])\s+", text) if len(p.strip()) > 1]
+    if len(lengths) >= CV_MIN_SENTENCES:
+        mean = sum(lengths) / len(lengths)
+        var = sum((x - mean) ** 2 for x in lengths) / len(lengths)
+        cv = (var ** 0.5) / mean if mean else 0
+        if cv < CV_FLOOR:
+            out("WARN", 1, f"문장 길이가 균일하다 (변동계수 {cv:.2f} < {CV_FLOOR}) — 긴 설명과 짧은 단정이 섞이는지 본다")
+
+
 def lint(path, root):
     found = []
 
@@ -258,6 +327,7 @@ def lint(path, root):
     if str(fm.get("render_with_liquid", "true")).lower() != "false":
         check_liquid(body, offset, out)
     check_convention(fm, body, out)
+    check_slop(body, offset, out)
     check_images(body, root, out)
     return sorted(found, key=lambda f: f[1])
 

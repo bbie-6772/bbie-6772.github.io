@@ -50,16 +50,14 @@ Jekyll은 코드블록 안에서도 Liquid를 처리한다. 코드 예제에서 
 
 ## 간이 검사 실행
 
-Python 3 표준 라이브러리만 사용하는 `lint.py`가 스킬 폴더에 있다. 저장소 루트에서 실행한다. `SKILL_DIR`는 예시 자리이므로 실제 설치 위치로 바꾼다.
+Python 3 표준 라이브러리만 쓴다. 저장소 루트에서 실행한다. 여러 파일과 `_posts` 디렉터리도 받는다.
 
 ```text
-python "SKILL_DIR/lint.py" "_posts/YYYY-MM-DD-slug.md"
+python scripts/post-lint.py "_posts/YYYY-MM-DD-slug.md"
 ```
 
-Codex에서는 `.agents/skills/blog-post/lint.py`, Claude Code에서는 `.claude/skills/blog-post/lint.py`일 수 있다. 설치 위치를 실제로 확인하며 절대 Windows 경로를 가정하지 않는다. 여러 파일 또는 `_posts` 디렉터리도 받을 수 있다.
-
-ERROR는 수정하거나 오탐인지 확인한다. WARN은 문맥에 따라 판단한다. 줄 수·이미지 장수·요약 개수·고정 소제목을 만족시키기 위한 편집은 하지 않는다. 이 검사는 얕은 YAML/Markdown 검사로 완전한 파서나 Jekyll 빌드를 대체하지 않는다.
+ERROR는 수정하거나 오탐인지 확인한다. WARN은 문맥에 따라 판단한다. `문체 후보:` WARN은 교정 후보일 뿐이며 이번에 생성한 설명 문장에만 적용한다. 줄 수·이미지 장수·요약 개수·고정 소제목을 만족시키기 위한 편집은 하지 않는다. 이 검사는 얕은 YAML/Markdown 검사로 완전한 파서나 Jekyll 빌드를 대체하지 않는다.
 
 Ruby/Bundler가 사용 가능한지 확인하고 프로젝트의 빌드 절차를 따른다. 실행 환경이 없으면 간이 검사 범위와 빌드 미실행을 보고한다. 관련 없는 과거 글 오류를 요청 없이 모두 수정하지 않는다.
 
-Claude에서 저장소나 실행 도구가 없는 경우에는 제공된 Markdown과 자료로 글을 작성·검토하고 검사 미실행 사실을 알린다. 존재하지 않는 파일 접근이나 실행 결과를 주장하지 않는다.
+저장소나 실행 도구가 없으면 제공된 Markdown과 자료로 작업하고 검사 미실행 사실을 알린다. 존재하지 않는 파일 접근이나 실행 결과를 주장하지 않는다.
