@@ -67,7 +67,7 @@ def check_front_matter(fm, path, out):
     tags = fm.get("tags", "")
     if isinstance(tags, str) and tags and not tags.startswith("["):
         out("WARN", 1, "tags는 [A, B] 형태 리스트로 쓴다")
-    # 카테고리/태그 표기: 영문 Title-Case + 하이픈 (jekyll.md '카테고리·태그 표기 규칙')
+    # 카테고리/태그 표기: 영문 Title-Case + 하이픈 (AGENTS.md '카테고리·태그 표기')
     cat = fm.get("categories", "")
     if isinstance(cat, str) and cat and not TAXONOMY.match(cat):
         out("WARN", 1, f"categories 표기가 관례와 다르다 (영문 Title-Case + 하이픈): {cat}")
