@@ -268,6 +268,16 @@ CONJ_LIMIT = 3
 # 최솟값이 0.292였다. 0.45는 사람 글 2%(3건)만 건드린다.
 CV_MIN_SENTENCES = 20
 CV_FLOOR = 0.45
+# 앞 문장을 되풀이하고 끝나는 짧은 확인 꼬리. 정보가 없어 삭제 테스트에 걸린다.
+# _posts 271건 측정에서 9편 11건만 걸렸다. 문단 마지막 문장에만 적용한다.
+TAIL_ECHO = re.compile(
+    r"^(값|결과|출력|수치|계산|예상|예시\s*출력|앞|위)?[이가은는]?\s*[^.!?]{0,12}"
+    r"(맞는다|맞았다|맞다|일치한다|일치했다|같다|그대로다|그렇다)[.!]?$"
+)
+TAIL_MAX = 20
+
+# 문단 단위 리듬은 검사하지 않는다. _posts 115건에서 1~2문장 문단 비율 중앙값이 78%,
+# 연속 런 중앙값이 10이라 임계를 어디에 두든 기존 글 대부분이 걸린다. 오탐이 크다.
 
 
 def check_slop(body, offset, out):
@@ -300,6 +310,29 @@ def check_slop(body, offset, out):
     if len(conj) >= CONJ_LIMIT:
         lines = ", ".join(f"L{n}" for n in conj)
         out("WARN", conj[0], f"문단 첫머리 접속사가 {len(conj)}회 — 연결어 없이 이어지는지 본다 ({lines})")
+
+    # 문단 끝의 확인 꼬리
+    para, paras = [], []
+    for n, line, first in prose:
+        if first and para:
+            paras.append(para)
+            para = []
+        para.append((n, line))
+    if para:
+        paras.append(para)
+    for block in paras:
+        n0 = block[0][0]
+        joined = " ".join(l for _, l in block)
+        joined = re.sub(r"`[^`]*`", "", joined)
+        joined = re.sub(r"\*\*", "", joined)
+        sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+", joined) if len(x.strip()) > 1]
+        if len(sents) < 2:
+            continue
+        last = sents[-1]
+        if len(last) < TAIL_MAX and TAIL_ECHO.match(last):
+            out("WARN", block[-1][0],
+                f"문체 후보: 앞 문장을 되풀이하는 확인 꼬리 \"{last}\" — "
+                f"지워도 정보가 주는지 본다 (문단 L{n0})")
 
     text = " ".join(l for _, l, _ in prose)
     text = re.sub(r"`[^`]*`", "", text)
