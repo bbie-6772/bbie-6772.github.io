@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" role="img" aria-label="벌꿀 채취에서 두 일꾼이 고를 수 있는 배치와 같은 행 겹침 조건">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .cell { fill: #ffffff; stroke: #d5dde6; }
+    .pick1 { fill: #dce7f4; stroke: #3d6fa8; }
+    .pick2 { fill: #eef3f9; stroke: #8fb0d4; }
+    .bad { fill: #f6ecec; stroke: #a04040; }
+  </style>
+  <rect class="bg" width="720" height="400" rx="10"/>
+  <text class="t" x="28" y="38" font-size="16" font-weight="600">두 일꾼은 서로 다른 행이거나, 같은 행이면 겹치지 않아야 한다</text>
+  <text class="sub" x="28" y="60" font-size="13">각 일꾼은 한 행에서 가로로 붙은 M칸을 고른다. 아래는 M = 2인 경우.</text>
+
+  <!-- case A: different rows -->
+  <text class="t" x="40" y="106" font-size="14" font-weight="600">서로 다른 행</text>
+  <g transform="translate(40,120)">
+    <rect class="pick1" x="0" y="0" width="42" height="42"/>
+    <rect class="pick1" x="42" y="0" width="42" height="42"/>
+    <rect class="cell" x="84" y="0" width="42" height="42"/>
+    <rect class="cell" x="126" y="0" width="42" height="42"/>
+    <rect class="cell" x="0" y="42" width="42" height="42"/>
+    <rect class="cell" x="42" y="42" width="42" height="42"/>
+    <rect class="pick2" x="84" y="42" width="42" height="42"/>
+    <rect class="pick2" x="126" y="42" width="42" height="42"/>
+    <text class="sub" x="84" y="108" font-size="12" text-anchor="middle">행이 다르면 조건 자체가 없다</text>
+    <text class="sub" x="84" y="128" font-size="12" text-anchor="middle">행별 최댓값 중 상위 두 개를 더하면 끝</text>
+  </g>
+
+  <!-- case B: same row ok -->
+  <text class="t" x="276" y="106" font-size="14" font-weight="600">같은 행, 안 겹침</text>
+  <g transform="translate(276,120)">
+    <rect class="pick1" x="0" y="0" width="42" height="42"/>
+    <rect class="pick1" x="42" y="0" width="42" height="42"/>
+    <rect class="pick2" x="84" y="0" width="42" height="42"/>
+    <rect class="pick2" x="126" y="0" width="42" height="42"/>
+    <text class="sub" x="21" y="60" font-size="11" text-anchor="middle">c1</text>
+    <text class="sub" x="105" y="60" font-size="11" text-anchor="middle">c2</text>
+    <text class="t" x="84" y="88" font-size="13" text-anchor="middle">c1 + M ≤ c2</text>
+    <text class="sub" x="84" y="128" font-size="12" text-anchor="middle">0 + 2 ≤ 2 → 통과</text>
+  </g>
+
+  <!-- case C: same row overlap -->
+  <text class="t" x="512" y="106" font-size="14" font-weight="600">같은 행, 겹침</text>
+  <g transform="translate(512,120)">
+    <rect class="pick1" x="0" y="0" width="42" height="42"/>
+    <rect class="bad" x="42" y="0" width="42" height="42"/>
+    <rect class="pick2" x="84" y="0" width="42" height="42"/>
+    <rect class="cell" x="126" y="0" width="42" height="42"/>
+    <text class="sub" x="21" y="60" font-size="11" text-anchor="middle">c1</text>
+    <text class="sub" x="63" y="60" font-size="11" text-anchor="middle" fill="#a04040">c2</text>
+    <text class="t" x="84" y="88" font-size="13" text-anchor="middle" fill="#a04040">0 + 2 ≤ 1 거짓</text>
+    <text class="sub" x="84" y="128" font-size="12" text-anchor="middle" fill="#a04040">한 칸을 둘이 나눠 갖는다</text>
+  </g>
+
+  <rect class="card" x="40" y="286" width="640" height="82" rx="8"/>
+  <text class="t" x="64" y="316" font-size="14" font-weight="600">고른 M칸을 전부 채취하는 게 아니다</text>
+  <text class="sub" x="64" y="342" font-size="13">그 M칸 안에서 다시 부분집합을 골라, 꿀 양의 합이 C 이하이면서 제곱합이 최대인 조합을 찾는다.</text>
+  <text class="sub" x="64" y="360" font-size="13">구간을 고르는 결정 안에 채취할 칸을 고르는 결정이 한 겹 더 들어 있다.</text>
+</svg>

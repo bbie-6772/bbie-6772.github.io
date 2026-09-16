@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" role="img" aria-label="전처리 표에서 행과 열의 범위를 뒤바꿔 잡았을 때와 바로잡았을 때">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .cell { fill: #ffffff; stroke: #d5dde6; }
+    .miss { fill: #f6ecec; stroke: #a04040; }
+    .ok { fill: #dce7f4; stroke: #3d6fa8; }
+  </style>
+  <rect class="bg" width="720" height="330" rx="10"/>
+  <text class="t" x="28" y="38" font-size="16" font-weight="600">N = 4, M = 2 — 표의 크기는 행 N개 × 열 (N − M + 1)개</text>
+  <text class="sub" x="28" y="60" font-size="13">행은 줄어들지 않는다. 줄어드는 건 시작 열 쪽이다.</text>
+
+  <!-- wrong -->
+  <text class="t" x="52" y="100" font-size="14" font-weight="600" fill="#a04040">처음 쓴 범위</text>
+  <text class="m" x="52" y="122" font-size="12" fill="#a04040">r &lt; N - M + 1, c &lt; N</text>
+  <g transform="translate(52,136)">
+    <rect class="cell" x="0" y="0" width="46" height="34"/>
+    <rect class="cell" x="46" y="0" width="46" height="34"/>
+    <rect class="cell" x="92" y="0" width="46" height="34"/>
+    <rect class="cell" x="138" y="0" width="46" height="34"/>
+    <rect class="cell" x="0" y="34" width="46" height="34"/>
+    <rect class="cell" x="46" y="34" width="46" height="34"/>
+    <rect class="cell" x="92" y="34" width="46" height="34"/>
+    <rect class="cell" x="138" y="34" width="46" height="34"/>
+    <rect class="cell" x="0" y="68" width="46" height="34"/>
+    <rect class="cell" x="46" y="68" width="46" height="34"/>
+    <rect class="cell" x="92" y="68" width="46" height="34"/>
+    <rect class="cell" x="138" y="68" width="46" height="34"/>
+    <rect class="miss" x="0" y="102" width="184" height="34"/>
+    <text class="t" x="92" y="124" font-size="12" text-anchor="middle" fill="#a04040">3행이 통째로 빠진다</text>
+  </g>
+  <text class="sub" x="52" y="296" font-size="12">열은 하나도 안 줄어 4칸, 행만 3개</text>
+
+  <!-- right -->
+  <text class="t" x="420" y="100" font-size="14" font-weight="600" fill="#3d6fa8">바로잡은 범위</text>
+  <text class="m" x="420" y="122" font-size="12">r &lt; N, c &lt; N - M + 1</text>
+  <g transform="translate(420,136)">
+    <rect class="ok" x="0" y="0" width="46" height="34"/>
+    <rect class="ok" x="46" y="0" width="46" height="34"/>
+    <rect class="ok" x="92" y="0" width="46" height="34"/>
+    <rect class="ok" x="0" y="34" width="46" height="34"/>
+    <rect class="ok" x="46" y="34" width="46" height="34"/>
+    <rect class="ok" x="92" y="34" width="46" height="34"/>
+    <rect class="ok" x="0" y="68" width="46" height="34"/>
+    <rect class="ok" x="46" y="68" width="46" height="34"/>
+    <rect class="ok" x="92" y="68" width="46" height="34"/>
+    <rect class="ok" x="0" y="102" width="46" height="34"/>
+    <rect class="ok" x="46" y="102" width="46" height="34"/>
+    <rect class="ok" x="92" y="102" width="46" height="34"/>
+  </g>
+  <text class="sub" x="420" y="296" font-size="12">행 4개 × 시작 열 3개 = 후보 구간 12개</text>
+</svg>

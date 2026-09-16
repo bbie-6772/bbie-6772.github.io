@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="부분집합 재귀 트리에서 합이 C를 넘으면 가지를 끊는 모습">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .edge { stroke: #8fb0d4; fill: none; }
+    .cut { stroke: #a04040; fill: none; stroke-dasharray: 5 4; }
+    .node { fill: #ffffff; stroke: #3d6fa8; }
+    .dead { fill: #f6ecec; stroke: #a04040; }
+  </style>
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="28" y="38" font-size="16" font-weight="600">합이 C를 넘으면 그 아래는 볼 필요가 없다</text>
+  <text class="sub" x="28" y="60" font-size="13">원소가 전부 양수라서 성립한다. 음수가 섞이면 아래에서 다시 줄어들 수 있다.</text>
+
+  <!-- tree -->
+  <g transform="translate(0,20)">
+    <path class="edge" d="M200 100 L120 160"/>
+    <path class="edge" d="M200 100 L280 160"/>
+    <path class="edge" d="M120 160 L80 225"/>
+    <path class="edge" d="M120 160 L160 225"/>
+    <path class="cut" d="M280 160 L240 225"/>
+    <path class="cut" d="M280 160 L320 225"/>
+
+    <circle class="node" cx="200" cy="100" r="26"/>
+    <text class="t" x="200" y="105" font-size="13" text-anchor="middle">합 4</text>
+
+    <circle class="node" cx="120" cy="160" r="26"/>
+    <text class="t" x="120" y="165" font-size="13" text-anchor="middle">합 4</text>
+    <text class="sub" x="120" y="205" font-size="11" text-anchor="middle">안 고름</text>
+
+    <circle class="dead" cx="280" cy="160" r="26"/>
+    <text class="t" x="280" y="165" font-size="13" text-anchor="middle" fill="#a04040">합 13</text>
+    <text class="sub" x="280" y="205" font-size="11" text-anchor="middle" fill="#a04040">고름 → C 초과</text>
+
+    <circle class="node" cx="80" cy="225" r="22"/>
+    <circle class="node" cx="160" cy="225" r="22"/>
+    <circle class="dead" cx="240" cy="225" r="22" opacity="0.35"/>
+    <circle class="dead" cx="320" cy="225" r="22" opacity="0.35"/>
+    <text class="sub" x="280" y="272" font-size="12" text-anchor="middle" fill="#a04040">여기부터 통째로 안 내려간다</text>
+  </g>
+
+  <!-- side card -->
+  <rect class="card" x="430" y="80" width="262" height="196" rx="8"/>
+  <text class="t" x="452" y="112" font-size="14" font-weight="600">1~10에서 합이 10인 부분집합</text>
+  <text class="sub" x="452" y="142" font-size="13">가지치기 없음</text>
+  <text class="t" x="668" y="142" font-size="15" text-anchor="end" font-weight="600">2,047회</text>
+  <line x1="452" y1="158" x2="668" y2="158" stroke="#d5dde6"/>
+  <text class="sub" x="452" y="184" font-size="13">합 &gt; 10에서 중단</text>
+  <text class="t" x="668" y="184" font-size="15" text-anchor="end" font-weight="600" fill="#a04040">415회</text>
+  <line x1="452" y1="200" x2="668" y2="200" stroke="#d5dde6"/>
+  <text class="sub" x="452" y="226" font-size="13">찾은 부분집합</text>
+  <text class="t" x="668" y="226" font-size="15" text-anchor="end" font-weight="600">10개</text>
+  <text class="sub" x="452" y="256" font-size="11">재귀 호출 수를 직접 세어 비교했다.</text>
+</svg>
