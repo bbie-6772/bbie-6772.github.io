@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" width="100%" role="img" aria-label="배열 list와 연결 리스트에서 중간에 원소를 하나 끼워 넣을 때의 차이">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .cell { fill: #ffffff; stroke: #d5dde6; }
+    .move { fill: #f6ecec; stroke: #a04040; }
+    .new { fill: #dce7f4; stroke: #3d6fa8; }
+    .link { stroke: #8fb0d4; fill: none; }
+    .relink { stroke: #3d6fa8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8fb0d4"/>
+    </marker>
+    <marker id="a2" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/>
+    </marker>
+    <marker id="a3" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#a04040"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="720" height="310" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">1번 자리에 X를 끼워 넣는다 — 원소 4개짜리</text>
+  <text class="sub" x="24" y="56" font-size="13">찾는 비용은 둘 다 같다. 갈리는 건 찾은 다음이다.</text>
+
+  <rect class="card" x="20" y="74" width="330" height="214" rx="8"/>
+  <text class="t" x="38" y="100" font-size="14" font-weight="600" fill="#a04040">배열 list</text>
+  <text class="sub" x="38" y="120" font-size="12">뒤쪽 원소를 전부 한 칸씩 민다</text>
+
+  <rect class="cell" x="38" y="136" width="48" height="34" rx="4"/><text class="m" x="58" y="158" font-size="13">A</text>
+  <rect class="cell" x="86" y="136" width="48" height="34" rx="4"/><text class="m" x="106" y="158" font-size="13">B</text>
+  <rect class="cell" x="134" y="136" width="48" height="34" rx="4"/><text class="m" x="154" y="158" font-size="13">C</text>
+  <rect class="cell" x="182" y="136" width="48" height="34" rx="4"/><text class="m" x="202" y="158" font-size="13">D</text>
+
+  <path class="link" d="M110 176 L158 202" stroke="#a04040" marker-end="url(#a3)"/>
+  <path class="link" d="M158 176 L206 202" stroke="#a04040" marker-end="url(#a3)"/>
+  <path class="link" d="M206 176 L254 202" stroke="#a04040" marker-end="url(#a3)"/>
+
+  <rect class="cell" x="38" y="212" width="48" height="34" rx="4"/><text class="m" x="58" y="234" font-size="13">A</text>
+  <rect class="new"  x="86" y="212" width="48" height="34" rx="4"/><text class="m" x="106" y="234" font-size="13" fill="#3d6fa8">X</text>
+  <rect class="move" x="134" y="212" width="48" height="34" rx="4"/><text class="m" x="154" y="234" font-size="13">B</text>
+  <rect class="move" x="182" y="212" width="48" height="34" rx="4"/><text class="m" x="202" y="234" font-size="13">C</text>
+  <rect class="move" x="230" y="212" width="48" height="34" rx="4"/><text class="m" x="250" y="234" font-size="13">D</text>
+
+  <text class="m" x="38" y="270" font-size="13" fill="#a04040">옮긴 원소 3개 — 최악 O(N)</text>
+
+  <rect class="card" x="370" y="74" width="330" height="214" rx="8"/>
+  <text class="t" x="388" y="100" font-size="14" font-weight="600" fill="#3d6fa8">연결 리스트</text>
+  <text class="sub" x="388" y="120" font-size="12">원소는 그대로 두고 화살표만 고쳐 단다</text>
+
+  <rect class="cell" x="388" y="136" width="48" height="34" rx="4"/><text class="m" x="408" y="158" font-size="13">A</text>
+  <rect class="cell" x="484" y="136" width="48" height="34" rx="4"/><text class="m" x="504" y="158" font-size="13">B</text>
+  <rect class="cell" x="580" y="136" width="48" height="34" rx="4"/><text class="m" x="600" y="158" font-size="13">C</text>
+  <rect class="cell" x="640" y="136" width="48" height="34" rx="4"/><text class="m" x="660" y="158" font-size="13">D</text>
+
+  <path class="link" d="M532 153 L576 153" marker-end="url(#a1)"/>
+  <path class="link" d="M628 153 L636 153" marker-end="url(#a1)"/>
+
+  <rect class="new" x="436" y="212" width="48" height="34" rx="4"/><text class="m" x="456" y="234" font-size="13" fill="#3d6fa8">X</text>
+  <path class="relink" d="M412 172 L448 208" marker-end="url(#a2)"/>
+  <path class="relink" d="M480 212 L504 174" marker-end="url(#a2)"/>
+
+  <text class="m" x="388" y="270" font-size="13" fill="#3d6fa8">고친 링크 2개 — 자리만 알면 O(1)</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" width="100%" role="img" aria-label="증가가 일어난 횟수와 구간에 포함된 당근 개수가 1 차이 나는 이유">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .cell { fill: #dce7f4; stroke: #3d6fa8; }
+    .gap { stroke: #a04040; fill: none; }
+  </style>
+  <defs>
+    <marker id="c1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#a04040"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="250" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">1 2 3 4 5 — 세어야 할 건 화살표가 아니라 상자다</text>
+  <text class="sub" x="24" y="56" font-size="13">내 코드는 "커졌다"가 몇 번 일어났는지를 세고 있었다.</text>
+
+  <rect class="card" x="20" y="74" width="680" height="150" rx="8"/>
+
+  <rect class="cell" x="60"  y="104" width="56" height="42" rx="4"/><text class="m" x="84"  y="131" font-size="15">1</text>
+  <rect class="cell" x="180" y="104" width="56" height="42" rx="4"/><text class="m" x="204" y="131" font-size="15">2</text>
+  <rect class="cell" x="300" y="104" width="56" height="42" rx="4"/><text class="m" x="324" y="131" font-size="15">3</text>
+  <rect class="cell" x="420" y="104" width="56" height="42" rx="4"/><text class="m" x="444" y="131" font-size="15">4</text>
+  <rect class="cell" x="540" y="104" width="56" height="42" rx="4"/><text class="m" x="564" y="131" font-size="15">5</text>
+
+  <path class="gap" d="M120 125 L176 125" marker-end="url(#c1)"/><text class="m" x="138" y="116" font-size="11" fill="#a04040">1</text>
+  <path class="gap" d="M240 125 L296 125" marker-end="url(#c1)"/><text class="m" x="258" y="116" font-size="11" fill="#a04040">2</text>
+  <path class="gap" d="M360 125 L416 125" marker-end="url(#c1)"/><text class="m" x="378" y="116" font-size="11" fill="#a04040">3</text>
+  <path class="gap" d="M480 125 L536 125" marker-end="url(#c1)"/><text class="m" x="498" y="116" font-size="11" fill="#a04040">4</text>
+
+  <text class="m" x="60" y="180" font-size="13" fill="#a04040">커진 횟수( 화살표 ) = 4</text>
+  <text class="m" x="60" y="204" font-size="13" fill="#3d6fa8">구간에 든 당근( 상자 ) = 5</text>
+  <text class="sub" x="380" y="180" font-size="13">상자 사이에만 화살표가 있으니 항상 하나가 적다.</text>
+  <text class="sub" x="380" y="204" font-size="13">화살표가 0개여도 상자는 1개 — 최소 길이 1과 맞는다.</text>
+</svg>
