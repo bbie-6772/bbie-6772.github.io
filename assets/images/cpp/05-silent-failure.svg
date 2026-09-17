@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="출력이 아예 없을 때 원인을 좁혀 간 세 단계와 각 단계에서 실제로 본 값">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .ok { fill: #dce7f4; stroke: #3d6fa8; }
+    .bad { fill: #f6ecec; stroke: #a04040; }
+    .flow { stroke: #8fb0d4; fill: none; }
+  </style>
+  <defs>
+    <marker id="d1" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#8fb0d4"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">아무것도 출력되지 않을 때 — 의심 범위를 셋으로 자른다</text>
+  <text class="sub" x="24" y="56" font-size="13">에러가 안 뜨니 "어디까지는 됐는지"를 값으로 확인하는 수밖에 없다.</text>
+
+  <rect class="card" x="20" y="76" width="212" height="180" rx="8"/>
+  <text class="t" x="38" y="104" font-size="13" font-weight="600">1. 파일이 열렸나</text>
+  <text class="m" x="38" y="130" font-size="12">freopen(...) 반환값</text>
+  <rect class="ok" x="38" y="144" width="174" height="34" rx="4"/>
+  <text class="m" x="52" y="166" font-size="13" fill="#3d6fa8">7ABBCA40 ( non-null )</text>
+  <text class="sub" x="38" y="200" font-size="12">열기는 성공.</text>
+  <text class="sub" x="38" y="218" font-size="12">경로 문제는 아니다.</text>
+  <text class="m" x="38" y="242" font-size="11" fill="#6b7f95">VS 작업 디렉터리 = $(ProjectDir)</text>
+
+  <path class="flow" d="M236 166 L266 166" marker-end="url(#d1)"/>
+
+  <rect class="card" x="270" y="76" width="212" height="180" rx="8"/>
+  <text class="t" x="288" y="104" font-size="13" font-weight="600">2. 첫 값이 들어왔나</text>
+  <text class="m" x="288" y="130" font-size="12">cin &gt;&gt; T 이후의 T</text>
+  <rect class="bad" x="288" y="144" width="174" height="34" rx="4"/>
+  <text class="m" x="302" y="166" font-size="13" fill="#a04040">0  ( fail() = 1 )</text>
+  <text class="sub" x="288" y="200" font-size="12">파싱 실패.</text>
+  <text class="sub" x="288" y="218" font-size="12">여기서 failbit가 서고</text>
+  <text class="sub" x="288" y="236" font-size="12">이후 추출은 전부 무시된다.</text>
+
+  <path class="flow" d="M486 166 L516 166" marker-end="url(#d1)"/>
+
+  <rect class="card" x="520" y="76" width="180" height="180" rx="8"/>
+  <text class="t" x="538" y="104" font-size="13" font-weight="600">3. 바이트가 뭔가</text>
+  <text class="m" x="538" y="130" font-size="12">파일 첫 3바이트</text>
+  <rect class="bad" x="538" y="144" width="144" height="34" rx="4"/>
+  <text class="m" x="552" y="166" font-size="13" fill="#a04040">EF BB BF</text>
+  <text class="sub" x="538" y="200" font-size="12">UTF-8 BOM.</text>
+  <text class="sub" x="538" y="218" font-size="12">숫자 앞에 숫자가 아닌</text>
+  <text class="sub" x="538" y="236" font-size="12">바이트가 세 개 있었다.</text>
+
+  <text class="sub" x="24" y="282" font-size="12">화면에는 아무 일도 안 일어난 것처럼 보이지만, 값으로 보면 1단계와 2단계 사이에서 끊겨 있다.</text>
+</svg>
