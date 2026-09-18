@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect x="0" y="0" width="720" height="380" rx="12" fill="#f7f9fb"/>
+<text x="24" y="36" font-size="17" font-weight="700" fill="#1d3a5c">주소 변환 계층은 TLB → 페이지 테이블이다</text>
+
+<rect x="24" y="56" width="330" height="82" rx="8" fill="#ffffff" stroke="#c9a0a0"/>
+<text x="44" y="80" font-size="12.5" font-weight="700" fill="#a04040">내가 말했던 것 (틀림)</text>
+<text x="44" y="102" font-size="12.5" fill="#6b7f95">TLB에서 못 찾으면 TCB로 올라가고,</text>
+<text x="44" y="121" font-size="12.5" fill="#6b7f95">거기서도 안 되면 PCB로 올라간다</text>
+
+<rect x="366" y="56" width="330" height="82" rx="8" fill="#ffffff" stroke="#a8c39c"/>
+<text x="386" y="80" font-size="12.5" font-weight="700" fill="#3d6fa8">실제</text>
+<text x="386" y="102" font-size="12.5" fill="#6b7f95">TLB에서 못 찾으면 RAM의 페이지 테이블을</text>
+<text x="386" y="121" font-size="12.5" fill="#6b7f95">걸어 내려간다. TCB / PCB는 다른 층이다</text>
+
+<path d="M 312 226 L 312 186 L 630 186 L 630 222" fill="none" stroke="#3d6fa8" stroke-width="1.6"/>
+<path d="M 630 222 l -4.5 -8 l 9 0 z" fill="#3d6fa8"/>
+<text x="470" y="178" font-size="12" font-weight="700" fill="#3d6fa8" text-anchor="middle">hit — 수 사이클로 끝난다</text>
+
+<rect x="32" y="248" width="108" height="46" rx="6" fill="#ffffff" stroke="#d5dde6"/>
+<text x="86" y="277" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">가상 주소</text>
+
+<path d="M 140 271 L 168 271" fill="none" stroke="#6b7f95" stroke-width="1.6"/>
+<path d="M 168 271 l -8 -4.5 l 0 9 z" fill="#6b7f95"/>
+
+<rect x="172" y="226" width="140" height="90" rx="8" fill="#eaf1f9" stroke="#8fb0d4"/>
+<text x="242" y="252" font-size="14" font-weight="700" fill="#1d3a5c" text-anchor="middle">TLB</text>
+<text x="242" y="274" font-size="11.5" fill="#6b7f95" text-anchor="middle">변환 결과를 담는</text>
+<text x="242" y="291" font-size="11.5" fill="#6b7f95" text-anchor="middle">별도의 하드웨어 캐시</text>
+<text x="242" y="308" font-size="11.5" font-weight="700" fill="#3d6fa8" text-anchor="middle">먼저 조회된다</text>
+
+<path d="M 312 271 L 344 271" fill="none" stroke="#a04040" stroke-width="1.6"/>
+<path d="M 344 271 l -8 -4.5 l 0 9 z" fill="#a04040"/>
+<text x="328" y="258" font-size="11.5" font-weight="700" fill="#a04040" text-anchor="middle">miss</text>
+
+<rect x="348" y="226" width="184" height="90" rx="8" fill="#f2e6e6" stroke="#c9a0a0"/>
+<text x="440" y="252" font-size="14" font-weight="700" fill="#1d3a5c" text-anchor="middle">페이지 테이블</text>
+<text x="440" y="274" font-size="11.5" fill="#6b7f95" text-anchor="middle">프로세스마다 하나 · RAM에 있다</text>
+<text x="440" y="291" font-size="11.5" fill="#6b7f95" text-anchor="middle">x86-64 4단계 구성이면</text>
+<text x="440" y="308" font-size="11.5" font-weight="700" fill="#a04040" text-anchor="middle">최악 RAM 4회 왕복 (page walk)</text>
+
+<path d="M 532 271 L 564 271" fill="none" stroke="#6b7f95" stroke-width="1.6"/>
+<path d="M 564 271 l -8 -4.5 l 0 9 z" fill="#6b7f95"/>
+
+<rect x="568" y="248" width="128" height="46" rx="6" fill="#ffffff" stroke="#d5dde6"/>
+<text x="632" y="277" font-size="13" font-weight="700" fill="#1d3a5c" text-anchor="middle">물리 주소</text>
+
+<text x="24" y="346" font-size="12.5" fill="#6b7f95">변환을 실제로 수행하는 하드웨어는 MMU다. CPU에는 지금 쓸 페이지 테이블의 시작 주소를 담는 레지스터가 있고(x86-64: CR3),</text>
+<text x="24" y="364" font-size="12.5" font-weight="700" fill="#1d3a5c">프로세스 전환은 이 레지스터를 바꾸는 일이다. 그래서 스레드 전환에는 이 교체가 없다</text>
+</svg>
