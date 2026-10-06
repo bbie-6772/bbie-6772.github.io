@@ -260,10 +260,18 @@ SLOP = [
     (re.compile(r"(획기적|혁신적|무궁무진)"), "근거 없는 수식어 — 무엇과 견줘 그런지 쓴다", None),
     (re.compile(r"(알아보겠|살펴보겠|알아봅시다|살펴봅시다)"), "정형 도입구 — 본론으로 바로 들어간다", None),
     (re.compile(r"^\s*(결론적으로|마무리하며)"), "정형 마무리구 — 남길 말이 있으면 그 말만 쓴다", None),
+    # 질의응답 세션의 문답 순서가 본문으로 새는 자리. _posts 282건 측정: 07월 이전 161편 0편,
+    # 07-01~09-06 98편 중 3편('모델이 ~라고 답했다' 같은 오탐 포함), 09-07 이후 23편 중 7편.
+    (re.compile(r"(?<![응대회답])답(했|하자|한\s*(게|건|것)|을\s*했)"),
+     "문답 재연 — 누가 뭐라고 답했는지 대신 질문과 근거를 쓴다. 틀린 답은 생각이 바뀐 지점만 남긴다", None),
 ]
 # 단어 자체가 아니라 문단마다 반복되는 것이 문제다. 그래서 문단 첫머리만, 3회부터 센다.
 CONJ = re.compile(r"^\s*(또한|게다가|더욱이|따라서|결과적으로|뿐만\s*아니라)")
 CONJ_LIMIT = 3
+# '처음 생각 → 관찰 → 이해' 흐름을 절마다 되풀이하면 '처음엔'이 글 전체에 깔린다.
+# _posts 282건 측정: 07월 이전 161편은 3회 이상 0편, 07월 이후 121편 중 9편이 3회 이상.
+FIRST = re.compile(r"처음(엔|에는)")
+FIRST_LIMIT = 3
 # 문장 길이 변동계수. _posts 165건(문장 20개 이상) 분포에서 하위 5%가 0.538,
 # 최솟값이 0.292였다. 0.45는 사람 글 2%(3건)만 건드린다.
 CV_MIN_SENTENCES = 20
@@ -310,6 +318,11 @@ def check_slop(body, offset, out):
     if len(conj) >= CONJ_LIMIT:
         lines = ", ".join(f"L{n}" for n in conj)
         out("WARN", conj[0], f"문단 첫머리 접속사가 {len(conj)}회 — 연결어 없이 이어지는지 본다 ({lines})")
+
+    firsts = [n for n, line, _ in prose if FIRST.search(line)]
+    if len(firsts) >= FIRST_LIMIT:
+        lines = ", ".join(f"L{n}" for n in firsts)
+        out("WARN", firsts[0], f"문체 후보: '처음엔'이 {len(firsts)}회 — 예상이 틀린 게 요점인 절에만 남기고 나머지는 결론부터 쓴다 ({lines})")
 
     # 문단 끝의 확인 꼬리
     para, paras = [], []
