@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="380" fill="#f7f9fb"/>
+
+  <!-- 받는 것 -->
+  <rect x="30" y="20" width="660" height="54" rx="8" fill="#eaf1f9" stroke="#3d6fa8"/>
+  <text x="360" y="43" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">내 화면이 네트워크로 받는 것</text>
+  <text x="360" y="63" text-anchor="middle" font-size="12" fill="#3d6fa8">드릴 대상 id (서버가 수락 때 기록, 0.3초 뒤 0) + 동료 눈 위치 (이미 NetworkTransform)</text>
+
+  <!-- 장면 -->
+  <rect x="30" y="92" width="660" height="218" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="50" y="116" font-size="12" font-weight="600" fill="#6b7f95">내 화면에서 계산</text>
+
+  <!-- 동료 -->
+  <rect x="120" y="150" width="60" height="130" rx="30" fill="#eaf1f9" stroke="#8fb0d4"/>
+  <circle cx="150" cy="172" r="6" fill="#1d3a5c"/>
+  <text x="150" y="298" text-anchor="middle" font-size="12" fill="#1d3a5c">동료</text>
+  <text x="150" y="140" text-anchor="middle" font-size="12" font-weight="600" fill="#3d6fa8">모터음 · 플레이어 위치</text>
+
+  <!-- 바위 -->
+  <ellipse cx="500" cy="220" rx="110" ry="72" fill="#e9e4dc" stroke="#b8ab98" stroke-width="1.5"/>
+  <text x="520" y="225" text-anchor="middle" font-size="13" fill="#6b7f95">Rock (대상 id)</text>
+
+  <!-- 접촉점 -->
+  <line x1="156" y1="173" x2="386" y2="207" stroke="#6b7f95" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="268" y="176" text-anchor="middle" font-size="12" fill="#6b7f95">ClosestPoint(눈 위치)</text>
+  <circle cx="392" cy="208" r="6" fill="#a04040"/>
+  <line x1="392" y1="140" x2="392" y2="200" stroke="#a04040" stroke-width="1"/>
+  <text x="392" y="133" text-anchor="middle" font-size="12" font-weight="600" fill="#a04040">갈리는 소리 · 광물 표면</text>
+
+  <text x="360" y="338" text-anchor="middle" font-size="13" fill="#1d3a5c">보내는 건 원인(무엇을 갈고 있나)뿐. 접촉 지점은 각 화면이 이미 가진 값으로 계산한다.</text>
+  <text x="360" y="360" text-anchor="middle" font-size="11" fill="#6b7f95">개념도. 원격 복제본만 3D 소리(Linear, 8~32m), 내 드릴은 2D.</text>
+</svg>

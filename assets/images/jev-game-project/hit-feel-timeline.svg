@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 390" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3d6fa8"/></marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a04040"/></marker>
+    <marker id="gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7f95"/></marker>
+  </defs>
+  <rect width="720" height="390" fill="#f7f9fb"/>
+
+  <!-- 레인 -->
+  <rect x="20" y="50" width="680" height="70" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <rect x="20" y="150" width="680" height="70" rx="8" fill="#ffffff" stroke="#3d6fa8"/>
+  <rect x="20" y="250" width="680" height="70" rx="8" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="35" y="90" font-size="14" font-weight="700" fill="#1d3a5c">내 화면</text>
+  <text x="35" y="190" font-size="14" font-weight="700" fill="#1d3a5c">서버</text>
+  <text x="35" y="290" font-size="14" font-weight="700" fill="#1d3a5c">동료 화면</text>
+  <text x="360" y="30" text-anchor="middle" font-size="15" font-weight="700" fill="#1d3a5c">찍는 순간부터 금이 갈 때까지</text>
+
+  <!-- 입력과 즉시 연출 -->
+  <circle cx="140" cy="85" r="7" fill="#a04040"/>
+  <text x="140" y="112" text-anchor="middle" font-size="11" fill="#a04040">우클릭</text>
+  <rect x="165" y="65" width="150" height="40" rx="6" fill="#eaf1f9" stroke="#3d6fa8"/>
+  <text x="240" y="83" text-anchor="middle" font-size="13" font-weight="600" fill="#1d3a5c">소리·불꽃·흔들림</text>
+  <text x="240" y="98" text-anchor="middle" font-size="11" fill="#3d6fa8">입력 즉시 (판정 아님)</text>
+
+  <!-- HitRpc -->
+  <line x1="145" y1="93" x2="296" y2="178" stroke="#a04040" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#red)"/>
+  <text x="196" y="160" text-anchor="middle" font-size="12" font-weight="600" fill="#a04040">HitRpc</text>
+
+  <!-- 서버 확정 -->
+  <rect x="300" y="165" width="170" height="40" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="385" y="183" text-anchor="middle" font-size="13" font-weight="600" fill="#1d3a5c">검증 → HP 12 → 11</text>
+  <text x="385" y="198" text-anchor="middle" font-size="11" fill="#6b7f95">NetworkVariable 변경</text>
+
+  <!-- 동기화 -->
+  <line x1="470" y1="180" x2="516" y2="98" stroke="#3d6fa8" stroke-width="2" marker-end="url(#blue)"/>
+  <line x1="470" y1="190" x2="516" y2="272" stroke="#3d6fa8" stroke-width="2" marker-end="url(#blue)"/>
+  <text x="500" y="190" font-size="11" fill="#3d6fa8">동기화</text>
+
+  <rect x="520" y="65" width="165" height="40" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="602" y="83" text-anchor="middle" font-size="13" font-weight="600" fill="#1d3a5c">OnValueChanged</text>
+  <text x="602" y="98" text-anchor="middle" font-size="11" fill="#6b7f95">금 가는 단계 갱신</text>
+  <rect x="520" y="265" width="165" height="40" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="602" y="283" text-anchor="middle" font-size="13" font-weight="600" fill="#1d3a5c">OnValueChanged</text>
+  <text x="602" y="298" text-anchor="middle" font-size="11" fill="#6b7f95">금 가는 단계 갱신</text>
+
+  <!-- 시간축 -->
+  <line x1="130" y1="338" x2="695" y2="338" stroke="#6b7f95" stroke-width="1.5" marker-end="url(#gray)"/>
+  <text x="690" y="332" text-anchor="end" font-size="11" fill="#6b7f95">시간</text>
+
+  <text x="360" y="362" text-anchor="middle" font-size="13" fill="#1d3a5c">손맛(파랑 칸)은 기다리지 않고, 결과(금)는 서버 값이 바뀐 뒤 모든 화면에 같이 나온다.</text>
+  <text x="360" y="380" text-anchor="middle" font-size="11" fill="#6b7f95">개념도. 간격은 실제 지연과 비례하지 않는다.</text>
+</svg>
