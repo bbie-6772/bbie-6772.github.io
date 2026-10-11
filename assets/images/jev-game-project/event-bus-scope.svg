@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3d6fa8"/></marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a04040"/></marker>
+  </defs>
+  <rect width="720" height="380" fill="#f7f9fb"/>
+
+  <!-- 클라이언트 PC -->
+  <rect x="30" y="30" width="300" height="290" rx="10" fill="#ffffff" stroke="#d5dde6" stroke-width="1.5"/>
+  <text x="180" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">클라이언트 PC</text>
+
+  <rect x="55" y="80" width="250" height="56" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="180" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1d3a5c">PickaxeController (owner)</text>
+  <text x="180" y="124" text-anchor="middle" font-size="12" fill="#6b7f95">Raycast → HitRpc 요청</text>
+
+  <rect x="55" y="160" width="250" height="56" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-dasharray="4 3"/>
+  <text x="180" y="184" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7f95">GameEventBus (static)</text>
+  <text x="180" y="204" text-anchor="middle" font-size="12" fill="#6b7f95">이 PC에서는 발행되지 않음</text>
+
+  <rect x="55" y="240" width="250" height="56" rx="6" fill="#ffffff" stroke="#d5dde6" stroke-dasharray="4 3"/>
+  <text x="180" y="264" text-anchor="middle" font-size="14" font-weight="600" fill="#6b7f95">Recorder (씬 배치)</text>
+  <text x="180" y="284" text-anchor="middle" font-size="12" fill="#6b7f95">구독은 했지만 수신 0</text>
+
+  <!-- 호스트 PC -->
+  <rect x="390" y="30" width="300" height="290" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="1.5"/>
+  <text x="540" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">호스트 PC (서버 + 클라이언트)</text>
+
+  <rect x="415" y="80" width="250" height="56" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="540" y="104" text-anchor="middle" font-size="14" font-weight="600" fill="#1d3a5c">PickaxeController (복제본)</text>
+  <text x="540" y="124" text-anchor="middle" font-size="12" fill="#6b7f95">검증 → OnServerHit → 발행</text>
+
+  <rect x="415" y="160" width="250" height="56" rx="6" fill="#eaf1f9" stroke="#3d6fa8"/>
+  <text x="540" y="184" text-anchor="middle" font-size="14" font-weight="600" fill="#1d3a5c">GameEventBus.OreHit</text>
+  <text x="540" y="204" text-anchor="middle" font-size="12" fill="#3d6fa8">OreHit?.Invoke(e)</text>
+
+  <rect x="415" y="240" width="250" height="56" rx="6" fill="#ffffff" stroke="#8fb0d4"/>
+  <text x="540" y="264" text-anchor="middle" font-size="14" font-weight="600" fill="#1d3a5c">Recorder (씬 배치)</text>
+  <text x="540" y="284" text-anchor="middle" font-size="12" fill="#6b7f95">수신 1</text>
+
+  <!-- 화살표 -->
+  <line x1="305" y1="108" x2="412" y2="108" stroke="#a04040" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#red)"/>
+  <text x="358" y="98" text-anchor="middle" font-size="12" font-weight="600" fill="#a04040">HitRpc</text>
+  <line x1="540" y1="136" x2="540" y2="157" stroke="#3d6fa8" stroke-width="2" marker-end="url(#blue)"/>
+  <line x1="540" y1="216" x2="540" y2="237" stroke="#3d6fa8" stroke-width="2" marker-end="url(#blue)"/>
+
+  <text x="360" y="346" text-anchor="middle" font-size="13" fill="#1d3a5c">PC 사이를 건너는 건 Rpc(빨강) 하나. Invoke(파랑)는 실행한 PC 안에서만 퍼진다.</text>
+  <text x="360" y="366" text-anchor="middle" font-size="11" fill="#6b7f95">개념도. 호스트 + 가상 플레이어 1 구성을 단순화했다.</text>
+</svg>
