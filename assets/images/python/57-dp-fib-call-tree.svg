@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" role="img" aria-label="재귀 피보나치 f(5)의 호출 트리 15개 노드 중 이미 계산한 하위 문제를 다시 계산하는 부분과, 메모이제이션이 값을 저장하는 순서">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .n { fill: #dce7f4; stroke: #3d6fa8; }
+    .dup { fill: #f6e3e3; stroke: #a04040; }
+    .e { stroke: #8fb0d4; stroke-width: 1.5; }
+    .ed { stroke: #a04040; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .memo { fill: #ffffff; stroke: #3d6fa8; }
+  </style>
+  <defs>
+    <marker id="a57" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="360" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">f(5)를 재귀로 부르면 15번 — 빨간 부분은 이미 한 계산이다</text>
+  <text class="sub" x="24" y="56" font-size="13">메모를 붙이면 빨간 노드는 memo에서 바로 꺼내고 그 아래로 내려가지 않는다.</text>
+
+  <rect class="card" x="20" y="72" width="460" height="270" rx="8"/>
+
+  <!-- edges -->
+  <line class="e" x1="250" y1="112" x2="150" y2="150"/>
+  <line class="ed" x1="250" y1="112" x2="380" y2="150"/>
+  <line class="e" x1="150" y1="162" x2="90" y2="200"/>
+  <line class="ed" x1="150" y1="162" x2="210" y2="200"/>
+  <line class="ed" x1="380" y1="162" x2="340" y2="200"/>
+  <line class="ed" x1="380" y1="162" x2="430" y2="200"/>
+  <line class="e" x1="90" y1="212" x2="55" y2="250"/>
+  <line class="e" x1="90" y1="212" x2="125" y2="250"/>
+  <line class="ed" x1="210" y1="212" x2="185" y2="250"/>
+  <line class="ed" x1="210" y1="212" x2="240" y2="250"/>
+  <line class="ed" x1="340" y1="212" x2="315" y2="250"/>
+  <line class="ed" x1="340" y1="212" x2="370" y2="250"/>
+  <line class="e" x1="55" y1="262" x2="38" y2="300"/>
+  <line class="e" x1="55" y1="262" x2="80" y2="300"/>
+
+  <!-- level 0 -->
+  <rect class="n" x="226" y="88" width="48" height="24" rx="5"/><text class="m" x="250" y="105" font-size="13" text-anchor="middle">f(5)</text>
+  <!-- level 1 -->
+  <rect class="n" x="126" y="138" width="48" height="24" rx="5"/><text class="m" x="150" y="155" font-size="13" text-anchor="middle">f(4)</text>
+  <rect class="dup" x="356" y="138" width="48" height="24" rx="5"/><text class="m" x="380" y="155" font-size="13" text-anchor="middle">f(3)</text>
+  <!-- level 2 -->
+  <rect class="n" x="66" y="188" width="48" height="24" rx="5"/><text class="m" x="90" y="205" font-size="13" text-anchor="middle">f(3)</text>
+  <rect class="dup" x="186" y="188" width="48" height="24" rx="5"/><text class="m" x="210" y="205" font-size="13" text-anchor="middle">f(2)</text>
+  <rect class="dup" x="316" y="188" width="48" height="24" rx="5"/><text class="m" x="340" y="205" font-size="13" text-anchor="middle">f(2)</text>
+  <rect class="dup" x="406" y="188" width="48" height="24" rx="5"/><text class="m" x="430" y="205" font-size="13" text-anchor="middle">f(1)</text>
+  <!-- level 3 -->
+  <rect class="n" x="31" y="238" width="48" height="24" rx="5"/><text class="m" x="55" y="255" font-size="13" text-anchor="middle">f(2)</text>
+  <rect class="n" x="101" y="238" width="48" height="24" rx="5"/><text class="m" x="125" y="255" font-size="13" text-anchor="middle">f(1)</text>
+  <rect class="dup" x="161" y="238" width="48" height="24" rx="5"/><text class="m" x="185" y="255" font-size="13" text-anchor="middle">f(1)</text>
+  <rect class="dup" x="216" y="238" width="48" height="24" rx="5"/><text class="m" x="240" y="255" font-size="13" text-anchor="middle">f(0)</text>
+  <rect class="dup" x="291" y="238" width="48" height="24" rx="5"/><text class="m" x="315" y="255" font-size="13" text-anchor="middle">f(1)</text>
+  <rect class="dup" x="346" y="238" width="48" height="24" rx="5"/><text class="m" x="370" y="255" font-size="13" text-anchor="middle">f(0)</text>
+  <!-- level 4 -->
+  <rect class="n" x="26" y="288" width="40" height="24" rx="5"/><text class="m" x="46" y="305" font-size="13" text-anchor="middle">f(1)</text>
+  <rect class="n" x="70" y="288" width="40" height="24" rx="5"/><text class="m" x="90" y="305" font-size="13" text-anchor="middle">f(0)</text>
+
+  <text class="sub" x="250" y="330" font-size="12" text-anchor="middle">왼쪽 맨 아래부터 값이 확정되며 올라간다</text>
+
+  <!-- memo order -->
+  <rect class="card" x="496" y="72" width="204" height="270" rx="8"/>
+  <text class="t" x="598" y="100" font-size="14" font-weight="600" text-anchor="middle">memo가 채워지는 순서</text>
+  <rect class="memo" x="548" y="116" width="100" height="30" rx="5"/><text class="m" x="598" y="136" font-size="13" text-anchor="middle">memo[2]</text>
+  <line x1="598" y1="146" x2="598" y2="166" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a57)"/>
+  <rect class="memo" x="548" y="168" width="100" height="30" rx="5"/><text class="m" x="598" y="188" font-size="13" text-anchor="middle">memo[3]</text>
+  <line x1="598" y1="198" x2="598" y2="218" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a57)"/>
+  <rect class="memo" x="548" y="220" width="100" height="30" rx="5"/><text class="m" x="598" y="240" font-size="13" text-anchor="middle">memo[4]</text>
+  <line x1="598" y1="250" x2="598" y2="270" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a57)"/>
+  <rect class="memo" x="548" y="272" width="100" height="30" rx="5"/><text class="m" x="598" y="292" font-size="13" text-anchor="middle">memo[5]</text>
+  <text class="sub" x="598" y="326" font-size="12" text-anchor="middle">반복문의 dp[2] → … → dp[5]와 같다</text>
+</svg>

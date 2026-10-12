@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" width="100%" role="img" aria-label="10월에 산 3달권은 올해 10, 11, 12월을 덮고, 11월에 산 3달권은 올해 11, 12월만 덮고 나머지 한 달은 내년으로 넘어간다. 가격은 같다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .mon { fill: #eef2f6; stroke: #d5dde6; }
+    .next { fill: #f7f9fb; stroke: #d5dde6; stroke-dasharray: 4 3; }
+    .bar { fill: #8fb0d4; }
+    .waste { fill: #e6c9c9; }
+  </style>
+
+  <rect class="bg" width="720" height="250" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">해를 넘기는 3달권은 10월 3달권보다 나을 수 없다</text>
+  <text class="sub" x="24" y="56" font-size="13">가격은 같고, 올해 덮는 범위는 10월에 사는 쪽이 더 넓다.</text>
+
+  <rect class="card" x="20" y="72" width="680" height="162" rx="8"/>
+
+  <!-- month header -->
+  <rect class="mon" x="160" y="88" width="80" height="30" rx="4"/><text class="t" x="200" y="108" font-size="13" text-anchor="middle">9월</text>
+  <rect class="mon" x="244" y="88" width="80" height="30" rx="4"/><text class="t" x="284" y="108" font-size="13" text-anchor="middle">10월</text>
+  <rect class="mon" x="328" y="88" width="80" height="30" rx="4"/><text class="t" x="368" y="108" font-size="13" text-anchor="middle">11월</text>
+  <rect class="mon" x="412" y="88" width="80" height="30" rx="4"/><text class="t" x="452" y="108" font-size="13" text-anchor="middle">12월</text>
+  <rect class="next" x="512" y="88" width="80" height="30" rx="4"/><text class="sub" x="552" y="108" font-size="13" text-anchor="middle">내년 1월</text>
+  <line x1="502" y1="82" x2="502" y2="222" stroke="#a04040" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <!-- Oct pass -->
+  <text class="t" x="40" y="152" font-size="13">10월에 구매</text>
+  <rect class="bar" x="244" y="134" width="248" height="26" rx="5"/>
+  <text class="t" x="368" y="152" font-size="12" text-anchor="middle">dp[9] + 3달권</text>
+
+  <!-- Nov pass -->
+  <text class="t" x="40" y="196" font-size="13">11월에 구매</text>
+  <rect class="bar" x="328" y="178" width="164" height="26" rx="5"/>
+  <rect class="waste" x="502" y="178" width="90" height="26" rx="5"/>
+  <text class="t" x="410" y="196" font-size="12" text-anchor="middle">dp[10] + 3달권</text>
+  <text class="sub" x="547" y="196" font-size="11" text-anchor="middle">올해 계산 밖</text>
+
+  <text class="sub" x="604" y="152" font-size="11">dp[9] ≤ dp[10]</text>
+  <text class="sub" x="604" y="168" font-size="11">→ 10월 쪽이</text>
+  <text class="sub" x="604" y="184" font-size="11">같거나 싸다</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" role="img" aria-label="A에서 D로 가는 최장 단순 경로 A, C, B, D 안의 A에서 C 구간을 A에서 C의 최장 경로 A, B, C로 바꿔 끼우면 B를 두 번 지나게 되는 그래프">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .v { fill: #ffffff; stroke: #6b7f95; stroke-width: 1.5; }
+    .vb { fill: #f6e3e3; stroke: #a04040; stroke-width: 2; }
+    .e { stroke: #d5dde6; stroke-width: 2; }
+    .hb { stroke: #3d6fa8; stroke-width: 4; }
+    .hr { stroke: #a04040; stroke-width: 4; }
+  </style>
+
+  <rect class="bg" width="720" height="320" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">최장 경로는 부분 경로를 바꿔 끼우면 정점이 겹친다</text>
+  <text class="sub" x="24" y="56" font-size="13">한 하위 문제의 최적 선택이 다른 하위 문제가 써야 할 B를 먼저 써 버린다.</text>
+
+  <!-- left panel -->
+  <rect class="card" x="20" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">A→D 최장: A→C→B→D = 5</text>
+  <g transform="translate(20,0)">
+    <line class="e" x1="50" y1="190" x2="165" y2="130"/>
+    <line class="hb" x1="50" y1="190" x2="165" y2="250"/>
+    <line class="hb" x1="165" y1="130" x2="165" y2="250"/>
+    <line class="hb" x1="165" y1="130" x2="285" y2="190"/>
+    <text class="m" x="98" y="150" font-size="13">1</text>
+    <text class="m" x="98" y="238" font-size="13">1</text>
+    <text class="m" x="174" y="195" font-size="13">2</text>
+    <text class="m" x="232" y="150" font-size="13">2</text>
+    <circle class="v" cx="50" cy="190" r="17"/><text class="t" x="50" y="195" font-size="14" text-anchor="middle">A</text>
+    <circle class="v" cx="165" cy="130" r="17"/><text class="t" x="165" y="135" font-size="14" text-anchor="middle">B</text>
+    <circle class="v" cx="165" cy="250" r="17"/><text class="t" x="165" y="255" font-size="14" text-anchor="middle">C</text>
+    <circle class="v" cx="285" cy="190" r="17"/><text class="t" x="285" y="195" font-size="14" text-anchor="middle">D</text>
+  </g>
+  <text class="sub" x="185" y="294" font-size="12" text-anchor="middle">이 경로 속 A→C 구간은 길이 1</text>
+
+  <!-- right panel -->
+  <rect class="card" x="370" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">A→C 최장 A→B→C(3)로 바꿔 끼우면</text>
+  <g transform="translate(370,0)">
+    <line class="hr" x1="50" y1="190" x2="165" y2="130"/>
+    <line class="e" x1="50" y1="190" x2="165" y2="250"/>
+    <line class="hr" x1="165" y1="130" x2="165" y2="250"/>
+    <line class="hr" x1="165" y1="130" x2="285" y2="190"/>
+    <text class="m" x="98" y="150" font-size="13">1</text>
+    <text class="m" x="98" y="238" font-size="13">1</text>
+    <text class="m" x="174" y="195" font-size="13">2</text>
+    <text class="m" x="232" y="150" font-size="13">2</text>
+    <circle class="v" cx="50" cy="190" r="17"/><text class="t" x="50" y="195" font-size="14" text-anchor="middle">A</text>
+    <circle class="vb" cx="165" cy="130" r="17"/><text class="t" x="165" y="135" font-size="14" text-anchor="middle">B</text>
+    <circle class="v" cx="165" cy="250" r="17"/><text class="t" x="165" y="255" font-size="14" text-anchor="middle">C</text>
+    <circle class="v" cx="285" cy="190" r="17"/><text class="t" x="285" y="195" font-size="14" text-anchor="middle">D</text>
+  </g>
+  <text class="t" x="535" y="294" font-size="12" text-anchor="middle" fill="#a04040">A→B→C→B→D : B를 두 번 지난다</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" role="img" aria-label="동전 1, 2원으로 3원을 만드는 방법 수. 금액을 바깥 루프로 두면 ways[3]을 한 번만 방문해 마지막 동전 후보를 모두 보고 3을 얻고, 동전을 바깥 루프로 두면 ways[3]을 동전마다 다시 방문해 1에서 2로 갱신된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a61" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="330" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">ways[3]에 몇 번 오느냐가 순열과 조합을 가른다</text>
+  <text class="sub" x="24" y="56" font-size="13">{1, 2}원으로 3원 만들기. 코드는 루프 두 줄의 순서만 다르다.</text>
+
+  <!-- left -->
+  <rect class="card" x="20" y="72" width="330" height="242" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">금액 바깥 — ways[3]에 한 번 온다</text>
+  <text class="sub" x="185" y="118" font-size="12" text-anchor="middle">그 한 번에 "마지막 동전" 후보를 전부 본다</text>
+
+  <rect class="c" x="40" y="138" width="130" height="62" rx="6"/>
+  <text class="m" x="105" y="158" font-size="12" text-anchor="middle">ways[2] = 2</text>
+  <text class="m" x="105" y="178" font-size="12" text-anchor="middle">1+1 / 2</text>
+  <text class="sub" x="105" y="194" font-size="11" text-anchor="middle">뒤에 1을 붙임</text>
+
+  <rect class="c" x="200" y="138" width="130" height="62" rx="6"/>
+  <text class="m" x="265" y="158" font-size="12" text-anchor="middle">ways[1] = 1</text>
+  <text class="m" x="265" y="178" font-size="12" text-anchor="middle">1</text>
+  <text class="sub" x="265" y="194" font-size="11" text-anchor="middle">뒤에 2를 붙임</text>
+
+  <line x1="105" y1="200" x2="160" y2="232" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a61)"/>
+  <line x1="265" y1="200" x2="210" y2="232" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a61)"/>
+  <rect class="hit" x="90" y="234" width="190" height="56" rx="6"/>
+  <text class="m" x="185" y="256" font-size="13" text-anchor="middle">ways[3] = 3</text>
+  <text class="m" x="185" y="278" font-size="12" text-anchor="middle">1+1+1 / 2+1 / 1+2</text>
+  <text class="t" x="185" y="306" font-size="12" text-anchor="middle">놓는 순서가 다르면 다른 방법 → 순열</text>
+
+  <!-- right -->
+  <rect class="card" x="370" y="72" width="330" height="242" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">동전 바깥 — ways[3]에 동전마다 온다</text>
+  <text class="sub" x="535" y="118" font-size="12" text-anchor="middle">올 때마다 그 동전 하나만 더한다</text>
+
+  <text class="sub" x="390" y="150" font-size="11">허가된 동전</text>
+  <text class="m" x="505" y="150" font-size="11" text-anchor="middle">0</text>
+  <text class="m" x="545" y="150" font-size="11" text-anchor="middle">1</text>
+  <text class="m" x="585" y="150" font-size="11" text-anchor="middle">2</text>
+  <text class="m" x="625" y="150" font-size="11" text-anchor="middle">3</text>
+
+  <text class="m" x="390" y="180" font-size="12">{1}</text>
+  <rect class="c" x="487" y="160" width="36" height="30" rx="4"/><text class="m" x="505" y="180" font-size="13" text-anchor="middle">1</text>
+  <rect class="c" x="527" y="160" width="36" height="30" rx="4"/><text class="m" x="545" y="180" font-size="13" text-anchor="middle">1</text>
+  <rect class="c" x="567" y="160" width="36" height="30" rx="4"/><text class="m" x="585" y="180" font-size="13" text-anchor="middle">1</text>
+  <rect class="hit" x="607" y="160" width="36" height="30" rx="4"/><text class="m" x="625" y="180" font-size="13" text-anchor="middle">1</text>
+  <text class="m" x="652" y="180" font-size="11">1+1+1</text>
+
+  <text class="m" x="390" y="230" font-size="12">{1, 2}</text>
+  <rect class="c" x="487" y="210" width="36" height="30" rx="4"/><text class="m" x="505" y="230" font-size="13" text-anchor="middle">1</text>
+  <rect class="c" x="527" y="210" width="36" height="30" rx="4"/><text class="m" x="545" y="230" font-size="13" text-anchor="middle">1</text>
+  <rect class="c" x="567" y="210" width="36" height="30" rx="4"/><text class="m" x="585" y="230" font-size="13" text-anchor="middle">2</text>
+  <rect class="hit" x="607" y="210" width="36" height="30" rx="4"/><text class="m" x="625" y="230" font-size="13" text-anchor="middle">2</text>
+  <text class="m" x="652" y="230" font-size="11">+ 1+2</text>
+  <line x1="625" y1="190" x2="625" y2="206" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a61)"/>
+
+  <text class="sub" x="535" y="270" font-size="12" text-anchor="middle">2는 1들을 다 놓은 뒤에만 붙는다 — 2+1은 안 생긴다</text>
+  <text class="t" x="535" y="306" font-size="12" text-anchor="middle">순서가 하나로 고정 → 조합</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="파스칼 삼각형의 한 줄 배열 1, 2, 1, 0을 앞에서부터 덮어쓰면 이미 갱신된 값을 읽어 1, 3, 4, 4가 되고, 뒤에서부터 덮어쓰면 옛 값을 읽어 1, 3, 3, 1이 된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .old { fill: #eef2f6; stroke: #d5dde6; }
+    .new { fill: #dce7f4; stroke: #3d6fa8; }
+    .bad { fill: #f6e3e3; stroke: #a04040; }
+  </style>
+  <defs>
+    <marker id="a60" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="r60" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#a04040"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">한 줄로 덮어쓸 때 — 읽을 칸이 아직 옛 값인 방향으로 돈다</text>
+  <text class="sub" x="24" y="56" font-size="13">새 row[j] = 옛 row[j-1] + 옛 row[j]. 그림은 row[2]를 계산하는 순간이다.</text>
+
+  <!-- left: forward -->
+  <rect class="card" x="20" y="72" width="330" height="212" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">앞에서부터 j = 1, 2, 3</text>
+  <text class="sub" x="40" y="138" font-size="12">윗줄</text>
+  <rect class="old" x="80"  y="116" width="50" height="34" rx="4"/><text class="m" x="105" y="138" font-size="14" text-anchor="middle">1</text>
+  <rect class="old" x="140" y="116" width="50" height="34" rx="4"/><text class="m" x="165" y="138" font-size="14" text-anchor="middle">2</text>
+  <rect class="old" x="200" y="116" width="50" height="34" rx="4"/><text class="m" x="225" y="138" font-size="14" text-anchor="middle">1</text>
+  <rect class="old" x="260" y="116" width="50" height="34" rx="4"/><text class="m" x="285" y="138" font-size="14" text-anchor="middle">0</text>
+  <text class="sub" x="40" y="222" font-size="12">결과</text>
+  <rect class="new" x="80"  y="200" width="50" height="34" rx="4"/><text class="m" x="105" y="222" font-size="14" text-anchor="middle">1</text>
+  <rect class="new" x="140" y="200" width="50" height="34" rx="4"/><text class="m" x="165" y="222" font-size="14" text-anchor="middle">3</text>
+  <rect class="bad" x="200" y="200" width="50" height="34" rx="4"/><text class="m" x="225" y="222" font-size="14" text-anchor="middle">4</text>
+  <rect class="bad" x="260" y="200" width="50" height="34" rx="4"/><text class="m" x="285" y="222" font-size="14" text-anchor="middle">4</text>
+  <line x1="190" y1="217" x2="198" y2="217" stroke="#a04040" stroke-width="2" marker-end="url(#r60)"/>
+  <line x1="225" y1="150" x2="225" y2="196" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a60)"/>
+  <text class="t" x="185" y="262" font-size="12" text-anchor="middle" fill="#a04040">row[1]은 이미 새 값 3 → 3 + 1 = 4로 오염</text>
+
+  <!-- right: backward -->
+  <rect class="card" x="370" y="72" width="330" height="212" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">뒤에서부터 j = 3, 2, 1</text>
+  <text class="sub" x="390" y="138" font-size="12">윗줄</text>
+  <rect class="old" x="430" y="116" width="50" height="34" rx="4"/><text class="m" x="455" y="138" font-size="14" text-anchor="middle">1</text>
+  <rect class="old" x="490" y="116" width="50" height="34" rx="4"/><text class="m" x="515" y="138" font-size="14" text-anchor="middle">2</text>
+  <rect class="old" x="550" y="116" width="50" height="34" rx="4"/><text class="m" x="575" y="138" font-size="14" text-anchor="middle">1</text>
+  <rect class="old" x="610" y="116" width="50" height="34" rx="4"/><text class="m" x="635" y="138" font-size="14" text-anchor="middle">0</text>
+  <text class="sub" x="390" y="222" font-size="12">결과</text>
+  <rect class="new" x="430" y="200" width="50" height="34" rx="4"/><text class="m" x="455" y="222" font-size="14" text-anchor="middle">1</text>
+  <rect class="new" x="490" y="200" width="50" height="34" rx="4"/><text class="m" x="515" y="222" font-size="14" text-anchor="middle">3</text>
+  <rect class="new" x="550" y="200" width="50" height="34" rx="4"/><text class="m" x="575" y="222" font-size="14" text-anchor="middle">3</text>
+  <rect class="new" x="610" y="200" width="50" height="34" rx="4"/><text class="m" x="635" y="222" font-size="14" text-anchor="middle">1</text>
+  <line x1="520" y1="150" x2="568" y2="196" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a60)"/>
+  <line x1="575" y1="150" x2="575" y2="196" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a60)"/>
+  <text class="t" x="535" y="262" font-size="12" text-anchor="middle">row[1]은 아직 옛 값 2 → 2 + 1 = 3</text>
+</svg>
