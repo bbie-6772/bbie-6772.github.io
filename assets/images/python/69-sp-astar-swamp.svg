@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="풀밭 1, 늪 3인 2줄 5칸 맵에서 h를 맨해튼 거리 그대로 쓰면 9칸을 꺼내 비용 6인 우회로를 찾고, h를 3배로 부풀리면 5칸만 꺼내 비용 8인 직진 경로를 돌려준다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .g { fill: #ffffff; stroke: #d5dde6; }
+    .w { fill: #c9b99a; stroke: #d5dde6; }
+    .pop { fill: #8fb0d4; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">h를 부풀리면 빨라지고, 최단은 보장되지 않는다</text>
+  <text class="sub" x="24" y="56" font-size="13">풀밭 1, 늪( 갈색 ) 3. 점은 큐에서 꺼낸 칸, 선은 돌려준 경로</text>
+
+  <!-- left h x1 -->
+  <rect class="card" x="20" y="72" width="330" height="212" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">h = 맨해튼 × 1</text>
+  <g transform="translate(75,118)">
+    <rect class="g" x="0" y="0" width="44" height="44"/><rect class="g" x="44" y="0" width="44" height="44"/>
+    <rect class="w" x="88" y="0" width="44" height="44"/><rect class="w" x="132" y="0" width="44" height="44"/>
+    <rect class="g" x="176" y="0" width="44" height="44"/>
+    <rect class="g" x="0" y="44" width="44" height="44"/><rect class="g" x="44" y="44" width="44" height="44"/>
+    <rect class="g" x="88" y="44" width="44" height="44"/><rect class="g" x="132" y="44" width="44" height="44"/>
+    <rect class="g" x="176" y="44" width="44" height="44"/>
+    <circle class="pop" cx="10" cy="10" r="4"/><circle class="pop" cx="54" cy="10" r="4"/><circle class="pop" cx="98" cy="10" r="4"/>
+    <circle class="pop" cx="186" cy="10" r="4"/>
+    <circle class="pop" cx="10" cy="54" r="4"/><circle class="pop" cx="54" cy="54" r="4"/><circle class="pop" cx="98" cy="54" r="4"/>
+    <circle class="pop" cx="142" cy="54" r="4"/><circle class="pop" cx="186" cy="54" r="4"/>
+    <polyline points="22,22 66,22 66,66 198,66 198,22" fill="none" stroke="#3d6fa8" stroke-width="3"/>
+    <text class="m" x="22" y="40" font-size="12" text-anchor="middle">S</text>
+    <text class="m" x="198" y="40" font-size="12" text-anchor="middle">G</text>
+  </g>
+  <text class="t" x="185" y="240" font-size="12" text-anchor="middle">9칸 꺼냄, 비용 6 ( 최단 )</text>
+
+  <!-- right h x3 -->
+  <rect class="card" x="370" y="72" width="330" height="212" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">h = 맨해튼 × 3</text>
+  <g transform="translate(425,118)">
+    <rect class="g" x="0" y="0" width="44" height="44"/><rect class="g" x="44" y="0" width="44" height="44"/>
+    <rect class="w" x="88" y="0" width="44" height="44"/><rect class="w" x="132" y="0" width="44" height="44"/>
+    <rect class="g" x="176" y="0" width="44" height="44"/>
+    <rect class="g" x="0" y="44" width="44" height="44"/><rect class="g" x="44" y="44" width="44" height="44"/>
+    <rect class="g" x="88" y="44" width="44" height="44"/><rect class="g" x="132" y="44" width="44" height="44"/>
+    <rect class="g" x="176" y="44" width="44" height="44"/>
+    <circle class="pop" cx="10" cy="10" r="4"/><circle class="pop" cx="54" cy="10" r="4"/><circle class="pop" cx="98" cy="10" r="4"/>
+    <circle class="pop" cx="142" cy="10" r="4"/><circle class="pop" cx="186" cy="10" r="4"/>
+    <polyline points="22,22 198,22" fill="none" stroke="#a04040" stroke-width="3"/>
+    <text class="m" x="22" y="40" font-size="12" text-anchor="middle">S</text>
+    <text class="m" x="198" y="40" font-size="12" text-anchor="middle">G</text>
+  </g>
+  <text class="r" x="535" y="240" font-size="12" text-anchor="middle">5칸 꺼냄, 비용 8 ( 최단의 3배 이내 )</text>
+  <text class="sub" x="535" y="262" font-size="11" text-anchor="middle">아래 줄은 f가 부풀어 한 번도 꺼내지지 않았다</text>
+</svg>

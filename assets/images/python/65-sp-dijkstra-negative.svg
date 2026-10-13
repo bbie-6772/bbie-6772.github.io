@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="a에서 b로 3, a에서 c로 5, c에서 b로 -3인 그래프에서 다익스트라는 b를 거리 3으로 꺼내 확정하지만, 나중에 c를 거쳐 2로 가는 길이 나타난다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .rm { font-family: "Cascadia Mono", Consolas, monospace; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a65" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="r65" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#a04040"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">음수 간선은 "꺼낸 순간 확정"을 깬다</text>
+  <text class="sub" x="24" y="56" font-size="13">확정한 뒤에 더 짧은 길이 나타난다</text>
+
+  <rect class="card" x="20" y="72" width="300" height="212" rx="8"/>
+  <circle class="c" cx="80" cy="180" r="22"/><text class="m" x="80" y="185" font-size="14" text-anchor="middle">a</text>
+  <circle class="bad" cx="250" cy="110" r="22"/><text class="m" x="250" y="115" font-size="14" text-anchor="middle">b</text>
+  <circle class="c" cx="250" cy="240" r="22"/><text class="m" x="250" y="245" font-size="14" text-anchor="middle">c</text>
+  <line x1="100" y1="170" x2="226" y2="118" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a65)"/>
+  <line x1="100" y1="192" x2="226" y2="232" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a65)"/>
+  <line x1="250" y1="218" x2="250" y2="136" stroke="#a04040" stroke-width="1.5" marker-end="url(#r65)"/>
+  <text class="m" x="150" y="132" font-size="13">3</text>
+  <text class="m" x="150" y="228" font-size="13">5</text>
+  <text class="rm" x="262" y="182" font-size="13">−3</text>
+
+  <rect class="card" x="340" y="72" width="360" height="212" rx="8"/>
+  <text class="sub" x="360" y="96" font-size="11">큐에서 꺼내는 순서</text>
+  <rect class="c" x="360" y="106" width="320" height="34" rx="4"/><text class="t" x="374" y="128" font-size="12">① a ( 0 ) 꺼냄 → b = 3, c = 5</text>
+  <rect class="bad" x="360" y="148" width="320" height="34" rx="4"/><text class="t" x="374" y="170" font-size="12">② b ( 3 ) 꺼냄 → 확정, 다시 보지 않는다</text>
+  <rect class="c" x="360" y="190" width="320" height="34" rx="4"/><text class="t" x="374" y="212" font-size="12">③ c ( 5 ) 꺼냄 → c → b로 5 − 3 = 2</text>
+  <text class="r" x="520" y="256" font-size="12" text-anchor="middle">b의 답은 2인데 이미 3으로 확정됐다</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="100바이트가 와서 50바이트만 읽었을 때 LT는 다음 epoll_wait에서 다시 알려 남은 50바이트를 읽게 하고, ET는 새 데이터가 올 때까지 알리지 않아 남은 50바이트가 버퍼에 방치된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a15" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">100바이트가 와서 50바이트만 읽었을 때</text>
+  <text class="sub" x="24" y="56" font-size="13">LT는 "아직 남았어"를 계속 알리고, ET는 "새로 왔어"만 알린다</text>
+
+  <rect class="card" x="20" y="72" width="680" height="96" rx="8"/>
+  <text class="t" x="40" y="126" font-size="15" font-weight="600">LT</text>
+  <rect class="hit" x="90" y="100" width="120" height="40" rx="5"/><text class="t" x="150" y="125" font-size="12" text-anchor="middle">알림 (100)</text>
+  <rect class="c" x="240" y="100" width="100" height="40" rx="5"/><text class="m" x="290" y="125" font-size="12" text-anchor="middle">recv 50</text>
+  <rect class="hit" x="370" y="100" width="140" height="40" rx="5"/><text class="t" x="440" y="125" font-size="12" text-anchor="middle">다시 알림 (50)</text>
+  <rect class="c" x="540" y="100" width="100" height="40" rx="5"/><text class="m" x="590" y="125" font-size="12" text-anchor="middle">recv 50</text>
+  <line x1="210" y1="120" x2="236" y2="120" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <line x1="340" y1="120" x2="366" y2="120" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <line x1="510" y1="120" x2="536" y2="120" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text class="sub" x="440" y="158" font-size="11" text-anchor="middle">꺼낸 뒤 아직 준비 상태라 준비 목록에 다시 넣었다</text>
+
+  <rect class="card" x="20" y="180" width="680" height="96" rx="8"/>
+  <text class="t" x="40" y="234" font-size="15" font-weight="600">ET</text>
+  <rect class="hit" x="90" y="208" width="120" height="40" rx="5"/><text class="t" x="150" y="233" font-size="12" text-anchor="middle">알림 (100)</text>
+  <rect class="c" x="240" y="208" width="100" height="40" rx="5"/><text class="m" x="290" y="233" font-size="12" text-anchor="middle">recv 50</text>
+  <rect class="bad" x="370" y="208" width="270" height="40" rx="5"/><text class="r" x="505" y="233" font-size="12" text-anchor="middle">epoll_wait에서 잠듦 — 새 데이터가 와야 깬다</text>
+  <line x1="210" y1="228" x2="236" y2="228" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <line x1="340" y1="228" x2="366" y2="228" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a15)"/>
+  <text class="r" x="505" y="266" font-size="11" text-anchor="middle">남은 50바이트는 버퍼에 그대로, 요청-응답이면 이 연결만 멈춘다</text>
+</svg>

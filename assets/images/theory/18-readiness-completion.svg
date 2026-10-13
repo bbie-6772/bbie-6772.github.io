@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" role="img" aria-label="epoll은 읽을 수 있다고 알린 뒤 애플리케이션이 버퍼를 준비해 recv로 복사하고, IOCP는 요청할 때 버퍼를 미리 넘겨 완료될 때까지 커널이 쥐고 있다가 읽기가 끝났다고 알린다. 아무것도 보내지 않는 연결 1만 개에서 IOCP는 버퍼 1만 개를 계속 붙잡는다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a18" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="330" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">버퍼를 언제 내주는가</text>
+  <text class="sub" x="24" y="56" font-size="13">readiness는 "읽을 수 있다", completion은 "읽기가 끝났다"를 알린다</text>
+
+  <rect class="card" x="20" y="72" width="330" height="242" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">epoll ( readiness )</text>
+  <rect class="c" x="50" y="114" width="270" height="34" rx="5"/><text class="t" x="185" y="136" font-size="12" text-anchor="middle">① 알림: 읽을 수 있다</text>
+  <rect class="hit" x="50" y="166" width="270" height="34" rx="5"/><text class="t" x="185" y="188" font-size="12" text-anchor="middle">② 이제 버퍼를 꺼낸다</text>
+  <rect class="c" x="50" y="218" width="270" height="34" rx="5"/><text class="t" x="185" y="240" font-size="12" text-anchor="middle">③ recv() — 복사는 유저 스레드가</text>
+  <line x1="185" y1="148" x2="185" y2="162" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a18)"/>
+  <line x1="185" y1="200" x2="185" y2="214" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a18)"/>
+  <text class="t" x="185" y="290" font-size="12" text-anchor="middle">조용한 연결 1만 개 → 붙잡힌 버퍼 0</text>
+
+  <rect class="card" x="370" y="72" width="330" height="242" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">IOCP ( completion )</text>
+  <rect class="hit" x="400" y="114" width="270" height="34" rx="5"/><text class="t" x="535" y="136" font-size="12" text-anchor="middle">① WSARecv에 버퍼를 미리 넘긴다</text>
+  <rect class="bad" x="400" y="166" width="270" height="34" rx="5"/><text class="t" x="535" y="188" font-size="12" text-anchor="middle">② 완료까지 버퍼는 커널 몫</text>
+  <rect class="c" x="400" y="218" width="270" height="34" rx="5"/><text class="t" x="535" y="240" font-size="12" text-anchor="middle">③ 완료 알림: 읽기가 끝났다</text>
+  <line x1="535" y1="148" x2="535" y2="162" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a18)"/>
+  <line x1="535" y1="200" x2="535" y2="214" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a18)"/>
+  <text class="r" x="535" y="290" font-size="12" text-anchor="middle">조용한 연결 1만 개 × 4KB ≈ 40MB를 계속 붙잡음</text>
+</svg>

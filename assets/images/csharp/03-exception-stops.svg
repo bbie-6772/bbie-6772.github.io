@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="보스가 죽어 OnDeath를 Invoke하면 이미 Destroy된 hpBar의 핸들러가 호출되어 예외를 던지고, 목록 뒤쪽의 questLog 핸들러와 Invoke 뒤의 GiveReward가 실행되지 않는다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .mg { font-family: "Cascadia Mono", Consolas, monospace; fill: #9aa9b8; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .skip { fill: #f7f9fb; stroke: #d5dde6; stroke-dasharray: 4 3; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a03" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="r03" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#a04040"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">구독자 하나의 예외가 뒤를 전부 끊는다</text>
+  <text class="sub" x="24" y="56" font-size="13">해제하지 않은 hpBar가 목록 앞쪽에 남아 있을 때</text>
+
+  <rect class="card" x="20" y="72" width="300" height="212" rx="8"/>
+  <text class="sub" x="40" y="96" font-size="11">Boss.Die()</text>
+  <rect class="c" x="40" y="108" width="260" height="34" rx="4"/><text class="m" x="52" y="130" font-size="12">OnDeath?.Invoke();</text>
+  <rect class="skip" x="40" y="156" width="260" height="34" rx="4"/><text class="mg" x="52" y="178" font-size="12">GiveReward();</text>
+  <text class="r" x="170" y="214" font-size="12" text-anchor="middle">실행되지 않는다 → 보상 없음</text>
+
+  <rect class="card" x="340" y="72" width="360" height="212" rx="8"/>
+  <text class="sub" x="360" y="96" font-size="11">invocation list ( 앞에서부터 호출 )</text>
+  <rect class="bad" x="360" y="108" width="320" height="40" rx="5"/>
+  <text class="t" x="374" y="126" font-size="12">① hpBar.OnBossDeath</text>
+  <text class="r" x="374" y="141" font-size="11">Destroy된 객체에서 Unity API 접근 → 예외</text>
+  <rect class="skip" x="360" y="160" width="320" height="34" rx="5"/><text class="sub" x="374" y="182" font-size="12">② questLog.OnBossDeath — 호출 안 됨</text>
+
+  <line x1="300" y1="116" x2="356" y2="116" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a03)"/>
+  <line x1="360" y1="136" x2="304" y2="136" stroke="#a04040" stroke-width="1.5" marker-end="url(#r03)"/>
+  <text class="r" x="520" y="232" font-size="12" text-anchor="middle">예외는 Invoke를 부른 쪽으로 올라간다</text>
+</svg>

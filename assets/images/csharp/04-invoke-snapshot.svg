@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="Invoke는 시작할 때 OnHit이 가리키던 목록 a, b, c를 끝까지 돈다. 호출 도중 b가 자기 자신을 해제하면 OnHit 필드는 a, c만 담은 새 목록을 가리키고, 그 변경은 다음 Invoke부터 적용된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a04" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="g04" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#6b7f95"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">Invoke는 시작할 때의 목록을 끝까지 돈다</text>
+  <text class="sub" x="24" y="56" font-size="13">호출 도중 b가 OnHit -= b.Handle 을 실행한 경우</text>
+
+  <rect class="card" x="20" y="72" width="680" height="212" rx="8"/>
+  <text class="m" x="40" y="108" font-size="13">OnHit</text>
+  <text class="sub" x="40" y="126" font-size="11">( 필드 )</text>
+
+  <text class="sub" x="200" y="96" font-size="11">이번 Invoke가 도는 목록</text>
+  <rect class="hit" x="200" y="104" width="70" height="34" rx="4"/><text class="m" x="235" y="126" font-size="13" text-anchor="middle">a</text>
+  <rect class="hit" x="274" y="104" width="70" height="34" rx="4"/><text class="m" x="309" y="126" font-size="13" text-anchor="middle">b</text>
+  <rect class="hit" x="348" y="104" width="70" height="34" rx="4"/><text class="m" x="383" y="126" font-size="13" text-anchor="middle">c</text>
+  <text class="t" x="440" y="126" font-size="12">a → b → c 모두 호출된다</text>
+  <line x1="92" y1="112" x2="196" y2="118" stroke="#6b7f95" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#g04)"/>
+  <text class="sub" x="120" y="102" font-size="10">시작 전</text>
+
+  <text class="sub" x="318" y="168" font-size="11">b 안에서 -= 실행</text>
+  <line x1="309" y1="140" x2="309" y2="190" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a04)"/>
+
+  <text class="sub" x="360" y="216" font-size="11">새 객체 — 다음 Invoke부터 이 목록</text>
+  <rect class="c" x="200" y="194" width="70" height="34" rx="4"/><text class="m" x="235" y="216" font-size="13" text-anchor="middle">a</text>
+  <rect class="c" x="274" y="194" width="70" height="34" rx="4"/><text class="m" x="309" y="216" font-size="13" text-anchor="middle">c</text>
+  <line x1="92" y1="120" x2="196" y2="208" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a04)"/>
+  <text class="sub" x="100" y="176" font-size="10">해제 후</text>
+
+  <text class="t" x="360" y="264" font-size="12" text-anchor="middle">그래서 "한 번 받고 자기를 해제하는" 구독자도 안전하다</text>
+</svg>

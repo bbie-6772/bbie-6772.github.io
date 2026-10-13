@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" role="img" aria-label="패킷이 5밀리초마다 오면 16밀리초 타임아웃에 닿기 전에 epoll_wait가 매번 n=1로 깨어나 n==0 조건의 tick이 한 번도 돌지 않고, 매 루프 시계를 확인하는 방식은 16, 32, 48밀리초에 tick을 돌린다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .pk { fill: #8fb0d4; }
+    .tk { fill: #3d6fa8; }
+  </style>
+
+  <rect class="bg" width="720" height="320" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">패킷이 5ms마다 오면 n == 0은 오지 않는다</text>
+  <text class="sub" x="24" y="56" font-size="13">타임아웃 16ms. 위는 n으로 시간을 판단, 아래는 매 루프 시계를 확인</text>
+
+  <!-- row 1 -->
+  <rect class="card" x="20" y="72" width="680" height="104" rx="8"/>
+  <text class="m" x="36" y="96" font-size="12">if (n == 0) tick();</text>
+  <line x1="80" y1="132" x2="680" y2="132" stroke="#d5dde6" stroke-width="2"/>
+  <g class="pk">
+    <rect x="139" y="116" width="8" height="16" rx="2"/><rect x="201" y="116" width="8" height="16" rx="2"/>
+    <rect x="264" y="116" width="8" height="16" rx="2"/><rect x="326" y="116" width="8" height="16" rx="2"/>
+    <rect x="389" y="116" width="8" height="16" rx="2"/><rect x="451" y="116" width="8" height="16" rx="2"/>
+    <rect x="514" y="116" width="8" height="16" rx="2"/><rect x="576" y="116" width="8" height="16" rx="2"/>
+    <rect x="639" y="116" width="8" height="16" rx="2"/>
+  </g>
+  <text class="sub" x="390" y="110" font-size="11" text-anchor="middle">매번 n = 1로 깨어나 타임아웃을 다시 건다</text>
+  <text class="r" x="380" y="160" font-size="12" text-anchor="middle">16ms에 한 번도 닿지 못한다 → tick 0번, 바쁠수록 세계가 멈춘다</text>
+
+  <!-- row 2 -->
+  <rect class="card" x="20" y="188" width="680" height="104" rx="8"/>
+  <text class="m" x="36" y="212" font-size="12">if (now &gt;= nextTick) tick();   timeout = nextTick − now</text>
+  <line x1="80" y1="248" x2="680" y2="248" stroke="#d5dde6" stroke-width="2"/>
+  <g class="pk">
+    <rect x="139" y="232" width="8" height="16" rx="2"/><rect x="201" y="232" width="8" height="16" rx="2"/>
+    <rect x="264" y="232" width="8" height="16" rx="2"/><rect x="326" y="232" width="8" height="16" rx="2"/>
+    <rect x="389" y="232" width="8" height="16" rx="2"/><rect x="451" y="232" width="8" height="16" rx="2"/>
+    <rect x="514" y="232" width="8" height="16" rx="2"/><rect x="576" y="232" width="8" height="16" rx="2"/>
+    <rect x="639" y="232" width="8" height="16" rx="2"/>
+  </g>
+  <g class="tk">
+    <rect x="278" y="224" width="6" height="32" rx="2"/><rect x="478" y="224" width="6" height="32" rx="2"/><rect x="678" y="224" width="6" height="32" rx="2"/>
+  </g>
+  <text class="t" x="281" y="270" font-size="11" text-anchor="middle">tick 16ms</text>
+  <text class="t" x="481" y="270" font-size="11" text-anchor="middle">tick 32ms</text>
+  <text class="t" x="650" y="270" font-size="11" text-anchor="middle">tick 48ms</text>
+  <text class="sub" x="380" y="286" font-size="11" text-anchor="middle">패킷이 몇 개 오든 시계가 tick을 정한다</text>
+
+  <rect class="pk" x="560" y="40" width="8" height="12" rx="2"/><text class="sub" x="574" y="51" font-size="11">패킷</text>
+  <rect class="tk" x="616" y="38" width="5" height="16" rx="2"/><text class="sub" x="628" y="51" font-size="11">tick</text>
+</svg>

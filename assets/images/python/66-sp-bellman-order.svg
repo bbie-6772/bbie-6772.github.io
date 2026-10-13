@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" role="img" aria-label="A에서 D까지 일자로 이어진 그래프에서 간선을 앞에서부터 검사하면 한 바퀴에 모든 거리가 맞고, 뒤에서부터 검사하면 한 바퀴에 한 칸씩만 맞아 세 바퀴가 걸린다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .mg { font-family: "Cascadia Mono", Consolas, monospace; fill: #9aa9b8; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+  </style>
+
+  <rect class="bg" width="720" height="320" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">검사 순서가 나빠도 한 바퀴에 최소 한 칸은 맞는다</text>
+  <text class="sub" x="24" y="56" font-size="13">A → B → C → D, 간선은 모두 1. 칸 안은 바퀴가 끝난 뒤의 거리</text>
+
+  <rect class="card" x="20" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="185" y="94" font-size="14" font-weight="600" text-anchor="middle">A→B, B→C, C→D 순서</text>
+  <text class="sub" x="40" y="138" font-size="12">1바퀴</text>
+  <g>
+    <rect class="hit" x="100" y="118" width="50" height="30" rx="4"/><text class="m" x="125" y="138" font-size="12" text-anchor="middle">0</text>
+    <rect class="hit" x="156" y="118" width="50" height="30" rx="4"/><text class="m" x="181" y="138" font-size="12" text-anchor="middle">1</text>
+    <rect class="hit" x="212" y="118" width="50" height="30" rx="4"/><text class="m" x="237" y="138" font-size="12" text-anchor="middle">2</text>
+    <rect class="hit" x="268" y="118" width="50" height="30" rx="4"/><text class="m" x="293" y="138" font-size="12" text-anchor="middle">3</text>
+  </g>
+  <text class="sub" x="125" y="112" font-size="11" text-anchor="middle">A</text><text class="sub" x="181" y="112" font-size="11" text-anchor="middle">B</text>
+  <text class="sub" x="237" y="112" font-size="11" text-anchor="middle">C</text><text class="sub" x="293" y="112" font-size="11" text-anchor="middle">D</text>
+  <text class="t" x="185" y="200" font-size="12" text-anchor="middle">B가 갱신된 직후 B→C를 검사하니</text>
+  <text class="t" x="185" y="220" font-size="12" text-anchor="middle">한 바퀴에 끝까지 전파된다</text>
+
+  <rect class="card" x="370" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="535" y="94" font-size="14" font-weight="600" text-anchor="middle">C→D, B→C, A→B 순서</text>
+  <text class="sub" x="475" y="112" font-size="11" text-anchor="middle">A</text><text class="sub" x="531" y="112" font-size="11" text-anchor="middle">B</text>
+  <text class="sub" x="587" y="112" font-size="11" text-anchor="middle">C</text><text class="sub" x="643" y="112" font-size="11" text-anchor="middle">D</text>
+  <text class="sub" x="390" y="138" font-size="12">1바퀴</text>
+  <rect class="hit" x="450" y="118" width="50" height="30" rx="4"/><text class="m" x="475" y="138" font-size="12" text-anchor="middle">0</text>
+  <rect class="hit" x="506" y="118" width="50" height="30" rx="4"/><text class="m" x="531" y="138" font-size="12" text-anchor="middle">1</text>
+  <rect class="c" x="562" y="118" width="50" height="30" rx="4"/><text class="mg" x="587" y="138" font-size="12" text-anchor="middle">∞</text>
+  <rect class="c" x="618" y="118" width="50" height="30" rx="4"/><text class="mg" x="643" y="138" font-size="12" text-anchor="middle">∞</text>
+  <text class="sub" x="390" y="182" font-size="12">2바퀴</text>
+  <rect class="hit" x="450" y="162" width="50" height="30" rx="4"/><text class="m" x="475" y="182" font-size="12" text-anchor="middle">0</text>
+  <rect class="hit" x="506" y="162" width="50" height="30" rx="4"/><text class="m" x="531" y="182" font-size="12" text-anchor="middle">1</text>
+  <rect class="hit" x="562" y="162" width="50" height="30" rx="4"/><text class="m" x="587" y="182" font-size="12" text-anchor="middle">2</text>
+  <rect class="c" x="618" y="162" width="50" height="30" rx="4"/><text class="mg" x="643" y="182" font-size="12" text-anchor="middle">∞</text>
+  <text class="sub" x="390" y="226" font-size="12">3바퀴</text>
+  <rect class="hit" x="450" y="206" width="50" height="30" rx="4"/><text class="m" x="475" y="226" font-size="12" text-anchor="middle">0</text>
+  <rect class="hit" x="506" y="206" width="50" height="30" rx="4"/><text class="m" x="531" y="226" font-size="12" text-anchor="middle">1</text>
+  <rect class="hit" x="562" y="206" width="50" height="30" rx="4"/><text class="m" x="587" y="226" font-size="12" text-anchor="middle">2</text>
+  <rect class="hit" x="618" y="206" width="50" height="30" rx="4"/><text class="m" x="643" y="226" font-size="12" text-anchor="middle">3</text>
+  <text class="t" x="535" y="272" font-size="12" text-anchor="middle">최악이어도 바퀴마다 한 칸 전진 → 최대 V − 1바퀴</text>
+</svg>

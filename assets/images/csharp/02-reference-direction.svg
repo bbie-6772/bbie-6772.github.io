@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="구독이 만드는 참조는 발행자 boss에서 invocation list를 거쳐 구독자 hpBar로 가는 한 방향뿐이다. static event는 프로그램 내내 살아 있는 GC root라 해제하지 않은 구독자를 씬이 바뀐 뒤에도 붙잡는다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a02" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="g02" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#6b7f95"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">구독은 발행자 → 구독자 한 방향으로 붙잡는다</text>
+  <text class="sub" x="24" y="56" font-size="13">boss.OnHit += hpBar.Refresh 이후의 참조</text>
+
+  <rect class="card" x="20" y="72" width="680" height="120" rx="8"/>
+  <rect class="hit" x="40" y="104" width="120" height="44" rx="6"/><text class="m" x="100" y="131" font-size="13" text-anchor="middle">boss</text>
+  <rect class="c" x="250" y="104" width="200" height="44" rx="6"/><text class="m" x="350" y="131" font-size="12" text-anchor="middle">[(hpBar, Refresh)]</text>
+  <rect class="hit" x="540" y="104" width="140" height="44" rx="6"/><text class="m" x="610" y="131" font-size="13" text-anchor="middle">hpBar</text>
+  <line x1="160" y1="126" x2="246" y2="126" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a02)"/>
+  <line x1="450" y1="126" x2="536" y2="126" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a02)"/>
+  <text class="sub" x="203" y="118" font-size="11" text-anchor="middle">event 필드</text>
+  <text class="sub" x="493" y="118" font-size="11" text-anchor="middle">Target</text>
+  <text class="sub" x="100" y="168" font-size="11" text-anchor="middle">발행자</text>
+  <text class="sub" x="610" y="168" font-size="11" text-anchor="middle">구독자</text>
+  <text class="t" x="350" y="178" font-size="12" text-anchor="middle">boss가 오래 살면 hpBar는 할 일이 끝나도 수거되지 않는다</text>
+
+  <rect class="card" x="20" y="204" width="680" height="120" rx="8"/>
+  <rect class="bad" x="40" y="236" width="150" height="44" rx="6"/><text class="m" x="115" y="263" font-size="12" text-anchor="middle">static OnHit</text>
+  <text class="r" x="115" y="300" font-size="11" text-anchor="middle">GC root, 프로그램 내내</text>
+  <rect class="c" x="250" y="236" width="200" height="44" rx="6"/><text class="m" x="350" y="263" font-size="12" text-anchor="middle">invocation list</text>
+  <rect class="c" x="520" y="222" width="160" height="30" rx="5"/><text class="t" x="600" y="242" font-size="12" text-anchor="middle">1번 씬의 hpBar</text>
+  <rect class="c" x="520" y="262" width="160" height="30" rx="5"/><text class="t" x="600" y="282" font-size="12" text-anchor="middle">2번 씬의 hpBar</text>
+  <line x1="190" y1="258" x2="246" y2="258" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a02)"/>
+  <line x1="450" y1="252" x2="516" y2="238" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a02)"/>
+  <line x1="450" y1="264" x2="516" y2="276" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a02)"/>
+  <text class="sub" x="350" y="306" font-size="11" text-anchor="middle">해제하지 않으면 씬이 바뀌어도 남는다</text>
+</svg>

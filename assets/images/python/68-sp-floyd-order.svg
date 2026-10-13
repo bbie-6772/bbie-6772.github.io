@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" role="img" aria-label="1에서 3, 3에서 4, 4에서 2로 가는 비용 1짜리 간선과 1에서 2로 바로 가는 비용 10짜리 간선이 있을 때, k를 바깥 루프에 두면 k=3에서 D[1][4]=2가 만들어지고 k=4에서 D[1][2]=3이 된다. k를 안쪽에 두면 D[1][2]를 처리할 때 D[1][4]가 아직 무한대라 10으로 확정된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a68" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="330" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">k가 안쪽이면 재료가 준비되기 전에 칸을 확정한다</text>
+  <text class="sub" x="24" y="56" font-size="13">1 → 3 → 4 → 2 ( 각 1 ),  1 → 2 ( 10 ).  정답 D[1][2] = 3</text>
+
+  <!-- graph strip -->
+  <circle class="c" cx="90" cy="100" r="16"/><text class="m" x="90" y="105" font-size="13" text-anchor="middle">1</text>
+  <circle class="c" cx="190" cy="100" r="16"/><text class="m" x="190" y="105" font-size="13" text-anchor="middle">3</text>
+  <circle class="c" cx="290" cy="100" r="16"/><text class="m" x="290" y="105" font-size="13" text-anchor="middle">4</text>
+  <circle class="c" cx="390" cy="100" r="16"/><text class="m" x="390" y="105" font-size="13" text-anchor="middle">2</text>
+  <line x1="106" y1="100" x2="170" y2="100" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a68)"/>
+  <line x1="206" y1="100" x2="270" y2="100" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a68)"/>
+  <line x1="306" y1="100" x2="370" y2="100" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a68)"/>
+  <path d="M100 86 C 160 66, 320 66, 380 86" fill="none" stroke="#8fb0d4" stroke-width="1.5" marker-end="url(#a68)"/>
+  <text class="m" x="240" y="90" font-size="12" text-anchor="middle">10</text>
+
+  <rect class="card" x="20" y="130" width="330" height="184" rx="8"/>
+  <text class="t" x="185" y="156" font-size="14" font-weight="600" text-anchor="middle">for k: for i: for j:</text>
+  <rect class="c" x="40" y="172" width="290" height="34" rx="4"/><text class="m" x="52" y="194" font-size="12">k=3  D[1][4] = 1 + 1 = 2</text>
+  <rect class="hit" x="40" y="214" width="290" height="34" rx="4"/><text class="m" x="52" y="236" font-size="12">k=4  D[1][2] = min(10, 2+1) = 3</text>
+  <text class="t" x="185" y="290" font-size="12" text-anchor="middle">k−1까지의 표가 다 차 있다</text>
+
+  <rect class="card" x="370" y="130" width="330" height="184" rx="8"/>
+  <text class="t" x="535" y="156" font-size="14" font-weight="600" text-anchor="middle">for i: for j: for k:</text>
+  <rect class="bad" x="390" y="172" width="290" height="34" rx="4"/><text class="t" x="402" y="194" font-size="12">i=1,j=2  D[1][4]가 ∞ → 10</text>
+  <rect class="c" x="390" y="214" width="290" height="34" rx="4"/><text class="t" x="402" y="236" font-size="12">i=1,j=4  그제야 D[1][4] = 2</text>
+  <text class="r" x="535" y="290" font-size="12" text-anchor="middle">D[1][2]는 다시 보지 않는다 → 10</text>
+</svg>

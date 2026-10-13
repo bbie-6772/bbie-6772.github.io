@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" role="img" aria-label="LT에서 두 스레드가 같은 소켓 알림을 받으면 100바이트 메시지가 앞 60바이트와 뒤 40바이트로 나뉘어 각 스레드로 가고, EPOLLONESHOT은 한 번 알린 뒤 감시를 꺼서 한 연결을 한 스레드만 읽게 한다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+  </style>
+  <defs>
+    <marker id="a16" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+    <marker id="r16" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#a04040"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="320" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">스레드 둘이 같은 소켓을 받으면 메시지가 찢어진다</text>
+  <text class="sub" x="24" y="56" font-size="13">바이트는 각각 한 번씩 읽혔지만, 어느 스레드도 메시지 하나를 온전히 갖지 못한다</text>
+
+  <rect class="card" x="20" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">LT + 워커 스레드 여럿</text>
+  <text class="sub" x="40" y="124" font-size="11">수신 버퍼 100바이트 ( 메시지 하나 )</text>
+  <rect class="hit" x="40" y="132" width="40" height="30" rx="3"/><text class="m" x="60" y="151" font-size="10" text-anchor="middle">길이</text>
+  <rect class="c" x="80" y="132" width="134" height="30"/>
+  <rect class="c" x="214" y="132" width="116" height="30"/>
+  <line x1="214" y1="128" x2="214" y2="166" stroke="#a04040" stroke-width="2" stroke-dasharray="3 2"/>
+  <text class="t" x="127" y="182" font-size="11" text-anchor="middle">앞 60</text>
+  <text class="t" x="272" y="182" font-size="11" text-anchor="middle">뒤 40</text>
+  <rect class="bad" x="60" y="226" width="110" height="36" rx="5"/><text class="t" x="115" y="249" font-size="12" text-anchor="middle">스레드 A</text>
+  <rect class="bad" x="200" y="226" width="110" height="36" rx="5"/><text class="t" x="255" y="249" font-size="12" text-anchor="middle">스레드 B</text>
+  <line x1="127" y1="188" x2="118" y2="222" stroke="#a04040" stroke-width="1.5" marker-end="url(#r16)"/>
+  <line x1="272" y1="188" x2="258" y2="222" stroke="#a04040" stroke-width="1.5" marker-end="url(#r16)"/>
+  <text class="r" x="185" y="288" font-size="11" text-anchor="middle">A가 읽기 전에 LT가 다시 넣어 B도 받았다</text>
+
+  <rect class="card" x="370" y="72" width="330" height="232" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">EPOLLONESHOT</text>
+  <rect class="hit" x="400" y="118" width="270" height="32" rx="5"/><text class="t" x="535" y="139" font-size="12" text-anchor="middle">① 한 번 알리고 감시를 끈다 → A만 받음</text>
+  <rect class="c" x="400" y="166" width="270" height="32" rx="5"/><text class="t" x="535" y="187" font-size="12" text-anchor="middle">② A가 EAGAIN까지 읽고 메시지 조립</text>
+  <rect class="c" x="400" y="214" width="270" height="32" rx="5"/><text class="t" x="535" y="235" font-size="12" text-anchor="middle">③ epoll_ctl(MOD)로 다시 켠다</text>
+  <line x1="535" y1="150" x2="535" y2="164" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a16)"/>
+  <line x1="535" y1="198" x2="535" y2="212" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a16)"/>
+  <text class="t" x="535" y="284" font-size="12" text-anchor="middle">한 연결은 한 번에 한 스레드</text>
+</svg>

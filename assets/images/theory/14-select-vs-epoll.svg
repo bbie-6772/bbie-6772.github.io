@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 350" width="100%" role="img" aria-label="소켓이 fd 3과 fd 1000 두 개일 때 select는 0부터 1000까지 비트맵 전체를 복사하고 훑지만, epoll은 등록된 소켓을 트리로 기억하고 데이터가 온 소켓만 준비 목록에 올려 그것만 돌려준다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a14" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#3d6fa8"/></marker>
+  </defs>
+
+  <rect class="bg" width="720" height="350" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">select는 매번 전부, epoll은 준비된 것만</text>
+  <text class="sub" x="24" y="56" font-size="13">감시할 소켓이 fd 3과 fd 1000 두 개일 때, 한 번 기다리는 데 드는 일</text>
+
+  <!-- left: select -->
+  <rect class="card" x="20" y="72" width="330" height="262" rx="8"/>
+  <text class="t" x="185" y="98" font-size="14" font-weight="600" text-anchor="middle">select — 번호가 곧 위치인 비트맵</text>
+  <rect class="c" x="40" y="116" width="290" height="26" rx="3"/>
+  <rect class="hit" x="41" y="116" width="6" height="26"/>
+  <rect class="hit" x="322" y="116" width="6" height="26"/>
+  <text class="m" x="44" y="158" font-size="11" text-anchor="middle">3</text>
+  <text class="m" x="325" y="158" font-size="11" text-anchor="middle">1000</text>
+  <text class="sub" x="185" y="158" font-size="11" text-anchor="middle">사이 996칸은 비어 있어도 훑는다</text>
+  <text class="t" x="40" y="190" font-size="12">① fd_set 복사 ( 유저 → 커널 )</text>
+  <text class="t" x="40" y="212" font-size="12">② 0~1000 훑으며 대기 큐 등록 → 잠듦</text>
+  <text class="t" x="40" y="234" font-size="12">③ 깨면 다시 훑고 대기 큐 해제, 결과 복사</text>
+  <text class="t" x="40" y="256" font-size="12">④ 유저도 FD_ISSET으로 훑기, 다음엔 다시 채우기</text>
+  <text class="t" x="185" y="312" font-size="12" text-anchor="middle">비용 ∝ 가장 큰 번호 ( nfds )</text>
+
+  <!-- right: epoll -->
+  <rect class="card" x="370" y="72" width="330" height="262" rx="8"/>
+  <text class="t" x="535" y="98" font-size="14" font-weight="600" text-anchor="middle">epoll — 커널이 목록을 기억한다</text>
+  <text class="sub" x="390" y="124" font-size="11">관심 목록 ( 레드 블랙 트리 )</text>
+  <circle class="c" cx="430" cy="152" r="16"/><text class="m" x="430" y="156" font-size="11" text-anchor="middle">3</text>
+  <circle class="hit" cx="470" cy="196" r="16"/><text class="m" x="470" y="200" font-size="10" text-anchor="middle">1000</text>
+  <line x1="440" y1="165" x2="460" y2="183" stroke="#8fb0d4" stroke-width="1.5"/>
+  <text class="sub" x="390" y="238" font-size="11">ADD 때 소켓에 콜백을 걸어 둔다</text>
+
+  <text class="sub" x="560" y="124" font-size="11">준비 목록</text>
+  <rect class="c" x="560" y="134" width="120" height="34" rx="4"/>
+  <rect class="hit" x="566" y="139" width="48" height="24" rx="3"/><text class="m" x="590" y="155" font-size="11" text-anchor="middle">1000</text>
+  <path d="M486 190 C 520 180, 540 170, 562 160" fill="none" stroke="#3d6fa8" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a14)"/>
+  <text class="sub" x="390" y="258" font-size="11">데이터 도착 → 콜백이 준비 목록에 올림</text>
+
+  <rect class="c" x="560" y="222" width="120" height="30" rx="4"/><text class="m" x="620" y="242" font-size="12" text-anchor="middle">epoll_wait</text>
+  <line x1="620" y1="220" x2="620" y2="172" stroke="#3d6fa8" stroke-width="1.5" marker-end="url(#a14)"/>
+  <text class="sub" x="626" y="200" font-size="11">이것만 본다</text>
+  <text class="t" x="535" y="312" font-size="12" text-anchor="middle">비용 ∝ 준비된 개수</text>
+</svg>

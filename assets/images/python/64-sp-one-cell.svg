@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" role="img" aria-label="플로이드-워셜은 2000 곱하기 2000 표 400만 칸을 경유지 2000개마다 갱신해 80억 번을 계산하지만, 문제가 묻는 건 0번에서 N-1번까지 한 칸뿐이다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #ffffff; stroke-width: 1; }
+    .hit { fill: #3d6fa8; }
+  </style>
+  <defs>
+    <pattern id="g64" width="12" height="12" patternUnits="userSpaceOnUse"><rect class="c" width="12" height="12"/></pattern>
+  </defs>
+
+  <rect class="bg" width="720" height="300" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" font-weight="600">출력은 한 칸인데 표 전체를 채우고 있었다</text>
+  <text class="sub" x="24" y="56" font-size="13">SWEA 22380, N = 2000일 때</text>
+
+  <rect class="card" x="20" y="72" width="680" height="212" rx="8"/>
+  <rect x="50" y="92" width="168" height="168" fill="url(#g64)" stroke="#d5dde6"/>
+  <rect class="hit" x="206" y="92" width="12" height="12"/>
+  <text class="m" x="226" y="102" font-size="11">costs[0][N-1]</text>
+  <text class="sub" x="134" y="278" font-size="11" text-anchor="middle">2000 × 2000 = 400만 칸 ( 축소해서 그림 )</text>
+
+  <text class="t" x="360" y="120" font-size="14" font-weight="600">플로이드-워셜</text>
+  <text class="t" x="360" y="144" font-size="12">400만 칸 × 경유지 2000개 = 80억 번 갱신</text>
+  <text class="sub" x="360" y="164" font-size="12">초당 2000만 번으로 잡으면 약 400초</text>
+
+  <text class="t" x="360" y="210" font-size="14" font-weight="600">문제가 묻는 것</text>
+  <text class="t" x="360" y="234" font-size="12">0번 → N−1번, 한 점에서 한 점</text>
+  <text class="sub" x="360" y="254" font-size="12">→ 다익스트라 칸이다</text>
+</svg>
