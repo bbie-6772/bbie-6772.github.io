@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 9 >
+title: 유니티 학습 프로젝트 - < 체력바, 사건과 상태 >
 subtitle: 사건과 상태 - 같은 신호를 재활용해도 되는가
 author: bbie
 categories: Unity-Project
@@ -246,7 +246,7 @@ void FixedUpdate()
 - [Unity 6000.0 Manual - Rigidbody2D.linearVelocity](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody2D-linearVelocity.html)
 - [Unity 6000.0 Manual - Order of execution for event functions](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)
 - [Microsoft Learn - event 키워드](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/event)
-- [지난 편 - 유니티 학습 프로젝트 < 8 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project2.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 레벨업 창과 버튼 이벤트 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project2.html)
 
 ## 한줄 평
 

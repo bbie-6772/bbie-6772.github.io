@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 15 >
+title: 유니티 학습 프로젝트 - < 발동하지 않는 좀비 상한 >
 subtitle: 상한을 넣었는데 발동할 일이 없었다
 author: bbie
 categories: Unity-Project
@@ -182,7 +182,7 @@ yield return _wait;
 - [Unity 6000.0 Manual - 코루틴](https://docs.unity3d.com/6000.0/Documentation/Manual/Coroutines.html)
 - [Unity 6000.0 Manual - Rigidbody 2D 충돌 처리](https://docs.unity3d.com/6000.0/Documentation/Manual/class-Rigidbody2D.html)
 - [측정 조건과 1~5차 실측 기록 - 0030](https://github.com/bbie-6772/2d-survivor/blob/main/docs/decisions/0030-test01-setting.md)
-- [지난 편 - 유니티 학습 프로젝트 < 14 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project2.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 성능 측정, 틀린 가설 세 개 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project2.html)
 
 ## 한줄 평
 

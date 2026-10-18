@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 3 >
+title: 유니티 학습 프로젝트 - < 방향, 가드, 무적 시간 >
 subtitle: 부호만 세 번 틀렸다 - 방향, 가드, 그리고 무적 시간
 author: bbie
 categories: Unity-Project
@@ -422,7 +422,7 @@ public event Action OnDied;
 - [Unity 6000.0 Scripting API - DisallowMultipleComponent](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/DisallowMultipleComponent.html)
 - [Unity 6000.0 Scripting API - Rigidbody2D.bodyType](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody2D-bodyType.html)
 - [Microsoft Learn - event 키워드](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/event)
-- [지난 편 - 유니티 학습 프로젝트 < 2 >](https://bbie-6772.github.io/unity-project/2026/08/28/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < Update와 FixedUpdate 사이 >](https://bbie-6772.github.io/unity-project/2026/08/28/unity-project.html)
 
 ## 한줄 평
 

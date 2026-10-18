@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Game Builders Seoul - < 1 >
+title: OpenAI Game Builders - < Agent-first 구조로 다시 설계하기 >
 subtitle: 복잡한 오케스트레이션을 Agent-first 구조로 다시 설계하기
 author: bbie
 categories: OpenAI-Game-Builders

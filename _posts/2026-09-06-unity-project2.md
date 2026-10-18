@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 14 >
+title: 유니티 학습 프로젝트 - < 성능 측정, 틀린 가설 세 개 >
 subtitle: 세 번 세운 가설이 전부 틀렸다
 author: bbie
 categories: Unity-Project
@@ -179,7 +179,7 @@ tags: [Game, Unity, C#, Optimization, Profiling]
 - [Unity 6000.0 Manual - Layer-based collision detection](https://docs.unity3d.com/6000.0/Documentation/Manual/LayerBasedCollision.html)
 - [Unity 6000.0 Manual - Physics 2D](https://docs.unity3d.com/6000.0/Documentation/Manual/Physics2DReference.html)
 - [측정 조건과 1~5차 실측 기록 - 0030](https://github.com/bbie-6772/2d-survivor/blob/main/docs/decisions/0030-test01-setting.md)
-- [지난 편 - 유니티 학습 프로젝트 < 13 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 남은 시간과 좀비 수 표시 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project.html)
 
 ## 한줄 평
 

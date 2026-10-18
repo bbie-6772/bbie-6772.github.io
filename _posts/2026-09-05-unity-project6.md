@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 12 >
+title: 유니티 학습 프로젝트 - < 방향이 틀렸다는 신호들 >
 subtitle: 방향이 틀렸을 때 그걸 알려주는 것들
 author: bbie
 categories: Unity-Project
@@ -285,7 +285,7 @@ _flashSprite.transform.localPosition = new Vector3(range / 2, 0f);
 - [Unity 6000.0 Manual - RequireComponent](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/RequireComponent.html)
 - [Unity 6000.0 Manual - Canvas](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/UICanvas.html)
 - [Microsoft Learn - 열거형 형식](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/builtin-types/enum)
-- [지난 편 - 유니티 학습 프로젝트 < 11 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project5.html)
+- [지난 편 - 유니티 학습 프로젝트 - < ScriptableObject는 언제 쓰나 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project5.html)
 
 ## 한줄 평
 

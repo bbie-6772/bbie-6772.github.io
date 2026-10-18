@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 11 >
+title: 유니티 학습 프로젝트 - < ScriptableObject는 언제 쓰나 >
 subtitle: ScriptableObject를 처음 쓰며 - 그래서 이건 언제 쓰는 건가
 author: bbie
 categories: Unity-Project
@@ -205,7 +205,7 @@ A를 고른 대가가 둘 있다.
 - [Unity 6000.0 Manual - CreateAssetMenu](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/CreateAssetMenuAttribute.html)
 - [Unity 6000.0 Manual - Prefabs](https://docs.unity3d.com/6000.0/Documentation/Manual/Prefabs.html)
 - [Microsoft Learn - switch 문](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/statements/selection-statements)
-- [지난 편 - 유니티 학습 프로젝트 < 10 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project4.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 코루틴 없는 스폰 타이머 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project4.html)
 
 ## 한줄 평
 

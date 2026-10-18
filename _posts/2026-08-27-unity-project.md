@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 1 >
+title: 유니티 학습 프로젝트 - < AI에게 기획서 맡기기 >
 subtitle: 코드를 주지 않는 AI에게 기획서를 맡겨봤다
 author: bbie
 categories: Unity-Project
@@ -136,7 +136,7 @@ spec을 쓸 때 항목을 네 개 두라는 조언을 받았다. 코어 루프 /
 
 ## 참고 자료
 
-- [지난 글 - OpenAI Game Builders < 6 >](https://bbie-6772.github.io/openai_game_builders/2026/08/27/openai-game-builders.html)
+- [지난 글 - OpenAI Game Builders - < AI가 만든 코드 디버깅 >](https://bbie-6772.github.io/openai_game_builders/2026/08/27/openai-game-builders.html)
 
 ## 한줄 평
 

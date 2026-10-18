@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Game Builders - < 6 >
+title: OpenAI Game Builders - < AI가 만든 코드 디버깅 >
 subtitle: AI가 만든 코드를 디버깅하며 알게 된 것
 author: bbie
 categories: OpenAI-Game-Builders

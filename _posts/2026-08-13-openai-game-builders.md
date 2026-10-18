@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Game Builders Seoul - < 2 >
+title: OpenAI Game Builders - < 한 이야기를 2D와 3D로 >
 subtitle: 하나의 이야기를 2D와 3D로 동시에 만들어보는 이유
 author: bbie
 categories: OpenAI-Game-Builders

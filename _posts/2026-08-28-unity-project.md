@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 2 >
+title: 유니티 학습 프로젝트 - < Update와 FixedUpdate 사이 >
 subtitle: 입력이 사라졌다 - Update와 FixedUpdate 사이에서
 author: bbie
 categories: Unity-Project
@@ -251,7 +251,7 @@ if (hit.collider != null)
 
 - [Unity 6000.0 Scripting API - Rigidbody2D.linearVelocity](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Rigidbody2D-linearVelocity.html)
 - [Unity 6000.0 Scripting API - Physics2D.Raycast](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Physics2D.Raycast.html)
-- [지난 편 - 유니티 학습 프로젝트 < 1 >](https://bbie-6772.github.io/unity-project/2026/08/27/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < AI에게 기획서 맡기기 >](https://bbie-6772.github.io/unity-project/2026/08/27/unity-project.html)
 
 ## 한줄 평
 

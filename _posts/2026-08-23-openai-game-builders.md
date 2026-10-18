@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Game Builders - < 5 >
+title: OpenAI Game Builders - < 역할 분담과 소통의 부재 >
 subtitle: 계획대로 나눈 역할이 계획대로 흘러가진 않았다
 author: bbie
 categories: OpenAI-Game-Builders

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 10 >
+title: 유니티 학습 프로젝트 - < 코루틴 없는 스폰 타이머 >
 subtitle: 시계를 두 개 두지 않기 위해 코루틴을 버렸다
 author: bbie
 categories: Unity-Project
@@ -250,7 +250,7 @@ spawnPoint = Vector2.Min(Vector2.Max(spawnPoint, _mapMin), _mapMax);
 - [Unity 6000.0 Manual - Order of execution for event functions](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)
 - [Microsoft Learn - IReadOnlyList 인터페이스](https://learn.microsoft.com/ko-kr/dotnet/api/system.collections.generic.ireadonlylist-1)
 - [Microsoft Learn - 구조체 형식](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/builtin-types/struct)
-- [지난 편 - 유니티 학습 프로젝트 < 9 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project3.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 체력바, 사건과 상태 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project3.html)
 
 ## 한줄 평
 

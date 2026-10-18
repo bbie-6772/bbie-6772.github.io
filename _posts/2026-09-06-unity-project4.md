@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 16 >
+title: 유니티 학습 프로젝트 - < 측정 도구를 의심하기 >
 subtitle: 측정 도구를 의심하기까지
 author: bbie
 categories: Unity-Project
@@ -232,7 +232,7 @@ tags: [Game, Unity, C#, Optimization, Profiling]
 - [Unity 6000.0 Manual - WaitForSeconds](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/WaitForSeconds.html)
 - [왕복 부하 실험 기록 - 0031](https://github.com/bbie-6772/2d-survivor/blob/main/docs/decisions/0031-test02-setting.md)
 - [마감으로 잘라낸 범위 - 0017](https://github.com/bbie-6772/2d-survivor/blob/main/docs/decisions/0017-weekend-scope-cut.md)
-- [지난 편 - 유니티 학습 프로젝트 < 15 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project3.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 발동하지 않는 좀비 상한 >](https://bbie-6772.github.io/unity-project/2026/09/06/unity-project3.html)
 
 ## 한줄 평
 

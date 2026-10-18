@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 4 >
+title: 유니티 학습 프로젝트 - < 발동 지점이 빠진 스킬 >
 subtitle: 코드는 다 썼는데 아무 일도 안 일어났다
 author: bbie
 categories: Unity-Project
@@ -454,7 +454,7 @@ IEnumerator FlashRoutine()
 - [Unity 6000.0 Scripting API - Debug.DrawRay](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Debug.DrawRay.html)
 - [Unity 6000.0 Manual - Order of execution for event functions](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)
 - [Microsoft Learn - 자동 구현 속성](https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties)
-- [지난 편 - 유니티 학습 프로젝트 < 3 >](https://bbie-6772.github.io/unity-project/2026/08/29/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 방향, 가드, 무적 시간 >](https://bbie-6772.github.io/unity-project/2026/08/29/unity-project.html)
 
 ## 한줄 평
 

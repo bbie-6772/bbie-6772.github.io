@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenAI Game Builders Seoul - < 4 >
+title: OpenAI Game Builders - < 13스테이지 계획을 산수로 접기 >
 subtitle: 8일 96시간, 13스테이지 계획을 산수로 접은 기록
 author: bbie
 categories: OpenAI-Game-Builders

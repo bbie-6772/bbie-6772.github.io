@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 13 >
+title: 유니티 학습 프로젝트 - < 남은 시간과 좀비 수 표시 >
 subtitle: 인자를 안 쓰는 메서드가 알려준 것
 author: bbie
 categories: Unity-Project
@@ -280,7 +280,7 @@ if (!isReady)
 - [Microsoft Learn - override 한정자](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/override)
 - [Unity 6000.0 Manual - Object.Destroy](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Object.Destroy.html)
 - [Unity 6000.0 Manual - Mathf.CeilToInt](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Mathf.CeilToInt.html)
-- [지난 편 - 유니티 학습 프로젝트 < 12 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project6.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 방향이 틀렸다는 신호들 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project6.html)
 
 ## 한줄 평
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 8 >
+title: 유니티 학습 프로젝트 - < 레벨업 창과 버튼 이벤트 >
 subtitle: 두 줄의 순서를 바꿨더니 동작했다, 그래서 되돌아갔다
 author: bbie
 categories: Unity-Project
@@ -315,7 +315,7 @@ void OnDisable() { _health.OnDamaged -= Flash; }
 - [Microsoft Learn - event 키워드](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/event)
 - [Unity 6000.0 Manual - UnityEvent](https://docs.unity3d.com/6000.0/Documentation/Manual/UnityEvents.html)
 - [TextMeshPro - Font Asset Creator](https://docs.unity3d.com/Packages/com.unity.textmeshpro@4.0/manual/FontAssetsCreator.html)
-- [지난 편 - 유니티 학습 프로젝트 < 7 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 게임 종료와 레벨업 큐 >](https://bbie-6772.github.io/unity-project/2026/09/05/unity-project.html)
 
 ## 한줄 평
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 6 >
+title: 유니티 학습 프로젝트 - < 심장 드롭과 NullReferenceException >
 subtitle: 같은 기준을 두 번 적용했더니 답이 갈렸다
 author: bbie
 categories: Unity-Project
@@ -257,7 +257,7 @@ protected override void Setup(GameObject obj)
 - [Microsoft Learn - 접근 한정자](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/access-modifiers)
 - [Unity 6000.0 Manual - Order of execution for event functions](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)
 - [Unity 6000.0 Manual - Coroutines](https://docs.unity3d.com/6000.0/Documentation/Manual/Coroutines.html)
-- [지난 편 - 유니티 학습 프로젝트 < 5 >](https://bbie-6772.github.io/unity-project/2026/08/30/unity-project2.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 상속 계층 설계 >](https://bbie-6772.github.io/unity-project/2026/08/30/unity-project2.html)
 
 ## 한줄 평
 

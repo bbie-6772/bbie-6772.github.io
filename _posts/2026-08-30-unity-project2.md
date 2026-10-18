@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 5 >
+title: 유니티 학습 프로젝트 - < 상속 계층 설계 >
 subtitle: 상속 계층을 세우는 데 오전을 다 썼고, 그동안 화면엔 좀비가 없었다
 author: bbie
 categories: Unity-Project
@@ -371,7 +371,7 @@ transform.position = new Vector3(currentPosition.x, currentPosition.y, _z);
 - [Unity 6000.0 Manual - Coroutines](https://docs.unity3d.com/6000.0/Documentation/Manual/Coroutines.html)
 - [Unity 6000.0 Manual - Order of execution for event functions](https://docs.unity3d.com/6000.0/Documentation/Manual/execution-order.html)
 - [Unity 6000.0 Scripting API - SerializeField](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/SerializeField.html)
-- [지난 편 - 유니티 학습 프로젝트 < 4 >](https://bbie-6772.github.io/unity-project/2026/08/30/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 발동 지점이 빠진 스킬 >](https://bbie-6772.github.io/unity-project/2026/08/30/unity-project.html)
 
 ## 한줄 평
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 유니티 학습 프로젝트 - < 7 >
+title: 유니티 학습 프로젝트 - < 게임 종료와 레벨업 큐 >
 subtitle: 미뤄둔 한 줄이 네 번째로 청구서를 보내왔다
 author: bbie
 categories: Unity-Project
@@ -281,7 +281,7 @@ if (_attacksPerSecond <= 0f)
 - [Unity 6000.0 Manual - Collider2D.OnTriggerEnter2D](https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Collider2D.OnTriggerEnter2D.html)
 - [Unity 6000.0 Manual - Coroutines](https://docs.unity3d.com/6000.0/Documentation/Manual/Coroutines.html)
 - [Microsoft Learn - event 키워드](https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/keywords/event)
-- [지난 편 - 유니티 학습 프로젝트 < 6 >](https://bbie-6772.github.io/unity-project/2026/09/04/unity-project.html)
+- [지난 편 - 유니티 학습 프로젝트 - < 심장 드롭과 NullReferenceException >](https://bbie-6772.github.io/unity-project/2026/09/04/unity-project.html)
 
 ## 한줄 평
 
