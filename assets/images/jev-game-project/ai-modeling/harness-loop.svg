@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="330" fill="#f7f9fb"/>
+  <text x="24" y="34" font-size="17" font-weight="700" fill="#1d3a5c">하네스 안에서 수정 한 번이 도는 순서 (개념도)</text>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8fb0d4"/></marker>
+  </defs>
+  <g font-size="14">
+    <rect x="24" y="60" width="150" height="74" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="99" y="90" text-anchor="middle" font-weight="700" fill="#3d6fa8">① 재기</text>
+    <text x="99" y="112" text-anchor="middle" fill="#6b7f95" font-size="12">간격·겹침·실루엣 수치</text>
+
+    <rect x="200" y="60" width="150" height="74" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="275" y="90" text-anchor="middle" font-weight="700" fill="#3d6fa8">② 보드로 묻기</text>
+    <text x="275" y="112" text-anchor="middle" fill="#6b7f95" font-size="12">후보 A·B·C를 렌더해 비교</text>
+
+    <rect x="376" y="60" width="150" height="74" rx="10" fill="#fff" stroke="#a04040" stroke-width="1.6"/>
+    <text x="451" y="90" text-anchor="middle" font-weight="700" fill="#a04040">③ 사람이 고르기</text>
+    <text x="451" y="112" text-anchor="middle" fill="#6b7f95" font-size="12">"진행" 답 = 이 계획만 승인</text>
+
+    <rect x="552" y="60" width="144" height="74" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="624" y="90" text-anchor="middle" font-weight="700" fill="#3d6fa8">④ 새 후보에 실행</text>
+    <text x="624" y="112" text-anchor="middle" fill="#6b7f95" font-size="12">승인된 파츠·꼭짓점만</text>
+
+    <rect x="376" y="196" width="320" height="74" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="536" y="226" text-anchor="middle" font-weight="700" fill="#3d6fa8">⑤ 새 프로세스에서 다시 열어 검증</text>
+    <text x="536" y="248" text-anchor="middle" fill="#6b7f95" font-size="12">범위 밖 변경 0인지, 해시·수치 재측정</text>
+
+    <rect x="24" y="196" width="326" height="74" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="187" y="226" text-anchor="middle" font-weight="700" fill="#3d6fa8">⑥ 후보로 보존, 채택은 따로</text>
+    <text x="187" y="248" text-anchor="middle" fill="#6b7f95" font-size="12">원본·이전 후보는 지우지 않음 → 언제든 원복</text>
+  </g>
+  <g stroke="#8fb0d4" stroke-width="2" fill="none" marker-end="url(#a)">
+    <line x1="174" y1="97" x2="198" y2="97"/>
+    <line x1="350" y1="97" x2="374" y2="97"/>
+    <line x1="526" y1="97" x2="550" y2="97"/>
+    <line x1="624" y1="134" x2="624" y2="194"/>
+    <line x1="376" y1="233" x2="352" y2="233"/>
+    <path d="M99,196 L99,136"/>
+  </g>
+  <text x="24" y="306" font-size="12" fill="#6b7f95">빨간 칸만 사람이 한다. 나머지는 AI가 하지만, 허락된 범위 밖으로는 실행 자체가 막힌다.</text>
+</svg>
