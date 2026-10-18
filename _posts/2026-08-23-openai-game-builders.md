@@ -15,7 +15,7 @@ tags: [Game, AI, Codex, Unity, PixelLab, PixelArt, Animation, Collaboration]
 
 ## 개요
 
-[지난 글](https://bbie-6772.github.io/openai_game_builders/2026/08/17/openai-game-builders2.html)에서는 13스테이지 기획과 8일 96 person-hour가 맞지 않는다는 사실을 확인하고, 구현 범위를 줄인 과정을 적었다.
+[지난 글]({% post_url 2026-08-17-openai-game-builders2 %})에서는 13스테이지 기획과 8일 96 person-hour가 맞지 않는다는 사실을 확인하고, 구현 범위를 줄인 과정을 적었다.
 
 계획을 줄였다고 바로 제작이 정리된 것은 아니었다.. 역할을 나눈 문서를 보고도 각자 생각한 범위가 달랐고, 실제 제출물을 만들기 위해 스테이지를 한 번 더 압축하게 되었다.
 

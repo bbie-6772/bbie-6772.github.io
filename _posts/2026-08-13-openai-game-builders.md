@@ -15,7 +15,7 @@ tags: [Game, AI, Codex, Unity, PixelLab, MVP, AI-Agent, Architecture]
 
 ## 개요
 
-[지난 글](https://bbie-6772.github.io/openai_game_builders/2026/08/12/openai-game-builders.html)에서는 게임 개발 오케스트레이션을 Agent-first 구조로 다시 설계한 과정을 정리했다. 판단은 Codex가 맡고, MCP는 외부 도구를 다루며, 최종 승인과 재미 판단은 사람이 맡도록 책임을 나눴다.
+[지난 글]({% post_url 2026-08-12-openai-game-builders %})에서는 게임 개발 오케스트레이션을 Agent-first 구조로 다시 설계한 과정을 정리했다. 판단은 Codex가 맡고, MCP는 외부 도구를 다루며, 최종 승인과 재미 판단은 사람이 맡도록 책임을 나눴다.
 
 구조를 가볍게 만든 이유는 멋진 설계도를 보여주기 위해서가 아니었다. **실제 게임을 더 빨리 만들고 고치기 위해서**였다.
 

@@ -15,7 +15,7 @@ tags: [Game, AI, Codex, RAG, MCP, Unity, Spec, MVP, AI-Agent, Architecture]
 
 ## 개요
 
-[지난 글](https://bbie-6772.github.io/openai_game_builders/2026/08/13/openai-game-builders.html)에서는 하나의 스토리를 2D와 3D로 나눠 각각 MVP를 만든 뒤, 플레이해보고 더 나은 쪽을 고르겠다고 적었다.
+[지난 글]({% post_url 2026-08-13-openai-game-builders %})에서는 하나의 스토리를 2D와 3D로 나눠 각각 MVP를 만든 뒤, 플레이해보고 더 나은 쪽을 고르겠다고 적었다.
 
 **그 비교는 실행되지 않았다. 3D 트랙은 MVP를 만들기 전에 무산됐다.**
 

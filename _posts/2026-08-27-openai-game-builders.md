@@ -15,7 +15,7 @@ tags: [Game, AI, Codex, Unity, WebGL, Debugging, Font, AI-Agent]
 
 ## 개요
 
-[지난 글](https://bbie-6772.github.io/openai_game_builders/2026/08/23/openai-game-builders.html)에서는 Role A로 spec 기반 코어 기능을 구현하고, PixelLab.ai와 GPT를 섞어 캐릭터 애니메이션을 만든 과정을 정리했다.
+[지난 글]({% post_url 2026-08-23-openai-game-builders %})에서는 Role A로 spec 기반 코어 기능을 구현하고, PixelLab.ai와 GPT를 섞어 캐릭터 애니메이션을 만든 과정을 정리했다.
 
 마지막 날에는 새 기능을 더 만드는 대신 디버깅과 제출용 Web build에 시간을 사용했다. 이때 만난 두 문제는 겉으로 보이는 증상과 실제 원인이 달랐다.
 
