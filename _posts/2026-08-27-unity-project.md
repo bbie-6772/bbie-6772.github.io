@@ -15,7 +15,7 @@ tags: [Game, Unity, AI, Spec, Game-Design]
 
 ## 개요
 
-[지난 글](https://bbie-6772.github.io/openai_game_builders/2026/08/27/openai-game-builders.html)에서 이런 다짐을 적었다. 다음에는 AI에게 완성 코드를 먼저 요청하지 말고, 구현 방법과 그 이유, 다른 방법과의 trade-off를 먼저 물어보겠다고.
+[지난 글]({% post_url 2026-08-27-openai-game-builders %})에서 이런 다짐을 적었다. 다음에는 AI에게 완성 코드를 먼저 요청하지 말고, 구현 방법과 그 이유, 다른 방법과의 trade-off를 먼저 물어보겠다고.
 
 말은 쉽다. 그래서 진짜로 해봤다.  
 새 Unity 프로젝트를 시작하면서 AI의 역할을 아예 둘로 쪼갰다. 하나는 프로젝트 설계를 도와주는 기획 AI, 다른 하나는 **코드를 절대 주지 않고 조언만 하는 멘토 AI**다.
@@ -136,7 +136,7 @@ spec을 쓸 때 항목을 네 개 두라는 조언을 받았다. 코어 루프 /
 
 ## 참고 자료
 
-- [지난 글 - OpenAI Game Builders - < AI가 만든 코드 디버깅 >](https://bbie-6772.github.io/openai_game_builders/2026/08/27/openai-game-builders.html)
+- [지난 글 - OpenAI Game Builders - < AI가 만든 코드 디버깅 >]({% post_url 2026-08-27-openai-game-builders %})
 
 ## 한줄 평
 
