@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="패턴 WORLD의 마지막 칸 아래 텍스트 글자가 O일 때, 1칸 밀면 L, 2칸 밀면 R, 3칸 밀면 O가 그 칸에 와서 처음으로 맞으므로 3칸 이동한다. skip 표는 W 4, O 3, R 2, L 1, D 5, 그 외 5">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .ghost { fill: #ffffff; stroke: #d5dde6; stroke-dasharray: 3 3; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .ok { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #3d6fa8; }
+  </style>
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" text-anchor="start" font-weight="600">몇 칸 밀어야 X가 패턴 글자와 겹치나</text>
+  <text class="sub" x="24" y="56" font-size="13" text-anchor="start">P = WORLD.  마지막 칸 아래 텍스트 글자 X = O.  d칸 밀면 그 칸에는 P[4−d]가 온다</text>
+  <rect class="card" x="24" y="72" width="420" height="250" rx="8"/>
+  <text class="sub" x="40" y="113" font-size="12" text-anchor="start">T</text>
+  <rect class="c" x="90" y="94" width="28" height="28" rx="4"/><text class="m" x="104.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="c" x="120" y="94" width="28" height="28" rx="4"/><text class="m" x="134.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="c" x="150" y="94" width="28" height="28" rx="4"/><text class="m" x="164.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="c" x="180" y="94" width="28" height="28" rx="4"/><text class="m" x="194.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="hit" x="210" y="94" width="28" height="28" rx="4"/><text class="m" x="224.0" y="113" font-size="14" text-anchor="middle">O</text><rect class="c" x="240" y="94" width="28" height="28" rx="4"/><text class="m" x="254.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="c" x="270" y="94" width="28" height="28" rx="4"/><text class="m" x="284.0" y="113" font-size="14" text-anchor="middle">·</text><rect class="c" x="300" y="94" width="28" height="28" rx="4"/><text class="m" x="314.0" y="113" font-size="14" text-anchor="middle">·</text>
+  <line x1="224" y1="126" x2="224" y2="290" stroke="#8fb0d4" stroke-width="1" stroke-dasharray="4 3"/>
+  <text class="sub" x="40" y="155" font-size="12" text-anchor="start">d=0</text>
+  <rect class="c" x="90" y="136" width="28" height="28" rx="4"/><text class="m" x="104.0" y="155" font-size="14" text-anchor="middle">W</text><rect class="c" x="120" y="136" width="28" height="28" rx="4"/><text class="m" x="134.0" y="155" font-size="14" text-anchor="middle">O</text><rect class="c" x="150" y="136" width="28" height="28" rx="4"/><text class="m" x="164.0" y="155" font-size="14" text-anchor="middle">R</text><rect class="c" x="180" y="136" width="28" height="28" rx="4"/><text class="m" x="194.0" y="155" font-size="14" text-anchor="middle">L</text><rect class="ghost" x="210" y="136" width="28" height="28" rx="4"/><text class="m" x="224.0" y="155" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="250" y="155" font-size="13" text-anchor="start">제자리, 제외</text>
+  <text class="sub" x="40" y="193" font-size="12" text-anchor="start">d=1</text>
+  <rect class="c" x="120" y="174" width="28" height="28" rx="4"/><text class="m" x="134.0" y="193" font-size="14" text-anchor="middle">W</text><rect class="c" x="150" y="174" width="28" height="28" rx="4"/><text class="m" x="164.0" y="193" font-size="14" text-anchor="middle">O</text><rect class="c" x="180" y="174" width="28" height="28" rx="4"/><text class="m" x="194.0" y="193" font-size="14" text-anchor="middle">R</text><rect class="bad" x="210" y="174" width="28" height="28" rx="4"/><text class="m" x="224.0" y="193" font-size="14" text-anchor="middle">L</text><rect class="c" x="240" y="174" width="28" height="28" rx="4"/><text class="m" x="254.0" y="193" font-size="14" text-anchor="middle">D</text>
+  <text class="r" x="280" y="193" font-size="13" text-anchor="start">P[3]=L  ✗</text>
+  <text class="sub" x="40" y="231" font-size="12" text-anchor="start">d=2</text>
+  <rect class="c" x="150" y="212" width="28" height="28" rx="4"/><text class="m" x="164.0" y="231" font-size="14" text-anchor="middle">W</text><rect class="c" x="180" y="212" width="28" height="28" rx="4"/><text class="m" x="194.0" y="231" font-size="14" text-anchor="middle">O</text><rect class="bad" x="210" y="212" width="28" height="28" rx="4"/><text class="m" x="224.0" y="231" font-size="14" text-anchor="middle">R</text><rect class="c" x="240" y="212" width="28" height="28" rx="4"/><text class="m" x="254.0" y="231" font-size="14" text-anchor="middle">L</text><rect class="c" x="270" y="212" width="28" height="28" rx="4"/><text class="m" x="284.0" y="231" font-size="14" text-anchor="middle">D</text>
+  <text class="r" x="310" y="231" font-size="13" text-anchor="start">P[2]=R  ✗</text>
+  <text class="sub" x="40" y="269" font-size="12" text-anchor="start">d=3</text>
+  <rect class="c" x="180" y="250" width="28" height="28" rx="4"/><text class="m" x="194.0" y="269" font-size="14" text-anchor="middle">W</text><rect class="hit" x="210" y="250" width="28" height="28" rx="4"/><text class="m" x="224.0" y="269" font-size="14" text-anchor="middle">O</text><rect class="c" x="240" y="250" width="28" height="28" rx="4"/><text class="m" x="254.0" y="269" font-size="14" text-anchor="middle">R</text><rect class="c" x="270" y="250" width="28" height="28" rx="4"/><text class="m" x="284.0" y="269" font-size="14" text-anchor="middle">L</text><rect class="c" x="300" y="250" width="28" height="28" rx="4"/><text class="m" x="314.0" y="269" font-size="14" text-anchor="middle">D</text>
+  <text class="ok" x="340" y="269" font-size="13" text-anchor="start">P[1]=O  ✓</text>
+  <text class="sub" x="40" y="306" font-size="12" text-anchor="start">처음 ✓가 나오는 d=3이 skip[O]</text>
+  <rect class="card" x="460" y="72" width="236" height="250" rx="8"/>
+  <text class="t" x="476" y="98" font-size="14" text-anchor="start" font-weight="600">skip 표 ( M = 5 )</text>
+  <text class="m" x="492" y="130" font-size="14" text-anchor="start">W</text>
+  <text class="m" x="640" y="130" font-size="14" text-anchor="end">4</text>
+  <text class="m" x="492" y="158" font-size="14" text-anchor="start">O</text>
+  <text class="m" x="640" y="158" font-size="14" text-anchor="end">3</text>
+  <text class="m" x="492" y="186" font-size="14" text-anchor="start">R</text>
+  <text class="m" x="640" y="186" font-size="14" text-anchor="end">2</text>
+  <text class="m" x="492" y="214" font-size="14" text-anchor="start">L</text>
+  <text class="m" x="640" y="214" font-size="14" text-anchor="end">1</text>
+  <text class="m" x="492" y="242" font-size="14" text-anchor="start">D</text>
+  <text class="m" x="640" y="242" font-size="14" text-anchor="end">5</text>
+  <text class="m" x="492" y="270" font-size="14" text-anchor="start">그 외</text>
+  <text class="m" x="640" y="270" font-size="14" text-anchor="end">5</text>
+  <text class="sub" x="476" y="306" font-size="12" text-anchor="start">D는 마지막 칸에만 있어서 M</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="패턴 aabaab에서 aabaa까지 맞고 다음 글자가 a일 때, j=5에서 b와 틀려 j=2로, j=2에서 b와 틀려 j=1로 되돌아간 뒤 P[1]=a가 맞아 최종 j=2가 된다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .ghost { fill: #ffffff; stroke: #d5dde6; stroke-dasharray: 3 3; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .ok { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #3d6fa8; }
+  </style>
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" text-anchor="start" font-weight="600">되돌리기는 맞는 글자를 만날 때까지 이어진다</text>
+  <text class="sub" x="24" y="56" font-size="13" text-anchor="start">P = aabaab ( pi = 0 1 0 1 2 3 ).  aabaa까지 맞은 뒤 다음 텍스트 글자가 a</text>
+  <rect class="card" x="24" y="72" width="672" height="250" rx="8"/>
+  <text class="sub" x="40" y="113" font-size="12" text-anchor="start">T</text>
+  <rect class="c" x="130" y="94" width="28" height="28" rx="4"/><text class="m" x="144.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="c" x="160" y="94" width="28" height="28" rx="4"/><text class="m" x="174.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="c" x="190" y="94" width="28" height="28" rx="4"/><text class="m" x="204.0" y="113" font-size="14" text-anchor="middle">b</text><rect class="c" x="220" y="94" width="28" height="28" rx="4"/><text class="m" x="234.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="c" x="250" y="94" width="28" height="28" rx="4"/><text class="m" x="264.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="hit" x="280" y="94" width="28" height="28" rx="4"/><text class="m" x="294.0" y="113" font-size="14" text-anchor="middle">a</text>
+  <rect class="hit" x="130" y="140" width="28" height="28" rx="4"/><text class="m" x="144.0" y="159" font-size="14" text-anchor="middle">a</text><rect class="hit" x="160" y="140" width="28" height="28" rx="4"/><text class="m" x="174.0" y="159" font-size="14" text-anchor="middle">a</text><rect class="hit" x="190" y="140" width="28" height="28" rx="4"/><text class="m" x="204.0" y="159" font-size="14" text-anchor="middle">b</text><rect class="hit" x="220" y="140" width="28" height="28" rx="4"/><text class="m" x="234.0" y="159" font-size="14" text-anchor="middle">a</text><rect class="hit" x="250" y="140" width="28" height="28" rx="4"/><text class="m" x="264.0" y="159" font-size="14" text-anchor="middle">a</text><rect class="bad" x="280" y="140" width="28" height="28" rx="4"/><text class="m" x="294.0" y="159" font-size="14" text-anchor="middle">b</text>
+  <text class="r" x="350" y="152" font-size="13" text-anchor="start">j=5: P[5]=b ≠ a  ✗</text>
+  <text class="sub" x="350" y="170" font-size="12" text-anchor="start">→ j = pi[4] = 2</text>
+  <rect class="hit" x="220" y="192" width="28" height="28" rx="4"/><text class="m" x="234.0" y="211" font-size="14" text-anchor="middle">a</text><rect class="hit" x="250" y="192" width="28" height="28" rx="4"/><text class="m" x="264.0" y="211" font-size="14" text-anchor="middle">a</text><rect class="bad" x="280" y="192" width="28" height="28" rx="4"/><text class="m" x="294.0" y="211" font-size="14" text-anchor="middle">b</text>
+  <text class="r" x="350" y="204" font-size="13" text-anchor="start">j=2: P[2]=b ≠ a  ✗</text>
+  <text class="sub" x="350" y="222" font-size="12" text-anchor="start">→ j = pi[1] = 1</text>
+  <rect class="hit" x="250" y="244" width="28" height="28" rx="4"/><text class="m" x="264.0" y="263" font-size="14" text-anchor="middle">a</text><rect class="hit" x="280" y="244" width="28" height="28" rx="4"/><text class="m" x="294.0" y="263" font-size="14" text-anchor="middle">a</text>
+  <text class="ok" x="350" y="256" font-size="13" text-anchor="start">j=1: P[1]=a = a  ✓</text>
+  <text class="sub" x="350" y="274" font-size="12" text-anchor="start">→ j = 2, 끝</text>
+  <text class="sub" x="40" y="306" font-size="12" text-anchor="start">보장된 부분: aabaa  →  aa  →  a  →  aa</text>
+</svg>

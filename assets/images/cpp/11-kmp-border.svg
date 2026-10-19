@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="맞은 부분 ababa 아래에 패턴을 1칸부터 4칸까지 밀어 겹쳐 보면, 2칸 밀 때 aba가, 4칸 밀 때 a가 겹친 곳과 같아 가능하고, 1칸과 3칸은 겹친 곳이 달라 불가능하다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .ghost { fill: #ffffff; stroke: #d5dde6; stroke-dasharray: 3 3; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .ok { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #3d6fa8; }
+  </style>
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" text-anchor="start" font-weight="600">맞은 부분 ababa를 d칸 밀면, 겹친 곳이 서로 같아야 한다</text>
+  <text class="sub" x="24" y="56" font-size="13" text-anchor="start">겹친 길이 (5−d)의 접미사 = 접두사  →  보더.  가장 긴 보더가 가장 작은 이동</text>
+  <rect class="card" x="24" y="72" width="672" height="250" rx="8"/>
+  <text class="sub" x="40" y="113" font-size="12" text-anchor="start">맞은 텍스트</text>
+  <rect class="hit" x="130" y="94" width="28" height="28" rx="4"/><text class="m" x="144.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="hit" x="160" y="94" width="28" height="28" rx="4"/><text class="m" x="174.0" y="113" font-size="14" text-anchor="middle">b</text><rect class="hit" x="190" y="94" width="28" height="28" rx="4"/><text class="m" x="204.0" y="113" font-size="14" text-anchor="middle">a</text><rect class="hit" x="220" y="94" width="28" height="28" rx="4"/><text class="m" x="234.0" y="113" font-size="14" text-anchor="middle">b</text><rect class="hit" x="250" y="94" width="28" height="28" rx="4"/><text class="m" x="264.0" y="113" font-size="14" text-anchor="middle">a</text>
+  <text class="sub" x="40" y="155" font-size="12" text-anchor="start">d=1</text>
+  <rect class="bad" x="160" y="136" width="28" height="28" rx="4"/><text class="m" x="174.0" y="155" font-size="14" text-anchor="middle">a</text><rect class="bad" x="190" y="136" width="28" height="28" rx="4"/><text class="m" x="204.0" y="155" font-size="14" text-anchor="middle">b</text><rect class="bad" x="220" y="136" width="28" height="28" rx="4"/><text class="m" x="234.0" y="155" font-size="14" text-anchor="middle">a</text><rect class="bad" x="250" y="136" width="28" height="28" rx="4"/><text class="m" x="264.0" y="155" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="280" y="136" width="28" height="28" rx="4"/><text class="m" x="294.0" y="155" font-size="14" text-anchor="middle">a</text>
+  <text class="r" x="420" y="155" font-size="13" text-anchor="start">겹친 곳이 다르다  ✗</text>
+  <text class="sub" x="40" y="195" font-size="12" text-anchor="start">d=2</text>
+  <rect class="hit" x="190" y="176" width="28" height="28" rx="4"/><text class="m" x="204.0" y="195" font-size="14" text-anchor="middle">a</text><rect class="hit" x="220" y="176" width="28" height="28" rx="4"/><text class="m" x="234.0" y="195" font-size="14" text-anchor="middle">b</text><rect class="hit" x="250" y="176" width="28" height="28" rx="4"/><text class="m" x="264.0" y="195" font-size="14" text-anchor="middle">a</text><rect class="ghost" x="280" y="176" width="28" height="28" rx="4"/><text class="m" x="294.0" y="195" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="310" y="176" width="28" height="28" rx="4"/><text class="m" x="324.0" y="195" font-size="14" text-anchor="middle">a</text>
+  <text class="ok" x="420" y="195" font-size="13" text-anchor="start">보더 aba  ✓</text>
+  <text class="sub" x="40" y="235" font-size="12" text-anchor="start">d=3</text>
+  <rect class="bad" x="220" y="216" width="28" height="28" rx="4"/><text class="m" x="234.0" y="235" font-size="14" text-anchor="middle">a</text><rect class="bad" x="250" y="216" width="28" height="28" rx="4"/><text class="m" x="264.0" y="235" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="280" y="216" width="28" height="28" rx="4"/><text class="m" x="294.0" y="235" font-size="14" text-anchor="middle">a</text><rect class="ghost" x="310" y="216" width="28" height="28" rx="4"/><text class="m" x="324.0" y="235" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="340" y="216" width="28" height="28" rx="4"/><text class="m" x="354.0" y="235" font-size="14" text-anchor="middle">a</text>
+  <text class="r" x="420" y="235" font-size="13" text-anchor="start">겹친 곳이 다르다  ✗</text>
+  <text class="sub" x="40" y="275" font-size="12" text-anchor="start">d=4</text>
+  <rect class="hit" x="250" y="256" width="28" height="28" rx="4"/><text class="m" x="264.0" y="275" font-size="14" text-anchor="middle">a</text><rect class="ghost" x="280" y="256" width="28" height="28" rx="4"/><text class="m" x="294.0" y="275" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="310" y="256" width="28" height="28" rx="4"/><text class="m" x="324.0" y="275" font-size="14" text-anchor="middle">a</text><rect class="ghost" x="340" y="256" width="28" height="28" rx="4"/><text class="m" x="354.0" y="275" font-size="14" text-anchor="middle">b</text><rect class="ghost" x="370" y="256" width="28" height="28" rx="4"/><text class="m" x="384.0" y="275" font-size="14" text-anchor="middle">a</text>
+  <text class="ok" x="420" y="275" font-size="13" text-anchor="start">보더 a  ✓</text>
+  <text class="sub" x="40" y="306" font-size="12" text-anchor="start">점선 칸은 아직 텍스트와 비교하지 않은 부분</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" role="img" aria-label="텍스트 XYZWABCD에서 패턴 ABCD를 찾을 때, 왼쪽부터 비교하면 T[0]의 X가 틀려 정렬 위치 0 하나만 탈락하고, 오른쪽부터 비교하면 T[3]의 W가 패턴에 없어 그 칸을 덮는 정렬 위치 0부터 3까지 네 개가 함께 탈락한다">
+  <style>
+    .bg { fill: #f7f9fb; }
+    .card { fill: #ffffff; stroke: #d5dde6; }
+    .t { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #1d3a5c; }
+    .sub { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #6b7f95; }
+    .m { font-family: "Cascadia Mono", Consolas, monospace; fill: #1d3a5c; }
+    .c { fill: #eef2f6; stroke: #d5dde6; }
+    .hit { fill: #dce7f4; stroke: #3d6fa8; stroke-width: 1.5; }
+    .bad { fill: #f6e6e6; stroke: #a04040; stroke-width: 1.5; }
+    .ghost { fill: #ffffff; stroke: #d5dde6; stroke-dasharray: 3 3; }
+    .r { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #a04040; }
+    .ok { font-family: Pretendard, -apple-system, "Segoe UI", Roboto, sans-serif; fill: #3d6fa8; }
+  </style>
+  <rect class="bg" width="720" height="340" rx="10"/>
+  <text class="t" x="24" y="34" font-size="16" text-anchor="start" font-weight="600">오른쪽 끝 칸 하나가 정렬 위치 M개를 한 번에 판정한다</text>
+  <text class="sub" x="24" y="56" font-size="13" text-anchor="start">T = XYZWABCD…,  P = ABCD.  빨간 칸이 그 비교 하나로 함께 탈락한 정렬 위치</text>
+  <rect class="card" x="24" y="72" width="324" height="250" rx="8"/>
+  <text class="t" x="40" y="98" font-size="14" text-anchor="start" font-weight="600">왼쪽부터 비교</text>
+  <text class="sub" x="40" y="129" font-size="12" text-anchor="start">T</text>
+  <rect class="bad" x="64" y="110" width="28" height="28" rx="4"/><text class="m" x="78.0" y="129" font-size="14" text-anchor="middle">X</text><rect class="c" x="94" y="110" width="28" height="28" rx="4"/><text class="m" x="108.0" y="129" font-size="14" text-anchor="middle">Y</text><rect class="c" x="124" y="110" width="28" height="28" rx="4"/><text class="m" x="138.0" y="129" font-size="14" text-anchor="middle">Z</text><rect class="c" x="154" y="110" width="28" height="28" rx="4"/><text class="m" x="168.0" y="129" font-size="14" text-anchor="middle">W</text><rect class="c" x="184" y="110" width="28" height="28" rx="4"/><text class="m" x="198.0" y="129" font-size="14" text-anchor="middle">A</text><rect class="c" x="214" y="110" width="28" height="28" rx="4"/><text class="m" x="228.0" y="129" font-size="14" text-anchor="middle">B</text><rect class="c" x="244" y="110" width="28" height="28" rx="4"/><text class="m" x="258.0" y="129" font-size="14" text-anchor="middle">C</text><rect class="c" x="274" y="110" width="28" height="28" rx="4"/><text class="m" x="288.0" y="129" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="40" y="169" font-size="12" text-anchor="start">s=0</text>
+  <rect class="bad" x="64" y="150" width="28" height="28" rx="4"/><text class="m" x="78.0" y="169" font-size="14" text-anchor="middle">A</text><rect class="ghost" x="94" y="150" width="28" height="28" rx="4"/><text class="m" x="108.0" y="169" font-size="14" text-anchor="middle">B</text><rect class="ghost" x="124" y="150" width="28" height="28" rx="4"/><text class="m" x="138.0" y="169" font-size="14" text-anchor="middle">C</text><rect class="ghost" x="154" y="150" width="28" height="28" rx="4"/><text class="m" x="168.0" y="169" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="40" y="201" font-size="12" text-anchor="start">s=1</text>
+  <rect class="ghost" x="94" y="182" width="28" height="28" rx="4"/><rect class="ghost" x="124" y="182" width="28" height="28" rx="4"/><rect class="ghost" x="154" y="182" width="28" height="28" rx="4"/><rect class="ghost" x="184" y="182" width="28" height="28" rx="4"/>
+  <text class="sub" x="40" y="233" font-size="12" text-anchor="start">s=2</text>
+  <rect class="ghost" x="124" y="214" width="28" height="28" rx="4"/><rect class="ghost" x="154" y="214" width="28" height="28" rx="4"/><rect class="ghost" x="184" y="214" width="28" height="28" rx="4"/><rect class="ghost" x="214" y="214" width="28" height="28" rx="4"/>
+  <text class="sub" x="40" y="265" font-size="12" text-anchor="start">s=3</text>
+  <rect class="ghost" x="154" y="246" width="28" height="28" rx="4"/><rect class="ghost" x="184" y="246" width="28" height="28" rx="4"/><rect class="ghost" x="214" y="246" width="28" height="28" rx="4"/><rect class="ghost" x="244" y="246" width="28" height="28" rx="4"/>
+  <text class="r" x="40" y="298" font-size="13" text-anchor="start">T[0]=X ≠ A  →  s=0만 탈락, 1칸 이동</text>
+  <rect class="card" x="372" y="72" width="324" height="250" rx="8"/>
+  <text class="t" x="388" y="98" font-size="14" text-anchor="start" font-weight="600">오른쪽부터 비교</text>
+  <text class="sub" x="388" y="129" font-size="12" text-anchor="start">T</text>
+  <rect class="c" x="412" y="110" width="28" height="28" rx="4"/><text class="m" x="426.0" y="129" font-size="14" text-anchor="middle">X</text><rect class="c" x="442" y="110" width="28" height="28" rx="4"/><text class="m" x="456.0" y="129" font-size="14" text-anchor="middle">Y</text><rect class="c" x="472" y="110" width="28" height="28" rx="4"/><text class="m" x="486.0" y="129" font-size="14" text-anchor="middle">Z</text><rect class="bad" x="502" y="110" width="28" height="28" rx="4"/><text class="m" x="516.0" y="129" font-size="14" text-anchor="middle">W</text><rect class="c" x="532" y="110" width="28" height="28" rx="4"/><text class="m" x="546.0" y="129" font-size="14" text-anchor="middle">A</text><rect class="c" x="562" y="110" width="28" height="28" rx="4"/><text class="m" x="576.0" y="129" font-size="14" text-anchor="middle">B</text><rect class="c" x="592" y="110" width="28" height="28" rx="4"/><text class="m" x="606.0" y="129" font-size="14" text-anchor="middle">C</text><rect class="c" x="622" y="110" width="28" height="28" rx="4"/><text class="m" x="636.0" y="129" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="388" y="169" font-size="12" text-anchor="start">s=0</text>
+  <rect class="ghost" x="412" y="150" width="28" height="28" rx="4"/><text class="m" x="426.0" y="169" font-size="14" text-anchor="middle">A</text><rect class="ghost" x="442" y="150" width="28" height="28" rx="4"/><text class="m" x="456.0" y="169" font-size="14" text-anchor="middle">B</text><rect class="ghost" x="472" y="150" width="28" height="28" rx="4"/><text class="m" x="486.0" y="169" font-size="14" text-anchor="middle">C</text><rect class="bad" x="502" y="150" width="28" height="28" rx="4"/><text class="m" x="516.0" y="169" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="388" y="201" font-size="12" text-anchor="start">s=1</text>
+  <rect class="ghost" x="442" y="182" width="28" height="28" rx="4"/><text class="m" x="456.0" y="201" font-size="14" text-anchor="middle">A</text><rect class="ghost" x="472" y="182" width="28" height="28" rx="4"/><text class="m" x="486.0" y="201" font-size="14" text-anchor="middle">B</text><rect class="bad" x="502" y="182" width="28" height="28" rx="4"/><text class="m" x="516.0" y="201" font-size="14" text-anchor="middle">C</text><rect class="ghost" x="532" y="182" width="28" height="28" rx="4"/><text class="m" x="546.0" y="201" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="388" y="233" font-size="12" text-anchor="start">s=2</text>
+  <rect class="ghost" x="472" y="214" width="28" height="28" rx="4"/><text class="m" x="486.0" y="233" font-size="14" text-anchor="middle">A</text><rect class="bad" x="502" y="214" width="28" height="28" rx="4"/><text class="m" x="516.0" y="233" font-size="14" text-anchor="middle">B</text><rect class="ghost" x="532" y="214" width="28" height="28" rx="4"/><text class="m" x="546.0" y="233" font-size="14" text-anchor="middle">C</text><rect class="ghost" x="562" y="214" width="28" height="28" rx="4"/><text class="m" x="576.0" y="233" font-size="14" text-anchor="middle">D</text>
+  <text class="sub" x="388" y="265" font-size="12" text-anchor="start">s=3</text>
+  <rect class="bad" x="502" y="246" width="28" height="28" rx="4"/><text class="m" x="516.0" y="265" font-size="14" text-anchor="middle">A</text><rect class="ghost" x="532" y="246" width="28" height="28" rx="4"/><text class="m" x="546.0" y="265" font-size="14" text-anchor="middle">B</text><rect class="ghost" x="562" y="246" width="28" height="28" rx="4"/><text class="m" x="576.0" y="265" font-size="14" text-anchor="middle">C</text><rect class="ghost" x="592" y="246" width="28" height="28" rx="4"/><text class="m" x="606.0" y="265" font-size="14" text-anchor="middle">D</text>
+  <text class="r" x="388" y="298" font-size="13" text-anchor="start">W는 패턴에 없다  →  s=0~3 탈락, 4칸 이동</text>
+</svg>
