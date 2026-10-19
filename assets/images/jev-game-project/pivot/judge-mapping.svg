@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="300" fill="#f7f9fb"/>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8fb0d4"/>
+    </marker>
+  </defs>
+
+  <!-- 입력 -->
+  <rect x="24" y="60" width="190" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="119" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#1d3a5c">입력</text>
+  <text x="119" y="128" text-anchor="middle" font-size="14" fill="#6b7f95">상황</text>
+  <text x="119" y="150" text-anchor="middle" font-size="15" fill="#1d3a5c">비 + 장날</text>
+  <text x="119" y="186" text-anchor="middle" font-size="14" fill="#6b7f95">인물</text>
+  <text x="119" y="208" text-anchor="middle" font-size="15" fill="#1d3a5c">농부 [일하기 싫음]</text>
+
+  <!-- 매핑 -->
+  <rect x="265" y="60" width="190" height="180" rx="10" fill="#ffffff" stroke="#3d6fa8" stroke-width="2.5"/>
+  <text x="360" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#3d6fa8">매핑</text>
+  <text x="360" y="132" text-anchor="middle" font-size="14" fill="#1d3a5c">이 상황에서</text>
+  <text x="360" y="154" text-anchor="middle" font-size="14" fill="#1d3a5c">이 사람이라면</text>
+  <text x="360" y="176" text-anchor="middle" font-size="14" fill="#1d3a5c">무엇을 고를까?</text>
+  <text x="360" y="214" text-anchor="middle" font-size="13" fill="#6b7f95">if 표 또는 Jev</text>
+
+  <!-- 출력 풀 -->
+  <rect x="506" y="60" width="190" height="180" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="601" y="92" text-anchor="middle" font-size="17" font-weight="700" fill="#1d3a5c">출력 풀</text>
+  <text x="601" y="128" text-anchor="middle" font-size="15" fill="#3d6fa8">UP (만족)</text>
+  <text x="601" y="154" text-anchor="middle" font-size="15" fill="#6b7f95">무관</text>
+  <text x="601" y="180" text-anchor="middle" font-size="15" fill="#a04040">DOWN (불만)</text>
+  <text x="601" y="214" text-anchor="middle" font-size="13" fill="#6b7f95">디자이너가 미리 만든 것</text>
+
+  <line x1="216" y1="150" x2="261" y2="150" stroke="#8fb0d4" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="457" y1="150" x2="502" y2="150" stroke="#8fb0d4" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <text x="360" y="276" text-anchor="middle" font-size="14" fill="#6b7f95">출력은 사람이 만들고, 판정 모델이 맡는 건 가운데 칸뿐이다</text>
+</svg>
