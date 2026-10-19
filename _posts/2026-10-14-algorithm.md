@@ -5,7 +5,7 @@ subtitle: "보이어-무어는 왜 오른쪽부터 비교하고, KMP는 왜 whil
 author: bbie
 categories: Algorithm
 banner:
-  image: /assets/images/cpp/00-banner.png
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"

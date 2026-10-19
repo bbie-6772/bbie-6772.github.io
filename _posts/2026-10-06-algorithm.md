@@ -4,9 +4,8 @@ title: Algorithm - < 트리 BFS, 이진 탐색 트리, 힙 >
 subtitle: "트리 BFS, 이진 탐색 트리, 그리고 비트 연산으로 걷는 힙"
 author: bbie
 categories: Algorithm
-permalink: /python/2026/10/06/python.html
 banner:
-  image: https://github.com/user-attachments/assets/0fff9e59-2aeb-4b6e-a0a3-da0582ecf37f
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -20,7 +19,7 @@ tags: [Algorithm, Data-Structure, Tree, Graph-Traversal, Heap, Python]
 
 마지막에 푼 힙 문제도 이 `>> 1`로 부모를 따라 올라가는 풀이였는데, 정작 틀린 곳은 올라가는 루프가 아니라 힙을 만드는 방식이었다.
 
-이번 편은 트리 BFS에서 시작해 이진 탐색 트리( BST ), 힙 순서로 나가고, AI가 던지는 질문에 답하면서 이해한 걸 확인했다. [Algorithm - < 서로소 집합과 최소 신장 트리 >]({% post_url 2026-10-01-python %})의 Prim에서 쓰던 `heapq`가 안에서 어떻게 움직이는지도 이번에 같이 봤다.
+이번 편은 트리 BFS에서 시작해 이진 탐색 트리( BST ), 힙 순서로 나가고, AI가 던지는 질문에 답하면서 이해한 걸 확인했다. [Algorithm - < 서로소 집합과 최소 신장 트리 >]({% post_url 2026-10-01-algorithm %})의 Prim에서 쓰던 `heapq`가 안에서 어떻게 움직이는지도 이번에 같이 봤다.
 
 - **트리 BFS**: 레벨 순서를 만드는 건 트리가 아니라 큐
 - **BST**: 정렬 배열 대신 쓰는 이유, 높이를 정하는 삽입 순서, 삭제할 때 올라올 수 있는 값
@@ -319,7 +318,7 @@ def push(threat, dist, monster):
 
 문제가 되는 상황도 있다. 먼 미래 이벤트를 자주 취소하고 다시 등록하면 꺼내지지 않는 죽은 원소가 힙에 계속 쌓인다. 죽은 원소 비율이 정해 둔 임계치를 넘으면 살아 있는 것만 걸러서 heapify로 다시 만드는 식으로 정리한다.
 
-다익스트라의 "꺼낸 거리가 기록된 거리보다 크면 `continue`"와 [Algorithm - < 서로소 집합과 최소 신장 트리 >]({% post_url 2026-10-01-python %}) Prim의 `if end in visited: continue`가 같은 기법이다.
+다익스트라의 "꺼낸 거리가 기록된 거리보다 크면 `continue`"와 [Algorithm - < 서로소 집합과 최소 신장 트리 >]({% post_url 2026-10-01-algorithm %}) Prim의 `if end in visited: continue`가 같은 기법이다.
 
 ---
 

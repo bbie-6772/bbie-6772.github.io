@@ -160,7 +160,7 @@ try {
 
 - 이번엔 Prisma 라이브러리 대신 직접 사용하기 위해 Connection Pool을 직접 구현해주도록 한다!
 
-- [참고 포스트](https://bbie-6772.github.io//server/2024/12/26/database.html)
+- [참고 포스트]({% post_url 2024-12-26-database %})
 
 ### DB 폴더 구조
 

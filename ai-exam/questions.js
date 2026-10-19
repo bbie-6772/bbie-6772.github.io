@@ -40,9 +40,9 @@
     shift: { title: "SSAFY <40> Test-Time Domain Adaptation", href: "/ssafy/2026/08/26/ssafy3.html" },
     sensing: { title: "SSAFY <41> Adaptive Sensing", href: "/ssafy/2026/08/26/ssafy4.html" },
     domain: { title: "SSAFY <42> Domain 지식과 모델 설계", href: "/ssafy/2026/08/26/ssafy5.html" },
-    pythonSynthetic: { title: "Python <10> 시퀀스 모델과 합성 데이터", href: "/python/2026/08/29/python.html" },
+    pythonSynthetic: { title: "Python <10> 시퀀스 모델과 합성 데이터", href: "/ai-practice/2026/08/29/ai.html" },
     pythonEda: { title: "Python <4> EDA와 시각화", href: "/python/2026/08/07/python.html" },
-    pythonRag: { title: "Python <12> RAG workflow", href: "/python/2026/08/29/python3.html" }
+    pythonRag: { title: "Python <12> RAG workflow", href: "/ai-practice/2026/08/29/ai3.html" }
   };
 
   const mcq = (question) => {

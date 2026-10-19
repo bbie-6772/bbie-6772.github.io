@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 알고리즘 - < 탐색/검색 >
+title: Algorithm - < 탐색/검색 >
 subtitle: 탐색과 경우의 수(Searching, DFS, BFS, Prime-Number)
 author: bbie
-categories: Study
+categories: Algorithm
 banner:
-  image: https://github.com/user-attachments/assets/4c07d091-e6a5-43f6-b9f4-5e6e214f7cb9
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -146,7 +146,7 @@ function binary_search_rightmost(A, n, T):
 
 - 해시 함수를 기반으로 Key를 레코드(데이터)에 직접 매핑하는 방식
 
-- [참고 포스트](https://bbie-6772.github.io/server/2024/12/31/database.html)
+- [참고 포스트]({% post_url 2024-12-31-database %})
 
 ### 트리 탐색 알고리즘
 

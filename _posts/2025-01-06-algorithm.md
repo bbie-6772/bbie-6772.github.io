@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 알고리즘 - < 정렬/재귀 >
+title: Algorithm - < 정렬/재귀 >
 subtitle: 퀵정렬과 무차별 대입법
 author: bbie
-categories: Study
+categories: Algorithm
 banner:
-  image: https://github.com/user-attachments/assets/4c07d091-e6a5-43f6-b9f4-5e6e214f7cb9
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"

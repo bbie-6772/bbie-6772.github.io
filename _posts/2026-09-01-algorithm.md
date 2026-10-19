@@ -4,9 +4,8 @@ title: Algorithm - < 정렬 8종과 sorted() >
 subtitle: 정렬 8종과 sorted()
 author: bbie
 categories: Algorithm
-permalink: /python/2026/09/01/python.html
 banner:
-  image: https://github.com/user-attachments/assets/0fff9e59-2aeb-4b6e-a0a3-da0582ecf37f
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -28,7 +27,7 @@ tags: [Sorting, Algorithm, Timsort, Python]
 
 > **정렬 알고리즘은 왜 이렇게 많은가?** 빠르기가 전부라면 제일 빠른 하나만 남으면 될 텐데.
 
-같은 여덟 개를 C++로 옮기고 직접 구현하며 삽질한 이야기는 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-cpp %})에 따로 적었다.
+같은 여덟 개를 C++로 옮기고 직접 구현하며 삽질한 이야기는 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-algorithm2 %})에 따로 적었다.
 
 ## 정렬을 고르는 네 가지 축
 
@@ -251,7 +250,7 @@ print(radix_sort([170, 45, 75, 90, 802, 24, 2, 66]))
 
 시간복잡도는 O(d(n + k))다. d는 자릿수, k는 10(버킷 개수). 자릿수가 고만고만하면 사실상 선형이다. 대신 버킷을 따로 잡으니 메모리를 더 쓰고, 음수나 실수는 그대로는 못 넣는다.
 
-기수 정렬은 직접 구현하면서 "언제 멈출 것인가"로 세 번이나 막혔는데, 그 얘기는 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-cpp %})에 따로 적었다.
+기수 정렬은 직접 구현하면서 "언제 멈출 것인가"로 세 번이나 막혔는데, 그 얘기는 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-algorithm2 %})에 따로 적었다.
 
 ---
 
@@ -414,7 +413,7 @@ sorted(students, key=lambda s: (s[1], -s[2]))
 
 표에서 병합 정렬이 갖지 못했던 **적응성**을 삽입 정렬로 메운 셈이다. 실제 데이터는 완전히 뒤죽박죽인 경우가 드물고 부분적으로 정렬돼 있는 경우가 많은데, Timsort는 그 부분을 찾아내서 건너뛴다. **현실의 데이터가 어떻게 생겼는지를 알고리즘에 박아 넣은 것**이라 볼 수 있다.
 
-C++의 std::sort는 정반대 선택을 했다. 퀵 정렬로 가다 깊어지면 힙 정렬로 갈아타는 인트로소트인데, **안정성을 버리고 메모리를 아꼈다.** 안정성이 필요하면 std::stable_sort를 따로 쓴다. 자세한 건 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-cpp %})에 적어뒀다.
+C++의 std::sort는 정반대 선택을 했다. 퀵 정렬로 가다 깊어지면 힙 정렬로 갈아타는 인트로소트인데, **안정성을 버리고 메모리를 아꼈다.** 안정성이 필요하면 std::stable_sort를 따로 쓴다. 자세한 건 [Algorithm - < 정렬 8종과 std::sort >]({% post_url 2026-09-01-algorithm2 %})에 적어뒀다.
 
 > 여덟 개를 직접 짤 이유는 실무에서 쓰려고가 아니라, **sorted() 안에서 무슨 일이 일어나는지 알기 위해서**였다.
 

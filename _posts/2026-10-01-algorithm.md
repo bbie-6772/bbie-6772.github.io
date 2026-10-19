@@ -4,9 +4,8 @@ title: Algorithm - < 서로소 집합과 최소 신장 트리 >
 subtitle: "서로소 집합과 최소 신장 트리, 그리고 벽돌 깨기의 무한루프"
 author: bbie
 categories: Algorithm
-permalink: /python/2026/10/01/python.html
 banner:
-  image: https://github.com/user-attachments/assets/0fff9e59-2aeb-4b6e-a0a3-da0582ecf37f
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -16,7 +15,7 @@ tags: [Algorithm, Data-Structure, Union-Find, MST, Troubleshooting, Python]
 
 ## 개요
 
-오늘 과제로 받은 벽돌 깨기는 버그 하나를 고치면 다음 버그가 나왔다.. 그렇게 고친 게 여섯 개였고, 제일 오래 붙잡은 건 중력 처리에서 난 무한루프였다. 그중 하나가 보드 복사였다. [Algorithm - < 트리·그래프·백트래킹 DFS >]({% post_url 2026-09-30-python %})의 숫자 만들기에서도 분기마다 `copy()`로 넘겼는데, 2차원 보드에서는 얕은 복사라 다른 분기의 보드까지 같이 지워졌다.
+오늘 과제로 받은 벽돌 깨기는 버그 하나를 고치면 다음 버그가 나왔다.. 그렇게 고친 게 여섯 개였고, 제일 오래 붙잡은 건 중력 처리에서 난 무한루프였다. 그중 하나가 보드 복사였다. [Algorithm - < 트리·그래프·백트래킹 DFS >]({% post_url 2026-09-30-algorithm %})의 숫자 만들기에서도 분기마다 `copy()`로 넘겼는데, 2차원 보드에서는 얕은 복사라 다른 분기의 보드까지 같이 지워졌다.
 
 이번 편은 서로소 집합과 최소 신장 트리를 다루고, AI가 던지는 질문에 답하면서 이해한 걸 확인했다. 사이클은 [이론 정리 - < 이진 탐색, BST, 그래프 탐색 >]({% post_url 2026-09-10-theory3 %})에서 `visited`로 피해 다니던 대상이었는데, Kruskal은 탐색 없이 대표자 비교만으로 막는다. 배운 순서대로 적어보겠다!
 

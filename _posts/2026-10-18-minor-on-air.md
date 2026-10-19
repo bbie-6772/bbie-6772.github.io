@@ -136,7 +136,7 @@ AI 판정을 믿지 않은 데는 근거가 있다.
 ## 더 읽어볼 만한 것들
 
 - [bbie-6772/ai-modeling-pipeline](https://github.com/bbie-6772/ai-modeling-pipeline): 이번 하네스 저장소. 단계·QA·승인 계약, Blender 꼭짓점 편집 adapter, 측정 도구가 있다.
-- [도면만 자세하면 AI가 3D로 만들어 줄 줄 알았다]({% post_url 2026-10-16-jev-game %}): 하네스를 만들기 전, 도면을 보태던 과정
+- [도면만 자세하면 AI가 3D로 만들어 줄 줄 알았다]({% post_url 2026-10-16-minor-on-air %}): 하네스를 만들기 전, 도면을 보태던 과정
 
 ## 소감
 

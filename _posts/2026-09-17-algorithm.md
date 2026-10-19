@@ -4,9 +4,8 @@ title: Algorithm - < 연결 리스트 응용 >
 subtitle: 연결 리스트 다음 두 문제, 그리고 출력이 1씩 작았던 이유
 author: bbie
 categories: Algorithm
-permalink: /python/2026/09/17/python.html
 banner:
-  image: https://github.com/user-attachments/assets/0fff9e59-2aeb-4b6e-a0a3-da0582ecf37f
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
@@ -18,7 +17,7 @@ tags: [Algorithm, Data-Structure, Linked-List, Python]
 
 연결 리스트 단원을 끝내고 후속 실습 문제 두 개를 풀었다. 당근 선별기와 주차장. 둘 다 파이썬으로 먼저 설계하고 돌려본 뒤에 C++로 다시 짰는데, 이번 편은 파이썬 쪽과 단원에서 정리한 개념까지다.
 
-C++로 옮기면서 겪은 것 — 출력이 아예 안 나와서 30분을 태운 이야기 — 는 [Algorithm - < 출력이 안 나온 파일 입출력 >]({% post_url 2026-09-17-cpp %})에 따로 적었다.
+C++로 옮기면서 겪은 것 — 출력이 아예 안 나와서 30분을 태운 이야기 — 는 [Algorithm - < 출력이 안 나온 파일 입출력 >]({% post_url 2026-09-17-algorithm2 %})에 따로 적었다.
 
 먼저 단원 내용부터 정리하고 문제로 간다.
 

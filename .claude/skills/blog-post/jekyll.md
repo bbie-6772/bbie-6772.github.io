@@ -13,7 +13,7 @@
 
 ## 카테고리는 URL이다
 
-`_config.yml`에 `permalink`가 없어서 Jekyll 기본값 `/:categories/:year/:month/:day/:title`을 쓴다. 카테고리 표기를 바꾸면 게시된 글의 주소가 바뀐다. `post_url` 내부 링크는 빌드할 때 새 주소를 따라가지만, 외부에 공유한 링크와 경로 기반 댓글 연결은 끊긴다. 바꾸기 전에 이 점을 알리고 확인받는다. 기존 주소를 지키려면 front matter에 `permalink: /<옛 카테고리 소문자>/YYYY/MM/DD/<slug>.html`을 고정한다( Algorithm으로 옮긴 글들이 이렇게 되어 있다 ). 블로그 안의 다른 글로 연결할 때는 `https://bbie-6772.github.io/...` 같은 전체 주소를 쓰지 않고 `{% post_url YYYY-MM-DD-slug %}`를 쓴다. 전체 주소는 카테고리가 바뀌어도 따라 바뀌지 않는다. OpenAI Game Builders 글의 '지난 글' 링크 6개가 `/openai_game_builders/` 주소로 남아 이렇게 깨졌었다( 2026-10-18 확인 ). 파일명과 자산 폴더는 독자에게 보이지 않으니 그대로 둔다.
+`_config.yml`에 `permalink`가 없어서 Jekyll 기본값 `/:categories/:year/:month/:day/:title`을 쓴다. 카테고리 표기를 바꾸면 게시된 글의 주소가 바뀐다. `post_url` 내부 링크는 빌드할 때 새 주소를 따라가지만, 외부에 공유한 링크와 경로 기반 댓글 연결은 끊긴다. 바꾸기 전에 이 점을 알리고 확인받는다. 기존 주소를 지키려면 front matter에 `permalink: /<옛 카테고리 소문자>/YYYY/MM/DD/<slug>.html`을 고정한다( Algorithm 글은 2026-10-20에 고정을 풀고 `/algorithm/` 주소와 `algorithm` 파일명으로 옮겼다 ). 블로그 안의 다른 글로 연결할 때는 `https://bbie-6772.github.io/...` 같은 전체 주소를 쓰지 않고 `{% post_url YYYY-MM-DD-slug %}`를 쓴다. 전체 주소는 카테고리가 바뀌어도 따라 바뀌지 않는다. OpenAI Game Builders 글의 '지난 글' 링크 6개가 `/openai_game_builders/` 주소로 남아 이렇게 깨졌었다( 2026-10-18 확인 ). 파일명과 자산 폴더는 독자에게 보이지 않으니 그대로 둔다.
 
 ## Liquid·수식
 

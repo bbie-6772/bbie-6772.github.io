@@ -156,7 +156,7 @@ GPT로 만든 최종 도면이 이것이다.
 ## 더 읽어볼 만한 것들
 
 - [bbie-6772/ai-modeling-pipeline](https://github.com/bbie-6772/ai-modeling-pipeline): 이 글 끝에서 만들기로 한 하네스 저장소
-- [AI에게 하네스를 씌웠더니 되묻기 시작했다]({% post_url 2026-10-18-jev-game %}): 그 저장소로 이어간 모델링과 결론
+- [AI에게 하네스를 씌웠더니 되묻기 시작했다]({% post_url 2026-10-18-minor-on-air %}): 그 저장소로 이어간 모델링과 결론
 
 ## 소감
 

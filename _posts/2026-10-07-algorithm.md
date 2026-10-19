@@ -4,9 +4,8 @@ title: Algorithm - < 분할 정복과 이진 검색 >
 subtitle: "분할 정복, 이진 검색, 그리고 '정렬한 상태로 저장한다'는 문장"
 author: bbie
 categories: Algorithm
-permalink: /python/2026/10/07/python.html
 banner:
-  image: https://github.com/user-attachments/assets/0fff9e59-2aeb-4b6e-a0a3-da0582ecf37f
+  image: /assets/images/algorithm/00-banner.webp
   opacity: 0.618
   background: "#000"
   height: "50vh"
