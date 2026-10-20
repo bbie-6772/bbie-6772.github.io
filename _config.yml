@@ -243,6 +243,18 @@ utterances:
   theme: "github-light"
   follow_site_theme: true
 
+# Giscus comments + reactions (replaces utterances once category_id is set)
+# See https://giscus.app/
+giscus:
+  repo: "bbie-6772/blog-comments"
+  repo_id: "R_kgDOM5mE1Q"
+  category: "Announcements"
+  category_id: "DIC_kwDOM5mE1c4DJEy8"
+
+# GoatCounter page views; enable "Allow adding visitor counts" in its settings
+# See https://www.goatcounter.com/
+goatcounter: "bbie6772"
+
 # Build settings
 # highlighter: none
 markdown: kramdown

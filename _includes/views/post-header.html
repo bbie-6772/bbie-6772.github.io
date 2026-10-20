@@ -17,6 +17,23 @@
     {%- include functions.html func='get_reading_time' -%}
     {% assign reading_time = return %}
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
+
+    {%- if site.goatcounter -%}
+    <span class="post-views left-vsplit" hidden><i class="fa fa-eye"></i> <span class="post-views-count"></span></span>
+    <script>
+      (function (el) {
+        // 404 until the first view is recorded; keep the slot hidden then
+        fetch('https://{{ site.goatcounter }}.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (!d) return;
+            el.querySelector('.post-views-count').textContent = d.count;
+            el.hidden = false;
+          })
+          .catch(function () {});
+      })(document.currentScript.previousElementSibling);
+    </script>
+    {%- endif -%}
   </div>
 
   {%- if page.tags.size > 0 -%}

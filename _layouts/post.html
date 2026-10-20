@@ -97,7 +97,9 @@ sidebar:
       {%- include extensions/comments/gitment.html -%}
       {%- endif -%}
 
-      {%- if site.utterances.repo -%}
+      {%- if site.giscus.category_id -%}
+      {%- include extensions/comments/giscus.html -%}
+      {%- elsif site.utterances.repo -%}
       {%- include extensions/comments/utterances.html -%}
       {%- endif -%}
 
