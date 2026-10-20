@@ -22,9 +22,9 @@
     <span class="post-views left-vsplit" hidden><i class="fa fa-eye"></i> <span class="post-views-count"></span></span>
     <script>
       (function (el) {
-        // 404 until the first view is recorded; keep the slot hidden then
+        // 404 until the first view is recorded, so show 0; other failures (ad blockers) stay hidden
         fetch('https://{{ site.goatcounter }}.goatcounter.com/counter/' + encodeURIComponent(location.pathname) + '.json')
-          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (r) { return r.ok ? r.json() : r.status === 404 ? { count: '0' } : null; })
           .then(function (d) {
             if (!d) return;
             el.querySelector('.post-views-count').textContent = d.count;
