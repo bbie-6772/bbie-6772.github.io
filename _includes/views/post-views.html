@@ -2,8 +2,10 @@
 <span class="post-views left-vsplit" hidden><i class="fa fa-eye"></i> <span class="post-views-count"></span></span>
 <script>
   (function (el) {
+    // GoatCounter caches responses (a first 404 stuck for hours), so a daily-changing end date rotates the cache key
+    var end = new Date(Date.now() + 864e5).toISOString().slice(0, 10);
     // 404 until the first view is recorded, so show 0; other failures (ad blockers) stay hidden
-    fetch('https://{{ site.goatcounter }}.goatcounter.com/counter/' + encodeURIComponent('{{ include.path }}') + '.json')
+    fetch('https://{{ site.goatcounter }}.goatcounter.com/counter/' + encodeURIComponent('{{ include.path }}') + '.json?end=' + end)
       .then(function (r) { return r.ok ? r.json() : r.status === 404 ? { count: '0' } : null; })
       .then(function (d) {
         if (!d) return;
