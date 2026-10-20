@@ -18,6 +18,7 @@
     {% assign reading_time = return %}
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
     {%- include views/post-views.html path=page.url -%}
+    {%- include views/post-reactions.html post=page -%}
   </div>
 
   {%- if page.tags.size > 0 -%}

@@ -1,0 +1,5 @@
+{%- assign reaction_term = include.post.path | split: "/" | last | remove: ".md" -%}
+{%- assign reaction_count = site.data.reactions[reaction_term] -%}
+{%- if reaction_count -%}
+<span class="post-reactions left-vsplit"><i class="fa fa-thumbs-o-up"></i> {{ reaction_count }}</span>
+{%- endif -%}

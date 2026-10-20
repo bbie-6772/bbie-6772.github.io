@@ -14,6 +14,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Refresh giscus reaction counts baked into post lists
+  schedule:
+    - cron: "0 */6 * * *"
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -52,6 +56,12 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Fetch giscus reaction counts
+        # A failed fetch must not block deploys; posts then show no reaction count
+        run: |
+          gh api graphql -f query='{ repository(owner: "bbie-6772", name: "blog-comments") { discussions(first: 100, categoryId: "DIC_kwDOM5mE1c4DJEy8") { nodes { title reactions { totalCount } } } } }'             --jq '[.data.repository.discussions.nodes[] | {key: .title, value: .reactions.totalCount}] | from_entries' > _data/reactions.json             || echo '{}' > _data/reactions.json
+        env:
+          GH_TOKEN: ${{ github.token }}
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
