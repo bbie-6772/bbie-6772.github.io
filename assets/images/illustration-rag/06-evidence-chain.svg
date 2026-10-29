@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="340" fill="#f7f9fb"/>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">지식 한 줄이 무엇을 보고 나왔는지 따라갈 수 있게 (설명용 개념도)</text>
+
+  <!-- 원문 구간 -->
+  <rect x="20" y="60" width="200" height="110" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="120" y="88" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">원문 구간</text>
+  <text x="120" y="114" text-anchor="middle" font-size="12" fill="#6b7f95">Notion 피드백 문단</text>
+  <text x="120" y="134" text-anchor="middle" font-size="12" fill="#6b7f95">추출 당시 스냅샷</text>
+  <text x="120" y="154" text-anchor="middle" font-size="12" fill="#6b7f95">내가 남긴 고찰 / AI 해석 구분</text>
+
+  <!-- 이미지 -->
+  <rect x="20" y="200" width="200" height="120" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="120" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">이미지</text>
+  <text x="120" y="254" text-anchor="middle" font-size="12" fill="#6b7f95">원본 · 첨삭 · 설명</text>
+  <text x="120" y="274" text-anchor="middle" font-size="12" fill="#6b7f95">크롭은 어느 원본의 어디인지</text>
+  <text x="120" y="294" text-anchor="middle" font-size="12" fill="#6b7f95">같은 구간 ≠ 직접 근거</text>
+
+  <!-- 근거 관계 -->
+  <rect x="270" y="130" width="180" height="90" rx="10" fill="#fff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="360" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#3d6fa8">근거 관계</text>
+  <text x="360" y="186" text-anchor="middle" font-size="12" fill="#6b7f95">이 지식은</text>
+  <text x="360" y="204" text-anchor="middle" font-size="12" fill="#6b7f95">이 문장 · 이 그림에서</text>
+
+  <!-- 지식 -->
+  <rect x="500" y="60" width="200" height="110" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="600" y="88" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">B 조건부 통찰</text>
+  <text x="600" y="114" text-anchor="middle" font-size="12" fill="#6b7f95">이 그림에서, 이런 조건일 때</text>
+  <text x="600" y="134" text-anchor="middle" font-size="12" fill="#6b7f95">초안(draft)이 기본</text>
+  <text x="600" y="154" text-anchor="middle" font-size="12" fill="#6b7f95">내가 채택해야 검색에 포함</text>
+
+  <rect x="500" y="200" width="200" height="120" rx="10" fill="#fff" stroke="#d5dde6" stroke-dasharray="5 4"/>
+  <text x="600" y="228" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">C 일반화 원리</text>
+  <text x="600" y="254" text-anchor="middle" font-size="12" fill="#6b7f95">B 근거가 있을 때만</text>
+  <text x="600" y="274" text-anchor="middle" font-size="12" fill="#6b7f95">근거 없으면 만들지 않음</text>
+  <text x="600" y="294" text-anchor="middle" font-size="12" fill="#6b7f95">어느 B에서 왔는지 추적</text>
+
+  <g stroke="#8fb0d4" stroke-width="2" fill="none">
+    <path d="M220 115 L270 160"/>
+    <path d="M220 260 L270 195"/>
+    <path d="M450 160 L500 115"/>
+    <path d="M600 170 L600 200"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="380" fill="#f7f9fb"/>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">비교 질문을 한 문장으로 검색할 때 vs 나눠서 검색할 때 (설명용 개념도)</text>
+
+  <!-- 왼쪽: 한 문장 -->
+  <rect x="20" y="50" width="330" height="310" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="185" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#a04040">한 문장으로 임베딩</text>
+  <rect x="40" y="90" width="290" height="40" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="185" y="115" text-anchor="middle" font-size="13" fill="#1d3a5c">"강한 명암 대비 vs 대기 원근법"</text>
+  <text x="185" y="150" text-anchor="middle" font-size="12" fill="#6b7f95">Top-5</text>
+  <g font-size="12">
+    <rect x="60" y="160" width="250" height="26" rx="4" fill="#f3dcdc"/><text x="72" y="178" fill="#1d3a5c">키아로스쿠로 · 청크 1</text>
+    <rect x="60" y="190" width="250" height="26" rx="4" fill="#f3dcdc"/><text x="72" y="208" fill="#1d3a5c">키아로스쿠로 · 청크 2</text>
+    <rect x="60" y="220" width="250" height="26" rx="4" fill="#fff" stroke="#d5dde6"/><text x="72" y="238" fill="#6b7f95">다른 기법</text>
+    <rect x="60" y="250" width="250" height="26" rx="4" fill="#f3dcdc"/><text x="72" y="268" fill="#1d3a5c">키아로스쿠로 · 청크 3</text>
+    <rect x="60" y="280" width="250" height="26" rx="4" fill="#fff" stroke="#d5dde6"/><text x="72" y="298" fill="#6b7f95">다른 기법</text>
+  </g>
+  <text x="185" y="336" text-anchor="middle" font-size="13" fill="#a04040">대기 원근법은 12위</text>
+
+  <!-- 오른쪽: 나눠서 -->
+  <rect x="370" y="50" width="330" height="310" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="535" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#3d6fa8">개념별로 검색해 병합</text>
+  <rect x="385" y="90" width="145" height="40" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="457" y="115" text-anchor="middle" font-size="13" fill="#1d3a5c">"강한 명암 대비"</text>
+  <rect x="540" y="90" width="145" height="40" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="612" y="115" text-anchor="middle" font-size="13" fill="#1d3a5c">"대기 원근법"</text>
+  <g font-size="12">
+    <rect x="385" y="150" width="145" height="28" rx="4" fill="#dbe6f3"/><text x="457" y="169" text-anchor="middle" fill="#1d3a5c">키아로스쿠로 상위</text>
+    <rect x="540" y="150" width="145" height="28" rx="4" fill="#dbe6f3"/><text x="612" y="169" text-anchor="middle" fill="#1d3a5c">대기 원근법 1위</text>
+  </g>
+  <path d="M457 182 L520 222 M612 182 L550 222" stroke="#8fb0d4" stroke-width="2" fill="none"/>
+  <rect x="425" y="226" width="220" height="70" rx="6" fill="#fff" stroke="#3d6fa8"/>
+  <text x="535" y="252" text-anchor="middle" font-size="13" fill="#1d3a5c">병합 + 항목 단위 중복 제거</text>
+  <text x="535" y="276" text-anchor="middle" font-size="12" fill="#6b7f95">한 문서의 청크는 한 자리만</text>
+  <text x="535" y="336" text-anchor="middle" font-size="13" fill="#3d6fa8">두 기법이 모두 상위에</text>
+</svg>
