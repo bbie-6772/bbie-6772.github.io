@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="340" fill="#f7f9fb"/>
+  <text x="360" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">이미지 한 장을 세 가지 기록으로 나누기 (설명용 개념도)</text>
+
+  <!-- 세 기록 -->
+  <rect x="20" y="50" width="210" height="130" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="125" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">원본 bytes</text>
+  <text x="125" y="102" text-anchor="middle" font-size="12" fill="#6b7f95">SHA-256 · 크기</text>
+  <text x="125" y="126" text-anchor="middle" font-size="12" fill="#1d3a5c">한 번 정해지면 안 바뀐다</text>
+  <text x="125" y="146" text-anchor="middle" font-size="12" fill="#1d3a5c">metadata만 고쳐도</text>
+  <text x="125" y="164" text-anchor="middle" font-size="12" fill="#1d3a5c">다른 파일이 된다</text>
+
+  <rect x="255" y="50" width="210" height="130" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="360" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">업로드 시도</text>
+  <text x="360" y="102" text-anchor="middle" font-size="12" fill="#6b7f95">file_upload ID</text>
+  <text x="360" y="126" text-anchor="middle" font-size="12" fill="#1d3a5c">첨부 전에는 1시간 유효</text>
+  <text x="360" y="146" text-anchor="middle" font-size="12" fill="#1d3a5c">실패하면 새 시도를</text>
+  <text x="360" y="164" text-anchor="middle" font-size="12" fill="#1d3a5c">child로 추가한다</text>
+
+  <rect x="490" y="50" width="210" height="130" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="595" y="76" text-anchor="middle" font-size="14" font-weight="700" fill="#1d3a5c">페이지 첨부</text>
+  <text x="595" y="102" text-anchor="middle" font-size="12" fill="#6b7f95">페이지의 이미지 블록</text>
+  <text x="595" y="126" text-anchor="middle" font-size="12" fill="#1d3a5c">전송 성공과 별개</text>
+  <text x="595" y="146" text-anchor="middle" font-size="12" fill="#1d3a5c">Notion 도구를 쓴</text>
+  <text x="595" y="164" text-anchor="middle" font-size="12" fill="#1d3a5c">호출자가 확인해 보고</text>
+
+  <g stroke="#8fb0d4" stroke-width="2" fill="none">
+    <path d="M230 115 L255 115"/><path d="M465 115 L490 115"/>
+  </g>
+
+  <!-- 작업 key 비교 -->
+  <rect x="20" y="200" width="680" height="120" rx="10" fill="#fff" stroke="#d5dde6"/>
+  <text x="40" y="228" font-size="14" font-weight="700" fill="#1d3a5c">작업을 구분하는 key</text>
+  <text x="40" y="258" font-size="13" fill="#a04040">이전</text>
+  <text x="100" y="258" font-size="13" fill="#1d3a5c">owner · page · SHA</text>
+  <text x="250" y="258" font-size="12" fill="#6b7f95">→ 역할·기록이 달라도 합쳐짐, 미첨부 작업 재시도 불가</text>
+  <text x="40" y="292" font-size="13" fill="#3d6fa8">이후</text>
+  <text x="100" y="292" font-size="13" fill="#1d3a5c">owner · page · SHA · role · record</text>
+  <text x="352" y="292" font-size="12" fill="#6b7f95">→ 원본은 그대로, 재시도는 새 child 기록</text>
+</svg>

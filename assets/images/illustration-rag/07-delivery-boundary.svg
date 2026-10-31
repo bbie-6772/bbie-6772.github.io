@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="360" fill="#f7f9fb"/>
+  <text x="360" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">전달 경로별로 어느 단계까지 갔나 (설명용 개념도)</text>
+
+  <!-- 단계 머리 -->
+  <g font-size="12" font-weight="700" fill="#1d3a5c" text-anchor="middle">
+    <text x="262" y="62">서버가</text><text x="262" y="78">원본 확보</text>
+    <text x="352" y="62">AI가</text><text x="352" y="78">그림을 봄</text>
+    <text x="442" y="62">실행환경에</text><text x="442" y="78">파일 bytes</text>
+    <text x="532" y="62">검증 통과</text><text x="532" y="78">(SHA·PNG)</text>
+    <text x="622" y="62">Chat 본문에</text><text x="622" y="78">그림 표시</text>
+  </g>
+
+  <!-- 행 -->
+  <g font-size="13" fill="#1d3a5c">
+    <rect x="20" y="92" width="680" height="40" rx="6" fill="#fff" stroke="#d5dde6"/>
+    <text x="34" y="117">실행환경에서 직접 다운로드</text>
+    <rect x="20" y="138" width="680" height="40" rx="6" fill="#fff" stroke="#d5dde6"/>
+    <text x="34" y="163">MCP ImageContent</text>
+    <rect x="20" y="184" width="680" height="40" rx="6" fill="#fff" stroke="#d5dde6"/>
+    <text x="34" y="209">resource_link + read</text>
+    <rect x="20" y="230" width="680" height="40" rx="6" fill="#fff" stroke="#d5dde6"/>
+    <text x="34" y="255">텍스트 조각 전사 (112조각)</text>
+    <rect x="20" y="276" width="680" height="40" rx="6" fill="#fff" stroke="#3d6fa8" stroke-width="1.5"/>
+    <text x="34" y="301" font-weight="700" fill="#3d6fa8">embedded bytes + 표준입력</text>
+  </g>
+
+  <!-- 직접 다운로드: 1단계에서 실패 -->
+  <text x="262" y="117" text-anchor="middle" font-size="12" fill="#a04040">DNS 실패</text>
+
+  <!-- ImageContent: 원본, AI 봄 / 이후 없음 -->
+  <rect x="227" y="146" width="160" height="24" rx="4" fill="#8fb0d4"/>
+  <text x="442" y="163" text-anchor="middle" font-size="12" fill="#a04040">파일로 안 넘어옴</text>
+
+  <!-- resource_link: 서버 blob 반환까지 -->
+  <rect x="227" y="192" width="70" height="24" rx="4" fill="#8fb0d4"/>
+  <text x="397" y="209" text-anchor="middle" font-size="12" fill="#a04040">도구 결과에 text만 남음</text>
+
+  <!-- 청크 전사: 끝까지, 점선 -->
+  <rect x="227" y="238" width="430" height="24" rx="4" fill="#8fb0d4" opacity="0.55" stroke="#3d6fa8" stroke-dasharray="4 3"/>
+  <text x="442" y="255" text-anchor="middle" font-size="12" fill="#1d3a5c">성공, 느리고 전사 오류·초기화에 약함</text>
+
+  <!-- embedded + stdin: 끝까지 -->
+  <rect x="227" y="284" width="430" height="24" rx="4" fill="#3d6fa8"/>
+  <text x="442" y="301" text-anchor="middle" font-size="12" fill="#fff">기본 경로로 채택</text>
+
+  <text x="360" y="342" text-anchor="middle" font-size="12" fill="#6b7f95">한 칸의 성공이 다음 칸을 보장하지 않는다. AI가 봤다(2열)와 내가 봤다(5열)는 다른 칸이다.</text>
+</svg>
