@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { extractPost } from '../scripts/build-memory.mjs';
 import { toolDefinitions, registerTools } from '../assets/js/memory-webmcp.mjs';
 import { queryPlan } from '../assets/js/memory-queries.mjs';
+import { dropHeadingPrefix } from '../assets/js/memory-client.mjs';
 
 const meta = { id:'2026-09-08-test', title:'본문 <검증>', date:'2026-09-08', url:'/blog/test.html', baseurl:'/blog', image:'/blog/assets/banner.png', categories:['회고'], tags:['C++'] };
 function fixture(body) { return `<html><script id="memory-post" type="application/json">${JSON.stringify(meta)}</script><div class="post-content">${body}</div></html>`; }
@@ -51,4 +52,10 @@ test('CS topic expands to explicit technical domains without rewriting records',
   assert.ok(queryPlan('컴퓨터 CS 지식').includes('운영체제'));
   assert.ok(queryPlan('스레드').includes('thread'));
   assert.deepEqual(queryPlan('내가 했던 그 일'), ['내가 했던 그 일']);
+});
+test('drops the title and heading Pagefind repeats at the start of an excerpt', () => {
+  const title='이론 정리 - < 임계 영역과 스레드 풀 >', heading='스레드 풀링(Thread Pooling)';
+  assert.equal(dropHeadingPrefix(`임계 영역과 스레드 풀 > ${heading}. 멀티 스레드를 이용해`, title, heading), '멀티 스레드를 이용해');
+  assert.equal(dropHeadingPrefix(`본문 앞부분 ${'가'.repeat(40)} ${heading}. 뒤`, title, heading), `본문 앞부분 ${'가'.repeat(40)} ${heading}. 뒤`);
+  assert.equal(dropHeadingPrefix(`${heading}.`, title, heading), `${heading}.`);
 });

@@ -1,4 +1,4 @@
-import { searchPosts, filters } from './memory-client.mjs';
+import { searchPosts, filters, dropHeadingPrefix } from './memory-client.mjs';
 import { registerTools } from './memory-webmcp.mjs';
 
 const form = document.querySelector('#memory-search');
@@ -36,12 +36,12 @@ function render(result) {
       category.textContent = item.category; meta.append(category);
     }
     const heading = document.createElement('p'); heading.className = 'memory-section';
-    heading.textContent = item.heading === '개요' ? '글의 시작에서' : `찾은 구간 · ${item.heading}`;
-    const excerpt = document.createElement('p'); excerpt.className = 'memory-excerpt'; excerpt.textContent = item.excerpt;
+    heading.textContent = item.heading;
+    const excerpt = document.createElement('p'); excerpt.className = 'memory-excerpt'; excerpt.textContent = dropHeadingPrefix(item.excerpt, item.title, item.heading);
     content.append(meta, title, heading, excerpt); li.append(content); list.append(li);
   }
-  status.textContent = result.results.length ? `관련 글 ${result.results.length}편을 표시합니다. 링크를 누르면 해당 구간으로 이동합니다.` : '일치하는 글이 없습니다. 기억나는 기술명이나 짧은 표현으로 다시 찾아보세요.';
-  if (result.expanded_queries?.length > 1) status.textContent += ` 함께 찾은 용어: ${result.expanded_queries.slice(1).join(', ')}.`;
+  status.textContent = result.results.length ? `관련 글 ${result.results.length}편` : '일치하는 글이 없습니다. 더 짧은 키워드로 다시 찾아보세요.';
+  if (result.expanded_queries?.length > 1) status.textContent += ` · 함께 찾은 용어: ${result.expanded_queries.slice(1).join(', ')}`;
 }
 async function run(event) {
   event?.preventDefault();
@@ -68,7 +68,7 @@ try {
   }
   if (form.elements.q.value) await run();
 } catch { status.textContent = '검색 자료를 불러오지 못했습니다. 새로고침 후 다시 시도해 주세요.'; }
-const registered = await registerTools(document.modelContext, (name, result) => {
+await registerTools(document.modelContext, (name, result) => {
   revision++;
   list.setAttribute('aria-busy', 'false');
   if (name === 'search_posts') {
@@ -76,6 +76,4 @@ const registered = await registerTools(document.modelContext, (name, result) => 
     for (const key of ['year', 'category', 'tag']) form.elements[key].value = result.filters[key] || '';
     render(result);
   }
-  document.querySelector('#memory-agent-status').textContent = `AI가 ${name === 'search_posts' ? '관련 글을 검색' : '글의 자료를 확인'}했습니다.`;
 });
-document.querySelector('#memory-agent-support').textContent = registered.error ? 'AI 도구 연결에 실패했습니다. 일반 검색은 사용할 수 있습니다.' : registered.supported ? '이 브라우저에서 AI 검색 도구를 사용할 수 있습니다.' : '일반 검색을 사용할 수 있습니다. AI 자료는 아래 링크로도 제공됩니다.';

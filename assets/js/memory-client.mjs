@@ -3,6 +3,12 @@ const base = new URL('../../', import.meta.url);
 const cache = new Map();
 export const excerptText = value => value.replace(/<[^>]*>/g, '').replace(/&(amp|lt|gt|quot|apos|nbsp|#39);/g,
   (_, entity) => ({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' ', '#39':"'"}[entity]));
+// Pagefind indexes the title and heading as body text, so an excerpt can open by repeating them.
+export function dropHeadingPrefix(excerpt, title, heading) {
+  const end = excerpt.indexOf(`${heading}.`);
+  const rest = end >= 0 && end <= title.length + 1 ? excerpt.slice(end + heading.length + 1).trim() : '';
+  return rest || excerpt;
+}
 async function json(url) {
   if (!cache.has(url)) cache.set(url, fetch(url).then(response => {
     if (!response.ok) throw new Error(`자료를 불러오지 못했습니다 (${response.status}). 다시 시도해 주세요.`);
