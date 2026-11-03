@@ -37,7 +37,8 @@
   <div class="post-meta">
     <span class="post-date"><i class="fa fa-calendar"></i> {{ post.date | date: date_format }}</span>
     {%- if post.author -%}
-    <span class="post-author left-vsplit"><i class="fa fa-pencil"></i> {{ post.author | escape }}</span>
+    {%- comment -%} front matter keeps the `bbie` id (AGENTS.md); the display name is site.author {%- endcomment -%}
+    <span class="post-author left-vsplit"><i class="fa fa-pencil"></i> {{ post.author | replace: 'bbie', site.author | escape }}</span>
     {%- endif -%}
     <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> {{ reading_time }}</span>
     {%- include views/post-views.html path=post.url -%}
