@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="320" fill="#f7f9fb"/>
+  <g font-size="14" fill="#1d3a5c">
+    <text x="180" y="32" text-anchor="middle" font-weight="700">Canvas 하나</text>
+    <rect x="24" y="46" width="312" height="190" rx="10" fill="#fff" stroke="#a04040" stroke-width="2"/>
+    <rect x="44" y="66" width="272" height="44" rx="6" fill="#fbeaea" stroke="#d5dde6"/>
+    <text x="180" y="93" text-anchor="middle">스킬 아이콘 패널 ( 거의 안 바뀜 )</text>
+    <rect x="44" y="122" width="272" height="94" rx="6" fill="#fbeaea" stroke="#d5dde6"/>
+    <text x="180" y="162" text-anchor="middle">적 HP바 20개</text>
+    <text x="180" y="186" text-anchor="middle" font-size="13" fill="#6b7f95">매 프레임 위치가 바뀜</text>
+    <text x="180" y="262" text-anchor="middle" fill="#a04040">매 프레임 전부 다시 합친다</text>
+    <text x="180" y="286" text-anchor="middle" font-size="13" fill="#6b7f95">묶어 그리기는 한 덩어리로 유지</text>
+
+    <text x="540" y="32" text-anchor="middle" font-weight="700">Canvas 둘</text>
+    <rect x="384" y="46" width="312" height="64" rx="10" fill="#fff" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="540" y="84" text-anchor="middle">스킬 아이콘 패널 → 캐시 재사용</text>
+    <rect x="384" y="122" width="312" height="114" rx="10" fill="#fff" stroke="#a04040" stroke-width="2"/>
+    <rect x="404" y="142" width="272" height="74" rx="6" fill="#fbeaea" stroke="#d5dde6"/>
+    <text x="540" y="174" text-anchor="middle">적 HP바 20개</text>
+    <text x="540" y="198" text-anchor="middle" font-size="13" fill="#6b7f95">여기만 매 프레임 다시 합친다</text>
+    <text x="540" y="262" text-anchor="middle" fill="#3d6fa8">다시 합치는 범위가 줄었다</text>
+    <text x="540" y="286" text-anchor="middle" font-size="13" fill="#6b7f95">대신 draw call이 대략 하나 는다</text>
+  </g>
+</svg>

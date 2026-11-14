@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -30 720 350" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="c" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#a04040"/></marker>
+  </defs>
+  <rect y="-30" width="720" height="350" fill="#f7f9fb"/>
+  <!-- 칸: 중심 (180,170), 한 변 200 -->
+  <rect x="80" y="70" width="200" height="200" fill="#fff" stroke="#d5dde6" stroke-width="2"/>
+  <text x="180" y="58" text-anchor="middle" font-size="13" fill="#6b7f95">오염이 줄어든 칸 ( 한 변 1 )</text>
+  <circle cx="180" cy="170" r="5" fill="#1d3a5c"/>
+  <text x="170" y="196" text-anchor="end" font-size="13" fill="#1d3a5c">칸 중심</text>
+  <!-- 방향 (0.8, 0.6) 화면상 위쪽: 경계 거리 0.625 -> 125px -->
+  <path d="M180 170L280 95" stroke="#8fb0d4" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="280" cy="95" r="5" fill="#3d6fa8"/>
+  <text x="196" y="118" font-size="13" fill="#3d6fa8">0.5 ÷ 0.8 = 0.625</text>
+  <!-- 출발점: +0.08 -> 16px -->
+  <circle cx="292.8" cy="85.4" r="7" fill="#6e4729"/>
+  <text x="312" y="112" font-size="14" fill="#1d3a5c" font-weight="700">출발점</text>
+  <text x="312" y="130" font-size="12" fill="#6b7f95">경계 + 0.04~0.12</text>
+  <!-- 도착점: +0.7 -> 140px -->
+  <path d="M300 80L398 6.5" stroke="#a04040" stroke-width="2.5" marker-end="url(#c)" transform="translate(0 0)"/>
+  <rect x="398" y="-2" width="12" height="12" fill="#6e4729" opacity="0.35"/>
+  <text x="424" y="18" font-size="14" fill="#1d3a5c" font-weight="700">도착점</text>
+  <text x="424" y="36" font-size="12" fill="#6b7f95">출발점 + 같은 방향 × 0.55~0.85</text>
+  <!-- 조준 범위 -->
+  <path d="M470 200H640" stroke="#3d6fa8" stroke-width="2"/>
+  <path d="M470 200L617 115M470 200L617 285" stroke="#8fb0d4" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="470" cy="200" r="5" fill="#3d6fa8"/>
+  <text x="556" y="150" text-anchor="middle" font-size="13" fill="#1d3a5c">조준 방향 좌우 30°</text>
+  <text x="556" y="304" text-anchor="middle" font-size="12" fill="#6b7f95">조각마다 이 안에서 각도를 하나 뽑는다</text>
+</svg>

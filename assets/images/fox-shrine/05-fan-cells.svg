@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="400" fill="#f7f9fb"/>
+  <!-- 격자 5x4, 한 칸 70px, 좌하단 (150,330) -->
+  <g stroke="#d5dde6" fill="#fff">
+    <rect x="150" y="50" width="350" height="280"/>
+  </g>
+  <!-- 범위 안 칸: (0,0) (1,0) (2,0) (1,1) -->
+  <g fill="#8fb0d4" opacity="0.55">
+    <rect x="150" y="260" width="70" height="70"/>
+    <rect x="220" y="260" width="70" height="70"/>
+    <rect x="290" y="260" width="70" height="70"/>
+    <rect x="220" y="190" width="70" height="70"/>
+  </g>
+  <g stroke="#d5dde6" stroke-width="1">
+    <path d="M220 50V330M290 50V330M360 50V330M430 50V330M150 120H500M150 190H500M150 260H500"/>
+  </g>
+  <!-- 부채꼴: 원점 (185,295), 반지름 140, ±45도 -->
+  <path d="M185 295L284 196A140 140 0 0 1 284 394Z" fill="none" stroke="#3d6fa8" stroke-width="2"/>
+  <!-- 칸 중심 -->
+  <g fill="#6b7f95">
+    <circle cx="255" cy="295" r="4"/><circle cx="325" cy="295" r="4"/><circle cx="255" cy="225" r="4"/>
+    <circle cx="185" cy="225" r="4"/><circle cx="325" cy="225" r="4"/><circle cx="395" cy="295" r="4"/>
+  </g>
+  <circle cx="185" cy="295" r="6" fill="#3d6fa8"/>
+  <g font-size="12" fill="#6b7f95" text-anchor="middle">
+    <text x="185" y="350">x=0</text><text x="255" y="350">1</text><text x="325" y="350">2</text><text x="395" y="350">3</text><text x="465" y="350">4</text>
+    <text x="134" y="299">y=0</text><text x="134" y="229">1</text><text x="134" y="159">2</text><text x="134" y="89">3</text>
+  </g>
+  <g font-size="14" fill="#1d3a5c">
+    <text x="530" y="90" font-weight="700">반지름 2, 전체각 90°</text>
+    <text x="530" y="116">캐릭터 (0.5, 0.5)</text>
+    <text x="530" y="142">오른쪽 조준</text>
+    <text x="530" y="190" font-weight="700">닿는 칸 4개</text>
+    <text x="530" y="216">(0,0) (1,0) (2,0) (1,1)</text>
+    <text x="530" y="262" fill="#6b7f95" font-size="13">(1,1)은 정확히 45° 선 위</text>
+    <text x="530" y="282" fill="#6b7f95" font-size="13">(2,0)은 정확히 반지름 끝</text>
+    <text x="530" y="302" fill="#6b7f95" font-size="13">둘 다 포함으로 정했다</text>
+  </g>
+</svg>

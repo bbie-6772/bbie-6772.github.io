@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#3d6fa8"/></marker>
+  </defs>
+  <rect width="720" height="250" fill="#f7f9fb"/>
+  <g font-size="14">
+    <rect x="24" y="50" width="200" height="130" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="124" y="80" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">낮</text>
+    <text x="124" y="110" text-anchor="middle" fill="#1d3a5c">빗자루로 직접 청소</text>
+    <text x="124" y="134" text-anchor="middle" fill="#6b7f95">오염이 0이 되면</text>
+    <text x="124" y="156" text-anchor="middle" fill="#6b7f95">그 구역은 복원</text>
+
+    <rect x="260" y="50" width="200" height="130" rx="10" fill="#fff" stroke="#d5dde6"/>
+    <text x="360" y="80" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">밤</text>
+    <text x="360" y="110" text-anchor="middle" fill="#1d3a5c">방송에서 낮의 성과 확인</text>
+    <text x="360" y="134" text-anchor="middle" fill="#6b7f95">팬들의 반응</text>
+    <text x="360" y="156" text-anchor="middle" fill="#6b7f95">여우불 해금</text>
+
+    <rect x="496" y="50" width="200" height="130" rx="10" fill="#fff" stroke="#3d6fa8" stroke-width="2"/>
+    <text x="596" y="80" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3a5c">다음 날</text>
+    <text x="596" y="110" text-anchor="middle" fill="#1d3a5c">여우불이 앞마당 낙엽을 맡고</text>
+    <text x="596" y="134" text-anchor="middle" fill="#1d3a5c">나는 새로 열린 구역으로</text>
+    <text x="596" y="156" text-anchor="middle" fill="#6b7f95">별빛 엔딩까지</text>
+  </g>
+  <path d="M226 115H256" stroke="#3d6fa8" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M462 115H492" stroke="#3d6fa8" stroke-width="2" marker-end="url(#a)"/>
+  <text x="360" y="222" text-anchor="middle" font-size="13" fill="#6b7f95">자동화는 어제 하던 일을 넘겨받고, 손은 새 구역으로 간다</text>
+</svg>
