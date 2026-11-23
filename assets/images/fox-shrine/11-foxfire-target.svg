@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="380" fill="#f7f9fb"/>
+  <!-- 구역 A: 7x3칸, 한 칸 40px, (170,40)~(450,160) -->
+  <rect x="170" y="40" width="280" height="120" fill="#fff" stroke="#d5dde6" stroke-width="2"/>
+  <path d="M210 40V160M250 40V160M290 40V160M330 40V160M370 40V160M410 40V160M170 80H450M170 120H450" stroke="#d5dde6"/>
+  <rect x="410" y="40" width="40" height="40" fill="#b08a5a" opacity="0.75"/>
+  <text x="310" y="184" text-anchor="middle" font-size="13" fill="#6b7f95">복원된 구역 A</text>
+  <!-- 구역 B: 4x2칸, (250,250)~(410,330) -->
+  <rect x="250" y="250" width="160" height="80" fill="#fff" stroke="#d5dde6" stroke-width="2"/>
+  <path d="M290 250V330M330 250V330M370 250V330M250 290H410" stroke="#d5dde6"/>
+  <rect x="250" y="250" width="40" height="40" fill="#b08a5a" opacity="0.75"/>
+  <text x="330" y="354" text-anchor="middle" font-size="13" fill="#6b7f95">복원된 구역 B</text>
+  <!-- 여우불 (120,250) -->
+  <path d="M120 250L170 160" stroke="#8fb0d4" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M120 250L250 250" stroke="#8fb0d4" stroke-width="2" stroke-dasharray="6 5"/>
+  <circle cx="170" cy="160" r="4" fill="#8fb0d4"/>
+  <circle cx="250" cy="250" r="4" fill="#8fb0d4"/>
+  <path d="M120 250L430 60" stroke="#a04040" stroke-width="2" opacity="0.45"/>
+  <path d="M120 250L270 270" stroke="#3d6fa8" stroke-width="3"/>
+  <circle cx="430" cy="60" r="5" fill="#a04040"/>
+  <circle cx="270" cy="270" r="5" fill="#3d6fa8"/>
+  <circle cx="120" cy="250" r="13" fill="#8a6fc0"/>
+  <text x="120" y="290" text-anchor="middle" font-size="14" fill="#1d3a5c" font-weight="700">여우불</text>
+  <g font-size="14" fill="#1d3a5c">
+    <text x="480" y="210"><tspan fill="#8fb0d4" font-weight="700">- - -</tspan> 격자 경계까지</text>
+    <text x="500" y="234">A가 더 가깝다</text>
+    <text x="480" y="276"><tspan fill="#3d6fa8" font-weight="700">───</tspan> 오염 칸 중심까지</text>
+    <text x="500" y="300">B가 더 가깝다</text>
+    <text x="480" y="342" font-weight="700">여우불은 B의 칸으로 간다</text>
+  </g>
+</svg>

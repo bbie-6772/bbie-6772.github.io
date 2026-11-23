@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect width="720" height="400" fill="#f7f9fb"/>
+  <text x="170" y="34" text-anchor="middle" font-size="15" fill="#6b7f95" font-weight="700">나누기 전</text>
+  <text x="530" y="34" text-anchor="middle" font-size="15" fill="#6b7f95" font-weight="700">나눈 뒤</text>
+  <path d="M350 30V380" stroke="#d5dde6" stroke-width="2"/>
+  <!-- 전: CleaningMap 하나 -->
+  <rect x="30" y="52" width="280" height="320" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="2"/>
+  <text x="170" y="82" text-anchor="middle" font-size="16" fill="#1d3a5c" font-weight="700">CleaningMap</text>
+  <g font-size="13.5" fill="#1d3a5c">
+    <text x="52" y="116">· 구역 목록과 해금 조건</text>
+    <text x="52" y="142">· 쓸기 범위, 여우불 목표 찾기</text>
+    <text x="52" y="168">· 일상 오염 적용</text>
+  </g>
+  <rect x="44" y="186" width="252" height="172" rx="6" fill="#a04040" opacity="0.08"/>
+  <g font-size="13.5" fill="#a04040">
+    <text x="52" y="212">· 날짜 카운터(DayProgression) 소유</text>
+    <text x="52" y="238">· 신사 진행(ShrineProgress) 소유</text>
+    <text x="52" y="264">· 날짜가 바뀌면 일상 오염 시작</text>
+    <text x="52" y="290">· 낮인지 보고 청소 허용</text>
+    <text x="52" y="316">· 쓸 때마다 복원 구역 보고</text>
+    <text x="52" y="342">  ( 진행 규칙이 맵 안에 섞여 있다 )</text>
+  </g>
+  <!-- 후: GameFlow + CleaningMap -->
+  <rect x="390" y="52" width="290" height="160" rx="10" fill="#fff" stroke="#3d6fa8" stroke-width="2"/>
+  <text x="535" y="82" text-anchor="middle" font-size="16" fill="#3d6fa8" font-weight="700">GameFlow</text>
+  <g font-size="13.5" fill="#1d3a5c">
+    <text x="410" y="114">· 진행 기록 소유</text>
+    <text x="410" y="136">  ( 날짜 카운터는 여기로 합침 )</text>
+    <text x="410" y="162">· 복원 보고, 새 날 일상 오염 지시</text>
+    <text x="410" y="188">· 청소·여우불 허용</text>
+  </g>
+  <rect x="390" y="262" width="290" height="110" rx="10" fill="#fff" stroke="#d5dde6" stroke-width="2"/>
+  <text x="535" y="292" text-anchor="middle" font-size="16" fill="#1d3a5c" font-weight="700">CleaningMap</text>
+  <g font-size="13.5" fill="#1d3a5c">
+    <text x="410" y="322">· 구역 목록과 해금 조건</text>
+    <text x="410" y="348">· 쓸기 범위, 여우불 목표, 오염 적용</text>
+  </g>
+  <path d="M500 212V256" stroke="#3d6fa8" stroke-width="2"/>
+  <path d="M494 248L500 258L506 248" fill="none" stroke="#3d6fa8" stroke-width="2"/>
+  <path d="M570 262V218" stroke="#6b7f95" stroke-width="2"/>
+  <path d="M564 226L570 216L576 226" fill="none" stroke="#6b7f95" stroke-width="2"/>
+  <text x="494" y="240" text-anchor="end" font-size="12" fill="#3d6fa8">청소 허용·오염 지시</text>
+  <text x="578" y="240" font-size="12" fill="#6b7f95">쓸었다는 알림</text>
+</svg>
