@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 330" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="330" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="42" font-size="17" font-weight="700" fill="#1d3a5c">이름 하나가 바뀌었을 때 누가 화면을 고치나</text>
+  <text x="32" y="64" font-size="12" fill="#6b7f95">같은 이름이 화면 네 곳에 나오는 경우</text>
+
+  <!-- vanilla row -->
+  <rect x="32" y="82" width="656" height="104" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="108" font-size="14" font-weight="700" fill="#a04040">바닐라 JS</text>
+  <rect x="52" y="122" width="130" height="44" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="117" y="149" font-size="12" text-anchor="middle" fill="#1d3a5c">입력값 바뀜</text>
+  <text x="196" y="149" font-size="16" fill="#6b7f95">→</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="220" y="118" width="210" height="52" rx="6" fill="#ffffff" stroke="#a04040"/>
+    <text x="232" y="138">querySelector로 4곳을 찾고</text>
+    <text x="232" y="156">textContent를 4번 대입</text>
+  </g>
+  <text x="444" y="149" font-size="16" fill="#6b7f95">→</text>
+  <rect x="468" y="122" width="200" height="44" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="568" y="149" font-size="12" text-anchor="middle" fill="#1d3a5c">화면 (내가 직접 고침)</text>
+
+  <!-- vue row -->
+  <rect x="32" y="202" width="656" height="104" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="228" font-size="14" font-weight="700" fill="#3d6fa8">Vue</text>
+  <rect x="52" y="242" width="130" height="44" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="117" y="262" font-size="12" text-anchor="middle" fill="#1d3a5c">상태</text>
+  <text x="117" y="278" font-size="11" text-anchor="middle" fill="#6b7f95">username.value = ...</text>
+  <text x="196" y="269" font-size="16" fill="#6b7f95">→</text>
+  <g font-size="11" fill="#1d3a5c">
+    <rect x="220" y="238" width="210" height="52" rx="6" fill="#ffffff" stroke="#3d6fa8"/>
+    <text x="232" y="258">템플릿에 선언만 해 둔다</text>
+    <text x="232" y="276" fill="#6b7f95">&lt;h1&gt;{{ username }}&lt;/h1&gt; × 4</text>
+  </g>
+  <text x="444" y="269" font-size="16" fill="#6b7f95">→</text>
+  <rect x="468" y="242" width="200" height="44" rx="6" fill="#f7f9fb" stroke="#d5dde6"/>
+  <text x="568" y="269" font-size="12" text-anchor="middle" fill="#1d3a5c">화면 (Vue가 다시 그림)</text>
+</svg>

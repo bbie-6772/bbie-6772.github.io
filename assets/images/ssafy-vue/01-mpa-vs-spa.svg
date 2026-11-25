@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" width="100%" font-family="Pretendard, -apple-system, Segoe UI, Roboto, sans-serif">
+  <rect x="0" y="0" width="720" height="340" rx="12" fill="#f7f9fb"/>
+  <text x="32" y="42" font-size="17" font-weight="700" fill="#1d3a5c">링크를 눌렀을 때 서버가 보내 주는 것</text>
+  <text x="32" y="64" font-size="12" fill="#6b7f95">왼쪽은 지금까지 배운 Django, 오른쪽은 Vue로 만든 화면</text>
+
+  <!-- left: Django -->
+  <rect x="32" y="82" width="320" height="236" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="52" y="110" font-size="14" font-weight="700" fill="#1d3a5c">Django (MPA + SSR)</text>
+  <g font-size="12" fill="#1d3a5c">
+    <text x="52" y="146">첫 요청</text>
+    <rect x="140" y="132" width="190" height="22" rx="4" fill="#3d6fa8"/>
+    <text x="235" y="148" text-anchor="middle" fill="#ffffff">완성된 HTML 전체</text>
+    <text x="52" y="186">링크 클릭</text>
+    <rect x="140" y="172" width="190" height="22" rx="4" fill="#3d6fa8"/>
+    <text x="235" y="188" text-anchor="middle" fill="#ffffff">완성된 HTML 전체</text>
+    <text x="52" y="226">링크 클릭</text>
+    <rect x="140" y="212" width="190" height="22" rx="4" fill="#3d6fa8"/>
+    <text x="235" y="228" text-anchor="middle" fill="#ffffff">완성된 HTML 전체</text>
+  </g>
+  <text x="52" y="270" font-size="12" fill="#6b7f95">화면은 서버가 그리고, 누를 때마다 새로고침</text>
+  <text x="52" y="292" font-size="12" fill="#6b7f95">강점: 첫 화면이 빠르고 검색 엔진에 잘 잡힌다</text>
+
+  <!-- right: Vue -->
+  <rect x="368" y="82" width="320" height="236" rx="10" fill="#ffffff" stroke="#d5dde6"/>
+  <text x="388" y="110" font-size="14" font-weight="700" fill="#1d3a5c">Vue (SPA + CSR)</text>
+  <g font-size="12" fill="#1d3a5c">
+    <text x="388" y="146">첫 요청</text>
+    <rect x="476" y="132" width="70" height="22" rx="4" fill="#ffffff" stroke="#8fb0d4"/>
+    <text x="511" y="148" text-anchor="middle">빈 HTML</text>
+    <rect x="552" y="132" width="114" height="22" rx="4" fill="#3d6fa8"/>
+    <text x="609" y="148" text-anchor="middle" fill="#ffffff">JavaScript</text>
+    <text x="388" y="186">링크 클릭</text>
+    <rect x="476" y="172" width="64" height="22" rx="4" fill="#a04040"/>
+    <text x="508" y="188" text-anchor="middle" fill="#ffffff">JSON</text>
+    <text x="388" y="226">링크 클릭</text>
+    <rect x="476" y="212" width="64" height="22" rx="4" fill="#a04040"/>
+    <text x="508" y="228" text-anchor="middle" fill="#ffffff">JSON</text>
+  </g>
+  <text x="388" y="270" font-size="12" fill="#6b7f95">화면은 브라우저가 그리고, 바뀐 부분만 교체</text>
+  <text x="388" y="292" font-size="12" fill="#6b7f95">약점: 첫 로딩이 느리고 검색 엔진이 늦게 본다</text>
+</svg>
